@@ -463,3 +463,121 @@
 .footer-links a:hover{
   opacity:0.8;
 }
+
+.hero-smartguide {
+  position: relative;
+  overflow: hidden;
+  min-height: 560px;
+  background-color: #082b4a;
+  background-image: url("../img/login/back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-smartguide__content {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 3rem 0 3rem;
+}
+
+.hero-smartguide__text {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  padding-bottom: 6rem;
+}
+
+.hero-smartguide__title {
+  margin: 0 0 0.75rem 0;
+  color: #ffffff;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.hero-smartguide__subtitle {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1.1rem, 2vw, 2rem);
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.hero-smartguide__media {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(58%, 860px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.hero-smartguide__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 1199.98px) {
+  .hero-smartguide {
+    min-height: 500px;
+  }
+
+  .hero-smartguide__content {
+    min-height: 500px;
+    padding: 3rem 2rem 0 2rem;
+  }
+
+  .hero-smartguide__media {
+    width: 56%;
+  }
+
+  .hero-smartguide__text {
+    max-width: 420px;
+    padding-bottom: 4rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 991.98px) {
+  .hero-smartguide {
+    min-height: auto;
+    background-position: center;
+  }
+
+  .hero-smartguide__content {
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 1.25rem 0 1.25rem;
+    gap: 2rem;
+  }
+
+  .hero-smartguide__text {
+    max-width: 100%;
+    padding-bottom: 0;
+  }
+
+  .hero-smartguide__media {
+    position: relative;
+    width: 100%;
+    right: auto;
+    bottom: auto;
+    justify-content: center;
+  }
+
+  .hero-smartguide__img {
+    width: 100%;
+    max-width: 720px;
+  }
+}

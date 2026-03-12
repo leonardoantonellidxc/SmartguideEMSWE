@@ -5,456 +5,408 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap icons -->
-    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
     <!-- CSS del tema -->
-    <link href="css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
     <!-- CSS del tema -->
-    <link href="css/custom.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
 
     <title>EMSWE Navis</title>
   </head>
 
   <body>
     <header aria-label="Funzioni di servizio">
-      <div class="header-top-light">
-        <div class="container py-2">
-          <div class="row gx-variable align-items-center">
-            <div class="col d-none d-md-block">
-              <a href="#" class="link-primary fw-semibold"
-                >Capitanerie di Porto</a
-              >
-            </div>
-            <div class="col col-md-auto text-end">
-              <div class="dropdown">
-                <button
-                  type="button"
-                  id="language"
-                  class="btn btn-sm link-primary dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <span class="visually-hidden">Lingue disponibili:</span>ITA
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="language">
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      ITA<span class="visually-hidden">: italiano</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#" lang="en">
-                      ENG<span class="visually-hidden">: english</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+  <div class="header-top-light">
+    <div class="container py-2">
+      <div class="row gx-variable align-items-center">
+        <div class="col d-none d-md-block">
+          <a href="#" class="link-primary fw-semibold">Capitanerie di Porto</a>
+        </div>
+        <div class="col col-md-auto text-end">
+          <div class="dropdown">
+            <button
+              type="button"
+              id="language"
+              class="btn btn-sm link-primary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span class="visually-hidden">Lingue disponibili:</span>ITA
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="language">
+              <li>
+                <a class="dropdown-item" href="#">
+                  ITA<span class="visually-hidden">: italiano</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" lang="en">
+                  ENG<span class="visually-hidden">: english</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="header-light">
-        <div class="container py-3">
-          <div class="row gx-variable align-items-center">
-            <div class="col-auto d-block d-md-none">
-              <button
-                type="button"
-                class="navbar-toggler"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbar-menu"
-                aria-controls="navbar-menu"
-                aria-expanded="false"
-              >
-                <span class="visually-hidden">Apri menu principale</span>
-                <i class="bi bi-list bi-lg"></i>
-              </button>
-            </div>
-
-            <div class="col-auto">
-              <img
-                src="img/Logo_GuardiaCostiera_scuro.svg"
-                alt="Logo Capitanerie di Porto"
-                class="logo"
-              />
-            </div>
-
-            <div class="col">
-              <a href="index.html" class="link-primary text-decoration-none">
-                <h1 class="h3 mb-0">
-                  EMSWE
-                  <small class="d-block"
-                    >European Maritime Single Window environment</small
-                  >
-                </h1>
-              </a>
-            </div>
-          </div>
+  <div class="header-light">
+    <div class="container py-3">
+      <div class="row gx-variable align-items-center">
+        <div class="col-auto d-block d-md-none">
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar-menu"
+            aria-controls="navbar-menu"
+            aria-expanded="false"
+          >
+            <span class="visually-hidden">Apri menu principale</span>
+            <i class="bi bi-list bi-lg"></i>
+          </button>
         </div>
+
+        <div class="col-auto">
+          <img
+            src="img/Logo_nuovo_guardiacostiera.png"
+            alt="Logo Capitanerie di Porto"
+            class="logo"
+          />
+        </div>
+ <div class="col">
+          <a href="index.html" class="link-primary text-decoration-none">
+            <h1 class="h3 mb-0">
+              Navis
+              <small class="d-block">European Maritime Single Window environment</small>
+            </h1>
+          </a>
+        </div>
+      
+
+       
       </div>
-    </header>
+    </div>
+  </div>
+</header>
 
-    <nav
-      class="navbar navbar-expand-md navbar-dark"
-      aria-label="Menu principale"
-    >
-      <h2 class="visually-hidden">Menu principale</h2>
-      <div class="container">
-        <div class="navbar-collapse collapse" id="navbar-menu">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="welcome.html">Welcome</a>
-            </li>
+    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Menu principale">
+  <h2 class="visually-hidden">Menu principale</h2>
+  <div class="container">
+    <div class="navbar-collapse collapse" id="navbar-menu">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="welcome.html">Welcome</a>
+        </li>
 
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownAgenzia"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Agenzia marittima
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link  dropdown-toggle"
+            href="#"
+            id="navbarDropdownAgenzia"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Agenzia marittima
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownAgenzia">
+            <li>
+              <a class="dropdown-item" href="agenzia-agente-raccomandatario.html">
+                Agente raccomandatario marittimo
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownAgenzia">
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="agenzia-agente-raccomandatario.html"
-                  >
-                    Agente raccomandatario marittimo
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="agenzia-collaboratore.html">
-                    Collaboratore
-                  </a>
-                </li>
-              </ul>
             </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownAzienda"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Azienda
+            <li>
+              <a class="dropdown-item" href="agenzia-collaboratore.html">
+                Collaboratore
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownAzienda">
-                <li>
-                  <a class="dropdown-item" href="azienda-bunkeraggio.html">
-                    Società di bunkeraggio
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="azienda-rifiuti.html">
-                    Delegato pratiche rifiuti
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="azienda-centro-in.html"
-                    >Centro IN</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="azienda-consolato.html"
-                    >Consolato</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="azienda-pif.html">PIF</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="azienda-avvisatore.html">
-                    Avvisatore marittimo
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="azienda-stn.html">
-                    Servizio tecnico nautici
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="azienda-chimico-porto.html">
-                    Chimico del porto
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="azienda-terminalista.html">
-                    Terminalista
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link active dropdown-toggle"
-                href="#"
-                id="navbarDropdownCompagnia"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Compagnia di Navigazione
-              </a>
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownCompagnia"
-              >
-                <li>
-                  <a class="dropdown-item" href="compagnia-comandante.html"
-                    >Comandante</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="compagnia-cso.html">CSO</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="compagnia-sso.html">SSO</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="compagnia-arp.html">ARP</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="armatore.html">Armatore</a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownEnte"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Ente
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownEnte">
-                <li>
-                  <a class="dropdown-item" href="ente-dogane.html"
-                    >Agenzia delle Dogane</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="ente-autorita-portuale.html"
-                    >Autorità portuale</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="ente-gdf.html"
-                    >Guardia di finanza</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="ente-istat.html">ISTAT</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="ente-mininterno.html"
-                    >Ministero dell’Interno</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="ente-pubblica-sicurezza.html"
-                    >Pubblica Sicurezza</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="ente-pcm.html">PCM</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="ente-sanita-marittima.html"
-                    >Sanità marittima</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownCPLocale"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                CP locale
-              </a>
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownCPLocale"
-              >
-                <li>
-                  <a class="dropdown-item" href="cap-responsabile-locale.html">
-                    Responsabile Locale
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="cap-operatore-as.html">
-                    Operatore CP A/S
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="cap-operatore-accosti.html">
-                    Operatore CP Accosti
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="cap-operatore-dao.html">
-                    Operatore CP DAO
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="cap-operatore-sala-operativa.html"
-                  >
-                    Operatore CP Sala operativa
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="cap-operatore-sicnav.html">
-                    Operatore CP SICNAV
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="cap-operatore-tecnica.html">
-                    Operatore CP Tecnica
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="cap-ufficiale-ispezione-servizi-istituto.html"
-                  >
-                    Ufficiale d’Ispezione / Responsabile ai servizi d’Istituto
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownCPCentrale"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                CP centrale
-              </a>
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownCPCentrale"
-              >
-                <li>
-                  <a class="dropdown-item" href="cap-ricerca-pax-crew.html">
-                    Utente ricerca pax&amp;crew
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="cap-amministratore-centrale.html"
-                  >
-                    Amministratore centrale
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="cap-centrale-operativa.html">
-                    Centrale Operativa
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="cap-consultazione-abbonamenti.html"
-                  >
-                    Consultazione abbonamenti
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="cap-statistiche.html"
-                    >Statistiche</a
-                  >
-                </li>
-              </ul>
             </li>
           </ul>
-        </div>
-      </div>
-    </nav>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownAzienda"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Azienda
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownAzienda">
+            <li>
+              <a class="dropdown-item" href="azienda-bunkeraggio.html">
+                Società di bunkeraggio
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="azienda-rifiuti.html">
+                Delegato pratiche rifiuti
+              </a>
+            </li>
+            
+            <li>
+              <a class="dropdown-item" href="azienda-avvisatore.html">
+                Avvisatore marittimo
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="azienda-stn.html">
+                Servizio tecnico nautici
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="azienda-chimico-porto.html">
+                Chimico del porto
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="azienda-terminalista.html">
+                Terminalista
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown active">
+          <a
+            class="nav-link  active dropdown-toggle"
+            href="#"
+            id="navbarDropdownCompagnia"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Compagnia di Navigazione
+          </a>
+          <ul class="dropdown-menu active" aria-labelledby="navbarDropdownCompagnia">
+            <li>
+              <a class="dropdown-item" href="compagnia-comandante.html">Comandante</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="compagnia-cso.html">CSO</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="compagnia-sso.html">SSO</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="compagnia-arp.html">ARP</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="armatore.html">Armatore</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownEnte"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Ente
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownEnte">
+            <li>
+              <a class="dropdown-item" href="ente-dogane.html">Agenzia delle Dogane</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="ente-autorita-portuale.html">Autorità portuale</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="ente-gdf.html">Guardia di finanza</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="ente-istat.html">ISTAT</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="ente-mininterno.html">Ministero dell’Interno</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="ente-pubblica-sicurezza.html">Pubblica Sicurezza</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="ente-pcm.html">PCM</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="ente-sanita-marittima.html">Sanità marittima</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="azienda-centro-in.html">Centro IN</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="azienda-consolato.html">Consolato</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="azienda-pif.html">PIF</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownCPLocale"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            CP locale
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownCPLocale">
+            <li>
+              <a class="dropdown-item" href="cap-responsabile-locale.html">
+                Responsabile Locale
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="cap-operatore-as.html">
+                Operatore CP A/S
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="cap-operatore-accosti.html">
+                Operatore CP Accosti
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="cap-operatore-dao.html">
+                Operatore CP DAO
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="cap-operatore-sala-operativa.html">
+                Operatore CP Sala operativa
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="cap-operatore-sicnav.html">
+                Operatore CP SICNAV
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="cap-operatore-tecnica.html">
+                Operatore CP Tecnica
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="cap-ufficiale-ispezione-servizi-istituto.html"
+              >
+                Ufficiale d’Ispezione / Responsabile ai servizi d’Istituto
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownCPCentrale"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            CP centrale
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownCPCentrale">
+            <li>
+              <a class="dropdown-item" href="cap-ricerca-pax-crew.html">
+                Utente ricerca pax&amp;crew
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="cap-amministratore-centrale.html">
+                Amministratore centrale
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="cap-centrale-operativa.html">
+                Centrale Operativa
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="cap-consultazione-abbonamenti.html">
+                Consultazione abbonamenti
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="cap-statistiche.html">Statistiche</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
     <main id="main-content" class="container-fluid">
       <div class="container">
         <!-- SIDEBAR (DESKTOP) -->
         <div class="row">
-          <div class="col-12 col-lg-3 my-5 sticky-top">
-            <nav
-              class="sidebar sidebar-expand-lg sidebar-dark sticky-top"
-              aria-label="Menu della sezione ..."
-            >
-              <div class="sidebar-header">
-                <h1 class="sidebar-title">
-                  Indice<span class="visually-hidden"> della sezione ...</span>
-                </h1>
-                <button
-                  type="button"
-                  class="navbar-toggler collapsed d-block d-lg-none"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#sidebar-menu"
-                  aria-controls="sidebar-menu"
-                  aria-expanded="false"
-                >
-                  <span class="visually-hidden"
-                    >Apri menu della sezione ...</span
-                  >
-                  <i class="bi bi-list bi-lg"></i>
-                </button>
-              </div>
-              <div class="sidebar-collapse collapse" id="sidebar-menu">
-                <ul class="nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">O1. Creazione</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">02. Modifica</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">O3. Cancellazione</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">O4. Annullamento</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"
-                      >O5. Integrazione Dichiarazione</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"
-                      >O6. Richiesta di invalidazione</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">O7. Richiesta di chiusura</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">O8. Ricerca e consultazione</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
+         <div class="col-12 col-lg-3 my-5">
+  <div class="sidebar-sticky-wrapper">
+    <nav
+      class="sidebar sidebar-expand-lg sidebar-dark"
+      aria-label="Menu della sezione"
+    >
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">
+          Indice<span class="visually-hidden"> della sezione</span>
+        </h2>
+        <button
+          type="button"
+          class="navbar-toggler collapsed d-block d-lg-none"
+          data-bs-toggle="collapse"
+          data-bs-target="#sidebar-menu"
+          aria-controls="sidebar-menu"
+          aria-expanded="false"
+        >
+          <span class="visually-hidden">Apri menu della sezione</span>
+          <i class="bi bi-list bi-lg"></i>
+        </button>
+      </div>
+
+      <div class="sidebar-collapse collapse" id="sidebar-menu">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#creazione">01. Creazione</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#modifica">02. Modifica</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">03. Cancellazione</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">04. Annullamento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">05. Integrazione Dichiarazione</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">06. Richiesta di invalidazione</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">07. Richiesta di chiusura</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">08. Ricerca e consultazione</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
           <!-- Content -->
           <div class="col-12 col-lg-9 my-5">
             <!-- HERO -->
@@ -509,7 +461,7 @@
             </section>
 
             <!-- SEZIONE 01 -->
-            <section class="mb-6">
+            <section id="creazione" class="mb-6 ">
               <div class="sg-section__frame rounded-3 overflow-hidden">
                 <div class="sg-section__head p-2 p-lg-4">
                   <div class="d-flex align-content-center align-items-center">
@@ -799,6 +751,479 @@
                                   informazioni presenti nella sezione
                                   “Associazione porto”; cliccare su “Vai avanti”
                                   per proseguire.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img src="./img/dichiarazionepb/6.png" alt="" />
+                          </div>
+                        </div>
+
+                        <div class="sg-note mt-4 p-3 rounded-3">
+                          <p class="mb-0">
+                            Visualizza il dettaglio di
+                            <a href="#" class="link-primary"
+                              >“Ulteriori modalità di ricerca” cliccando qui</a
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- STEP 2 AGGIUMTA DOCUMENTO -->
+                    <div class="card border-0 rounded-3 overflow-hidden">
+                      <div class="sg-step-section__head p-3 p-lg-4">
+                        <div
+                          class="d-flex justify-content-between align-items-center gap-3 flex-wrap"
+                        >
+                          <div class="d-flex align-items-center gap-3">
+                            <div class="sg-step-index">2</div>
+                            <h4 class="h4 text-white mb-0">
+                              AGGIUNTA DOCUMENTO
+                            </h4>
+                          </div>
+                          <span class="badge text-bg-outline-light"
+                            >STEP 2</span
+                          >
+                        </div>
+                      </div>
+
+                      <div class="card-body bg-light p-4 p-lg-5">
+                        <div class="row g-4 align-items-start">
+                          <div class="col-12 col-lg-7">
+                            <div class="sg-placeholder sg-placeholder--wide">
+                              <span>Placeholder immagine</span>
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-lg-5">
+                            <div class="mb-5">
+                              <div class="d-flex gap-3">
+                                <div class="sg-step-badge flex-shrink-0">1</div>
+                                <div>
+                                  <h5 class="h4 mb-3">Aggiunta Documento</h5>
+                                  <p class="mb-3">
+                                    L’inserimento del documento è previsto in
+                                    entrambe le tipologie di dichiarazione;
+                                    tuttavia, trattandosi di una nuova
+                                    dichiarazione, questo passaggio è
+                                    facoltativo.
+                                  </p>
+
+                                  <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge text-bg-light border"
+                                      >Tipologia file accettata: PDF</span
+                                    >
+                                    <span class="badge text-bg-light border"
+                                      >Dimensioni massime: 5MB</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div>
+                              <div class="d-flex gap-3">
+                                <div class="sg-step-badge flex-shrink-0">2</div>
+                                <div>
+                                  <h5 class="h4 mb-3">Imposta di Bollo</h5>
+                                  <p class="mb-0">
+                                    L’imposta di bollo viene assolta
+                                    selezionando la modalità di assolvimento e
+                                    la successiva compilazione dei campi
+                                    contestuali alla modalità pre scelta. Per
+                                    proseguire è necessario compilare la sezione
+                                    successivamente cliccare il pulsante “Vai
+                                    Avanti”.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- STEP 3 AGGIUNGI UTENTI-->
+                    <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                      <div class="sg-step-section__head p-3 p-lg-4">
+                        <div
+                          class="d-flex justify-content-between align-items-center gap-3 flex-wrap"
+                        >
+                          <div class="d-flex align-items-center gap-3">
+                            <div class="sg-step-index">3</div>
+                            <h4 class="h4 text-white mb-0">
+                              UTENTI DICHIARANTI
+                            </h4>
+                          </div>
+                          <span class="badge text-bg-outline-light"
+                            >STEP 3</span
+                          >
+                        </div>
+                      </div>
+
+                      <div class="card-body bg-light">
+                        <div class="mb-5"></div>
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">1</div>
+                              <div>
+                                <h5 class="h4 mb-3">RICERCA DELL’UTENTE</h5>
+                                <p class="mb-0">
+                                  Per aggiungere uno o più utenti è necessario
+                                  valorizzare il campo “Identificativo fiscale”.
+                                  Cliccando il pulsante “Cerca” l’utente verrà
+                                  aggiunto nella tabella “Utenti dichiaranti
+                                  aggiunti”.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <div class="sg-placeholder sg-placeholder--wide">
+                              <span>Placeholder immagine</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">2</div>
+                              <div>
+                                <h5 class="h4 mb-3">
+                                  POSSIBILITÀ DI SELEZIONE ED ELIMINAZIONE
+                                </h5>
+                                <p class="mb-0">
+                                  È possibile eliminare uno o più utenti
+                                  presenti nella tabella, selezionandoli tramite
+                                  le relative checkbox e successivo clic del
+                                  pulsante “Elimina”.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <div class="sg-placeholder sg-placeholder--wide">
+                              <span>Placeholder immagine</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">3</div>
+                              <div>
+                                <h5 class="h4 mb-3">
+                                  VERIFICA E STEP SUCCESSIVO
+                                </h5>
+                                <p class="mb-0">
+                                  Verificato il corretto inserimento degli
+                                  utenti, selezionare il pulsante “Vai avanti”
+                                  per procedere.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <div class="sg-placeholder sg-placeholder--wide">
+                              <span>Placeholder immagine</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- STEP 4 RIEPILOGO-->
+                    <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                      <div class="sg-step-section__head p-3 p-lg-4">
+                        <div
+                          class="d-flex justify-content-between align-items-center gap-3 flex-wrap"
+                        >
+                          <div class="d-flex align-items-center gap-3">
+                            <div class="sg-step-index">4</div>
+                            <h4 class="h4 text-white mb-0">
+                              RIEPILOGO DICHIARAZIONE
+                            </h4>
+                          </div>
+                          <span class="badge text-bg-outline-light"
+                            >STEP 4</span
+                          >
+                        </div>
+                      </div>
+
+                      <div class="card-body bg-light">
+                        <div class="mb-5"></div>
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">1</div>
+                              <div>
+                                <h5 class="h4 mb-3">
+                                  INFORMAZIONI E POSSIBILI AZIONI
+                                </h5>
+                                <p class="mb-0">
+                                  Nell’ultimo passaggio di riepilogo è possibile
+                                  consultare tutte le informazioni inserite,
+                                  sottomettere o salvare in bozza la
+                                  Dichiarazione.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <div class="sg-placeholder sg-placeholder--wide">
+                              <span>Placeholder immagine</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">2</div>
+                              <div>
+                                <h5 class="h4 mb-3">
+                                  SALVATAGGIO IN BOZZA DELLA DICHIARAZIONE
+                                </h5>
+                                <p class="mb-0">
+                                  È possibile salvare la Dichiarazione in bozza;
+                                  dopo aver confermato l’operazione tramite una
+                                  finestra che apparirà sullo schermo, la
+                                  Dichiarazione assumerà lo stato “Bozza” ma non
+                                  sarà ancora visibile agli operatori CdP.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <div class="sg-placeholder sg-placeholder--wide">
+                              <span>Placeholder immagine</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">3</div>
+                              <div>
+                                <h5 class="h4 mb-3">
+                                  SOTTOMISSIONE DELLA DICHIARAZIONE
+                                </h5>
+                                <p class="mb-0">
+                                  È possibile sottomettere la Dichiarazione;
+                                  dopo aver confermato l’operazione tramite una
+                                  finestra che apparirà sullo schermo, la
+                                  Dichiarazione assumerà lo stato “Sottomessa” e
+                                  sarà inviata per valutazione all’operatore
+                                  CdP.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <div class="sg-placeholder sg-placeholder--wide">
+                              <span>Placeholder immagine</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+             <!-- SEZIONE 02 modifica -->
+            <section id="modifica" class="mb-6 ">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-content-center align-items-center">
+                    <div class="">
+                      <p class="h1 text-white me-4">02.</p>
+                    </div>
+                    <div class="">
+                      <h6 class="text-white h1 mb-2">
+                        Modifica
+                      </h6>
+                      <p class="text-white mb-0">
+                        Panoramica sulla modifica della
+                        Dichiarazione di Porto Base.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sg-section__body p-2">
+                                  <!-- DUE CARD TIPOLOGIE -->
+                  <div class="sg-dark-panel rounded-3 p-3 p-lg-4 mb-4">
+                    <h3 class="h2 mb-4 titlepage">
+                       Punto di Accesso della modifica di una 
+Dichiarazione di Porto Base
+                      </h3>
+                   
+
+                    <div class="row g-4 sg-card-row">
+                      <div class="col-12 col-lg-6 d-flex">
+                        <div
+                          class="card h-100 w-100 border-0 d-flex flex-column"
+                        >
+                          <div
+                            class="bg-light p-3 rounded d-flex flex-column mb-3 flex-grow-1"
+                          >
+                            <div class="sg-step-badge mb-3">1</div>
+
+                            <h4 class="h5 mb-3">
+                            Attivazione “Modifica” dall’elenco risultati di ricerca
+                            </h4>
+
+                            <p>
+                             Nell’elenco risultati della Dichiarazione di porto base è possibile accedere al dettaglio in modalità modifica cliccando sull’”icona della matita”.
+                            </p>
+                          </div>
+
+                          <img
+                            class="w-100 mt-auto"
+                            src="./img/dichiarazionepb/2.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-lg-6 d-flex">
+                        <div
+                          class="card h-100 w-100 border-0 d-flex flex-column"
+                        >
+                          <div
+                            class="bg-light p-3 rounded d-flex flex-column mb-3 flex-grow-1"
+                          >
+                            <div class="sg-step-badge mb-3">2</div>
+
+                            <h4 class="h5 mb-3">
+                              Attivazione Modifica da pagina di dettaglio Dichiarazione Porto Base
+                            </h4>
+
+                            <p>
+                              Nell’elenco risultati della Dichiarazione di porto base è possibile accedere al dettaglio in modalità visualizzazione cliccando sull’”icona dell’occhio”. All’interno del dettaglio per procedere con la modifica sarà necessario cliccare sul pulsante “Modifica Dichiarazione”.
+                            </p>
+                          </div>
+
+                          <img
+                            class="w-100 mt-auto"
+                            src="./img/dichiarazionepb/3.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP DI MOdifica -->
+                  <div class="sg-dark-panel border rounded-3 p-3 p-lg-4 mb-4">
+                    <h3 class="h2 mb-2 text-info-emphasis titlepage">
+                      Step di modifica di una Dichiarazione di Porto Base
+                    </h3>
+                    <p class="text-white mb-4">
+                      Per modificare una nuova dichiarazione di Porto Base,
+                      l’Armatore dovrà procedere seguendo i passaggi
+                      sottostanti.
+                    </p>
+
+                    
+
+                    <!-- STEP 1 RICERCA E SELEZIONE NAVE -->
+                    <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                      <div class="sg-step-section__head p-3 p-lg-4">
+                        <div
+                          class="d-flex justify-content-between align-items-center gap-3 flex-wrap"
+                        >
+                          <div class="d-flex align-items-center gap-3">
+                            <div class="sg-step-index">1</div>
+                            <h4 class="h4 text-white mb-0">
+                              RICERCA E SELEZIONE NAVE
+                            </h4>
+                          </div>
+                          <span class="badge text-bg-outline-light"
+                            >STEP 1</span
+                          >
+                        </div>
+                      </div>
+
+                      <div class="card-body bg-light">
+                        <div class="mb-5"></div>
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">1</div>
+                              <div>
+                                <h5 class="h4 mb-3">RICERCA DELLA NAVE</h5>
+                                <p class="mb-0">
+                                 All’interno della pagina di dettaglio in modalità Modifica, il processo di aggiornamento delle informazioni seguirà lo stesso flusso guidato a step, descritto nel flusso di “Creazione e sottomissione” (pag 28)
+
+Le informazioni non modificabili sono il tipo di Dichiarazione Porto Base e l’associazione di una nuova nave.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img src="./img/dichiarazionepb/4.png" alt="" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img src="./img/dichiarazionepb/5.png" alt="" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">2</div>
+                              <div>
+                                <h5 class="h4 mb-3">Riepilogo</h5>
+                                <p class="mb-0">
+                                  Dopo aver effettuato le modifiche è possibile o salvare nuovamente la Dichiarazione in bozza cliccando sul pulsante “Salva in bozza” o sottometterla cliccando sul pulsante “Sottometti”
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">3</div>
+                              <div>
+                                <h5 class="h4 mb-3">
+                                 Approfondimenti sulla modifica
+                                </h5>
+                                <p class="mb-0">
+                                 La modifica delle Dichiarazioni di Porto Base in stato “Sottomessa” è consentita solo nel caso in cui la Dichiarazione non sia associata a un Fascicolo che contenga soste con Obblighi di Dichiarazione inviati a CdP.
+
+Dopo aver effettuato le modifiche è possibile sottomettere la variazione della Dichiarazione cliccando sul pulsante “Sottometti variazione”.
+
+Nel caso in cui l’Armatore modifichi il Porto Base, il sistema al momento della sottomissione variazione, crea e sottomette una nuova Dichiarazione di Porto Base e la inoltra all’Operatore CdP responsabile del nuovo porto inserito e contestualmente pone la Dichiarazione di Porto Base modificata in stato “Ritirata”.
+
+Nel caso in cui la Dichiarazione di Porto Base “Ritirata” risulti essere associata a un fascicolo che contenga soste con Obblighi di Dichiarazione inviati a CdP, quest’ultimo e i relativi oggetti associati,  vengono posti nello stato “Eliminato”;
+
+Nel caso in cui l’Armatore non modifichi il Porto Base, la Dichiarazione di Porto Base precedentemente inviata a CdP viene integrata con le nuove informazioni inserite.
                                 </p>
                               </div>
                             </div>
