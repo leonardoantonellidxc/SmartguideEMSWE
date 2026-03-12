@@ -467,7 +467,6 @@
 .hero-smartguide {
   position: relative;
   overflow: hidden;
-  min-height: 560px;
   background-color: #082b4a;
   background-image: url("../img/login/back.png");
   background-repeat: no-repeat;
@@ -476,7 +475,7 @@
 }
 
 .hero-smartguide__content {
-  min-height: 560px;
+ 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -513,7 +512,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  width: min(58%, 860px);
+  width: min(48%, 860px);
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
