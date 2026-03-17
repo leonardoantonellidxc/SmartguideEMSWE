@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap icons -->
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <!-- CSS del tema -->
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+      <!-- CSS custom -->
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>Nome sito / Nome servizio</title>
+</head>
+
+<body>
+ <header aria-label="Funzioni di servizio">
+  <div class="header-top-light">
+    <div class="container py-2">
+      <div class="row gx-variable align-items-center">
+        <div class="col d-none d-md-block">
+          <a href="#" class="link-primary fw-semibold">Capitanerie di Porto</a>
+        </div>
+        <div class="col col-md-auto text-end">
+          <div class="dropdown">
+            <button
+              type="button"
+              id="language"
+              class="btn btn-sm link-primary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span class="visually-hidden">Lingue disponibili:</span>ITA
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="language">
+              <li>
+                <a class="dropdown-item" href="#">
+                  ITA<span class="visually-hidden">: italiano</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" lang="en">
+                  ENG<span class="visually-hidden">: english</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-light">
+    <div class="container py-3">
+      <div class="row gx-variable align-items-center">
+        <div class="col-auto d-block d-md-none">
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar-menu"
+            aria-controls="navbar-menu"
+            aria-expanded="false"
+          >
+            <span class="visually-hidden">Apri menu principale</span>
+            <i class="bi bi-list bi-lg"></i>
+          </button>
+        </div>
+
+        <div class="col-auto">
+          <img
+            src="img/Logo_nuovo_guardiacostiera.png"
+            alt="Logo Capitanerie di Porto"
+            class="logo"
+          />
+        </div>
+ <div class="col">
+          <a href="index.html" class="link-primary text-decoration-none">
+            <h1 class="h3 mb-0">
+              Navis
+              <small class="d-block">European Maritime Single Window environment</small>
+            </h1>
+          </a>
+        </div>
+      
+
+       
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar navbar-expand-md navbar-dark" aria-label="Menu principale">
+  <h2 class="visually-hidden">Menu principale</h2>
+  <div class="container">
+    <div class="navbar-collapse collapse" id="navbar-menu">
+      <ul class="navbar-nav me-auto">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="welcome.html">Welcome</a>
+        </li>
+
+        <!-- Agenzia marittima -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAgenzia" role="button" data-bs-toggle="dropdown">
+            Agenzia marittima
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="agenzia-agente-raccomandatario.html">
+                Agente raccomandatario marittimo
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="agenzia-collaboratore.html">
+                Collaboratore
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Azienda -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAzienda" role="button" data-bs-toggle="dropdown">
+            Azienda
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="azienda-avvisatore.html">Avvisatore marittimo</a></li>
+            <li><a class="dropdown-item" href="azienda-chimico-porto.html">Chimico del porto</a></li>
+            <li><a class="dropdown-item" href="azienda-rifiuti.html">Delegato pratiche rifiuti</a></li>
+            <li><a class="dropdown-item" href="azienda-stn.html">Servizio tecnico nautici</a></li>
+            <li><a class="dropdown-item" href="azienda-bunkeraggio.html">Società di bunkeraggio</a></li>
+            <li><a class="dropdown-item" href="azienda-terminalista.html">Terminalista</a></li>
+          </ul>
+        </li>
+
+        <!-- Compagnia -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCompagnia" role="button" data-bs-toggle="dropdown">
+            Compagnia di Navigazione
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="armatore.html">Armatore</a></li>
+            <li><a class="dropdown-item" href="compagnia-arp.html">ARP</a></li>
+            <li><a class="dropdown-item" href="compagnia-comandante.html">Comandante</a></li>
+            <li><a class="dropdown-item" href="compagnia-cso.html">CSO</a></li>
+            <li><a class="dropdown-item" href="compagnia-sso.html">SSO</a></li>
+          </ul>
+        </li>
+
+        <!-- Ente -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownEnte" role="button" data-bs-toggle="dropdown">
+            Ente
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="ente-dogane.html">Agenzia delle Dogane</a></li>
+            <li><a class="dropdown-item" href="ente-autorita-portuale.html">Autorità portuale</a></li>
+            <li><a class="dropdown-item" href="azienda-centro-in.html">Centro IN</a></li>
+            <li><a class="dropdown-item" href="azienda-consolato.html">Consolato</a></li>
+            <li><a class="dropdown-item" href="ente-gdf.html">Guardia di finanza</a></li>
+            <li><a class="dropdown-item" href="ente-istat.html">ISTAT</a></li>
+            <li><a class="dropdown-item" href="ente-mininterno.html">Ministero dell’Interno</a></li>
+            <li><a class="dropdown-item" href="ente-pcm.html">PCM</a></li>
+            <li><a class="dropdown-item" href="azienda-pif.html">PIF</a></li>
+            <li><a class="dropdown-item" href="ente-pubblica-sicurezza.html">Pubblica Sicurezza</a></li>
+            <li><a class="dropdown-item" href="ente-sanita-marittima.html">Sanità marittima</a></li>
+          </ul>
+        </li>
+
+        <!-- CP locale -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCPLocale" role="button" data-bs-toggle="dropdown">
+            CP locale
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="cap-operatore-accosti.html">Operatore CP Accosti</a></li>
+            <li><a class="dropdown-item" href="cap-operatore-as.html">Operatore CP A/S</a></li>
+            <li><a class="dropdown-item" href="cap-operatore-dao.html">Operatore CP DAO</a></li>
+            <li><a class="dropdown-item" href="cap-operatore-sala-operativa.html">Operatore CP Sala operativa</a></li>
+            <li><a class="dropdown-item" href="cap-operatore-sicnav.html">Operatore CP SICNAV</a></li>
+            <li><a class="dropdown-item" href="cap-operatore-tecnica.html">Operatore CP Tecnica</a></li>
+            <li><a class="dropdown-item" href="cap-responsabile-locale.html">Responsabile Locale</a></li>
+            <li><a class="dropdown-item" href="cap-ufficiale-ispezione-servizi-istituto.html">Ufficiale d’Ispezione / Responsabile ai servizi d’Istituto</a></li>
+          </ul>
+        </li>
+
+        <!-- CP centrale -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCPCentrale" role="button" data-bs-toggle="dropdown">
+            CP centrale
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="cap-amministratore-centrale.html">Amministratore centrale</a></li>
+            <li><a class="dropdown-item" href="cap-centrale-operativa.html">Centrale Operativa</a></li>
+            <li><a class="dropdown-item" href="cap-consultazione-abbonamenti.html">Consultazione abbonamenti</a></li>
+            <li><a class="dropdown-item" href="cap-statistiche.html">Statistiche</a></li>
+            <li><a class="dropdown-item" href="cap-ricerca-pax-crew.html">Utente ricerca pax&amp;crew</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <main id="main-content" class="container-fluid">
+        <div class="container"> 
+  <div class="px-lg-8">
+    <!-- HERO -->
+    <section class="hero-smartguide w-100 mb-4">
+  <div class="hero-smartguide__content">
+    <div class="hero-smartguide__text">
+      <h1 class="text-white h1">SMART GUIDE</h1>
+      <p class="h4 text-white">
+        Percorsi guidati per l’utilizzo dei flussi digitali
+      </p>
+       <p class="text-white">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, eos ex libero accusamus labore quasi vel incidunt reiciendis voluptas expedita aut quidem sint aliquam ut voluptatem praesentium sapiente. Laboriosam, omnis!
+      </p>
+    </div>
+
+    <div class="hero-smartguide__media col-4">
+      <img
+        src="img/login/Group 1010105760.png"
+        alt="Anteprima piattaforma EMSWE"
+        class="hero-smartguide__img"
+      />
+    </div>
+  </div>
+</section>
+    
+
+    <!-- SECTION 2 -->
+    
+    <div class="row mb-5">
+        <!-- CARD 1 -->
+ <div class="col-12 col-lg-6">
+          <div class="card h-100">
+            <div
+              class="card-header d-flex align-items-start justify-content-between gap-3 bg-transparent border-0"
+            >
+              <div class="d-flex flex-column-reverse justify-content-end gap-2">
+                <h3 class="card-title mb-0" id="accessibilita">
+                  Smart Guide in PDF
+                </h3>
+                <span class="text-muted">DOCUMENTAZIONE</span>
+              </div>
+
+             
+            </div>
+
+            <div class="card-body">
+              <p class="card-text">
+                Scarica la versione completa della guida in formato PDF.
+                Il documento raccoglie tutte le procedure illustrate nella
+                guida navigabile ed è pensato per la consultazione offline
+                o la condivisione.
+              </p>
+              <a
+                aria-labelledby="accessibilita"
+                href="accessibilità.html"
+                class="text-decoration-none"
+              >
+                Vai alla sezione
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+       
+
+        <!-- CARD 2 -->
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+          <div class="card h-100">
+            <div
+              class="card-header d-flex align-items-start justify-content-between gap-3 bg-transparent border-0"
+            >
+              <div class="d-flex flex-column-reverse justify-content-end gap-2">
+                <h3 class="card-title mb-0" id="design-system">
+                 Video pillole
+                </h3>
+                <span class="text-muted">MULTIMEDIA</span>
+              </div>
+
+             
+            </div>
+
+            <div class="card-body">
+              <p class="card-text">
+                Consulta la guida interattiva organizzata per sezioni e
+                passaggi operativi. Troverai istruzioni chiare, schermate
+                applicative e indicazioni utili per svolgere correttamente
+                le procedure nel sistema EMSWE NAVIS.
+              </p>
+              <a
+                aria-labelledby="design-system"
+                href="design-system.html"
+                class="text-decoration-none"
+              >
+                Vai alla sezione
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div></div>
+  </div>
+</main>
+
+<footer>
+    <div class="footer-dark">
+        <div class="container py-3">
+            <div class="row gx-variable align-items-center">
+                <div class="col-auto">
+                    <img src="./img/Logo_GuardiaCostiera_chiaro.svg" alt="" class="logo" />
+                </div>
+                <div class="col">
+                    <h1 class="h3">
+                        <span class="visually-hidden">Informazioni su </span>EMSWE
+
+                    </h1>
+                </div>
+                <div class="col-12">
+                    <hr />
+                    <ul class="list-inline d-inline-block me-3">
+                        <li class="list-inline-item">
+                            <a href="#" class="link-white external-link" target="_blank">Dichiarazione di accessibilità<span class="visually-hidden">: apre una nuova finestra</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="link-white">Cookie</a>
+                        </li>
+                    </ul>
+                    <span class="fw-semibold">Ente appartenenza</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
