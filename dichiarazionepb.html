@@ -394,7 +394,7 @@
               <a href="#">Supporto</a>
             </li>
             <li class="breadcrumb-item">
-              <a href="#">Manuali Smart Guide</a>
+              <a href="index.html">Manuali Smart Guide</a>
             </li>
            
             <li class="breadcrumb-item active" aria-current="page">
@@ -2658,5 +2658,18 @@
 
     <!-- Bootstrap JS -->
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+  document.querySelectorAll('.sidebar .nav-link').forEach(link => {
+    link.addEventListener('click', function () {
+      
+      // Rimuove active da tutti
+      document.querySelectorAll('.sidebar .nav-link')
+        .forEach(el => el.classList.remove('active'));
+
+      // Aggiunge active a quello cliccato
+      this.classList.add('active');
+    });
+  });
+</script>
   </body>
 </html>
