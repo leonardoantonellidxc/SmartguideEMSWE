@@ -16,42 +16,49 @@
 
   <body>
     <header aria-label="Funzioni di servizio">
-      <div class="header-top-light">
-        <div class="container py-2">
-          <div class="row gx-variable align-items-center">
-            <div class="col d-none d-md-block">
-              <a href="#" class="link-primary fw-semibold"
-                >Capitanerie di Porto</a
-              >
-            </div>
-            <div class="col col-md-auto text-end">
-              <div class="dropdown">
-                <button
-                  type="button"
-                  id="language"
-                  class="btn btn-sm link-primary dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <span class="visually-hidden">Lingue disponibili:</span>ITA
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="language">
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      ITA<span class="visually-hidden">: italiano</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#" lang="en">
-                      ENG<span class="visually-hidden">: english</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <div class="header-top-dark">
+  <div class="container py-2">
+    <div class="row gx-variable align-items-center">
+
+      <!-- SINISTRA -->
+      <div class="col d-none d-md-flex align-items-center">
+        <i class="bi bi-arrow-left me-2 text-white"></i>
+        <a href="#" class="link-white fw-semibold">
+          Torna in Supporto
+        </a>
+      </div>
+
+      <!-- DESTRA -->
+      <div class="col col-md-auto text-end">
+        <div class="dropdown">
+          <button
+            type="button"
+            id="language"
+            class="btn btn-sm link-white dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="visually-hidden">Lingue disponibili:</span>ITA
+          </button>
+
+          <ul class="dropdown-menu" aria-labelledby="language">
+            <li>
+              <a class="dropdown-item" href="#">
+                ITA<span class="visually-hidden">: italiano</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" lang="en">
+                ENG<span class="visually-hidden">: english</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
+
+    </div>
+  </div>
+</div>
 
       <div class="header-light">
         <div class="container py-3">
@@ -391,7 +398,7 @@
             <li class="breadcrumb-item">
               <a href="#">Supporto</a>
             </li>
-           
+
             <li class="breadcrumb-item active" aria-current="page">
               Manuali Smart Guide
             </li>
@@ -400,7 +407,118 @@
         <!-- SIDEBAR (DESKTOP) -->
         <div class="row">
           <div class="col-12 col-lg-3 my-3">
-            <nav
+
+<nav class="sidebar sidebar-expand-lg sidebar-light sidebar-active-end  " aria-label="Menu della sezione ...">
+  <div class="sidebar-header text-bg-primary ">
+    <h1 class="sidebar-title">
+      Menu<span class="visually-hidden"> della sezione ...</span>
+    </h1>
+    <button
+      type="button"
+      class="navbar-toggler collapsed d-block d-lg-none"
+      data-bs-toggle="collapse"
+      data-bs-target="#sidebar-menu"
+      aria-controls="sidebar-menu"
+      aria-expanded="false"
+    >
+      <span class="visually-hidden">Apri menu della sezione ...</span>
+      <i class="bi bi-list bi-lg"></i>
+    </button>
+  </div>
+
+  <div class="sidebar-collapse collapse" id="sidebar-menu">
+    <ul class="nav">
+      <li class="nav-item">
+        <a
+          href="#alt-submenu-2"
+          class="nav-link collapse-toggle-start"
+          data-bs-toggle="collapse"
+          aria-controls="alt-submenu-2"
+          aria-expanded="true"
+        >
+          Gestione e Consultazione
+        </a>
+
+        <div id="alt-submenu-2" class="collapse show">
+          <ul class="nav">
+            <!-- Gestione abbonamenti -->
+            <li class="nav-item">
+              <a
+                href="#alt-submenu-2-1"
+                class="nav-link collapse-toggle-start collapsed"
+                data-bs-toggle="collapse"
+                aria-controls="alt-submenu-2-1"
+                aria-expanded="false"
+              >
+                Gestione abbonamenti
+              </a>
+
+              <div id="alt-submenu-2-1" class="collapse">
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="dichiarazionepb.html">Dichiarazione di porto base</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Fascicoli per soste in abbonamento</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Gestione soste -->
+            <li class="nav-item">
+              <a
+                href="#alt-submenu-2-2"
+                class="nav-link collapse-toggle-start collapsed"
+                data-bs-toggle="collapse"
+                aria-controls="alt-submenu-2-2"
+                aria-expanded="false"
+              >
+                Gestione soste
+              </a>
+
+              <div id="alt-submenu-2-2" class="collapse">
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Soste</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Soste per unità da diporto</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a
+          href="#alt-submenu-1"
+          class="nav-link collapse-toggle-start collapsed"
+          data-bs-toggle="collapse"
+          aria-controls="alt-submenu-1"
+          aria-expanded="false"
+        >
+          Report
+        </a>
+
+        <div id="alt-submenu-1" class="collapse">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lista abbonamenti</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ricerca richieste</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+            <!-- <nav
               class="sidebar sidebar-expand-lg sidebar-dark"
               aria-label="Menu della sezione ..."
             >
@@ -460,21 +578,12 @@
                       >Report</a
                     >
                     <div id="ex-sidebar-dark-submenu-2" class="collapse">
-                      <ul class="nav">
-                        <li class="nav-item">
-                          <a class="nav-link" href="#"
-                            >Gestione e consultazione</a
-                          >
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Voce 2</a>
-                        </li>
-                      </ul>
+                    
                     </div>
                   </li>
                 </ul>
               </div>
-            </nav>
+            </nav>-->
           </div>
           <!-- Content -->
           <div class="col-12 col-lg-9 my-3">
@@ -482,9 +591,9 @@
             <section class="hero-smartguide w-100 mb-4">
               <div class="hero-smartguide__content">
                 <div class="hero-smartguide__text">
-                  <h1 class="text-white h1">SMART GUIDE</h1>
-                  <p class="h4 text-white">
-                    Percorsi guidati per l’utilizzo dei flussi digitali
+                  <h1 class="text-white h1">Smart guide</h1>
+                  <p class="h6 text-white mt-4">
+                    Guide pratiche e percorsi interattivi per utilizzare in modo semplice ed efficace i servizi digitali.
                   </p>
                 </div>
 
@@ -498,7 +607,7 @@
               </div>
             </section>
             <div class="row mt-0 mb-4 pt-0 gy-5">
-              <h3 class="my-0">Lorem ipsum</h3>
+              <h3 class="my-0">Le smart guide più consultate</h3>
               <div class="col-12 col-lg-4">
                 <div class="card h-100">
                   <div

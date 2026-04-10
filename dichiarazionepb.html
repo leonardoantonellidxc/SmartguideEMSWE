@@ -16,42 +16,49 @@
 
   <body>
     <header aria-label="Funzioni di servizio">
-      <div class="header-top-light">
-        <div class="container py-2">
-          <div class="row gx-variable align-items-center">
-            <div class="col d-none d-md-block">
-              <a href="#" class="link-primary fw-semibold"
-                >Capitanerie di Porto</a
-              >
-            </div>
-            <div class="col col-md-auto text-end">
-              <div class="dropdown">
-                <button
-                  type="button"
-                  id="language"
-                  class="btn btn-sm link-primary dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <span class="visually-hidden">Lingue disponibili:</span>ITA
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="language">
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      ITA<span class="visually-hidden">: italiano</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#" lang="en">
-                      ENG<span class="visually-hidden">: english</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <div class="header-top-dark">
+  <div class="container py-2">
+    <div class="row gx-variable align-items-center">
+
+      <!-- SINISTRA -->
+      <div class="col d-none d-md-flex align-items-center">
+        <i class="bi bi-arrow-left me-2 text-white"></i>
+        <a href="#" class="link-white fw-semibold">
+          Torna in Supporto
+        </a>
+      </div>
+
+      <!-- DESTRA -->
+      <div class="col col-md-auto text-end">
+        <div class="dropdown">
+          <button
+            type="button"
+            id="language"
+            class="btn btn-sm link-white dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="visually-hidden">Lingue disponibili:</span>ITA
+          </button>
+
+          <ul class="dropdown-menu" aria-labelledby="language">
+            <li>
+              <a class="dropdown-item" href="#">
+                ITA<span class="visually-hidden">: italiano</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" lang="en">
+                ENG<span class="visually-hidden">: english</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
+
+    </div>
+  </div>
+</div>
 
       <div class="header-light">
         <div class="container py-3">
@@ -77,7 +84,6 @@
                 class="logo"
               />
             </div>
-            
           </div>
         </div>
       </div>
