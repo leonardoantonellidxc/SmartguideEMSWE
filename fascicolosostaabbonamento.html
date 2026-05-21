@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+    <title>EMSWE Navis — Fascicoli per sosta in abbonamento</title>
+  </head>
+
+  <body>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold">Torna in Supporto</a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button type="button" id="language" class="btn btn-sm link-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false">
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Fascicoli per sosta in abbonamento</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <h2 class="sidebar-title">Indice<span class="visually-hidden"> della sezione</span></h2>
+                  <button type="button" class="navbar-toggler collapsed d-block d-lg-none" data-bs-toggle="collapse" data-bs-target="#sidebar-menu" aria-controls="sidebar-menu" aria-expanded="false">
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#creazione">01. Creazione fascicolo per soste in abbonamento</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#ricerca-consultazione">02. Ricerca e consultazione fascicolo per soste in abbonamento</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#modifica">03. Modifica fascicolo per soste in abbonamento</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#cancellazione">04. Cancellazione fascicolo per sosta in abbonamento</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#sosta-straordinaria">05. Creazione di una sosta straordinaria per adempimenti</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#chiusura-anticipata">06. Chiusura anticipata fascicolo per sosta in abbonamento</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#gestione-abbonamento">07. Gestione abbonamento</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <!-- /SIDEBAR -->
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between">
+                  <h4>Fascicoli per sosta in abbonamento</h4>
+                </div>
+                <p class="mb-0">
+                  Il portale delle Smart Guide è uno spazio digitale che raccoglie risorse pratiche e aggiornate in un unico ambiente intuitivo. Strumenti chiari e organizzati per organizzarti e trovare subito ciò che ti serve.
+                </p>
+              </div>
+              <div class="card border-0 my-4 shadow-sm rounded-3 overflow-hidden">
+                <div class="card-body p-3 bg-light">
+                  <div class="d-flex mb-3">
+                    <div class="me-3">
+                      <img src="/img/fascicoloabbonamento/Notebook.png" alt="" />
+                    </div>
+                    <h5 class="h5 fw-bold text-primary">ACCENNI NORMATIVI</h5>
+                  </div>
+                  <p class="mb-3">
+                    Il fascicolo per sosta in abbonamento è lo strumento con cui l'Armatore gestisce le soste periodiche di una nave nel porto base, in conformità con il regime di abbonamento previsto dal Decreto Ministeriale 27 aprile 2017.
+                  </p>
+                  <p class="mb-0">
+                    Il fascicolo raccoglie tutte le informazioni relative all'abbonamento — periodicità, date di validità, porti interessati — e consente di avviare, modificare, chiudere o gestire le soste in abbonamento associate a una Dichiarazione di Porto Base approvata.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <!-- /HERO -->
+
+
+            <!-- ═══════════════════════════════════════════
+                 SEZIONE 01 — CREAZIONE FASCICOLO
+            ═══════════════════════════════════════════ -->
+            <section id="creazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-content-center align-items-center">
+                    <div class=""><p class="h1 text-white me-4">01.</p></div>
+                    <div class="">
+                      <h6 class="text-white h1 mb-2">Creazione fascicolo per soste in abbonamento</h6>
+                      <p class="text-white mb-0">Panoramica sulla creazione e gestione dei fascicoli per sosta in abbonamento.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PUNTO DI ACCESSO -->
+                <div class="sg-section__body p-2">
+                  <h2 class="h1 ps-3">Punto di accesso — La voce di menù</h2>
+                </div>
+
+                <div class="sg-section__body p-2">
+                  <div class="card border-0 rounded-3 mb-4">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+                        <div class="col-12 col-lg-5">
+                          <p class="mb-3">Dalla dashboard è possibile <strong>accedere alle principali sezioni tramite le voci di menu</strong>.</p>
+                          <div class="card border-0 rounded-3 p-3 bg-white">
+                            <p class="fw-bold mb-2">Menu a tendina</p>
+                            <p class="mb-0">Cliccando sulla voce "<strong>Gestione e Consultazione</strong>" viene visualizzato un menu a tendina, da cui è possibile accedere ai "<strong>Fascicoli Soste in Abbonamento</strong>".</p>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-7">
+                          <div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CREAZIONE -->
+                <div class="sg-section__body p-2">
+                  <h2 class="h1 ps-3">Creazione fascicolo per soste in abbonamento</h2>
+                </div>
+
+                <div class="sg-section__body p-2">
+                  <div class="card border-0 rounded-3 mb-4">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+                        <div class="col-12 col-lg-5">
+                          <p class="mb-0">Dopo aver effettuato l'accesso alla pagina "<strong>Fascicoli Soste in Abbonamento</strong>", cliccare sul pulsante "<strong>Nuovo fascicolo</strong>" per avviare il flusso di creazione.</p>
+                        </div>
+                        <div class="col-12 col-lg-7">
+                          <div class="d-flex align-items-center gap-2 p-3 border rounded-3 bg-white mb-3">
+                            <i class="bi bi-plus-lg fs-5 text-primary flex-shrink-0"></i>
+                            <span class="fw-semibold">Nuovo Fascicolo</span>
+                          </div>
+                          <div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP DI CREAZIONE -->
+                  <div class="sg-dark-panel border rounded-3 p-3 p-lg-4 mb-4">
+                    <h3 class="h2 mb-2 text-info-emphasis titlepage">Step di creazione di un fascicolo per soste in abbonamento</h3>
+                    <p class="text-white mb-4">Per creare un nuovo Fascicolo, procedere seguendo i passaggi sottostanti:</p>
+
+                    <div class="row g-3 mb-4">
+                      <div class="col-12 col-md-6 col-xl-3">
+                        <div class="card h-100 border-0"><div class="card-body p-3 bg-light rounded-1"><div class="small text-uppercase text-secondary mb-2">STEP 1</div><h4 class="h6 mb-2">RICERCA E SELEZIONE NAVE</h4><p class="mb-0 small">Consente di ricercare e selezionare la nave e successivamente la Dichiarazione di Porto Base alla quale associare un nuovo fascicolo.</p></div></div>
+                      </div>
+                      <div class="col-12 col-md-6 col-xl-3">
+                        <div class="card bg-light h-100 border-0"><div class="card-body p-3"><div class="small text-uppercase text-secondary mb-2">STEP 2</div><h4 class="h6 mb-2">DATI ABBONAMENTO</h4><p class="mb-0 small">Consente di aggiungere i "Dati abbonamento": Periodicità, Data inizio abbonamento.</p></div></div>
+                      </div>
+                      <div class="col-12 col-md-6 col-xl-3">
+                        <div class="card bg-light h-100 border-0"><div class="card-body p-3"><div class="small text-uppercase text-secondary mb-2">STEP 3</div><h4 class="h6 mb-2">PORTI INTERESSATI <span class="fw-normal">(Facoltativo)</span></h4><p class="mb-0 small">Consente di aggiungere i porti interessati tramite selezione da menu a tendina.</p></div></div>
+                      </div>
+                      <div class="col-12 col-md-6 col-xl-3">
+                        <div class="card bg-light h-100 border-0"><div class="card-body p-3"><div class="small text-uppercase text-secondary mb-2">STEP 4</div><h4 class="h6 mb-2">RIEPILOGO</h4><p class="mb-0 small">Consente di visualizzare il riepilogo delle informazioni inserite negli step precedenti e procedere con il Salvataggio del fascicolo.</p></div></div>
+                      </div>
+                    </div>
+
+                    <!-- STEP 1 -->
+                    <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                      <div class="sg-step-section__head p-3 p-lg-4">
+                        <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                          <div class="d-flex align-items-center gap-3"><div class="sg-step-index">1</div><h4 class="h4 text-white mb-0">RICERCA E SELEZIONE NAVE</h4></div>
+                          <span class="badge text-bg-outline-light">STEP 1</span>
+                        </div>
+                      </div>
+                      <div class="card-body bg-light p-4">
+                        <!-- stepper -->
+                        <div class="card border-0 rounded-3 mb-4">
+                          <div class="card-body py-3 px-4">
+                            <div class="row g-0 align-items-center text-center">
+                              <div class="col"><div class="small text-uppercase fw-bold mb-2" style="font-size:.7rem; color:#123b63;">RICERCA E SELEZIONE NAVE</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#123b63;display:flex;align-items:center;justify-content:center;"><i class="bi bi-pencil text-white" style="font-size:.75rem;"></i></div></div></div>
+                              <div class="col-auto px-1"><div style="height:2px;width:40px;background:#cbd5e1;"></div></div>
+                              <div class="col"><div class="small text-uppercase mb-2" style="font-size:.7rem; color:#94a3b8;">DATI ABBONAMENTO</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#e2e8f0;"></div></div></div>
+                              <div class="col-auto px-1"><div style="height:2px;width:40px;background:#cbd5e1;"></div></div>
+                              <div class="col"><div class="small text-uppercase mb-2" style="font-size:.7rem; color:#94a3b8;">PORTI INTERESSATI</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#e2e8f0;"></div></div></div>
+                              <div class="col-auto px-1"><div style="height:2px;width:40px;background:#cbd5e1;"></div></div>
+                              <div class="col"><div class="small text-uppercase mb-2" style="font-size:.7rem; color:#94a3b8;">RIEPILOGO</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#e2e8f0;"></div></div></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 overflow-hidden w-100"><div class="card-body bg-white p-4 d-flex flex-column"><div class="d-flex gap-3 mb-3"><div class="sg-step-badge flex-shrink-0">1</div><div><h6 class="fw-bold mb-2">RICERCA DELLA NAVE E DETTAGLIO</h6><p class="mb-0 small">Cercare la nave usando uno dei criteri disponibili e cliccare "<strong>Avvia ricerca</strong>".</p></div></div><div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div></div></div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 overflow-hidden w-100"><div class="card-body bg-white p-4 d-flex flex-column"><div class="d-flex gap-3 mb-3"><div class="sg-step-badge flex-shrink-0">2</div><div><h6 class="fw-bold mb-2">SELEZIONE NAVE</h6><p class="mb-0 small">Il sistema mostra l'elenco dei risultati della ricerca; selezionare una delle navi presenti. È possibile entrare nel dettaglio dell'anagrafica nave cliccando sull'icona dell'occhio.</p></div></div><div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div></div></div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 overflow-hidden w-100"><div class="card-body bg-white p-4 d-flex flex-column"><div class="d-flex gap-3 mb-3"><div class="sg-step-badge flex-shrink-0">3</div><div><h6 class="fw-bold mb-2">DICHIARAZIONE ASSOCIATA E STEP SUCCESSIVO</h6><p class="mb-0 small">Dopo aver selezionato una nave, il sistema mostrerà i dati della Dichiarazione di Porto Base associata; clicca "<strong>Vai avanti</strong>" per proseguire.</p></div></div><div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div></div></div>
+                          </div>
+                        </div>
+                        <div class="sg-note mt-4 p-3 rounded-3 d-flex align-items-start gap-2">
+                          <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+                          <p class="mb-0">Nel caso in cui la nave presenti più Dichiarazioni di Porto Base, l'utente per procedere deve selezionarne una.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- STEP 2 -->
+                    <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                      <div class="sg-step-section__head p-3 p-lg-4">
+                        <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                          <div class="d-flex align-items-center gap-3"><div class="sg-step-index">2</div><h4 class="h4 text-white mb-0">DATI ABBONAMENTO</h4></div>
+                          <span class="badge text-bg-outline-light">STEP 2</span>
+                        </div>
+                      </div>
+                      <div class="card-body bg-light p-4">
+                        <!-- stepper -->
+                        <div class="card border-0 rounded-3 mb-4">
+                          <div class="card-body py-3 px-4">
+                            <div class="row g-0 align-items-center text-center">
+                              <div class="col"><div class="small text-uppercase fw-semibold mb-2" style="font-size:.7rem; color:#64748b;">RICERCA E SELEZIONE NAVE</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#123b63;display:flex;align-items:center;justify-content:center;"><i class="bi bi-check text-white" style="font-size:.85rem;"></i></div></div></div>
+                              <div class="col-auto px-1"><div style="height:2px;width:40px;background:#123b63;"></div></div>
+                              <div class="col"><div class="small text-uppercase fw-bold mb-2" style="font-size:.7rem; color:#123b63;">DATI ABBONAMENTO</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#123b63;display:flex;align-items:center;justify-content:center;"><i class="bi bi-pencil text-white" style="font-size:.75rem;"></i></div></div></div>
+                              <div class="col-auto px-1"><div style="height:2px;width:40px;background:#cbd5e1;"></div></div>
+                              <div class="col"><div class="small text-uppercase mb-2" style="font-size:.7rem; color:#94a3b8;">PORTI INTERESSATI</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#e2e8f0;"></div></div></div>
+                              <div class="col-auto px-1"><div style="height:2px;width:40px;background:#cbd5e1;"></div></div>
+                              <div class="col"><div class="small text-uppercase mb-2" style="font-size:.7rem; color:#94a3b8;">RIEPILOGO</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#e2e8f0;"></div></div></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-5">
+                            <p class="mb-3">Inserire i dati dell'abbonamento: <strong>periodicità</strong>, <strong>Data inizio abbonamento</strong>. La <strong>Data fine abbonamento viene calcolata automaticamente</strong> dal sistema in relazione alla periodicità e alla data inizio abbonamento (non sarà modificabile).</p>
+                            <p class="mb-0">Una volta inseriti i dati richiesti, cliccare il tasto "<strong>Vai avanti</strong>" per andare allo step successivo.</p>
+                          </div>
+                          <div class="col-12 col-lg-7"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div>
+                        </div>
+                        <div class="sg-note mt-4 p-3 rounded-3 d-flex align-items-start gap-2">
+                          <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+                          <p class="mb-0">Il sistema mostra un alert informativo per segnalare che le date di inizio e fine abbonamento inserite non rientrano nel periodo di validità della Dichiarazione di Porto Base.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- STEP 3 -->
+                    <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                      <div class="sg-step-section__head p-3 p-lg-4">
+                        <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                          <div class="d-flex align-items-center gap-3"><div class="sg-step-index">3</div><h4 class="h4 text-white mb-0">PORTI INTERESSATI <span class="fw-normal fs-6">(Facoltativo)</span></h4></div>
+                          <span class="badge text-bg-outline-light">STEP 3</span>
+                        </div>
+                      </div>
+                      <div class="card-body bg-light p-4">
+                        <!-- stepper -->
+                        <div class="card border-0 rounded-3 mb-4">
+                          <div class="card-body py-3 px-4">
+                            <div class="row g-0 align-items-center text-center">
+                              <div class="col"><div class="small text-uppercase fw-semibold mb-2" style="font-size:.7rem; color:#64748b;">RICERCA E SELEZIONE NAVE</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#123b63;display:flex;align-items:center;justify-content:center;"><i class="bi bi-check text-white" style="font-size:.85rem;"></i></div></div></div>
+                              <div class="col-auto px-1"><div style="height:2px;width:40px;background:#123b63;"></div></div>
+                              <div class="col"><div class="small text-uppercase fw-semibold mb-2" style="font-size:.7rem; color:#64748b;">DATI ABBONAMENTO</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#123b63;display:flex;align-items:center;justify-content:center;"><i class="bi bi-check text-white" style="font-size:.85rem;"></i></div></div></div>
+                              <div class="col-auto px-1"><div style="height:2px;width:40px;background:#123b63;"></div></div>
+                              <div class="col"><div class="small text-uppercase fw-bold mb-2" style="font-size:.7rem; color:#123b63;">PORTI INTERESSATI</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#123b63;display:flex;align-items:center;justify-content:center;"><i class="bi bi-pencil text-white" style="font-size:.75rem;"></i></div></div></div>
+                              <div class="col-auto px-1"><div style="height:2px;width:40px;background:#cbd5e1;"></div></div>
+                              <div class="col"><div class="small text-uppercase mb-2" style="font-size:.7rem; color:#94a3b8;">RIEPILOGO</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#e2e8f0;"></div></div></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 overflow-hidden w-100"><div class="card-body bg-white p-4 d-flex flex-column"><div class="d-flex gap-3 mb-3"><div class="sg-step-badge flex-shrink-0">1</div><div><h6 class="fw-bold mb-2">SELEZIONE DEL PORTO</h6><p class="mb-0 small">Digitare almeno un carattere per cercare il porto di interesse. Successivamente selezionare il porto attraverso il menu a tendina.</p></div></div><div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div></div></div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 overflow-hidden w-100"><div class="card-body bg-white p-4 d-flex flex-column"><div class="d-flex gap-3 mb-3"><div class="sg-step-badge flex-shrink-0">2</div><div><h6 class="fw-bold mb-2">AGGIUNTA O ELIMINAZIONE DEL PORTO</h6><p class="mb-0 small">Una volta selezionato, cliccare sul pulsante "<strong>Aggiungi in Elenco</strong>". Successivamente è possibile selezionare uno o più porti presenti nell'"<strong>Elenco risultati Porti interessati</strong>" ed eliminarli cliccando il tasto "<strong>Elimina</strong>".</p></div></div><div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div></div></div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 overflow-hidden w-100"><div class="card-body bg-white p-4 d-flex flex-column"><div class="d-flex gap-3 mb-3"><div class="sg-step-badge flex-shrink-0">3</div><div><h6 class="fw-bold mb-2">REVISIONE E CONFERMA</h6><p class="mb-0 small">Verificato il corretto inserimento dei porti, selezionare il pulsante "<strong>Vai avanti</strong>" per procedere allo step successivo.</p></div></div><div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div></div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- STEP 4 -->
+                    <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                      <div class="sg-step-section__head p-3 p-lg-4">
+                        <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                          <div class="d-flex align-items-center gap-3"><div class="sg-step-index">4</div><h4 class="h4 text-white mb-0">RIEPILOGO</h4></div>
+                          <span class="badge text-bg-outline-light">STEP 4</span>
+                        </div>
+                      </div>
+                      <div class="card-body bg-light p-4">
+                        <!-- stepper -->
+                        <div class="card border-0 rounded-3 mb-4">
+                          <div class="card-body py-3 px-4">
+                            <div class="row g-0 align-items-center text-center">
+                              <div class="col"><div class="small text-uppercase fw-semibold mb-2" style="font-size:.7rem; color:#64748b;">RICERCA E SELEZIONE NAVE</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#123b63;display:flex;align-items:center;justify-content:center;"><i class="bi bi-check text-white" style="font-size:.85rem;"></i></div></div></div>
+                              <div class="col-auto px-1"><div style="height:2px;width:40px;background:#123b63;"></div></div>
+                              <div class="col"><div class="small text-uppercase fw-semibold mb-2" style="font-size:.7rem; color:#64748b;">DATI ABBONAMENTO</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#123b63;display:flex;align-items:center;justify-content:center;"><i class="bi bi-check text-white" style="font-size:.85rem;"></i></div></div></div>
+                              <div class="col-auto px-1"><div style="height:2px;width:40px;background:#123b63;"></div></div>
+                              <div class="col"><div class="small text-uppercase fw-semibold mb-2" style="font-size:.7rem; color:#64748b;">PORTI INTERESSATI</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#123b63;display:flex;align-items:center;justify-content:center;"><i class="bi bi-check text-white" style="font-size:.85rem;"></i></div></div></div>
+                              <div class="col-auto px-1"><div style="height:2px;width:40px;background:#123b63;"></div></div>
+                              <div class="col"><div class="small text-uppercase fw-bold mb-2" style="font-size:.7rem; color:#123b63;">RIEPILOGO</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#123b63;display:flex;align-items:center;justify-content:center;"><i class="bi bi-pencil text-white" style="font-size:.75rem;"></i></div></div></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 overflow-hidden w-100"><div class="card-body bg-white p-4 d-flex flex-column"><div class="d-flex gap-3 mb-3"><div class="sg-step-badge flex-shrink-0">1</div><div><h6 class="fw-bold mb-2">DETTAGLIO E SALVATAGGIO</h6><p class="mb-0 small">Nell'ultimo passaggio di riepilogo è possibile consultare tutte le informazioni inserite e salvare il fascicolo attraverso l'apposito pulsante.</p></div></div><div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div></div></div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 overflow-hidden w-100"><div class="card-body bg-white p-4 d-flex flex-column"><div class="d-flex gap-3 mb-3"><div class="sg-step-badge flex-shrink-0">2</div><div><h6 class="fw-bold mb-2">CONFERMA SALVATAGGIO E POSSIBILI ERRORI</h6><p class="mb-0 small">Il sistema mostra una finestra di conferma per il salvataggio del fascicolo; cliccare su "<strong>Salva Fascicolo</strong>" per continuare. Se esiste già un fascicolo per la stessa dichiarazione, viene mostrato un messaggio informativo e non sarà possibile proseguire con la creazione.</p></div></div><div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div></div></div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 overflow-hidden w-100"><div class="card-body bg-white p-4 d-flex flex-column"><div class="d-flex gap-3 mb-3"><div class="sg-step-badge flex-shrink-0">3</div><div><h6 class="fw-bold mb-2">AZIONI DISPONIBILI DOPO CREAZIONE FASCICOLO</h6><p class="mb-0 small">Dopo avere creato il fascicolo, le azioni disponibili saranno "<strong>Inizia abbonamento</strong>", "<strong>Modifica fascicolo</strong>", "<strong>Cancella fascicolo</strong>" e "<strong>Creare sosta straordinaria</strong>".</p></div></div><div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div></div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div><!-- /sg-dark-panel -->
+
+                  <!-- ULTERIORI MODALITÀ DI RICERCA -->
+                  <div class="sg-section__body p-2 mt-2">
+                    <h2 class="h1 ps-3">Ulteriori modalità di ricerca</h2>
+                  </div>
+
+                  <div class="card border-0 rounded-3 mb-4">
+                    <div class="card-body bg-light p-4">
+                      <!-- stepper solo step 1 -->
+                      <div class="card border-0 rounded-3 mb-4">
+                        <div class="card-body py-3 px-4">
+                          <div class="row g-0 align-items-center text-center">
+                            <div class="col"><div class="small text-uppercase fw-bold mb-2" style="font-size:.7rem; color:#123b63;">RICERCA E SELEZIONE NAVE</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#123b63;display:flex;align-items:center;justify-content:center;"><i class="bi bi-pencil text-white" style="font-size:.75rem;"></i></div></div></div>
+                            <div class="col-auto px-1"><div style="height:2px;width:40px;background:#cbd5e1;"></div></div>
+                            <div class="col"><div class="small text-uppercase mb-2" style="font-size:.7rem; color:#94a3b8;">DATI ABBONAMENTO</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#e2e8f0;"></div></div></div>
+                            <div class="col-auto px-1"><div style="height:2px;width:40px;background:#cbd5e1;"></div></div>
+                            <div class="col"><div class="small text-uppercase mb-2" style="font-size:.7rem; color:#94a3b8;">PORTI INTERESSATI</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#e2e8f0;"></div></div></div>
+                            <div class="col-auto px-1"><div style="height:2px;width:40px;background:#cbd5e1;"></div></div>
+                            <div class="col"><div class="small text-uppercase mb-2" style="font-size:.7rem; color:#94a3b8;">RIEPILOGO</div><div class="d-flex align-items-center justify-content-center"><div style="width:28px;height:28px;border-radius:50%;background:#e2e8f0;"></div></div></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row g-4">
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border rounded-3 w-100"><div class="card-body p-4 d-flex flex-column"><h5 class="h6 text-uppercase fw-bold mb-3">NAVE ASSOCIATA A UNA DICHIARAZIONE NON APPROVATA</h5><p class="mb-4 small">Se la nave ha una dichiarazione di porto base non ancora approvata, è possibile proseguire con la creazione del fascicolo e con l'inserimento del planning, ma non della prima sosta.</p><div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div></div></div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border rounded-3 w-100"><div class="card-body p-4 d-flex flex-column"><h5 class="h6 text-uppercase fw-bold mb-3">NESSUNA DICHIARAZIONE TROVATA PER LA NAVE SELEZIONATA</h5><p class="mb-4 small">Nel caso non sia stata trovata nessuna dichiarazione di porto base per la nave selezionata, il sistema lo comunicherà attraverso un alert informativo e non consentirà di procedere con la creazione del fascicolo.</p><div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div></div></div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border rounded-3 w-100"><div class="card-body p-4 d-flex flex-column"><h5 class="h6 text-uppercase fw-bold mb-3">NAVE BANNATA</h5><p class="mb-4 small">Nel caso in cui si selezioni una nave bannata, il sistema ne dà evidenza tramite una <strong>finestra di attenzione</strong> richiedendo l'inserimento obbligatorio di <strong>una motivazione</strong> per poter proseguire.</p><div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div><!-- /sg-section__body -->
+              </div><!-- /sg-section__frame -->
+            </section>
+            <!-- /SEZIONE 01 -->
+
+            <!-- Le sezioni 02-07 verranno aggiunte qui -->
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto">
+              <img src="./img/logo_footer.svg" alt="" class="logo" />
+            </div>
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank">Dichiarazione di accessibilità<span class="visually-hidden">: apre una nuova finestra</span></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold">Ente appartenenza</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.querySelectorAll('.sidebar .nav-link').forEach(link => {
+        link.addEventListener('click', function () {
+          document.querySelectorAll('.sidebar .nav-link').forEach(el => el.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>

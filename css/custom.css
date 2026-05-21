@@ -580,3 +580,11 @@
     max-width: 720px;
   }
 }
+/* Banda avviso obbligatorio — da aggiungere in custom.css */
+.sg-alert-danger {
+  background: #fff5f5;
+  border-left: 4px solid #dc3545;
+  border-top: 1px solid #f5c2c7;
+  border-bottom: 1px solid #f5c2c7;
+  border-right: 1px solid #f5c2c7;
+}
