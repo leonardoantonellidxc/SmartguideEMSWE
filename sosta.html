@@ -1,0 +1,940 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap icons -->
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <!-- CSS del tema -->
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <!-- CSS del tema -->
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis</title>
+
+    <style>
+    .col-12.col-lg-9 img {
+      cursor: zoom-in;
+      transition: opacity .2s;
+    }
+    .col-12.col-lg-9 img:hover {
+      opacity: .85;
+    }
+  </style>
+
+  </head>
+
+  <body>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <!-- SINISTRA -->
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+
+            <!-- DESTRA -->
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      ITA<span class="visually-hidden">: italiano</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" lang="en">
+                      ENG<span class="visually-hidden">: english</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+
+            <div class="col-auto">
+              <img
+                src="img/logo_prova1.svg"
+                alt="Logo Capitanerie di Porto"
+                class="logo"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Supporto</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="index.html">Manuali Smart Guide</a>
+            </li>
+
+            <li class="breadcrumb-item active" aria-current="page">
+              Dichiarazione di Porto Base
+            </li>
+          </ol>
+        </nav>
+        <!-- SIDEBAR (DESKTOP) -->
+        <div class="row">
+        <div class="col-12 col-lg-3 my-3">
+  <div class="sidebar-sticky-wrapper sticky-top">
+    <nav
+      class="sidebar sidebar-expand-lg sidebar-dark sticky-top"
+      aria-label="Menu della sezione"
+    >
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">
+          Indice<span class="visually-hidden"> della sezione</span>
+        </h2>
+        <button
+          type="button"
+          class="navbar-toggler collapsed d-block d-lg-none"
+          data-bs-toggle="collapse"
+          data-bs-target="#sidebar-menu"
+          aria-controls="sidebar-menu"
+          aria-expanded="false"
+        >
+          <span class="visually-hidden">Apri menu della sezione</span>
+          <i class="bi bi-list bi-lg"></i>
+        </button>
+      </div>
+      <div class="sidebar-collapse collapse" id="sidebar-menu">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#creazione">
+              01. Creazione sosta
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ricerca-consultazione">
+              02. Ricerca e consultazione sosta
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#modifica">
+              03. Modifica sosta
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cancellazione">
+              04. Cancellazione sosta
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+          <!-- Content -->
+          <div class="col-12 col-lg-9 my-3">
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between">
+                  <h4>Soste</h4>
+                </div>
+
+                <p class="mb-0">
+                  Il portale delle Smart Guide è uno spazio digitale che
+                  raccoglie risorse pratiche e aggiornate in un unico ambiente
+                  intuitivo. Strumenti chiari e organizzati per organizzarti e
+                  trovare subito ciò che ti serve.
+                </p>
+              </div>
+
+             
+            </section>
+
+            <!-- SEZIONE 01 -->
+           <!-- ============================================================
+     SEZIONE 01 — CREAZIONE SOSTA
+     Pagine: 5 (intro) · 6 (punti accesso) · 7 (passaggi) · 8 (step overview)
+             9 (step 1 dati generali) · 10 (step 2 info aggiuntive)
+             11 (focus inserimento) · 12 (step 3 riepilogo)
+     ============================================================ -->
+<section id="creazione" class="mb-6">
+  <div class="sg-section__frame rounded-3 overflow-hidden">
+
+    <!-- HEAD -->
+    <div class="sg-section__head p-2 p-lg-4">
+      <div class="d-flex align-items-center gap-3">
+        <p class="h1 text-white mb-0 me-2">01.</p>
+        <div>
+          <h6 class="text-white h1 mb-2">Creazione sosta</h6>
+          <p class="text-white mb-0">
+            Panoramica sulla creazione e gestione della Sosta, dall'inserimento
+            dei dati al salvataggio e invio della stessa.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 6 — PUNTI DI ACCESSO ──────────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <h2 class="h1 mb-2">Punti di accesso alla creazione</h2>
+      <p class="mb-4">La creazione di una nuova sosta avviene:</p>
+
+      <div class="card border-0 rounded-3">
+        <div class="card-body bg-light p-4">
+          <div class="row g-4 align-items-center">
+
+            <div class="col-12 col-lg-5 d-flex flex-column gap-4">
+
+              <!-- 1 Menu a tendina -->
+              <div class="d-flex gap-3">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div class="card border-0 rounded-3 p-3 w-100 bg-primary">
+                  <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                  <p class="text-white mb-0">
+                    Cliccando sulla voce <strong>"Gestione e consultazione"</strong>
+                    viene visualizzato un menu a tendina, da cui è possibile accedere
+                    alla voce <a href="#" class="text-warning">"Soste"</a>, al cui
+                    interno è presente il pulsante di creazione.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 2 Dashboard -->
+              <div class="d-flex gap-3">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <p class="mb-3">
+                    Dalla dashboard è possibile creare nuove soste cliccando
+                    <strong>"Crea nuova sosta"</strong>.
+                  </p>
+                  <span class="sg-action-btn rounded-3">
+                    <i class="bi bi-plus-lg"></i> Crea nuova sosta
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-12 col-lg-7">
+              <div class="sg-placeholder sg-placeholder--wide">
+                <span>Placeholder immagine</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 7 — PASSAGGI PER CREARE UNA NUOVA SOSTA ─────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3">
+        <div>
+          <p class="fw-semibold text-secondary mb-1">Creazione sosta</p>
+          <h2 class="h1 mb-2">Passaggi per creare una nuova sosta</h2>
+          <p class="mb-0">
+            Dopo aver cliccato il pulsante "Nuova sosta", seguire tutti i passaggi
+            indicati a sistema e inserire le informazioni necessarie per cominciare
+            l'iter di creazione di una nuova sosta.
+          </p>
+        </div>
+        <span class="sg-action-btn rounded-3 flex-shrink-0">
+          <i class="bi bi-plus-lg"></i> Nuova sosta
+        </span>
+      </div>
+
+      <div class="d-flex justify-content-end mb-4">
+        <span class="sg-rimando">
+          <i class="bi bi-eye text-primary"></i>
+          Visualizza il dettaglio di
+          <a href="#" class="link-primary fw-semibold ms-1">"Ulteriori modalità di ricerca" a pagina 13</a>
+        </span>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Ricerca tramite uno dei parametri visualizzati</h5>
+                  <p class="mb-0">
+                    Ricercare la nave tramite uno dei campi visualizzati a sistema:
+                    Nome Nave, IMO, MMSI o Call Sign. In questo caso selezionare il
+                    <strong>"Nome Nave"</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Ricerca della nave</h5>
+                  <p class="mb-0">
+                    Selezionare una dei parametri mostrati come <strong>"Nome Nave"</strong>.
+                    Successivamente avvia la ricerca cliccando <strong>"Avvia Ricerca"</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">3</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Selezione nave e conferma</h5>
+                  <p class="mb-0">
+                    I risultati vengono visualizzati tramite una vista tabellare,
+                    selezionare una nave e cliccare <strong>"Vai avanti"</strong>
+                    per cominciare la creazione.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 8 — STEP OVERVIEW ────────────────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <p class="fw-semibold text-secondary mb-1">Creazione sosta</p>
+      <h2 class="h1 mb-3">Step di creazione di una nuova Sosta</h2>
+      <p class="mb-4">Per creare una nuova sosta, procedere seguendo i passaggi sottostanti:</p>
+
+      <div class="row g-4">
+
+        <!-- STEP 1 -->
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="text-center mb-3">
+                <span class="sg-step-tag">STEP 1</span>
+              </div>
+              <h5 class="fw-bold text-uppercase text-center mb-3">Dati generali</h5>
+              <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                <div class="sg-stepper__dot sg-stepper__dot--active">
+                  <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                </div>
+                <div class="sg-stepper__line"></div>
+                <div class="sg-stepper__dot"></div>
+                <div class="sg-stepper__line"></div>
+                <div class="sg-stepper__dot"></div>
+              </div>
+              <p class="mb-3">
+                Consente di inserire le informazioni generali, quali: Porto di sosta
+                (con ETA e ETD), Porto Precedente (con ETD) e Porto successivo (con ETA).
+              </p>
+              <div class="mt-auto">
+                <div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="text-center mb-3">
+                <span class="sg-step-tag">STEP 2</span>
+              </div>
+              <h5 class="fw-bold text-uppercase text-center mb-3">Informazioni aggiuntive</h5>
+              <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                <div class="sg-stepper__dot sg-stepper__dot--done">
+                  <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                </div>
+                <div class="sg-stepper__line sg-stepper__line--done"></div>
+                <div class="sg-stepper__dot sg-stepper__dot--active">
+                  <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                </div>
+                <div class="sg-stepper__line"></div>
+                <div class="sg-stepper__dot"></div>
+              </div>
+              <p class="mb-3">
+                Consente di inserire informazioni aggiuntive utili a definire meglio
+                la sosta, quali: Servizi Tecnico Nautici in Arrivo, Bunkeraggio,
+                Trasporto Passeggeri, Trasporto Merci e Operazioni di Allibo.
+              </p>
+              <div class="mt-auto">
+                <div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="text-center mb-3">
+                <span class="sg-step-tag">STEP 3</span>
+              </div>
+              <h5 class="fw-bold text-uppercase text-center mb-3">Riepilogo sosta</h5>
+              <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                <div class="sg-stepper__dot sg-stepper__dot--done">
+                  <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                </div>
+                <div class="sg-stepper__line sg-stepper__line--done"></div>
+                <div class="sg-stepper__dot sg-stepper__dot--done">
+                  <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                </div>
+                <div class="sg-stepper__line sg-stepper__line--done"></div>
+                <div class="sg-stepper__dot sg-stepper__dot--active">
+                  <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                </div>
+              </div>
+              <p class="mb-3">
+                Consente di visualizzare il riepilogo delle informazioni inserite
+                negli step precedenti e procedere al salvataggio della sosta.
+              </p>
+              <div class="mt-auto">
+                <div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── PAG. 9 — STEP 1: DATI GENERALI ───────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="card border-0 rounded-3 overflow-hidden">
+
+        <div class="sg-step-section__head p-3 p-lg-4">
+          <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+            <div class="d-flex align-items-center gap-3">
+              <div class="sg-step-index">1</div>
+              <div>
+                <p class="text-white mb-1 opacity-75 small">Creazione di una nuova Sosta</p>
+                <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Dati generali</h4>
+              </div>
+            </div>
+            <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 1</span>
+          </div>
+        </div>
+
+        <!-- stepper -->
+        <div class="card-body bg-white py-3 px-4">
+          <div class="row g-0 align-items-end text-center">
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--active mb-2">DATI GENERALI</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--active">
+                  <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label mb-2">INFORMAZIONI AGGIUNTIVE</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot"></div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label mb-2">RIEPILOGO SOSTA</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body bg-light p-4">
+          <div class="row g-4">
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">1</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Informazioni generali</h5>
+                  </div>
+                  <p class="mb-3">In questo step è possibile inserire le informazioni generali relative alla sosta, ai porti ed alle date di partenza e arrivo.</p>
+                  <div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">2</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Inserimento dati e possibili errori</h5>
+                  </div>
+                  <p class="mb-3">Inserire Porto di sosta (ETA/ETD), Porto Precedente (ETD) e Porto successivo (ETA). Se i dati non sono corretti il sistema avvisa e <strong>non consente di procedere</strong>.</p>
+                  <div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">3</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Revisione e conferma</h5>
+                  </div>
+                  <p class="mb-3">Verificato il corretto inserimento, selezionare <strong>"Vai avanti"</strong> per procedere allo step successivo.</p>
+                  <div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sg-note p-3 rounded-3 mt-4 d-flex align-items-start gap-2">
+            <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+            <p class="mb-0">In caso di incongruenze tra le date di arrivo e partenze tra i vari porti, il sistema informerà l'utente tramite messaggi di errore posizionati sotto i campi compilati in modo errato e tramite alert informativi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 10 — STEP 2: INFORMAZIONI AGGIUNTIVE ──────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="card border-0 rounded-3 overflow-hidden">
+
+        <div class="sg-step-section__head p-3 p-lg-4">
+          <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+            <div class="d-flex align-items-center gap-3">
+              <div class="sg-step-index">2</div>
+              <div>
+                <p class="text-white mb-1 opacity-75 small">Creazione di una nuova Sosta</p>
+                <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Informazioni aggiuntive</h4>
+              </div>
+            </div>
+            <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 2</span>
+          </div>
+        </div>
+
+        <div class="card-body bg-white py-3 px-4">
+          <div class="row g-0 align-items-end text-center">
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--done mb-2">DATI GENERALI</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--done">
+                  <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--active mb-2">INFORMAZIONI AGGIUNTIVE</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--active">
+                  <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label mb-2">RIEPILOGO SOSTA</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body bg-light p-4">
+          <div class="d-flex justify-content-center mb-4">
+            <span class="sg-rimando">
+              <i class="bi bi-eye text-primary"></i>
+              Focus su <a href="#" class="link-primary fw-semibold ms-1">Inserimento delle informazioni aggiuntive a pagina 11</a>
+            </span>
+          </div>
+          <div class="row g-4">
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">1</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Visualizzazione delle informazioni aggiuntive</h5>
+                  </div>
+                  <p class="mb-3">Il sistema dà la possibilità di inserire informazioni aggiuntive utili a definire meglio la sosta e a pre-popolare l'elenco degli Obblighi di Dichiarazione.</p>
+                  <div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">2</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Aggiunta e modifica delle informazioni</h5>
+                  </div>
+                  <p class="mb-3">L'utente può aggiungere e successivamente modificare: Servizi Tecnico Nautici in Arrivo, Bunkeraggio, Trasporto Passeggeri, Trasporto Merci e Operazioni di Allibo.</p>
+                  <div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">3</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Verifica e step successivo</h5>
+                  </div>
+                  <p class="mb-3">Dopo aver selezionato le informazioni aggiuntive, cliccare su <strong>"Vai avanti"</strong> per proseguire allo step finale.</p>
+                  <div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 11 — FOCUS INSERIMENTO ──────────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="card border-0 rounded-3 overflow-hidden">
+
+        <div class="sg-step-section__head p-3 p-lg-4">
+          <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+            <div class="d-flex align-items-center gap-3">
+              <div class="sg-step-index">2</div>
+              <div>
+                <p class="text-white mb-1 opacity-75 small">Creazione di una nuova Sosta</p>
+                <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Inserimento informazioni aggiuntive</h4>
+              </div>
+            </div>
+            <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 2</span>
+          </div>
+        </div>
+
+        <div class="card-body bg-light p-4">
+
+          <!-- SERVIZI TECNICO NAUTICI -->
+          <div class="sg-focus-block mb-4">
+            <h5 class="fw-bold text-uppercase mb-3">Servizi Tecnico Nautici</h5>
+            <div class="row g-3">
+              <div class="col-12 col-lg-4 d-flex">
+                <div class="card border-0 rounded-3 w-100">
+                  <div class="card-body p-3 d-flex flex-column">
+                    <div class="d-flex gap-2 mb-2">
+                      <div class="sg-step-badge flex-shrink-0">1</div>
+                      <p class="mb-0 small fw-semibold">Dopo aver selezionato "Sì", scegliere una o più <strong>tipologie di servizio</strong>.</p>
+                    </div>
+                    <div class="mt-auto pt-2"><div class="sg-placeholder sg-placeholder--card"><span>Placeholder immagine</span></div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 d-flex">
+                <div class="card border-0 rounded-3 w-100">
+                  <div class="card-body p-3 d-flex flex-column">
+                    <div class="d-flex gap-2 mb-2">
+                      <div class="sg-step-badge flex-shrink-0">2</div>
+                      <p class="mb-0 small fw-semibold">Dopo aver selezionato la tipologia cliccare <strong>"Aggiungi in elenco"</strong>.</p>
+                    </div>
+                    <div class="mt-auto pt-2"><div class="sg-placeholder sg-placeholder--card"><span>Placeholder immagine</span></div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 d-flex">
+                <div class="card border-0 rounded-3 w-100">
+                  <div class="card-body p-3 d-flex flex-column">
+                    <div class="d-flex gap-2 mb-2">
+                      <div class="sg-step-badge flex-shrink-0">3</div>
+                      <p class="mb-0 small fw-semibold">La tipologia aggiunta può essere eliminata tramite l'<strong>"icona del cestino"</strong>.</p>
+                    </div>
+                    <div class="mt-auto pt-2"><div class="sg-placeholder sg-placeholder--card"><span>Placeholder immagine</span></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BUNKERAGGIO -->
+          <div class="sg-focus-block">
+            <h5 class="fw-bold text-uppercase mb-3">Bunkeraggio</h5>
+            <div class="row g-3">
+              <div class="col-12 col-lg-4 d-flex">
+                <div class="card border-0 rounded-3 w-100">
+                  <div class="card-body p-3 d-flex flex-column">
+                    <div class="d-flex gap-2 mb-2">
+                      <div class="sg-step-badge flex-shrink-0">1</div>
+                      <p class="mb-0 small fw-semibold">Selezionare una o più tipologie e aziende, quindi cliccare <strong>"Aggiungi in elenco"</strong>.</p>
+                    </div>
+                    <div class="mt-auto pt-2"><div class="sg-placeholder sg-placeholder--card"><span>Placeholder immagine</span></div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 d-flex">
+                <div class="card border-0 rounded-3 w-100">
+                  <div class="card-body p-3 d-flex flex-column">
+                    <div class="d-flex gap-2 mb-2">
+                      <div class="sg-step-badge flex-shrink-0">2</div>
+                      <p class="mb-0 small fw-semibold">È possibile modificare o eliminare tramite gli appositi pulsanti.</p>
+                    </div>
+                    <div class="mt-auto pt-2"><div class="sg-placeholder sg-placeholder--card"><span>Placeholder immagine</span></div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 d-flex">
+                <div class="card border-0 rounded-3 w-100">
+                  <div class="card-body p-3 d-flex flex-column">
+                    <div class="d-flex gap-2 mb-2">
+                      <div class="sg-step-badge flex-shrink-0">3</div>
+                      <p class="mb-0 small fw-semibold">Dopo aver modificato, cliccare <strong>"Salva"</strong> o <strong>"Annulla"</strong>.</p>
+                    </div>
+                    <div class="mt-auto pt-2"><div class="sg-placeholder sg-placeholder--card"><span>Placeholder immagine</span></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 12 — STEP 3: RIEPILOGO SOSTA ───────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="card border-0 rounded-3 overflow-hidden">
+
+        <div class="sg-step-section__head p-3 p-lg-4">
+          <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+            <div class="d-flex align-items-center gap-3">
+              <div class="sg-step-index">3</div>
+              <div>
+                <p class="text-white mb-1 opacity-75 small">Creazione di una nuova Sosta</p>
+                <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Riepilogo sosta</h4>
+              </div>
+            </div>
+            <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 3</span>
+          </div>
+        </div>
+
+        <div class="card-body bg-white py-3 px-4">
+          <div class="row g-0 align-items-end text-center">
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--done mb-2">DATI GENERALI</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--done">
+                  <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--done mb-2">INFORMAZIONI AGGIUNTIVE</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--done">
+                  <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--active mb-2">RIEPILOGO SOSTA</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--active">
+                  <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body bg-light p-4">
+          <div class="row g-4">
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">1</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Visualizzazione riepilogo</h5>
+                  </div>
+                  <p class="mb-3">Nell'ultimo passaggio è possibile consultare tutte le informazioni inserite negli step precedenti.</p>
+                  <div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">2</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Salva e invia</h5>
+                  </div>
+                  <p class="mb-3">Dopo aver verificato il corretto inserimento dei dati negli step precedenti, cliccare <strong>"Salva e invia"</strong> per procedere.</p>
+                  <div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">3</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Conferma salvataggio</h5>
+                  </div>
+                  <p class="mb-3">Il sistema mostra una finestra di conferma e comunica l'avvenuta creazione. Alla sosta viene assegnato un <strong>"Visit ID"</strong> e assume lo stato <strong>"Aperta"</strong>.</p>
+                  <div class="mt-auto"><div class="sg-placeholder sg-placeholder--wide"><span>Placeholder immagine</span></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /sg-section__frame -->
+</section>
+<!-- FINE SEZIONE 01 — CREAZIONE SOSTA --> 
+
+     
+        
+          </div>
+          <!-- /col-content -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </main>
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto">
+              <img src="./img/logo_footer.svg" alt="" class="logo" />
+            </div>
+
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold">Ente appartenenza</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- MODAL BOOTSTRAP ITALIA -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content" style="background: rgba(0,0,0,.92);">
+      <div class="modal-header border-0">
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Chiudi"
+        ></button>
+      </div>
+      <div class="modal-body d-flex align-items-center justify-content-center p-2">
+        <img
+          id="lightbox-img"
+          src=""
+          alt=""
+          class="img-fluid rounded"
+          style="max-height: 90vh; object-fit: contain;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.querySelectorAll(".sidebar .nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          // Rimuove active da tutti
+          document
+            .querySelectorAll(".sidebar .nav-link")
+            .forEach((el) => el.classList.remove("active"));
+
+          // Aggiunge active a quello cliccato
+          this.classList.add("active");
+        });
+      });
+    </script>
+    <script>
+  (function () {
+    const contenuto = document.querySelector('.col-12.col-lg-9');
+    if (!contenuto) return;
+
+    const lbImg  = document.getElementById('lightbox-img');
+    const modal  = document.getElementById('lightboxModal');
+    const bsModal = new bootstrap.Modal(modal);
+
+    contenuto.querySelectorAll('img').forEach(function (img) {
+      img.addEventListener('click', function () {
+        lbImg.src = this.src;
+        lbImg.alt = this.alt || '';
+        bsModal.show();
+      });
+    });
+
+    // Pulisce src alla chiusura (evita flash dell'immagine precedente)
+    modal.addEventListener('hidden.bs.modal', function () {
+      lbImg.src = '';
+    });
+  })();
+</script>
+
+  </body>
+</html>
