@@ -11,6 +11,17 @@
     <link href="./css/custom.css" rel="stylesheet" />
 
     <title>EMSWE Navis</title>
+
+    <style>
+    .col-12.col-lg-9 img {
+      cursor: zoom-in;
+      transition: opacity .2s;
+    }
+    .col-12.col-lg-9 img:hover {
+      opacity: .85;
+    }
+  </style>
+
   </head>
 
   <body>
@@ -4920,6 +4931,31 @@
         </div>
       </div>
     </footer>
+    <!-- MODAL BOOTSTRAP ITALIA -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content" style="background: rgba(0,0,0,.92);">
+      <div class="modal-header border-0">
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Chiudi"
+        ></button>
+      </div>
+      <div class="modal-body d-flex align-items-center justify-content-center p-2">
+        <img
+          id="lightbox-img"
+          src=""
+          alt=""
+          class="img-fluid rounded"
+          style="max-height: 90vh; object-fit: contain;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <!-- Bootstrap JS -->
     <script src="./js/bootstrap.bundle.min.js"></script>
@@ -4936,5 +4972,29 @@
         });
       });
     </script>
+    <script>
+  (function () {
+    const contenuto = document.querySelector('.col-12.col-lg-9');
+    if (!contenuto) return;
+
+    const lbImg  = document.getElementById('lightbox-img');
+    const modal  = document.getElementById('lightboxModal');
+    const bsModal = new bootstrap.Modal(modal);
+
+    contenuto.querySelectorAll('img').forEach(function (img) {
+      img.addEventListener('click', function () {
+        lbImg.src = this.src;
+        lbImg.alt = this.alt || '';
+        bsModal.show();
+      });
+    });
+
+    // Pulisce src alla chiusura (evita flash dell'immagine precedente)
+    modal.addEventListener('hidden.bs.modal', function () {
+      lbImg.src = '';
+    });
+  })();
+</script>
+
   </body>
 </html>
