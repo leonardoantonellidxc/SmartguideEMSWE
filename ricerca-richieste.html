@@ -1,0 +1,594 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Ricerca richieste</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Ricerca richieste</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <h2 class="sidebar-title">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </h2>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#ricerca-richieste">
+                        02. Ricerca richieste
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between">
+                  <h4>Gestione Report</h4>
+                </div>
+                <p class="mb-0">
+                  Il portale delle Smart Guide è uno spazio digitale che
+                  raccoglie risorse pratiche e aggiornate in un unico ambiente
+                  intuitivo. Strumenti chiari e organizzati per organizzarti e
+                  trovare subito ciò che ti serve.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 02 — RICERCA RICHIESTE
+                 ============================================================ -->
+            <section id="ricerca-richieste" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">02.</p>
+                    <div>
+                      <h6 class="text-white h1 mb-2">Ricerca richieste</h6>
+                      <p class="text-white mb-0">
+                        Una panoramica sul flusso di ricerca e consultazione di diverse tipologie di richieste presenti a sistema.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── 02.01 — PUNTO DI ACCESSO ───────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <p class="fw-semibold text-secondary mb-1">Ricerca richieste</p>
+                  <h2 class="h1 mb-2">Punto di accesso</h2>
+                  <h3 class="h4 fw-bold mb-3">La voce di menù</h3>
+                  <p class="mb-4">
+                    L'accesso alla sezione Report avviene tramite la voce di menu <strong>"Report"</strong>,
+                    disponibile nella barra di navigazione principale, da cui è possibile
+                    selezionare le funzionalità disponibili.
+                  </p>
+
+                  <div class="card border-0 rounded-3">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+
+                        <div class="col-12 col-lg-5">
+                          <div class="card border-0 rounded-3 p-3 bg-primary">
+                            <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                            <p class="text-white mb-0">
+                              Cliccando sulla voce <strong>"Report"</strong> viene
+                              visualizzato un menu a tendina, da cui è possibile
+                              accedere a <strong>"Ricerca richieste"</strong>.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-lg-7">
+                          <img src="./img/ricerca-richieste/1.png" alt="" class="w-100 rounded-3" />
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── 02.02 — RICERCA RICHIESTE (SELEZIONE TIPO) ─────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <p class="fw-semibold text-secondary mb-1">Ricerca richieste</p>
+                  <h2 class="h1 mb-3">Ricerca richieste</h2>
+                  <p class="mb-3">
+                    Per avviare la ricerca, è necessario selezionare un <strong>tipo di richiesta</strong>
+                    tra quelli di seguito indicati:
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+
+                    <div class="col-12 col-lg-5">
+                      <ul class="list-unstyled mb-4">
+                        <li class="d-flex align-items-start gap-2 mb-2">
+                          <span class="sg-step-badge flex-shrink-0 mt-1">1</span>
+                          <span>Chiusura Dichiarazione di porto base</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-2 mb-2">
+                          <span class="sg-step-badge flex-shrink-0 mt-1">2</span>
+                          <span>Richiesta invalidazione Dichiarazione di porto base</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-2 mb-2">
+                          <span class="sg-step-badge flex-shrink-0 mt-1">3</span>
+                          <span>Dichiarazione di Porto base</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-2 mb-2">
+                          <span class="sg-step-badge flex-shrink-0 mt-1">4</span>
+                          <span>Obblighi di Dichiarazione</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-2 mb-2">
+                          <span class="sg-step-badge flex-shrink-0 mt-1">5</span>
+                          <span>Richiesta invalidazione Obblighi di Dichiarazione</span>
+                        </li>
+                      </ul>
+                      <div class="sg-note p-3 rounded-3 d-flex align-items-start gap-2">
+                        <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+                        <p class="mb-0">
+                          <strong>Contestualmente</strong> al tipo di richiesta selezionata
+                          verranno mostrati i relativi campi di ricerca consultabili
+                          nella sezione successiva.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-7">
+                    <img src="./img/ricerca-richieste/1.png" alt="" class="w-100 rounded-3" />
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── 02.03 — FUNZIONALITÀ IN PAGINA ────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <p class="fw-semibold text-secondary mb-1">Ricerca richieste</p>
+                  <h2 class="h1 mb-3">Funzionalità in pagina</h2>
+                  <p class="mb-4">
+                    Il sistema mostra i campi di ricerca contestualizzati alla tipologia di richiesta
+                    selezionata. Le funzionalità descritte di seguito saranno le medesime per tutte le
+                    tipologie di richieste. A titolo esemplificativo viene illustrata la tipologia di
+                    richiesta <strong>"Dichiarazione di Porto Base"</strong>. La schermata è suddivisa
+                    nelle seguenti <strong>tre sezioni</strong>:
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+
+                    <!-- Immagine schermata principale -->
+                    <div class="col-12 col-lg-5">
+                      <img src="./img/ricerca-richieste/4.png" alt="" class="w-100 rounded-3" />
+                    </div>
+
+                    <!-- 3 sezioni numerate -->
+                    <div class="col-12 col-lg-7 d-flex flex-column gap-4">
+
+                      <!-- 1 SEZIONE FILTRI -->
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <div>
+                              <h5 class="fw-bold text-uppercase mb-2">Sezione filtri</h5>
+                              <p class="mb-0">
+                                La sezione Filtri consente di ricercare le liste delle richieste secondo
+                                diversi criteri. Sono disponibili <strong>filtri base</strong>, come
+                                <strong>Stato</strong>, <strong>Porto base</strong>, <strong>Nave</strong>
+                                e <strong>filtri avanzati</strong> per affinare la ricerca per
+                                l'<strong>Intervallo data</strong>. Avviare la ricerca attraverso il
+                                pulsante <strong>"Cerca"</strong> e pulire i filtri tramite il pulsante
+                                <strong>"Pulisci"</strong>. I filtri applicati sono visualizzati e cancellabili.
+                              </p>
+                            </div>
+                          </div>
+                         <img src="./img/ricerca-richieste/5.png" alt="" class="w-100 rounded-3" />
+                        </div>
+                      </div>
+
+                      <!-- 2 AZIONI SULLA TABELLA -->
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <div>
+                              <h5 class="fw-bold text-uppercase mb-2">Azioni sulla tabella dei risultati</h5>
+                              <p class="mb-0">
+                                È possibile esportare i risultati di ricerca attraverso il pulsante
+                                <strong>"Esporta"</strong> nei formati disponibili (PDF o XLS).
+                              </p>
+                            </div>
+                          </div>
+                        <img src="./img/ricerca-richieste/6.png" alt="" class="w-100 rounded-3" />
+                        </div>
+                      </div>
+
+                      <!-- 3 VISUALIZZAZIONE TRAMITE TABELLA -->
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <div>
+                              <h5 class="fw-bold text-uppercase mb-2">Visualizzazione richieste tramite tabella</h5>
+                              <p class="mb-0">
+                                I risultati della ricerca vengono presentati in una tabella, mostrando le
+                                <strong>informazioni principali</strong> e l'azione di
+                                <strong>visualizzazione dettaglio tramite icona dell'occhio</strong>.
+                              </p>
+                            </div>
+                          </div>
+                          <img src="./img/ricerca-richieste/7.png" alt="" class="w-100 rounded-3" />
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── 02.04 — VISUALIZZAZIONE DETTAGLIO RICHIESTA ─────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <p class="fw-semibold text-secondary mb-1">Ricerca richieste – Dichiarazione di Porto Base</p>
+                  <h2 class="h1 mb-3">Visualizzazione dettaglio richiesta</h2>
+                  <p class="mb-4">
+                    All'interno del dettaglio della Dichiarazione di porto base saranno
+                    visualizzate le seguenti informazioni:
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+
+                    <div class="col-12 col-lg-5">
+                      <ul class="list-unstyled mb-0">
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Informazioni Dichiarazione di porto base</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Documenti caricati</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Utenti Dichiaranti</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Imposta di Bollo</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Note interne <em>(visibili solo agli Operatori Cdp)</em></span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Fascicoli associati</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-12 col-lg-7">
+                    <img src="./img/ricerca-richieste/8.png" alt="" class="w-100 rounded-3" />
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── 02.05 — VISUALIZZAZIONE FILE REPORT ESPORTATO ──────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <p class="fw-semibold text-secondary mb-1">Ricerca richieste – Dichiarazione di Porto Base</p>
+                  <h2 class="h1 mb-3">Visualizzazione file report esportato</h2>
+                  <p class="mb-4">
+                    Dopo aver cliccato il pulsante <strong>"Esporta"</strong>, può decidere
+                    con quale formato esportare il report (PDF e Xls):
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+
+                    <!-- SINISTRA: formati + lista campi -->
+                    <div class="col-12 col-lg-5">
+
+                      <div class="card border-0 rounded-3 p-3 bg-primary d-inline-flex align-items-center gap-3 mb-4">
+                        <span class="text-white fw-semibold">Esporta</span>
+                        <i class="bi bi-chevron-down text-white"></i>
+                      </div>
+                      <div class="card border-0 rounded-3 bg-white p-3 mb-4">
+                        <div class="d-flex align-items-center gap-2 py-2 border-bottom">
+                          <i class="bi bi-file-earmark-pdf text-danger"></i>
+                          <span>Pdf</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 py-2">
+                          <i class="bi bi-file-earmark-spreadsheet text-success"></i>
+                          <span>Xls</span>
+                        </div>
+                      </div>
+
+                      <p class="mb-3">
+                        Nel report esportato sono consultabili, in formato tabellare,
+                        le seguenti informazioni:
+                      </p>
+                      <ul class="mb-0">
+                        <li>Tipo richiesta</li>
+                        <li>Data richiesta</li>
+                        <li>Stato richiesta</li>
+                        <li>Nave</li>
+                        <li>Porto base</li>
+                      </ul>
+
+                    </div>
+
+                    <!-- DESTRA: anteprima report -->
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/ricerca-richieste/9.png" alt="" class="w-100 rounded-3" />
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── 02.06 — FILTRI PER TIPOLOGIA ──────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <p class="fw-semibold text-secondary mb-1">Ricerca richieste</p>
+                  <h2 class="h1 mb-3">Filtri di ricerca in base alla tipologia della richiesta</h2>
+
+                  <div class="row g-4">
+
+                    <!-- Card 1: Chiusura Dichiarazione Porto Base -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border rounded-3 overflow-hidden h-100">
+                        <div class="card-header bg-light py-2 px-3">
+                          <p class="fw-bold text-uppercase mb-0 small">Chiusura Dichiarazione Porto Base</p>
+                        </div>
+                        <div class="card-body p-3">
+                          <p class="mb-3 small">
+                            I filtri disponibili saranno: Stato, Numero istanza collegata,
+                            Data istanza collegata e Intervallo data.
+                          </p>
+                        <img src="./img/ricerca-richieste/10.png" alt="" class="w-100 rounded-3" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Card 2: Richiesta Invalidazione Dichiarazione di Porto Base -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border rounded-3 overflow-hidden h-100">
+                        <div class="card-header bg-light py-2 px-3">
+                          <p class="fw-bold text-uppercase mb-0 small">Richiesta Invalidazione Dichiarazione di Porto Base</p>
+                        </div>
+                        <div class="card-body p-3">
+                          <p class="mb-3 small">
+                            I filtri disponibili saranno: Stato, Numero istanza collegata,
+                            Data istanza collegata e Intervallo data.
+                          </p>
+                          <img src="./img/ricerca-richieste/11.png" alt="" class="w-100 rounded-3" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Card 3: Obblighi di Dichiarazione -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border rounded-3 overflow-hidden h-100">
+                        <div class="card-header bg-light py-2 px-3">
+                          <p class="fw-bold text-uppercase mb-0 small">Obblighi di Dichiarazione</p>
+                        </div>
+                        <div class="card-body p-3">
+                          <p class="mb-3 small">
+                            I filtri disponibili saranno: Stato, VisitID, Tipologia Obbligo
+                            di Dichiarazione, Nome Obbligo di Dichiarazione e Intervallo data.
+                          </p>
+                          <img src="./img/ricerca-richieste/11.png" alt="" class="w-100 rounded-3" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Card 4: Richiesta Invalidazione Obblighi di Dichiarazione -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border rounded-3 overflow-hidden h-100">
+                        <div class="card-header bg-light py-2 px-3">
+                          <p class="fw-bold text-uppercase mb-0 small">Richiesta Invalidazione Obblighi di Dichiarazione</p>
+                        </div>
+                        <div class="card-body p-3">
+                          <p class="mb-3 small">
+                            I filtri disponibili saranno: Stato, VisitID, Tipologia Obbligo
+                            di Dichiarazione, Nome Obbligo di Dichiarazione e Intervallo data.
+                          </p>
+                          <img src="./img/ricerca-richieste/12.png" alt="" class="w-100 rounded-3" />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+ <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto">
+              <img src="./img/logo_footer.svg" alt="" class="logo" />
+            </div>
+
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold">Ente appartenenza</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.querySelectorAll(".sidebar .nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          document.querySelectorAll(".sidebar .nav-link").forEach((el) => el.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg  = document.getElementById('lightbox-img');
+        const modal  = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.addEventListener('click', function () {
+            lbImg.src = this.src;
+            lbImg.alt = this.alt || '';
+            bsModal.show();
+          });
+        });
+        modal.addEventListener('hidden.bs.modal', function () {
+          lbImg.src = '';
+        });
+      })();
+    </script>
+
+  </body>
+</html>

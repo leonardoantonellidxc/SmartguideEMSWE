@@ -1,0 +1,1991 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Gestione Soste Unità da Diporto</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      ITA<span class="visually-hidden">: italiano</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" lang="en">
+                      ENG<span class="visually-hidden">: english</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img
+                src="img/logo_prova1.svg"
+                alt="Logo Capitanerie di Porto"
+                class="logo"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Supporto</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="index.html">Manuali Smart Guide</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Gestione Soste Unità da Diporto
+            </li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav
+                class="sidebar sidebar-expand-lg sidebar-dark sticky-top"
+                aria-label="Menu della sezione"
+              >
+                <div class="sidebar-header">
+                  <h2 class="sidebar-title">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </h2>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#creazione-diporto">
+                        01. Creazione sosta per unità da Diporto
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#ricerca-diporto">
+                        02. Ricerca e consultazione sosta per unità da Diporto
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#modifica-diporto">
+                        03. Modifica sosta per unità da Diporto
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#cancellazione-diporto">
+                        04. Cancellazione sosta per unità da Diporto
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between">
+                  <h4>Soste Unità da Diporto</h4>
+                </div>
+                <p class="mb-0">
+                  Il portale delle Smart Guide è uno spazio digitale che
+                  raccoglie risorse pratiche e aggiornate in un unico ambiente
+                  intuitivo. Strumenti chiari e organizzati per organizzarti e
+                  trovare subito ciò che ti serve.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — CREAZIONE SOSTA PER UNITÀ DA DIPORTO
+                 ============================================================ -->
+           <!-- ============================================================
+     SEZIONE 01 — CREAZIONE SOSTA PER UNITÀ DA DIPORTO
+     Pagine: 84 (intro) · 85 (punti accesso) · 86 (passaggi creazione)
+             87 (step overview) · 88 (step 1 dati generali) · 89 (step 2 info aggiuntive)
+             90 (focus inserimento) · 91 (step 3 riepilogo) · 95 (ulteriori modalità ricerca)
+     ============================================================ -->
+<section id="creazione-diporto" class="mb-6">
+  <div class="sg-section__frame rounded-3 overflow-hidden">
+
+    <!-- HEAD -->
+    <div class="sg-section__head p-2 p-lg-4">
+      <div class="d-flex align-items-center gap-3">
+        <p class="h1 text-white mb-0 me-2">01.</p>
+        <div>
+          <h6 class="text-white h1 mb-2">Creazione sosta per unità da Diporto</h6>
+          <p class="text-white mb-0">
+            Panoramica sulla creazione e gestione della Soste per unità da Diporto,
+            dall'inserimento dei dati al salvataggio e invio della stessa.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 85 — PUNTI DI ACCESSO ──────────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <h2 class="h1 mb-2">Punti di accesso alla creazione</h2>
+      <p class="mb-4">La creazione di una nuova sosta avviene:</p>
+
+      <div class="card border-0 rounded-3">
+        <div class="card-body bg-light p-4">
+          <div class="row g-4 align-items-center">
+
+            <div class="col-12 col-lg-5 d-flex flex-column gap-4">
+
+              <!-- 1 Menu a tendina -->
+              <div class="d-flex gap-3">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div class="card border-0 rounded-3 p-3 w-100 bg-primary">
+                  <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                  <p class="text-white mb-0">
+                    Cliccando sulla voce <strong>"Gestione e consultazione"</strong>
+                    viene visualizzato un menu a tendina, da cui è possibile accedere
+                    alla voce <strong>"Soste"</strong>, al cui interno è presente
+                    il pulsante di creazione.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 2 Dashboard -->
+              <div class="d-flex gap-3">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <p class="mb-3">
+                    Dalla dashboard è possibile creare nuove soste cliccando
+                    <strong>"Crea nuova sosta"</strong>.
+                  </p>
+                  <span class="sg-action-btn rounded-3">
+                    <i class="bi bi-plus-lg"></i> Crea nuova sosta
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-12 col-lg-7">
+              <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 86 — PASSAGGI PER CREARE UNA NUOVA SOSTA ─────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3">
+        <div>
+          <p class="fw-semibold text-secondary mb-1">Creazione sosta</p>
+          <h2 class="h1 mb-2">Passaggi per creare una nuova sosta per navi da Diporto per l'Unione Europea</h2>
+          <p class="mb-0">
+            Dopo aver cliccato il pulsante "Nuova sosta", seguire tutti i passaggi
+            indicati a sistema e inserire le informazioni necessarie per cominciare
+            l'iter di creazione di una nuova sosta.
+          </p>
+        </div>
+        <span class="sg-action-btn rounded-3 flex-shrink-0">
+          <i class="bi bi-plus-lg"></i> Nuova sosta
+        </span>
+      </div>
+
+      <div class="d-flex justify-content-end mb-4">
+        <span class="sg-rimando">
+          <i class="bi bi-eye text-primary"></i>
+          Visualizza il dettaglio di
+          <a href="#ulteriori-ricerca-diporto" class="link-primary fw-semibold ms-1">"Ulteriori modalità di ricerca" a pagina 95</a>
+        </span>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- CARD 1 -->
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Ricerca nave tramite uno dei parametri visualizzati</h5>
+                  <p class="mb-0">
+                    Ricercare la nave tramite uno dei campi visualizzati a sistema: in questo
+                    caso <strong>"Nome Nave"</strong>. Successivamente cliccare il pulsante
+                    <strong>"Avvia ricerca"</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Possibile errore</h5>
+                  <p class="mb-0">
+                    Se la nave selezionata non rientra nelle casistiche per tipologia
+                    pratica amministrativa per unità da Diporto, il sistema lo segnala
+                    con una <strong>finestra informativa</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">3</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Risultati e conferma</h5>
+                  <p class="mb-0">
+                    Dopo aver cliccato su <strong>"Vai avanti"</strong>, il sistema nel
+                    caso in cui esista una sosta sullo stesso porto, lo segnala tramite
+                    una finestra informativa ed è possibile procedere utilizzando la
+                    sosta o procedendo con la creazione di una nuova sosta.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── PAG. 87 — STEP OVERVIEW ───────────────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+
+      <p class="fw-semibold text-secondary mb-1">Passaggi per creare una nuova sosta per navi da Diporto per l'Unione Europea</p>
+      <h2 class="h1 mb-3">Step di creazione di una nuova Sosta</h2>
+      <p class="mb-4">Per creare una nuova sosta, l'utente dovrà procedere seguendo i passaggi sottostanti.</p>
+
+      <div class="row g-4">
+
+        <!-- STEP 1 -->
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="text-center mb-3">
+                <span class="sg-step-tag">STEP 1</span>
+              </div>
+              <h5 class="fw-bold text-uppercase text-center mb-3">Dati generali</h5>
+              <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                <div class="sg-stepper__dot sg-stepper__dot--active">
+                  <i class="bi bi-pencil text-white"></i>
+                </div>
+                <div class="sg-stepper__line"></div>
+                <div class="sg-stepper__dot"></div>
+                <div class="sg-stepper__line"></div>
+                <div class="sg-stepper__dot"></div>
+              </div>
+              <p class="mb-3">
+                Consente di inserire le informazioni generali, quali: Porto di sosta
+                (con ETA e ETD), Porto Precedente (con ETD) e Porto successivo (con ETA).
+              </p>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="text-center mb-3">
+                <span class="sg-step-tag">STEP 2</span>
+              </div>
+              <h5 class="fw-bold text-uppercase text-center mb-3">Informazioni aggiuntive</h5>
+              <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                <div class="sg-stepper__dot sg-stepper__dot--done">
+                  <i class="bi bi-check text-white"></i>
+                </div>
+                <div class="sg-stepper__line sg-stepper__line--done"></div>
+                <div class="sg-stepper__dot sg-stepper__dot--active">
+                  <i class="bi bi-pencil text-white"></i>
+                </div>
+                <div class="sg-stepper__line"></div>
+                <div class="sg-stepper__dot"></div>
+              </div>
+              <p class="mb-3">
+                Consente di inserire informazioni aggiuntive utili a definire meglio
+                la richiesta. Come: Servizi Tecnico Nautici, Bunkeraggio.
+              </p>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="text-center mb-3">
+                <span class="sg-step-tag">STEP 3</span>
+              </div>
+              <h5 class="fw-bold text-uppercase text-center mb-3">Riepilogo sosta</h5>
+              <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                <div class="sg-stepper__dot sg-stepper__dot--done">
+                  <i class="bi bi-check text-white"></i>
+                </div>
+                <div class="sg-stepper__line sg-stepper__line--done"></div>
+                <div class="sg-stepper__dot sg-stepper__dot--done">
+                  <i class="bi bi-check text-white"></i>
+                </div>
+                <div class="sg-stepper__line sg-stepper__line--done"></div>
+                <div class="sg-stepper__dot sg-stepper__dot--active">
+                  <i class="bi bi-pencil text-white"></i>
+                </div>
+              </div>
+              <p class="mb-3">
+                Consente di visualizzare il riepilogo delle informazioni inserite
+                negli step precedenti e procedere con il salvataggio e invio della
+                creazione di una sosta.
+              </p>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── PAG. 88 — STEP 1: DATI GENERALI ───────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="card border-0 rounded-3 overflow-hidden">
+
+        <div class="sg-step-section__head p-3 p-lg-4">
+          <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+            <div class="d-flex align-items-center gap-3">
+              <div class="sg-step-index">1</div>
+              <div>
+                <p class="text-white mb-1 opacity-75 small">Creazione di una nuova sosta per navi da Diporto per l'Unione Europea</p>
+                <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Dati generali</h4>
+              </div>
+            </div>
+            <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 1</span>
+          </div>
+        </div>
+
+        <!-- STEPPER -->
+        <div class="card-body bg-white py-3 px-4">
+          <div class="row g-0 align-items-end text-center">
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--active mb-2">DATI GENERALI</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--active">
+                  <i class="bi bi-pencil text-white"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label mb-2">INFORMAZIONI AGGIUNTIVE</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot"></div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label mb-2">RIEPILOGO SOSTA</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body bg-light p-4">
+          <div class="row g-4">
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">1</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Visualizzazione nave selezionata</h5>
+                  </div>
+                  <p class="mb-3">
+                    In questo step è possibile inserire le informazioni generali relative
+                    alla sosta, ai porti ed alle date di partenza e arrivo.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">2</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Inserimento dati generali e possibili errori</h5>
+                  </div>
+                  <p class="mb-3">
+                    Nel caso in cui i dati inseriti non siano corretti, il sistema informa
+                    l'utente tramite un alert e <strong>non consente di procedere</strong>
+                    allo step successivo.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">3</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Revisione e conferma</h5>
+                  </div>
+                  <p class="mb-3">
+                    Verificato il corretto inserimento dei dati generali, selezionare il
+                    pulsante <strong>"Vai avanti"</strong> per procedere allo step successivo.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sg-note p-3 rounded-3 mt-4 d-flex align-items-start gap-2">
+            <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+            <p class="mb-0">
+              In caso di incongruenze tra le date di arrivo e partenze tra i vari porti,
+              il sistema informerà l'utente tramite messaggi di errore posizionati sotto
+              i campi compilati in modo errato e tramite alert informativi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 89 — STEP 2: INFORMAZIONI AGGIUNTIVE ─────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="card border-0 rounded-3 overflow-hidden">
+
+        <div class="sg-step-section__head p-3 p-lg-4">
+          <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+            <div class="d-flex align-items-center gap-3">
+              <div class="sg-step-index">2</div>
+              <div>
+                <p class="text-white mb-1 opacity-75 small">Creazione di una nuova sosta per navi da Diporto per l'Unione Europea</p>
+                <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Informazioni aggiuntive</h4>
+              </div>
+            </div>
+            <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 2</span>
+          </div>
+        </div>
+
+        <!-- STEPPER -->
+        <div class="card-body bg-white py-3 px-4">
+          <div class="row g-0 align-items-end text-center">
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--done mb-2">DATI GENERALI</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--done">
+                  <i class="bi bi-check text-white"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--active mb-2">INFORMAZIONI AGGIUNTIVE</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--active">
+                  <i class="bi bi-pencil text-white"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label mb-2">RIEPILOGO SOSTA</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body bg-light p-4">
+          <div class="d-flex justify-content-center mb-4">
+            <span class="sg-rimando">
+              <i class="bi bi-eye text-primary"></i>
+              Focus su <a href="#" class="link-primary fw-semibold ms-1">Inserimento delle informazioni aggiuntive a pagina 90</a>
+            </span>
+          </div>
+          <div class="row g-4">
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">1</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Visualizzazione delle informazioni aggiuntive</h5>
+                  </div>
+                  <p class="mb-3">
+                    Il sistema dà la possibilità di inserire una serie di informazioni
+                    aggiuntive utili a definire meglio la sosta e a pre-popolare
+                    l'elenco degli Obblighi di Dichiarazione.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">2</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Aggiunta e modifica delle informazioni</h5>
+                  </div>
+                  <p class="mb-3">
+                    L'utente può aggiungere e successivamente modificare le informazioni
+                    relative a <strong>Servizi Tecnico Nautici in Arrivo</strong> e
+                    <strong>Bunkeraggio</strong>.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">3</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Verifica e step successivo</h5>
+                  </div>
+                  <p class="mb-3">
+                    Dopo aver selezionato le informazioni aggiuntive, cliccare su
+                    <strong>"Vai avanti"</strong> per proseguire allo step finale.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 90 — FOCUS INSERIMENTO INFORMAZIONI AGGIUNTIVE ───── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="card border-0 rounded-3 overflow-hidden">
+
+        <div class="sg-step-section__head p-3 p-lg-4">
+          <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+            <div class="d-flex align-items-center gap-3">
+              <div class="sg-step-index">2</div>
+              <div>
+                <p class="text-white mb-1 opacity-75 small">Creazione di una nuova sosta per navi da Diporto per l'Unione Europea</p>
+                <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Inserimento informazioni aggiuntive</h4>
+              </div>
+            </div>
+            <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 2</span>
+          </div>
+        </div>
+
+        <div class="card-body bg-light p-4">
+
+          <!-- SERVIZI TECNICO NAUTICI -->
+          <div class="sg-focus-block mb-4">
+            <h5 class="fw-bold text-uppercase mb-3">Servizi Tecnico Nautici</h5>
+            <div class="row g-3">
+              <div class="col-12 col-lg-4 d-flex">
+                <div class="card border-0 rounded-3 w-100">
+                  <div class="card-body p-3 d-flex flex-column">
+                    <div class="d-flex gap-2 mb-2">
+                      <div class="sg-step-badge flex-shrink-0">1</div>
+                      <p class="mb-0 small fw-semibold">Dopo aver selezionato "Sì", scegliere la <strong>tipologia di servizio</strong>.</p>
+                    </div>
+                    <div class="mt-auto pt-2">
+                      <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 d-flex">
+                <div class="card border-0 rounded-3 w-100">
+                  <div class="card-body p-3 d-flex flex-column">
+                    <div class="d-flex gap-2 mb-2">
+                      <div class="sg-step-badge flex-shrink-0">2</div>
+                      <p class="mb-0 small fw-semibold">Dopo aver selezionato la tipologia cliccare <strong>"Aggiungi in elenco"</strong>.</p>
+                    </div>
+                    <div class="mt-auto pt-2">
+                      <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 d-flex">
+                <div class="card border-0 rounded-3 w-100">
+                  <div class="card-body p-3 d-flex flex-column">
+                    <div class="d-flex gap-2 mb-2">
+                      <div class="sg-step-badge flex-shrink-0">3</div>
+                      <p class="mb-0 small fw-semibold">La tipologia aggiunta può essere eliminata tramite l'<strong>"icona del cestino"</strong>.</p>
+                    </div>
+                    <div class="mt-auto pt-2">
+                      <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BUNKERAGGIO -->
+          <div class="sg-focus-block">
+            <h5 class="fw-bold text-uppercase mb-3">Bunkeraggio</h5>
+            <div class="row g-3">
+              <div class="col-12 col-lg-4 d-flex">
+                <div class="card border-0 rounded-3 w-100">
+                  <div class="card-body p-3 d-flex flex-column">
+                    <div class="d-flex gap-2 mb-2">
+                      <div class="sg-step-badge flex-shrink-0">1</div>
+                      <p class="mb-0 small fw-semibold">Selezionare tipologia e azienda, quindi cliccare <strong>"Aggiungi in elenco"</strong>.</p>
+                    </div>
+                    <div class="mt-auto pt-2">
+                      <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 d-flex">
+                <div class="card border-0 rounded-3 w-100">
+                  <div class="card-body p-3 d-flex flex-column">
+                    <div class="d-flex gap-2 mb-2">
+                      <div class="sg-step-badge flex-shrink-0">2</div>
+                      <p class="mb-0 small fw-semibold">È possibile modificare o eliminare tramite gli appositi pulsanti.</p>
+                    </div>
+                    <div class="mt-auto pt-2">
+                      <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 d-flex">
+                <div class="card border-0 rounded-3 w-100">
+                  <div class="card-body p-3 d-flex flex-column">
+                    <div class="d-flex gap-2 mb-2">
+                      <div class="sg-step-badge flex-shrink-0">3</div>
+                      <p class="mb-0 small fw-semibold">Dopo aver modificato, cliccare <strong>"Salva"</strong> o <strong>"Annulla"</strong>.</p>
+                    </div>
+                    <div class="mt-auto pt-2">
+                      <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 91 — STEP 3: RIEPILOGO SOSTA ─────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="card border-0 rounded-3 overflow-hidden">
+
+        <div class="sg-step-section__head p-3 p-lg-4">
+          <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+            <div class="d-flex align-items-center gap-3">
+              <div class="sg-step-index">3</div>
+              <div>
+                <p class="text-white mb-1 opacity-75 small">Creazione di una nuova sosta per navi da Diporto per l'Unione Europea</p>
+                <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Riepilogo sosta</h4>
+              </div>
+            </div>
+            <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 3</span>
+          </div>
+        </div>
+
+        <!-- STEPPER tutti completati -->
+        <div class="card-body bg-white py-3 px-4">
+          <div class="row g-0 align-items-end text-center">
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--done mb-2">DATI GENERALI</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--done">
+                  <i class="bi bi-check text-white"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--done mb-2">INFORMAZIONI AGGIUNTIVE</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--done">
+                  <i class="bi bi-check text-white"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--active mb-2">RIEPILOGO SOSTA</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--active">
+                  <i class="bi bi-pencil text-white"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body bg-light p-4">
+          <div class="row g-4">
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">1</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Visualizzazione riepilogo</h5>
+                  </div>
+                  <p class="mb-3">Nell'ultimo passaggio è possibile consultare tutte le informazioni inserite.</p>
+                  <div class="mt-auto">
+                    <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">2</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Salva e invia</h5>
+                  </div>
+                  <p class="mb-3">
+                    Dopo aver verificato il corretto inserimento dei dati negli step
+                    precedenti, cliccare il pulsante <strong>"Salva e invia"</strong>
+                    per procedere.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">3</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Conferma salvataggio</h5>
+                  </div>
+                  <p class="mb-3">
+                    Il sistema mostra una finestra di conferma e comunica l'avvenuta
+                    creazione. Alla sosta viene assegnato un <strong>"Visit ID"</strong>
+                    e assume lo stato <strong>"Aperta"</strong>.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 95 — ULTERIORI MODALITÀ DI RICERCA ───────────────── -->
+    <div id="ulteriori-ricerca-diporto" class="sg-section__body p-2 p-lg-4">
+      <div class="card border-0 rounded-3 overflow-hidden">
+
+        <div class="sg-step-section__head p-3 p-lg-4">
+          <div class="d-flex align-items-center gap-3">
+            <div>
+              <p class="text-white mb-1 opacity-75 small">Ricerca delle navi</p>
+              <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Ulteriori modalità di ricerca</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body bg-light p-4">
+          <div class="row g-4">
+
+            <!-- NAVE NON CENSITA -->
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 overflow-hidden w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <h5 class="fw-bold text-uppercase mb-3">Nave non censita</h5>
+                  <p class="mb-4">
+                    È possibile censire una nuova nave cliccando sul pulsante
+                    <strong>"Censisci nuova nave"</strong>, disponibile sia all'interno
+                    della finestra visualizzata, se la ricerca non restituisce risultati,
+                    sia sotto la tabella dei risultati.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- NAVE BANNATA -->
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 overflow-hidden w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <h5 class="fw-bold text-uppercase mb-3">Nave bannata</h5>
+                  <p class="mb-4">
+                    Nel caso in cui si selezioni una nave bannata, il sistema ne dà
+                    evidenza tramite una <strong>finestra di attenzione</strong>
+                    richiedendo l'inserimento obbligatorio di <strong>una motivazione</strong>
+                    per poter proseguire.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- LA NAVE NON RIENTRA NELLE CASISTICHE -->
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 overflow-hidden w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <h5 class="fw-bold text-uppercase mb-3">La nave non rientra nelle casistiche</h5>
+                  <p class="mb-4">
+                    Nel caso in cui si selezioni una tipologia di nave che potrebbe non
+                    rientrare nelle casistiche per la tipologia di pratica amministrativa.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /sg-section__frame -->
+</section>
+<!-- FINE SEZIONE 01 — CREAZIONE SOSTA PER UNITÀ DA DIPORTO -->
+
+            <!-- ============================================================
+                 SEZIONE 02 — RICERCA E CONSULTAZIONE SOSTA PER UNITÀ DA DIPORTO
+                 ============================================================ -->
+            <!-- ============================================================
+     SEZIONE 02 — RICERCA E CONSULTAZIONE SOSTA PER UNITÀ DA DIPORTO
+     Pagine: 96 (intro) · 97 (punti accesso) · 98 (funzionalità lista)
+             99 (lista / aggiornamento) · 100 (dettaglio sosta)
+             101 (obblighi UE) · 102 (obblighi extra-UE)
+     ============================================================ -->
+<section id="ricerca-diporto" class="mb-6">
+  <div class="sg-section__frame rounded-3 overflow-hidden">
+
+    <!-- HEAD -->
+    <div class="sg-section__head p-2 p-lg-4">
+      <div class="d-flex align-items-center gap-3">
+        <p class="h1 text-white mb-0 me-2">02.</p>
+        <div>
+          <h6 class="text-white h1 mb-2">Ricerca e consultazione sosta per unità da Diporto</h6>
+          <p class="text-white mb-0">
+            Una panoramica sui flussi di ricerca e consultazione delle soste per unità da Diporto.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 97 — PUNTI DI ACCESSO ──────────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <h2 class="h1 mb-2">Punti di accesso per la ricerca soste per unità da Diporto</h2>
+      <p class="mb-4">La ricerca di una sosta per unità da Diporto avviene tramite:</p>
+
+      <div class="card border-0 rounded-3">
+        <div class="card-body bg-light p-4">
+          <div class="row g-4 align-items-center">
+
+            <div class="col-12 col-lg-5 d-flex flex-column gap-4">
+              <div class="d-flex gap-3">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div class="card border-0 rounded-3 p-3 w-100 bg-primary">
+                  <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                  <p class="text-white mb-0">
+                    Cliccando sulla voce <strong>"Gestione e consultazione"</strong>
+                    viene visualizzato un menu a tendina, da cui è possibile accedere
+                    alla voce <strong>"Soste per unità da diporto"</strong>, al cui
+                    interno è possibile ricercare le soste per unità da diporto
+                    presenti a sistema.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-7">
+              <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 98 — FUNZIONALITÀ IN PAGINA (LISTA SOSTE) ────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+
+      <div class="row g-4 align-items-start">
+
+        <!-- SINISTRA: intro + immagine -->
+        <div class="col-12 col-lg-5">
+          <p class="fw-semibold text-secondary mb-1">Ricerca e consultazione di una sosta: lista soste</p>
+          <h2 class="h1 mb-3">Funzionalità in pagina</h2>
+          <p class="mb-4">
+            Accedendo alla sezione "Lista soste", il sistema mostra i
+            <strong>filtri di ricerca</strong> disponibili, sia di
+            <strong>base sia avanzati</strong>. Dopo aver selezionato i criteri
+            desiderati e cliccato su <strong>"Cerca"</strong>, i risultati vengono
+            visualizzati in <strong>forma tabellare</strong>.
+          </p>
+          <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+        </div>
+
+        <!-- DESTRA: 4 funzionalità -->
+        <div class="col-12 col-lg-7 d-flex flex-column gap-4">
+
+          <div class="card border-0 rounded-3">
+            <div class="card-body bg-light p-4">
+              <div class="d-flex gap-3 mb-3">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Sezione filtri</h5>
+                  <p class="mb-0">
+                    La sezione Filtri consente di ricercare le soste secondo diversi
+                    criteri. Sono disponibili filtri base e filtri avanzati per affinare la ricerca.
+                  </p>
+                </div>
+              </div>
+              <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+            </div>
+          </div>
+
+          <div class="card border-0 rounded-3">
+            <div class="card-body bg-light p-4">
+              <div class="d-flex gap-3">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Visualizzazione di "Lista Soste" o "Aggiornamento Soste"</h5>
+                  <p class="mb-0">
+                    È possibile scegliere di visualizzare i risultati di ricerca
+                    della lista soste e degli aggiornamenti delle soste.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 rounded-3">
+            <div class="card-body bg-light p-4">
+              <div class="d-flex gap-3 mb-3">
+                <div class="sg-step-badge flex-shrink-0">3</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Filtri e azioni sulla tabella</h5>
+                  <p class="mb-0">
+                    I risultati della ricerca possono essere filtrati per
+                    <strong>"Attività"</strong> e <strong>"Stato Attività"</strong>.
+                    Selezionando una o più soste è possibile <strong>salvare e inviare</strong>,
+                    <strong>cancellare</strong> ed <strong>esportare</strong>.
+                  </p>
+                </div>
+              </div>
+              <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+            </div>
+          </div>
+
+          <div class="card border-0 rounded-3">
+            <div class="card-body bg-light p-4">
+              <div class="d-flex gap-3 mb-3">
+                <div class="sg-step-badge flex-shrink-0">4</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Visualizzazione soste tramite tabella</h5>
+                  <p class="mb-0">
+                    I risultati della ricerca vengono presentati in una tabella,
+                    mostrando le <strong>informazioni e azioni principali</strong>.
+                  </p>
+                </div>
+              </div>
+              <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 99 — LISTA SOSTE E AGGIORNAMENTO SOSTE ───────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+
+      <h2 class="h1 mb-2">Visualizzazione risultati in tabella: Lista Soste e Aggiornamento soste</h2>
+      <p class="mb-4">
+        I risultati di ricerca delle soste, possono essere visualizzati tramite tabella secondo due modalità:
+      </p>
+
+      <div class="row g-4">
+
+        <div class="col-12 col-lg-6 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div>
+                  <h5 class="fw-bold mb-2">Lista Soste</h5>
+                  <p class="mb-0">
+                    È l'elenco di tutte le soste presenti a sistema, create dall'utente
+                    che ha effettuato l'accesso, sulle quali è possibile accedere al
+                    dettaglio e svolgere diverse azioni.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <h5 class="fw-bold mb-2">Aggiornamenti soste</h5>
+                  <p class="mb-0">
+                    È un elenco di attività che l'utente deve svolgere sia per gestire
+                    le soste create dal Collaboratore, sia per integrare gli Obblighi
+                    di Dichiarazione. Sarà possibile filtrare i risultati in tabella
+                    per <strong>"Attività"</strong> e <strong>"Stato Attività"</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── PAG. 100 — DETTAGLIO DELLA SOSTA ──────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="card border-0 rounded-3 overflow-hidden">
+        <div class="sg-step-section__head p-3 p-lg-4">
+          <div class="d-flex align-items-center gap-3">
+            <div class="sg-step-index">1</div>
+            <div>
+              <p class="text-white mb-1 opacity-75 small">Ricerca e consultazione Sosta</p>
+              <h4 class="h4 text-white mb-0 fw-bold">Dettaglio della sosta</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body bg-light p-4">
+          <div class="row g-4 align-items-start">
+
+            <div class="col-12 col-lg-5">
+              <p class="mb-3">All'interno della pagina sono consultabili le seguenti informazioni:</p>
+              <ul class="mb-4">
+                <li>Informazioni sosta</li>
+                <li>Informazioni aggiuntive</li>
+                <li>Obblighi di dichiarazione
+                  <ul>
+                    <li>Comunicazioni</li>
+                    <li>Controlli frontiera</li>
+                    <li>Merci</li>
+                    <li>Rifiuti</li>
+                    <li>Sicurezza</li>
+                    <li>FAL</li>
+                  </ul>
+                </li>
+              </ul>
+              <p class="fw-bold mb-3">Possibili azioni secondarie sulla richiesta:</p>
+              <div class="d-flex flex-column gap-2">
+                <div class="card border-0 rounded-3 p-3 bg-white">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-pencil text-primary"></i>
+                    <span class="fw-semibold small">Modifica Dati Sosta</span>
+                  </div>
+                </div>
+                <div class="card border-0 rounded-3 p-3 bg-white">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-trash3 text-danger"></i>
+                    <span class="fw-semibold small">Cancella</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-7">
+              <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 101 — OBBLIGHI DI DICHIARAZIONE (UNIONE EUROPEA) ─── -->
+    <div class="sg-section__body p-2 p-lg-4">
+
+      <div class="card border-0 rounded-3 overflow-hidden">
+        <div class="sg-step-section__head p-3 p-lg-4">
+          <div class="d-flex align-items-center gap-3">
+            <div>
+              <p class="text-white mb-1 opacity-75 small">Ricerca e consultazione Sosta</p>
+              <h4 class="h4 text-white mb-0 fw-bold">Obblighi di Dichiarazione (Unione Europea)</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body bg-light p-4">
+          <div class="row g-4 align-items-start">
+
+            <div class="col-12 col-lg-5">
+
+              <h5 class="fw-bold mb-3">Per "Pre Arrivo" e "Arrivo"</h5>
+              <div class="card border-0 rounded-3 p-3 bg-white mb-3">
+                <ul class="mb-0 ps-3">
+                  <li><strong>C3.1 (FAL1S)</strong></li>
+                  <li><strong>A4.1</strong></li>
+                  <li>
+                    <strong>C8:</strong> in base alla bandiera della nave oggetto della sosta
+                    la compilazione dell'Obbligo di Dichiarazione è:
+                    <ul>
+                      <li>Non obbligatoria per le navi di bandiera italiana;</li>
+                      <li>Obbligatoria per le navi di bandiera non italiana.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <h5 class="fw-bold mb-3">Per "Partenza"</h5>
+              <div class="card border-0 rounded-3 p-3 bg-white">
+                <ul class="mb-0 ps-3">
+                  <li><strong>C4.1 (FAL1S)</strong></li>
+                  <li><strong>A4.2</strong></li>
+                  <li>
+                    <strong>C9:</strong> in base alla bandiera della nave oggetto della sosta
+                    la compilazione dell'Obbligo di Dichiarazione è:
+                    <ul>
+                      <li>Non obbligatoria per le navi di bandiera italiana;</li>
+                      <li>Obbligatoria per le navi di bandiera non italiana.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="col-12 col-lg-7">
+              <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 102 — OBBLIGHI DI DICHIARAZIONE (EXTRA-UNIONE EUROPEA) -->
+    <div class="sg-section__body p-2 p-lg-4">
+
+      <div class="card border-0 rounded-3 overflow-hidden">
+        <div class="sg-step-section__head p-3 p-lg-4">
+          <div class="d-flex align-items-center gap-3">
+            <div>
+              <p class="text-white mb-1 opacity-75 small">Ricerca e consultazione Sosta</p>
+              <h4 class="h4 text-white mb-0 fw-bold">Obblighi di Dichiarazione (Extra-Unione Europea)</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body bg-light p-4">
+          <div class="row g-4 align-items-start">
+
+            <div class="col-12 col-lg-5">
+
+              <h5 class="fw-bold mb-3">Per "Pre Arrivo" e "Arrivo"</h5>
+              <div class="card border-0 rounded-3 p-3 bg-white mb-3">
+                <ul class="mb-0 ps-3">
+                  <li>
+                    Solo la <strong>C3.1 (FAL1S):</strong> nel caso di porto precedente
+                    italiano e porto di sosta successivo italiano.
+                  </li>
+                  <li>
+                    In aggiunta alla <strong>C3.1 (FAL1S)</strong> anche la <strong>C3:</strong>
+                    si interrompe il regime di semplificazione in questi due scenari:
+                    <ul>
+                      <li>Nel caso di porto precedente estero e primo porto di sosta italiano</li>
+                      <li>Nel caso di porto di sosta italiano e porto successivo "Estero" o "Mare"</li>
+                    </ul>
+                  </li>
+                  <li><strong>A4.1</strong></li>
+                  <li><strong>C8:</strong> La compilazione è obbligatoria.</li>
+                </ul>
+              </div>
+
+              <h5 class="fw-bold mb-3">Per "Partenza"</h5>
+              <div class="card border-0 rounded-3 p-3 bg-white">
+                <ul class="mb-0 ps-3">
+                  <li>
+                    <strong>C4.1 (FAL1S):</strong> nel caso di porto precedente italiano
+                    e porto di sosta successivo italiano.
+                  </li>
+                  <li>
+                    In aggiunta alla <strong>C4.1 (FAL1S)</strong> anche la <strong>C4:</strong>
+                    si interrompe il regime di semplificazione nei seguenti scenari:
+                    <ul>
+                      <li>Nel caso di porto precedente estero e primo porto di sosta italiano</li>
+                      <li>Nel caso di porto di sosta italiano e porto successivo "Estero" o "Mare"</li>
+                      <li>Nel caso in cui vi sia verificato un avvicendamento del comandante nel porto</li>
+                    </ul>
+                  </li>
+                  <li><strong>A4.2</strong></li>
+                  <li><strong>C9:</strong> La compilazione è obbligatoria.</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="col-12 col-lg-7">
+              <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /sg-section__frame -->
+</section>
+<!-- FINE SEZIONE 02 — RICERCA E CONSULTAZIONE SOSTA PER UNITÀ DA DIPORTO -->
+
+            <!-- ============================================================
+                 SEZIONE 03 — MODIFICA SOSTA PER UNITÀ DA DIPORTO
+                 ============================================================ -->
+          <!-- ============================================================
+     SEZIONE 03 — MODIFICA SOSTA PER UNITÀ DA DIPORTO
+     Pagine: 103 (intro) · 104 (punto accesso) · 105 (step 1 dati generali)
+             106 (step 3 riepilogo)
+     ============================================================ -->
+<section id="modifica-diporto" class="mb-6">
+  <div class="sg-section__frame rounded-3 overflow-hidden">
+
+    <!-- HEAD -->
+    <div class="sg-section__head p-2 p-lg-4">
+      <div class="d-flex align-items-center gap-3">
+        <p class="h1 text-white mb-0 me-2">03.</p>
+        <div>
+          <h6 class="text-white h1 mb-2">Modifica sosta per unità da Diporto</h6>
+          <p class="text-white mb-0">
+            Panoramica sul flusso di modifica delle soste per unità da Diporto,
+            successivamente alla creazione delle stesse.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 104 — PUNTO DI ACCESSO ───────────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
+        <div>
+          <p class="fw-semibold text-secondary mb-1">Modifica sosta per unità da Diporto</p>
+          <h2 class="h1 mb-0">Punto di Accesso della modifica di una sosta</h2>
+        </div>
+        <span class="sg-action-btn rounded-3 flex-shrink-0">
+          <i class="bi bi-pencil"></i> Modifica Dati Sosta
+        </span>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- CARD 1 -->
+        <div class="col-12 col-lg-6 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div>
+                  <h5 class="fw-bold mb-2">Attivazione "Modifica" dall'elenco risultati di ricerca</h5>
+                  <p class="mb-0">
+                    Nell'elenco dei risultati di ricerca delle soste è possibile accedere
+                    al dettaglio in modalità modifica cliccando sull'"<strong>icona della matita</strong>".
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-12 col-lg-6 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <h5 class="fw-bold mb-2">Attivazione Modifica da pagina di dettaglio della sosta</h5>
+                  <p class="mb-0">
+                    Nell'elenco dei risultati di ricerca delle soste è possibile accedere
+                    al dettaglio in modalità visualizzazione cliccando sull'"<strong>icona
+                    dell'occhio</strong>". All'interno del dettaglio per procedere con la
+                    modifica sarà necessario cliccare sul pulsante
+                    <strong>"Modifica Dati Sosta"</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── PAG. 105 — STEP 1: DATI GENERALI ──────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="card border-0 rounded-3 overflow-hidden">
+
+        <div class="sg-step-section__head p-3 p-lg-4">
+          <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+            <div class="d-flex align-items-center gap-3">
+              <div class="sg-step-index">1</div>
+              <div>
+                <p class="text-white mb-1 opacity-75 small">Modifica sosta per unità da Diporto</p>
+                <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Dati generali</h4>
+              </div>
+            </div>
+            <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 1</span>
+          </div>
+        </div>
+
+        <!-- STEPPER — step 1 attivo -->
+        <div class="card-body bg-white py-3 px-4">
+          <div class="row g-0 align-items-end text-center">
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--active mb-2">DATI GENERALI</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--active">
+                  <i class="bi bi-check text-white"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label mb-2">INFORMAZIONI AGGIUNTIVE</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot"></div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label mb-2">RIEPILOGO SOSTA</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body bg-light p-4">
+          <div class="row g-4 align-items-start">
+
+            <div class="col-12 col-lg-5">
+              <p class="mb-3">
+                All'interno della pagina di dettaglio in modalità <strong>Modifica</strong>,
+                il processo di aggiornamento delle informazioni seguirà <strong>lo stesso
+                flusso</strong> guidato a step, descritto nel flusso di
+                <a href="#creazione-diporto" class="link-primary fw-semibold">"Creazione di una sosta" (pag 00)</a>.
+              </p>
+              <p class="mb-3">
+                All'interno della pagina <strong>non è possibile scegliere una nave
+                differente rispetto a quella precedentemente inserita né il porto di sosta</strong>.
+              </p>
+              <p class="mb-3">
+                È consentita esclusivamente la <strong>modifica del porto successivo di
+                sosta e relativo ETD</strong>, se è stato fissato l'ATA all'interno della sosta.
+              </p>
+              <p class="mb-0">
+                Nel caso di Unità da Diporto non europee proveniente da porti esteri sarà
+                presente la sezione <strong>"Elenco Successivi Porti di Scalo"</strong> e
+                sarà possibile aggiornare anche l'elenco.
+              </p>
+            </div>
+
+            <div class="col-12 col-lg-7">
+              <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── PAG. 106 — STEP 3: RIEPILOGO SOSTA ────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="card border-0 rounded-3 overflow-hidden">
+
+        <div class="sg-step-section__head p-3 p-lg-4">
+          <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+            <div class="d-flex align-items-center gap-3">
+              <div class="sg-step-index">3</div>
+              <div>
+                <p class="text-white mb-1 opacity-75 small">Modifica sosta per unità da Diporto</p>
+                <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Riepilogo sosta</h4>
+              </div>
+            </div>
+            <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 3</span>
+          </div>
+        </div>
+
+        <!-- STEPPER — tutti completati -->
+        <div class="card-body bg-white py-3 px-4">
+          <div class="row g-0 align-items-end text-center">
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--done mb-2">DATI GENERALI</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--done">
+                  <i class="bi bi-check text-white"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--done mb-2">INFORMAZIONI AGGIUNTIVE</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--done">
+                  <i class="bi bi-check text-white"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+            <div class="col">
+              <p class="sg-stepper__label sg-stepper__label--active mb-2">RIEPILOGO SOSTA</p>
+              <div class="d-flex justify-content-center">
+                <div class="sg-stepper__dot sg-stepper__dot--active">
+                  <i class="bi bi-pencil text-white"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body bg-light p-4">
+          <div class="row g-4">
+
+            <!-- 1 SALVA MODIFICA -->
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">1</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Salva modifica</h5>
+                  </div>
+                  <p class="mb-3">
+                    All'interno del riepilogo della sosta, sarà possibile salvare la modifica
+                    tramite l'apposito pulsante <strong>"Salva modifica"</strong>.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2 CONFERMA SALVATAGGIO -->
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">2</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Conferma salvataggio</h5>
+                  </div>
+                  <p class="mb-3">
+                    Il sistema mostra una finestra che informa l'utente dell'avvenuto
+                    successo di invio e salvataggio.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 DETTAGLIO E CAMBIO STATO -->
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">3</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Dettaglio e cambio stato</h5>
+                  </div>
+                  <p class="mb-3">
+                    Dopo aver salvato la modifica della sosta, all'interno del dettaglio
+                    lo stato resta <strong>"Aperta"</strong>.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- NOTA -->
+          <div class="sg-note p-3 rounded-3 mt-4 d-flex align-items-start gap-2">
+            <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+            <p class="mb-0">
+              Lo stato della sosta assumerà lo stato <strong>"Chiusa"</strong> una volta
+              fissato l'ATD e non sarà più modificabile.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /sg-section__frame -->
+</section>
+<!-- FINE SEZIONE 03 — MODIFICA SOSTA PER UNITÀ DA DIPORTO -->
+
+            <!-- ============================================================
+                 SEZIONE 04 — CANCELLAZIONE SOSTA PER UNITÀ DA DIPORTO
+                 ============================================================ -->
+            <!-- ============================================================
+     SEZIONE 04 — CANCELLAZIONE SOSTA PER UNITÀ DA DIPORTO
+     Pagine: 107 (intro) · 108 (cancellazione tramite tabella)
+             109 (cancellazione dal dettaglio) · 110 (cancellazione dalla dashboard)
+     ============================================================ -->
+<section id="cancellazione-diporto" class="mb-6">
+  <div class="sg-section__frame rounded-3 overflow-hidden">
+
+    <!-- HEAD -->
+    <div class="sg-section__head p-2 p-lg-4">
+      <div class="d-flex align-items-center gap-3">
+        <p class="h1 text-white mb-0 me-2">04.</p>
+        <div>
+          <h6 class="text-white h1 mb-2">Cancellazione sosta per unità da Diporto</h6>
+          <p class="text-white mb-0">
+            Panoramica sul flusso di cancellazione di una Sosta per unità da Diporto.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTA CONDIVISA -->
+    <div class="sg-section__body p-2 p-lg-4 pb-0">
+      <div class="sg-note p-3 rounded-3 d-flex align-items-start gap-2">
+        <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+        <p class="mb-0">
+          La cancellazione sarà possibile soltanto se non è stata già impostata l'ATA
+          all'interno della sosta e se gli Obblighi di Dichiarazione presenti non siano
+          già stati lavorati a vario titolo dall'Autorità Marittima.
+        </p>
+      </div>
+    </div>
+
+    <!-- ── PAG. 108 — CANCELLAZIONE TRAMITE TABELLA ──────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3">
+        <div>
+          <p class="fw-semibold text-secondary mb-1">Cancellazione sosta per unità da Diporto</p>
+          <h2 class="h1 mb-2">Cancellazione sosta tramite tabella</h2>
+          <p class="mb-0">
+            Dopo aver creato una sosta, l'utente può eliminarla tramite le azioni
+            presenti in tabella, attraverso i seguenti passaggi:
+          </p>
+        </div>
+        <div class="d-flex flex-column align-items-end gap-2 flex-shrink-0">
+          <p class="text-muted small text-end mb-1">
+            La sosta, una volta cancellata, non sarà più disponibile e gli Obblighi
+            di Dichiarazione per i quali non è ancora stata svolta alcuna attività
+            da parte del CdP verranno posti in stato "Annullata".
+          </p>
+          <span class="sg-action-btn rounded-3 bg-danger border-0">
+            <i class="bi bi-trash3"></i> Elimina
+          </span>
+        </div>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- CARD 1 -->
+        <div class="col-12 col-lg-6 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Cancella tramite tabella</h5>
+                  <p class="mb-0">
+                    Nell'elenco risultati della ricerca delle soste è possibile eliminare
+                    la sosta <strong>selezionandola</strong> attraverso la checkbox e
+                    successivamente cliccando il pulsante <strong>"Elimina"</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-12 col-lg-6 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Finestra di conferma eliminazione e successo</h5>
+                  <p class="mb-0">
+                    Il sistema mostra una finestra in cui l'utente deve confermare di essere
+                    sicuro di voler eliminare la sosta. Cliccare <strong>Cancella</strong>
+                    per proseguire. Una volta eliminata il sistema lo comunica all'utente
+                    tramite alert informativo.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── PAG. 109 — CANCELLAZIONE DAL DETTAGLIO ────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
+        <div>
+          <p class="fw-semibold text-secondary mb-1">Cancellazione sosta per unità da Diporto</p>
+          <h2 class="h1 mb-2">Cancellazione sosta dal dettaglio</h2>
+          <p class="mb-0">
+            Dopo aver creato una sosta, l'utente può eliminarla tramite le azioni
+            presenti all'interno del dettaglio, attraverso i seguenti passaggi:
+          </p>
+        </div>
+        <span class="sg-action-btn rounded-3 bg-danger border-0 flex-shrink-0">
+          <i class="bi bi-trash3"></i> Elimina
+        </span>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- CARD 1 -->
+        <div class="col-12 col-lg-6 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Cancella dal dettaglio della sosta</h5>
+                  <p class="mb-0">
+                    Nell'elenco risultati delle soste è possibile accedere al dettaglio
+                    cliccando sull'"<strong>icona dell'occhio</strong>". All'interno del
+                    dettaglio per procedere con la cancellazione sarà necessario cliccare
+                    sul pulsante <strong>"Cancella"</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-12 col-lg-6 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Finestra di conferma e giustificazione</h5>
+                  <p class="mb-0">
+                    Il sistema mostra una finestra di conferma che informa l'utente che
+                    l'eliminazione della sosta è <strong>irreversibile</strong> e che, una
+                    volta cancellata, non sarà più disponibile. Cliccare
+                    <strong>"Cancella sosta"</strong> per confermare.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── PAG. 110 — CANCELLAZIONE DALLA DASHBOARD ──────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
+        <div>
+          <p class="fw-semibold text-secondary mb-1">Cancellazione sosta</p>
+          <h2 class="h1 mb-2">Cancellazione sosta dalla dashboard</h2>
+          <p class="mb-0">
+            Dopo aver creato una sosta, l'utente può eliminarla tramite le azioni
+            presenti all'interno della lista soste nella sezione "Panoramica",
+            attraverso i seguenti passaggi:
+          </p>
+        </div>
+        <span class="sg-action-btn rounded-3 bg-danger border-0 flex-shrink-0">
+          <i class="bi bi-trash3"></i> Elimina
+        </span>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- CARD 1 -->
+        <div class="col-12 col-lg-6 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Cancella dal dettaglio della sosta</h5>
+                  <p class="mb-0">
+                    Nell'elenco risultati delle soste è possibile accedere al dettaglio
+                    cliccando sull'"<strong>icona dell'occhio</strong>". All'interno del
+                    dettaglio per procedere con la cancellazione sarà necessario cliccare
+                    sul pulsante <strong>"Cancella"</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-12 col-lg-6 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Finestra di conferma e giustificazione</h5>
+                  <p class="mb-0">
+                    Il sistema mostra una finestra di conferma. L'eliminazione della
+                    sosta è <strong>irreversibile</strong> e, una volta cancellata,
+                    non sarà più disponibile. Cliccare
+                    <strong>"Conferma eliminazione"</strong> per confermare.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto">
+                <img src="./img/PERCORSO_FILE.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /sg-section__frame -->
+</section>
+<!-- FINE SEZIONE 04 — CANCELLAZIONE SOSTA PER UNITÀ DA DIPORTO -->
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Chiudi"
+            ></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img
+              id="lightbox-img"
+              src=""
+              alt=""
+              class="img-fluid rounded"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- Sidebar active link -->
+    <script>
+      document.querySelectorAll(".sidebar .nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          document
+            .querySelectorAll(".sidebar .nav-link")
+            .forEach((el) => el.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+
+    <!-- Lightbox -->
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+
+        const lbImg  = document.getElementById('lightbox-img');
+        const modal  = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.addEventListener('click', function () {
+            lbImg.src = this.src;
+            lbImg.alt = this.alt || '';
+            bsModal.show();
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () {
+          lbImg.src = '';
+        });
+      })();
+    </script>
+
+  </body>
+</html>
