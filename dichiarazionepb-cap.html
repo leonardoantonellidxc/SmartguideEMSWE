@@ -1,0 +1,2017 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Dichiarazione di Porto Base (Capitaneria)</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity 0.2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: 0.85;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >ITA<span class="visually-hidden">: italiano</span></a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" lang="en"
+                      >ENG<span class="visually-hidden">: english</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img
+                src="img/logo_prova1.svg"
+                alt="Logo Capitanerie di Porto"
+                class="logo"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item">
+              <a href="index.html">Manuali Smart Guide</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Dichiarazione di Porto Base
+            </li>
+          </ol>
+        </nav>
+
+        <div class="row">
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav
+                class="sidebar sidebar-expand-lg sidebar-dark sticky-top"
+                aria-label="Menu della sezione"
+              >
+                <div class="sidebar-header">
+                  <h2 class="sidebar-title">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </h2>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#ricerca-consultazione">
+                        01. Ricerca e consultazione
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#valutazione-dichiarazione">
+                        02. Valutazione della Dichiarazione di Porto Base
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#valutazione-invalidazione">
+                        03. Valutazione richiesta di invalidazione
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#valutazione-chiusura">
+                        04. Valutazione richiesta di chiusura
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#revoca-dichiarazione">
+                        05. Revoca Dichiarazione
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between">
+                  <h4>Dichiarazione di Porto Base</h4>
+                </div>
+                <p class="mb-0">
+                  Il portale delle Smart Guide è uno spazio digitale che
+                  raccoglie risorse pratiche e aggiornate in un unico ambiente
+                  intuitivo. Strumenti chiari e organizzati per organizzarti e
+                  trovare subito ciò che ti serve.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — RICERCA E CONSULTAZIONE
+                 ============================================================ -->
+            <section id="dichiarazione-porto-base" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h6 class="text-white h1 mb-2">
+                        Ricerca e Consultazione
+                      </h6>
+                      <p class="text-white mb-0">
+                        Gestione Dichiarazione di Porto Base
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── 01.01 — LA DASHBOARD ──────────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <h2 class="h1 mb-2">La dashboard</h2>
+                  <h3 class="h4 fw-bold mb-3">
+                    Visualizzazione delle Dichiarazioni di Porto Base
+                  </h3>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-2">
+                            <i
+                              class="bi bi-check-circle-fill text-primary fs-4 flex-shrink-0"
+                            ></i>
+                            <div>
+                              <h5 class="fw-bold mb-2">
+                                Panoramica delle attività
+                              </h5>
+                              <p class="mb-0">
+                                Dalla dashboard è possibile consultare l'elenco
+                                di tutte le Dichiarazioni di Porto Base che
+                                richiedono azioni di valutazione.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/dichiarazionepb-cap/1.png"
+                        alt=""
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── 01.02 — PUNTO DI ACCESSO ──────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <h2 class="h1 mb-2">Punto di accesso</h2>
+                  <h3 class="h4 fw-bold mb-3">La voce di menù</h3>
+                  <p class="mb-4">
+                    Dalla dashboard, oltre a visualizzare, ricercare le soste,
+                    consultare la lista delle attività da svolgere, è possibile
+                    <strong
+                      >accedere alle principali sezioni tramite le voci di
+                      menu</strong
+                    >.
+                  </p>
+
+                  <div class="card border-0 rounded-3">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+                        <div class="col-12 col-lg-5">
+                          <div class="card border-0 rounded-3 p-3 bg-primary">
+                            <h5 class="text-white fw-bold mb-2">
+                              Menu a tendina
+                            </h5>
+                            <p class="text-white mb-0">
+                              Cliccando sulla voce
+                              <strong>"Gestione e Consultazione"</strong> viene
+                              visualizzato un menu a tendina, da cui è possibile
+                              accedere alle
+                              <strong>"Dichiarazioni di Porto Base"</strong>.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-lg-7">
+                          <img
+                            src="./img/dichiarazionepb-cap/2.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── 01.03 — RICERCA TRA DPB E RICHIESTE DI INVALIDAZIONE ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <h2 class="h1 mb-3">
+                    Ricerca tra Dichiarazione di Porto Base e Richieste di
+                    invalidazione
+                  </h2>
+                  <p class="mb-4">
+                    In questa pagina è possibile visualizzare ed esportare
+                    l'elenco delle dichiarazioni di porto base attive, lo
+                    storico delle richieste precedenti e le richieste di
+                    invalidazione e chiusura.
+                  </p>
+
+                  <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <div>
+                              <h5 class="fw-bold mb-2">
+                                Dichiarazione di Porto Base
+                              </h5>
+                              <p class="mb-0">
+                                L'operatore CdP valuta formalmente il porto in
+                                cui una nave è stabilmente basata, dopo aver
+                                ricevuto la richiesta da parte dell'Armatore.
+                              </p>
+                            </div>
+                          </div>
+                          <img
+                            src="./img/dichiarazionepb-cap/3.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <div>
+                              <h5 class="fw-bold mb-2">
+                                Richiesta di invalidazione/chiusura
+                                Dichiarazione di Porto Base
+                              </h5>
+                              <p class="mb-0">
+                                È la procedura che consente all'operatore CdP di
+                                ricercare le richieste di invalidazione/chiusura
+                                di una Dichiarazione di Porto Base "Approvata".
+                              </p>
+                            </div>
+                          </div>
+                          <img
+                            src="./img/dichiarazionepb-cap/4.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ============================================================
+                     STEP 1 — DICHIARAZIONE DI PORTO BASE
+                     ============================================================ -->
+
+                <!-- ── 01.04 — STEP 1: DICHIARAZIONE DI PORTO BASE / RICERCA ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <div class="d-flex align-items-start gap-3 mb-4">
+                    <div class="sg-step-index bg-primary flex-shrink-0">1</div>
+                    <div>
+                      <h2 class="h1 mb-1">Dichiarazione di porto base</h2>
+                      <h3 class="h4 fw-bold mb-0">
+                        Ricerca Dichiarazione di Porto Base
+                      </h3>
+                    </div>
+                  </div>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-4">
+                        La pagina consente all'Operatore di Capitaneria di
+                        ricercare e consultare le Dichiarazioni di Porto Base
+                        presenti nel sistema.
+                      </p>
+                      <p class="mb-4">
+                        La ricerca può essere effettuata utilizzando i campi e i
+                        filtri disponibili, per individuare rapidamente le
+                        dichiarazioni di interesse, sia attive sia storiche, ai
+                        fini delle attività di verifica e controllo.
+                      </p>
+
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-toggle-on text-primary fs-4"></i>
+                            <span class="fw-semibold"
+                              >Dichiarazioni attive</span
+                            >
+                          </div>
+                          <p class="mb-0">
+                            Consente di filtrare le Dichiarazioni di Porto Base
+                            <strong>attive</strong> e <strong>passate</strong>;
+                            la ricerca è già impostata per visualizzare solo le
+                            dichiarazioni di porto base attive.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/dichiarazionepb-cap/5.png"
+                        alt=""
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── 01.05 — STEP 1: FUNZIONALITÀ IN PAGINA ────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <div class="d-flex align-items-start gap-3 mb-4">
+                    <div class="sg-step-index bg-primary flex-shrink-0">1</div>
+                    <div>
+                      <p class="fw-semibold text-secondary mb-1">
+                        Dichiarazione di Porto Base
+                      </p>
+                      <h2 class="h1 mb-0">Funzionalità in pagina</h2>
+                    </div>
+                  </div>
+
+                  <p class="mb-3">
+                    È possibile avviare la ricerca utilizzando i filtri
+                    disponibili oppure applicare criteri aggiuntivi per affinare
+                    i risultati.
+                  </p>
+                  <p class="mb-4">
+                    La schermata è suddivisa nelle seguenti sezioni:
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <img
+                        src="./img/dichiarazionepb-cap/6.png"
+                        alt=""
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+
+                    <div class="col-12 col-lg-7 d-flex flex-column gap-4">
+                      <!-- 1 SEZIONE FILTRI -->
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <div>
+                              <h5 class="fw-bold text-uppercase mb-2">
+                                Sezione filtri
+                              </h5>
+                              <p class="mb-0">
+                                La sezione Filtri consente di ricercare le
+                                Dichiarazioni secondo diversi criteri, con
+                                visibilità su tutte le compagnie e le navi
+                                presenti nel sistema. Sono disponibili
+                                <strong>filtri base</strong>, come
+                                <strong>nome della compagnia</strong> e della
+                                nave, <strong>"Dichiarazioni Attive"</strong>, e
+                                <strong>filtri avanzati</strong> per affinare la
+                                ricerca per intervallo temporale e stato della
+                                richiesta.
+                              </p>
+                            </div>
+                          </div>
+                          <img
+                            src="./img/dichiarazionepb-cap/7.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- 2 VISUALIZZAZIONE RICHIESTA TRAMITE TABELLA -->
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <div>
+                              <h5 class="fw-bold text-uppercase mb-2">
+                                Visualizzazione richiesta tramite tabella
+                              </h5>
+                              <p class="mb-0">
+                                I risultati della ricerca vengono presentati in
+                                una tabella, mostrando le
+                                <strong>informazioni principali</strong> e le
+                                <strong>azioni disponibili</strong>.
+                              </p>
+                            </div>
+                          </div>
+                          <img
+                            src="./img/dichiarazionepb-cap/8.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- NOTA -->
+                  <div
+                    class="sg-note p-3 rounded-3 mt-4 d-flex align-items-start gap-2"
+                  >
+                    <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">
+                      Le dichiarazioni in stato <strong>"Ritirata"</strong> è
+                      visibile esclusivamente agli Operatori CdP che operano per
+                      il porto presente nella Dichiarazione
+                      <strong>"Ritirata"</strong>.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ── 01.06 — STEP 1: VISUALIZZAZIONE DETTAGLIO DPB ─────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <div class="d-flex align-items-start gap-3 mb-4">
+                    <div class="sg-step-index bg-primary flex-shrink-0">1</div>
+                    <div>
+                      <p class="fw-semibold text-secondary mb-1">
+                        Dichiarazione di porto base
+                      </p>
+                      <h2 class="h1 mb-0">
+                        Visualizzazione dettaglio Dichiarazione di Porto Base
+                      </h2>
+                    </div>
+                  </div>
+
+                  <p class="mb-4">
+                    All'interno della pagina sono consultabili le seguenti
+                    informazioni:
+                  </p>
+
+                  <div class="row g-4 align-items-start mb-4">
+                    <div class="col-12 col-lg-5">
+                      <ul class="list-unstyled mb-0">
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Dati della Dichiarazione di Porto Base</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Note</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Documenti caricati</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Utenti dichiaranti</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/dichiarazionepb-cap/9.png"
+                        alt=""
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+
+                  <h3 class="h5 fw-bold mb-3">
+                    Possibili azioni sulla Dichiarazione di Porto Base:
+                  </h3>
+
+                  <div class="row g-4">
+                    <!-- Azione 1: Presa in carico -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border rounded-3 h-100">
+                        <div class="card-body p-3">
+                          <div
+                            class="sg-action-btn d-inline-flex align-items-center gap-2 mb-3"
+                          >
+                            <i class="bi bi-check2-square"></i>
+                            <span>Presa in carico</span>
+                          </div>
+                          <p class="mb-2">
+                            La funzione
+                            <strong>"Presa in carico"</strong> consente di
+                            accedere alle seguenti azioni operative sulla
+                            dichiarazione:
+                          </p>
+                          <ul class="mb-0 small">
+                            <li>
+                              <strong>Approva Dichiarazione</strong> — Conferma
+                              e valida la dichiarazione inserita.
+                            </li>
+                            <li>
+                              <strong>Richiedi integrazione</strong> — Invia una
+                              richiesta di integrazione o modifica al soggetto
+                              dichiarante.
+                            </li>
+                            <li>
+                              <strong>Respingi Dichiarazione</strong> — Rifiuta
+                              la dichiarazione, indicando le motivazioni del
+                              respingimento.
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Azione 2: Storico variazioni -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border rounded-3 h-100">
+                        <div class="card-body p-3">
+                          <div
+                            class="d-inline-flex align-items-center gap-2 mb-3"
+                          >
+                            <i
+                              class="bi bi-clock-history text-primary fs-5"
+                            ></i>
+                            <span class="fw-semibold">Storico variazioni</span>
+                          </div>
+                          <p class="mb-0">
+                            Consente di consultare tutte le modifiche apportate
+                            alla dichiarazione nel tempo, con evidenza delle
+                            variazioni e dei relativi aggiornamenti.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Azione 3: Stampa in PDF -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border rounded-3 h-100">
+                        <div class="card-body p-3">
+                          <div
+                            class="d-inline-flex align-items-center gap-2 mb-3"
+                          >
+                            <i
+                              class="bi bi-file-earmark-pdf text-primary fs-5"
+                            ></i>
+                            <span class="fw-semibold">Stampa in PDF</span>
+                          </div>
+                          <p class="mb-0">
+                            Permette di generare ed esportare il documento in
+                            formato PDF per la consultazione offline o
+                            l'archiviazione.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ============================================================
+                     STEP 2 — RICHIESTA DI INVALIDAZIONE/CHIUSURA
+                     ============================================================ -->
+
+                <!-- ── 01.07 — STEP 2: RICHIESTA DI INVALIDAZIONE / RICERCA ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <div class="d-flex align-items-start gap-3 mb-4">
+                    <div class="sg-step-index bg-primary flex-shrink-0">2</div>
+                    <div>
+                      <h2 class="h1 mb-1">
+                        Richiesta di invalidazione/chiusura Dichiarazione di
+                        Porto Base
+                      </h2>
+                      <h3 class="h4 fw-bold mb-0">
+                        Ricerca della richiesta di invalidazione
+                      </h3>
+                    </div>
+                  </div>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-4">
+                        La pagina consente di <strong>ricercare</strong> e
+                        <strong>consultare</strong>
+                        le richieste di invalidazione/chiusura di Porto Base
+                        presenti nel sistema.
+                      </p>
+
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-list-check text-primary fs-4"></i>
+                            <span class="fw-semibold"
+                              >Selezione tipo richiesta</span
+                            >
+                          </div>
+                          <p class="mb-0">
+                            È necessario selezionare il
+                            <strong>tipo di richiesta</strong>, in questo caso
+                            <strong>"Richiesta di invalidazione"</strong>, per
+                            visualizzare i filtri di ricerca.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/dichiarazionepb-cap/10.png"
+                        alt=""
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── 01.08 — STEP 2: FUNZIONALITÀ IN PAGINA ────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <div class="d-flex align-items-start gap-3 mb-4">
+                    <div class="sg-step-index bg-primary flex-shrink-0">2</div>
+                    <div>
+                      <p class="fw-semibold text-secondary mb-1">
+                        Richiesta di invalidazione/chiusura Dichiarazione di
+                        porto base
+                      </p>
+                      <h2 class="h1 mb-0">Funzionalità in pagina</h2>
+                    </div>
+                  </div>
+
+                  <p class="mb-4">
+                    Una volta selezionato il tipo di richiesta, è possibile
+                    <strong>avviare subito la ricerca</strong> oppure aggiungere
+                    ulteriori <strong>filtri avanzati</strong> per rendere i
+                    risultati più precisi. La schermata è suddivisa nelle
+                    seguenti sezioni:
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <img
+                        src="./img/dichiarazionepb-cap/11.png"
+                        alt=""
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+
+                    <div class="col-12 col-lg-7 d-flex flex-column gap-4">
+                      <!-- 1 SEZIONE FILTRI -->
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <div>
+                              <h5 class="fw-bold text-uppercase mb-2">
+                                Sezione filtri
+                              </h5>
+                              <p class="mb-0">
+                                La sezione Filtri consente di ricercare le
+                                richieste di invalidazione/chiusura secondo
+                                diversi criteri. Sono disponibili filtri base,
+                                come <strong>nome della nave</strong> e
+                                <strong>periodicità</strong>, e filtri avanzati
+                                per affinare la ricerca per
+                                <strong>porto base</strong>,
+                                <strong>stato della richiesta</strong> e
+                                <strong>periodo</strong>.
+                              </p>
+                            </div>
+                          </div>
+                          <img
+                            src="./img/dichiarazionepb-cap/12.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- 2 VISUALIZZAZIONE RICHIESTA TRAMITE TABELLA -->
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <div>
+                              <h5 class="fw-bold text-uppercase mb-2">
+                                Visualizzazione richiesta tramite tabella
+                              </h5>
+                              <p class="mb-0">
+                                I risultati della ricerca vengono presentati in
+                                una tabella, mostrando le
+                                <strong>informazioni principali</strong>.
+                              </p>
+                            </div>
+                          </div>
+                          <img
+                            src="./img/dichiarazionepb-cap/13.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── 01.09 — STEP 2: FOCUS ELENCO RICHIESTE ────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <div class="d-flex align-items-start gap-3 mb-4">
+                    <div class="sg-step-index bg-primary flex-shrink-0">2</div>
+                    <div>
+                      <p class="fw-semibold text-secondary mb-1">
+                        Richiesta di invalidazione/chiusura Dichiarazione di
+                        porto base
+                      </p>
+                      <h2 class="h1 mb-0">Focus Elenco richieste</h2>
+                    </div>
+                  </div>
+
+                  <img
+                    src="./img/dichiarazionepb-cap/14.png"
+                    alt=""
+                    class="w-100 rounded-3 mb-4"
+                  />
+
+                  <div class="row g-4">
+                    <!-- 1 INFORMAZIONI PRINCIPALI -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Informazioni principali
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            All'interno della tabella sono visualizzati dati
+                            come
+                            <strong>nome della nave</strong>,
+                            <strong>porto base</strong>,
+                            <strong>periodicità</strong> e
+                            <strong>stato della richiesta</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/15.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 2 MOTIVAZIONE E INFORMATIVA -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Motivazione e informativa
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Con l'hover del mouse è possibile consultare la
+                            <strong>motivazione della richiesta</strong> e la
+                            <strong>normativa di riferimento</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/16.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 3 AZIONI SULLA RICHIESTA -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Azioni sulla richiesta
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Per ogni richiesta sono disponibili le azioni di
+                            <strong>visualizzazione del dettaglio</strong> e
+                            <strong>consultazione dello storico</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/17.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── 01.10 — STEP 2: VISUALIZZAZIONE DETTAGLIO RICHIESTA ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <div class="d-flex align-items-start gap-3 mb-4">
+                    <div class="sg-step-index bg-primary flex-shrink-0">2</div>
+                    <div>
+                      <p class="fw-semibold text-secondary mb-1">
+                        Richiesta di invalidazione/chiusura Dichiarazione di
+                        porto base
+                      </p>
+                      <h2 class="h1 mb-0">
+                        Visualizzazione dettaglio richiesta
+                      </h2>
+                    </div>
+                  </div>
+
+                  <div class="row g-4 align-items-start">
+                    <!-- SINISTRA: info + azioni -->
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">
+                        All'interno della pagina sono consultabili le seguenti
+                        informazioni:
+                      </p>
+                      <ul class="list-unstyled mb-4">
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Dati della richiesta</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Informativa</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span
+                            >Motivazione delle richiesta di invalidazione</span
+                          >
+                        </li>
+                      </ul>
+
+                      <h3 class="h5 fw-bold mb-3">Azione primaria da fare:</h3>
+
+                      <div class="card border rounded-3 mb-3">
+                        <div class="card-body p-3">
+                          <div
+                            class="sg-action-btn d-inline-flex align-items-center gap-2 mb-2"
+                          >
+                            <i class="bi bi-check2-square"></i>
+                            <span>Prendi in carico</span>
+                          </div>
+                          <p class="mb-0">
+                            Viene presa in carico l'attività da svolgere.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="card border rounded-3">
+                        <div class="card-body p-3">
+                          <div
+                            class="d-inline-flex align-items-center gap-2 mb-2"
+                          >
+                            <i
+                              class="bi bi-file-earmark-pdf text-primary fs-5"
+                            ></i>
+                            <span class="fw-semibold">Stampa in PDF</span>
+                          </div>
+                          <p class="mb-0">
+                            Possibilità di stampare un PDF del
+                            <strong>dettaglio</strong>.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- DESTRA: schermata dettaglio -->
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/dichiarazionepb-cap/18.png"
+                        alt=""
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 02 — VALUTAZIONE DELLA DICHIARAZIONE DI PORTO BASE
+                 ============================================================ -->
+            <section id="valutazione-dichiarazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">02.</p>
+                    <div>
+                      <h6 class="text-white h1 mb-2">
+                        Valutazione della Dichiarazione di Porto Base
+                      </h6>
+                      <p class="text-white mb-0">
+                        Di seguito una panoramica sulle azioni disponibili per
+                        la valutazione di una Dichiarazione di Porto Base, che
+                        può avvenire esclusivamente dopo la sottomissione
+                        della stessa.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── 02.01 — AZIONI DISPONIBILI POST "PRESA IN CARICO" ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <p class="fw-semibold text-secondary mb-1">
+                    Valutazione della Dichiarazione di Porto Base
+                  </p>
+                  <h2 class="h1 mb-3">
+                    Azioni disponibili post "Presa in carico"
+                  </h2>
+                  <p class="mb-4">
+                    Una volta che l'utente ha preso in carico una
+                    Dichiarazione di Porto base, avrà la possibilità di
+                    procedere con le seguenti azioni:
+                  </p>
+
+                  <div class="sg-rimando rounded-3 p-3 mb-4 d-flex align-items-start gap-2">
+                    <i class="bi bi-eye flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">
+                      Visualizza il dettaglio del flusso di
+                      <a href="#">"presa in carico"</a> nella sezione
+                      "Ricerca e Consultazione".
+                    </p>
+                  </div>
+
+                  <div class="row g-4 align-items-start">
+
+                    <div class="col-12 col-lg-5">
+                      <img
+                        src="./img/dichiarazionepb-cap/19.png"
+                        alt=""
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+
+                    <div class="col-12 col-lg-7 d-flex flex-column gap-4">
+
+                      <!-- Azione 1: Approva dichiarazione -->
+                      <div>
+                        <div class="sg-action-btn d-inline-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-check2-square"></i>
+                          <span>Approva dichiarazione</span>
+                        </div>
+                        <p class="mb-0">
+                          L'utente, dopo aver preso visione della
+                          Dichiarazione di Porto Base, può decidere di
+                          approvarla.
+                        </p>
+                      </div>
+
+                      <hr class="my-0" />
+
+                      <!-- Azione 2: Richiedi integrazione -->
+                      <div>
+                        <div class="d-inline-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-pencil text-primary fs-5"></i>
+                          <span class="fw-semibold">Richiedi integrazione</span>
+                        </div>
+                        <p class="mb-0">
+                          L'utente, dopo aver preso visione della
+                          Dichiarazione di Porto Base, può decidere se
+                          richiedere all'Armatore di integrarla.
+                        </p>
+                      </div>
+
+                      <hr class="my-0" />
+
+                      <!-- Azione 3: Respingi dichiarazione -->
+                      <div>
+                        <div class="d-inline-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-slash-circle text-primary fs-5"></i>
+                          <span class="fw-semibold">Respingi dichiarazione</span>
+                        </div>
+                        <p class="mb-0">
+                          L'utente, dopo aver preso visione della
+                          Dichiarazione di Porto Base, può decidere di
+                          respingerla.
+                        </p>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- ── 02.02 — PASSAGGI PER APPROVARE UNA DICHIARAZIONE ──── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <p class="fw-semibold text-secondary mb-1">
+                    Gestione azioni sull'attività
+                  </p>
+                  <h2 class="h1 mb-3">Passaggi per approvare una Dichiarazione</h2>
+                  <p class="mb-4">
+                    Il flusso per <strong>approvare la Dichiarazione</strong>
+                    di Porto Base da parte dell'Operatore di Capitanerie,
+                    prevede i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Avvia azione "Approva dichiarazione"
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Per approvare la Dichiarazione di Porto Base
+                            clicchiamo, <strong>"Approva dichiarazione"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/20.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Conferma approvazione dichiarazione
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una
+                            <strong>finestra per confermare l'approvazione
+                            della dichiarazione</strong>; clicca l'apposito
+                            pulsante per proseguire.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/21.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Dettaglio e stato
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Una volta cliccato il pulsante, la Dichiarazione
+                            passa nello stato <strong>"Approvata"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/22.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- ── 02.03 — PASSAGGI PER RICHIEDERE UN'INTEGRAZIONE ───── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <p class="fw-semibold text-secondary mb-1">
+                    Gestione azioni sull'attività
+                  </p>
+                  <h2 class="h1 mb-3">Passaggi per richiedere un'integrazione</h2>
+                  <p class="mb-4">
+                    Il flusso per <strong>richiedere l'integrazione della
+                    Dichiarazione</strong> di Porto Base da parte
+                    dell'Operatore di Capitanerie, prevede i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Avvia azione "Richiedi integrazione"
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Per richiedere l'integrazione della Dichiarazione
+                            di Porto Base clicchiamo
+                            <strong>"Richiedi integrazione"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/23.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Aggiunta della motivazione di integrazione
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostrerà una
+                            <strong>finestra per inserire obbligatoriamente
+                            la motivazione</strong> della richiesta di
+                            integrazione; compilare e confermare.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/24.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Dettaglio e stato
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Una volta confermata la richiesta, nel dettaglio
+                            la dichiarazione passa allo stato
+                            <strong>"Da integrare"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/25.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- ── 02.04 — PASSAGGI PER RESPINGERE UNA DICHIARAZIONE ─── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <p class="fw-semibold text-secondary mb-1">
+                    Gestione azioni sull'attività
+                  </p>
+                  <h2 class="h1 mb-3">Passaggi per respingere una Dichiarazione</h2>
+                  <p class="mb-4">
+                    Il flusso per <strong>respingere la Dichiarazione</strong>
+                    di Porto Base da parte dell'Operatore di Capitanerie,
+                    prevede i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Avvia azione "Respingi dichiarazione"
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Per respingere la Dichiarazione di Porto Base
+                            clicchiamo, <strong>"Respingi dichiarazione"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/26.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Finestra di conferma
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una
+                            <strong>finestra per inserire obbligatoriamente
+                            il motivo</strong> per la quale si sta
+                            respingendo la Dichiarazione; compilare e confermare.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/27.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Dettaglio e stato
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Una volta cliccato il pulsante, la Dichiarazione
+                            passa nello stato <strong>"Respinta"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/28.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 03 — VALUTAZIONE RICHIESTA DI INVALIDAZIONE
+                 ============================================================ -->
+            <section id="valutazione-invalidazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">03.</p>
+                    <div>
+                      <h6 class="text-white h1 mb-2">
+                        Valutazione richiesta di invalidazione
+                      </h6>
+                      <p class="text-white mb-0">
+                        Di seguito una panoramica sulle azioni disponibili
+                        per la valutazione di una richiesta di invalidazione
+                        di una Dichiarazione di Porto Base, che può avvenire
+                        esclusivamente dopo la sottomissione della stessa.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── 03.01 — PASSAGGI PER APPROVARE LA RICHIESTA DI INVALIDAZIONE ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <p class="fw-semibold text-secondary mb-1">
+                    Valutazione richiesta di invalidazione
+                  </p>
+                  <h2 class="h1 mb-3">
+                    Passaggi per approvare la richiesta di invalidazione
+                  </h2>
+                  <p class="mb-4">
+                    A seguito dell'invio della richiesta di invalidazione
+                    della Dichiarazione di Porto Base da parte dell'Armatore,
+                    l'Operatore di Capitanerie potrà <strong>valutarla</strong>,
+                    decidendo se <strong>approvarla</strong> o
+                    <strong>respingerla</strong>.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Dettaglio e pulsante
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Per approvare la Dichiarazione di Porto Base
+                            clicchiamo, <strong>"Approva invalidazione"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/30.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Aggiunta della motivazione del rifiuto
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una <strong>finestra per
+                            inserire obbligatoriamente la motivazione</strong>
+                            di rifiuto della richiesta; compila il campo e
+                            conferma.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/30.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Dettaglio e stato
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Al clic del pulsante, lo stato della richiesta
+                            diventa <strong>"Accettata"</strong> e la
+                            Dichiarazione di Porto Base
+                            <strong>"Invalidata"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/31.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- ── 03.02 — PASSAGGI PER RIFIUTARE LA RICHIESTA DI INVALIDAZIONE ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <p class="fw-semibold text-secondary mb-1">
+                    Valutazione richiesta di invalidazione
+                  </p>
+                  <h2 class="h1 mb-3">
+                    Passaggi per rifiutare la richiesta di invalidazione
+                  </h2>
+                  <p class="mb-4">
+                    A seguito dell'invio della richiesta di invalidazione
+                    della Dichiarazione di Porto Base da parte dell'Armatore,
+                    l'Operatore di Capitanerie potrà <strong>valutarla</strong>,
+                    decidendo se <strong>approvarla</strong> o
+                    <strong>respingerla</strong>.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Dettaglio e pulsante
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Per approvare la Dichiarazione di Porto Base
+                            clicchiamo, <strong>"Respingi invalidazione"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/32.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Aggiunta della motivazione del rifiuto
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una <strong>finestra per
+                            inserire obbligatoriamente la motivazione</strong>
+                            di rifiuto della richiesta; compila il campo e
+                            conferma.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/33.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Dettaglio e stato
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Una volta cliccato il pulsante, la richiesta di
+                            invalidazione passa nello stato
+                            <strong>"Respinta"</strong> e contestualmente la
+                            Dichiarazione di Porto Base torna nello stato
+                            <strong>"Approvata"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/34.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 04 — VALUTAZIONE RICHIESTA DI CHIUSURA
+                 ============================================================ -->
+            <section id="valutazione-chiusura" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">04.</p>
+                    <div>
+                      <h6 class="text-white h1 mb-2">
+                        Valutazione richiesta di chiusura
+                      </h6>
+                      <p class="text-white mb-0">
+                        Di seguito una panoramica sulle azioni disponibili
+                        per la valutazione di una richiesta di chiusura di
+                        una Dichiarazione di Porto Base, che può avvenire
+                        esclusivamente dopo la sottomissione della stessa.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── 04.01 — PASSAGGI PER APPROVARE LA RICHIESTA DI CHIUSURA ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <p class="fw-semibold text-secondary mb-1">
+                    Valutazione richiesta di invalidazione
+                  </p>
+                  <h2 class="h1 mb-3">
+                    Passaggi per approvare la richiesta di chiusura
+                  </h2>
+                  <p class="mb-4">
+                    A seguito dell'invio della richiesta di chiusura della
+                    Dichiarazione di Porto Base da parte dell'Armatore,
+                    l'Operatore di Capitaneria potrà <strong>valutarla</strong>,
+                    decidendo se <strong>approvarla</strong> o
+                    <strong>respingerla</strong>.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Dettaglio e pulsante
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Per approvare la richiesta di chiusura della
+                            Dichiarazione di Porto Base clicchiamo,
+                            <strong>"Approva richiesta di chiusura"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/35.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Finestra di conferma
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostrerà una <strong>finestra per
+                            conferma la richiesta di chiusura</strong>; clicca
+                            l'apposito pulsante per confermare.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/36.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Dettaglio e stato
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Una volta cliccato il pulsante, la richiesta di
+                            chiusura passa nello stato
+                            <strong>"Accettata"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/37.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- ── 04.02 — EFFETTI A SEGUITO DI APPROVAZIONE RICHIESTA DI CHIUSURA ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <p class="fw-semibold text-secondary mb-1">
+                    Valutazione richiesta di invalidazione
+                  </p>
+                  <h2 class="h1 mb-3">
+                    Effetti a seguito di approvazione richiesta di chiusura
+                  </h2>
+                  <p class="mb-4">
+                    A seguito di approvazione richiesta chiusura della
+                    Dichiarazione di Porto Base, sia la Dichiarazione di
+                    Porto base che il Fascicolo per soste in abbonamento ad
+                    essa associato assumeranno lo stato <strong>"Chiusa"</strong>.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- 1 Dichiarazione di Porto Base -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Visualizzazione e stato della Dichiarazione di Porto Base
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            A seguito di approvazione richiesta chiusura, la
+                            Dichiarazione di Porto Base assumerà lo stato
+                            <strong>"Chiusa"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/38.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 2 Fascicolo Soste in Abbonamento -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Visualizzazione e stato del Fascicolo Soste in Abbonamento
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            A seguito di approvazione richiesta chiusura, il
+                            Fascicolo Soste in Abbonamento assumerà lo stato
+                            <strong>"Chiuso"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/39.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- ── 04.03 — PASSAGGI PER RIFIUTARE LA RICHIESTA DI CHIUSURA ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <p class="fw-semibold text-secondary mb-1">
+                    Valutazione richiesta di invalidazione
+                  </p>
+                  <h2 class="h1 mb-3">
+                    Passaggi per rifiutare la richiesta di chiusura
+                  </h2>
+                  <p class="mb-4">
+                    A seguito dell'invio della richiesta di chiusura della
+                    Dichiarazione di Porto Base da parte dell'Armatore,
+                    l'Operatore di Capitanerie potrà <strong>valutarla</strong>,
+                    decidendo se <strong>approvarla</strong> o
+                    <strong>respingerla</strong>.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Dettaglio e pulsante
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Per respingere la richiesta di chiusura della
+                            Dichiarazione di Porto Base clicchiamo
+                            <strong>"Respingi richiesta di chiusura"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/40.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Aggiunta della motivazione del rifiuto
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostrerà una <strong>finestra per
+                            inserire obbligatoriamente la motivazione</strong>
+                            della richiesta di chiusura; clicca il pulsante
+                            per proseguire.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/41.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Dettaglio e stato
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Una volta confermato il rifiuto della richiesta
+                            di chiusura, nel dettaglio la Dichiarazione
+                            passerà allo stato <strong>"Respinta"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/42.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 05 — REVOCA DICHIARAZIONE
+                 ============================================================ -->
+            <section id="revoca-dichiarazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">05.</p>
+                    <div>
+                      <h6 class="text-white h1 mb-2">Revoca Dichiarazione</h6>
+                      <p class="text-white mb-0">
+                        Di seguito una panoramica sulla revoca della
+                        Dichiarazione di Porto Base, che può avvenire
+                        esclusivamente dopo l'approvazione della stessa.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── 05.01 — PASSAGGI PER REVOCARE LA DICHIARAZIONE ────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+                  <p class="fw-semibold text-secondary mb-1">
+                    Revoca Dichiarazione
+                  </p>
+                  <h2 class="h1 mb-3">Passaggi per revocare la dichiarazione</h2>
+                  <p class="mb-4">
+                    Una volta approvata la Dichiarazione di Porto Base,
+                    l'Operatore di Capitaneria può procedere con la revoca
+                    della stessa attraverso i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Dettaglio e pulsante
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Per revocare la Dichiarazione di Porto Base
+                            clicchiamo <strong>"Revoca Dichiarazione"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/44.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Aggiunta della motivazione della revoca
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una <strong>finestra per
+                            inserire obbligatoriamente il motivo</strong> per
+                            cui si sta revocando la Dichiarazione; compilare
+                            e confermare.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/45.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h5 class="fw-bold text-uppercase mb-0">
+                              Dettaglio e stato
+                            </h5>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver revocato la Dichiarazione di Porto
+                            Base, nel dettaglio la Dichiarazione di Porto
+                            Base assumerà lo stato <strong>"Revocata"</strong>.
+                          </p>
+                          <img
+                            src="./img/dichiarazionepb-cap/46.png"
+                            alt=""
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+          </div>
+          <!-- /col-lg-9 -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </main>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Chiudi"
+            ></button>
+          </div>
+          <div
+            class="modal-body d-flex align-items-center justify-content-center p-2"
+          >
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.querySelectorAll(".sidebar .nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          document
+            .querySelectorAll(".sidebar .nav-link")
+            .forEach((el) => el.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector(".col-12.col-lg-9");
+        if (!contenuto) return;
+        const lbImg = document.getElementById("lightbox-img");
+        const modal = document.getElementById("lightboxModal");
+        const bsModal = new bootstrap.Modal(modal);
+        contenuto.querySelectorAll("img").forEach(function (img) {
+          img.addEventListener("click", function () {
+            lbImg.src = this.src;
+            lbImg.alt = this.alt || "";
+            bsModal.show();
+          });
+        });
+        modal.addEventListener("hidden.bs.modal", function () {
+          lbImg.src = "";
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,705 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Ricerca e consultazione fascicoli e soste in abbonamento</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Ricerca e consultazione fascicoli e soste in abbonamento</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <h2 class="sidebar-title">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </h2>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#fascicoli-soste-abbonamento">
+                        01. Ricerca e consultazione fascicoli e soste in abbonamento
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between">
+                  <h4>Gestione Fascicoli in abbonamento</h4>
+                </div>
+                <p class="mb-0">
+                  Il portale delle Smart Guide è uno spazio digitale che
+                  raccoglie risorse pratiche e aggiornate in un unico ambiente
+                  intuitivo. Strumenti chiari e organizzati per organizzarti e
+                  trovare subito ciò che ti serve.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — RICERCA E CONSULTAZIONE FASCICOLI
+                 E SOSTE IN ABBONAMENTO
+                 Profilo: Operatore CdP Locale
+                 ============================================================ -->
+            <section id="fascicoli-soste-abbonamento" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h6 class="text-white h1 mb-2">
+                        Ricerca e consultazione fascicoli e soste in abbonamento
+                      </h6>
+                      <p class="text-white mb-0">
+                        Una panoramica sui flussi di ricerca e consultazione
+                        fascicolo per soste in abbonamento.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── 01.01 — PUNTO DI ACCESSO ──────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h2 class="h1 mb-2">Punto di accesso</h2>
+                  <h3 class="h4 fw-bold mb-3">La voce di menù</h3>
+                  <p class="mb-4">
+                    Dalla dashboard è possibile <strong>accedere alle
+                    principali sezioni tramite le voci di menu</strong>.
+                  </p>
+
+                  <div class="card border-0 rounded-3">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+
+                        <div class="col-12 col-lg-5">
+                          <div class="card border-0 rounded-3 p-3 bg-primary">
+                            <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                            <p class="text-white mb-0">
+                              Cliccando sulla voce <strong>"Gestione e
+                              Consultazione"</strong> viene visualizzato un
+                              menu a tendina, da cui è possibile accedere
+                              alle <strong>"Fascicoli Soste in Abbonamento"</strong>.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-lg-7">
+                          <img src="./img/fascicoli-cap/1.png" alt="" class="w-100" />
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── 01.02 — RICERCA TRA FASCICOLI E SOSTE IN ABBONAMENTO ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h2 class="h1 mb-3">Ricerca tra Fascicoli e Soste in abbonamento</h2>
+                  <p class="mb-4">
+                    In questa pagina l'utente può ricercare, visualizzare ed
+                    esportare l'elenco dei fascicoli e delle soste in abbonamento.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Card 1 -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <div>
+                              <h5 class="fw-bold mb-2">Ricerca Fascicoli</h5>
+                              <p class="mb-0">
+                                È la procedura che consente di ricercare i
+                                Fascicoli per soste in abbonamento.
+                              </p>
+                            </div>
+                          </div>
+                          <img src="./img/fascicoli-cap/2.png" alt="" class="w-100" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <div>
+                              <h5 class="fw-bold mb-2">Ricerca soste in abbonamento</h5>
+                              <p class="mb-0">
+                                È la procedura che consente di ricercare le
+                                soste inserite all'interno dei fascicoli.
+                              </p>
+                            </div>
+                          </div>
+                          <img src="./img/fascicoli-cap/3.png" alt="" class="w-100" />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ============================================================
+                     STEP 1 — RICERCA E CONSULTAZIONE: FASCICOLI
+                     ============================================================ -->
+
+                <!-- ── 01.03 — STEP 1: FUNZIONALITÀ IN PAGINA ────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <div class="d-flex align-items-start gap-3 mb-4">
+                    <div class="sg-step-index bg-primary flex-shrink-0">1</div>
+                    <div>
+                      <p class="fw-semibold text-secondary mb-1">
+                        Ricerca e consultazione: Fascicoli
+                      </p>
+                      <h2 class="h1 mb-0">Funzionalità in pagina</h2>
+                    </div>
+                  </div>
+
+                  <p class="mb-4">
+                    È possibile avviare la ricerca utilizzando i filtri
+                    disponibili oppure applicare criteri aggiuntivi per
+                    affinare i risultati. La schermata è suddivisa nelle
+                    seguenti sezioni:
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+
+                    <div class="col-12 col-lg-5">
+                      <img src="./img/fascicoli-cap/4.png" alt="" class="w-100" />
+                    </div>
+
+                    <div class="col-12 col-lg-7 d-flex flex-column gap-4">
+
+                      <!-- 1 SEZIONE FILTRI -->
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <div>
+                              <h5 class="fw-bold text-uppercase mb-2">Sezione filtri</h5>
+                              <p class="mb-0">
+                                La sezione Filtri consente di ricercare i
+                                fascicoli attraverso dei <strong>filtri
+                                base</strong> come: ID Fascicolo, Nome Nave,
+                                Numero IMO o Periodicità. Sono disponibili
+                                <strong>filtri avanzati</strong> per affinare
+                                come Porto Base, Nave Passeggeri, Stato
+                                fascicolo e la ricerca per intervallo temporale.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 2 ESPORTAZIONE -->
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <div>
+                              <h5 class="fw-bold text-uppercase mb-2">Esportazione</h5>
+                              <p class="mb-0">
+                                L'unica azione disponibile al di sopra della
+                                tabella è l'<strong>esportazione</strong>.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 3 VISUALIZZAZIONE RISULTATI TRAMITE TABELLA -->
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <div>
+                              <h5 class="fw-bold text-uppercase mb-2">Visualizzazione risultati tramite tabella</h5>
+                              <p class="mb-0">
+                                I risultati della ricerca vengono presentati
+                                in una tabella, mostrando le <strong>informazioni
+                                principali</strong> e le <strong>azioni
+                                disponibili</strong>.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 4 STORICO SOSTE -->
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">4</div>
+                            <div>
+                              <h5 class="fw-bold text-uppercase mb-2">Storico soste</h5>
+                              <p class="mb-0">
+                                I risultati della ricerca vengono presentati
+                                in una tabella, mostrando le <strong>informazioni
+                                principali</strong> e le <strong>azioni
+                                disponibili</strong>.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── 01.04 — STEP 1: DETTAGLIO DEL FASCICOLO ───────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <div class="d-flex align-items-start gap-3 mb-4">
+                    <div class="sg-step-index bg-primary flex-shrink-0">1</div>
+                    <div>
+                      <p class="fw-semibold text-secondary mb-1">
+                        Ricerca e consultazione fascicolo per soste in abbonamento
+                      </p>
+                      <h2 class="h1 mb-0">Dettaglio del fascicolo</h2>
+                    </div>
+                  </div>
+
+                  <p class="mb-4">
+                    All'interno della pagina sono consultabili le seguenti informazioni:
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+
+                    <div class="col-12 col-lg-5">
+                      <ul class="list-unstyled mb-0">
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Nave e relativo identificativo</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Dichiarazione di porto base associata con relativo link per accedere al dettaglio</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Dati abbonamento</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Informazioni aggiuntive</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Porti interessati</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                          <i class="bi bi-dot fs-4 text-primary"></i>
+                          <span>Elenco soste</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/fascicoli-cap/5.png" alt="" class="w-100" />
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ============================================================
+                     STEP 2 — RICERCA E CONSULTAZIONE: SOSTE IN ABBONAMENTO
+                     ============================================================ -->
+
+                <!-- ── 01.05 — STEP 2: FUNZIONALITÀ IN PAGINA ────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <div class="d-flex align-items-start gap-3 mb-4">
+                    <div class="sg-step-index bg-primary flex-shrink-0">2</div>
+                    <div>
+                      <p class="fw-semibold text-secondary mb-1">
+                        Ricerca e consultazione: Soste in abbonamento
+                      </p>
+                      <h2 class="h1 mb-0">Funzionalità in pagina</h2>
+                    </div>
+                  </div>
+
+                  <p class="mb-4">
+                    È possibile avviare la ricerca utilizzando i filtri
+                    disponibili oppure applicare criteri aggiuntivi per
+                    affinare i risultati. La schermata è suddivisa nelle
+                    seguenti sezioni:
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+
+                    <div class="col-12 col-lg-5">
+                      <img src="./img/fascicoli-cap/6.png" alt="" class="w-100" />
+                    </div>
+
+                    <div class="col-12 col-lg-7 d-flex flex-column gap-4">
+
+                      <!-- 1 SEZIONE FILTRI -->
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <div>
+                              <h5 class="fw-bold text-uppercase mb-2">Sezione filtri</h5>
+                              <p class="mb-0">
+                                La sezione Filtri consente di ricercare le
+                                soste secondo diversi criteri. Sono disponibili
+                                <strong>filtri base</strong> e <strong>filtri
+                                avanzati</strong> per affinare la ricerca.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 2 VISUALIZZAZIONE DI "LISTA SOSTE" O "AGGIORNAMENTO SOSTE" -->
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <div>
+                              <h5 class="fw-bold text-uppercase mb-2">
+                                Visualizzazione di "Lista soste" o "Aggiornamento soste"
+                              </h5>
+                              <p class="mb-0">
+                                È possibile scegliere di visualizzare i
+                                risultati di ricerca della lista soste e
+                                degli aggiornamenti delle soste.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 3 FILTRI E AZIONI SULLA TABELLA -->
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <div>
+                              <h5 class="fw-bold text-uppercase mb-2">Filtri e azioni sulla tabella</h5>
+                              <p class="mb-0">
+                                I risultati della ricerca possono essere
+                                filtrati per <strong>"Attività"</strong> e
+                                <strong>"Stato Attività"</strong>. Selezionando
+                                una o più task è possibile salvare e inviare,
+                                cancellare ed esportare. Infine, è possibile
+                                filtrare le soste per <strong>navi che
+                                trasportano merci pericolose</strong> tramite
+                                l'apposito pulsante.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 4 VISUALIZZAZIONE SOSTE TRAMITE TABELLA -->
+                      <div class="card border-0 rounded-3">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">4</div>
+                            <div>
+                              <h5 class="fw-bold text-uppercase mb-2">Visualizzazione soste tramite tabella</h5>
+                              <p class="mb-0">
+                                I risultati della ricerca vengono presentati
+                                in una tabella, mostrando le <strong>informazioni
+                                e azioni principali</strong>.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── 01.06 — STEP 2: FOCUS "SOLO MERCI PERICOLOSE" ─────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <div class="d-flex align-items-start gap-3 mb-4">
+                    <div class="sg-step-index bg-primary flex-shrink-0">2</div>
+                    <h2 class="h1 mb-0">
+                      Focus sull'azione di visualizzazione delle merci
+                      pericolose (Lista soste)
+                    </h2>
+                  </div>
+
+                  <p class="mb-4">
+                    È possibile visualizzare o nascondere le merci pericolose
+                    tramite l'interazione con il pulsante evidenziato.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Pulsante disattivato -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="bi bi-toggle-off text-primary fs-3"></i>
+                            <span class="fw-semibold">Solo merci pericolose</span>
+                          </div>
+                          <p class="mb-3">
+                            Di default il pulsante sarà disattivato, saranno
+                            visualizzate tutte le soste.
+                          </p>
+                          <img src="./img/fascicoli-cap/7.png" alt="" class="w-100" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Pulsante attivato -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="bi bi-toggle-on text-primary fs-3"></i>
+                            <span class="fw-semibold">Solo merci pericolose</span>
+                          </div>
+                          <p class="mb-3">
+                            Se il pulsante è attivo, saranno mostrate solo le
+                            soste per quelle navi che dichiarano di
+                            trasportare merci pericolose.
+                          </p>
+                          <img src="./img/fascicoli-cap/8.png" alt="" class="w-100" />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── 01.07 — STEP 2: VISUALIZZAZIONE RISULTATI: LISTA SOSTE / AGGIORNAMENTI ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <div class="d-flex align-items-start gap-3 mb-4">
+                    <div class="sg-step-index bg-primary flex-shrink-0">2</div>
+                    <h2 class="h1 mb-0">
+                      Visualizzazione risultati in tabella: Lista Soste e
+                      Aggiornamento soste
+                    </h2>
+                  </div>
+
+                  <p class="mb-4">
+                    I risultati di ricerca delle soste in abbonamento,
+                    possono essere visualizzati tramite tabella secondo due
+                    modalità:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- 1 Lista Soste -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold mb-0">Lista Soste</h5>
+                          </div>
+                          <p class="mb-3">
+                            È l'elenco di tutte le soste presenti a sistema,
+                            in relazione all'utente che sta operando, sulle
+                            quali è possibile accedere al dettaglio e
+                            svolgere diverse azioni.
+                          </p>
+                          <img src="./img/fascicoli-cap/9.png" alt="" class="w-100" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 2 Aggiornamenti soste -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold mb-0">Aggiornamenti soste</h5>
+                          </div>
+                          <p class="mb-3">
+                            È un elenco di attività che l'utente deve
+                            svolgere. Sarà possibile filtrare i risultati in
+                            tabella per <strong>"Attività"</strong> e
+                            <strong>"Stato Attività"</strong>.
+                          </p>
+                          <img src="./img/fascicoli-cap/10.png" alt="" class="w-100" />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.querySelectorAll(".sidebar .nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          document.querySelectorAll(".sidebar .nav-link").forEach((el) => el.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg  = document.getElementById('lightbox-img');
+        const modal  = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.addEventListener('click', function () {
+            lbImg.src = this.src;
+            lbImg.alt = this.alt || '';
+            bsModal.show();
+          });
+        });
+        modal.addEventListener('hidden.bs.modal', function () {
+          lbImg.src = '';
+        });
+      })();
+    </script>
+
+  </body>
+</html>
