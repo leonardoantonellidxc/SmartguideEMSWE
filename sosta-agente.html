@@ -1,0 +1,887 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap icons -->
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <!-- CSS del tema -->
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <!-- CSS del tema -->
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Soste (Agente Raccomandatario Marittimo)</title>
+
+    <style>
+    .col-12.col-lg-9 img {
+      cursor: zoom-in;
+      transition: opacity .2s;
+    }
+    .col-12.col-lg-9 img:hover {
+      opacity: .85;
+    }
+  </style>
+
+  </head>
+
+  <body>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <!-- SINISTRA -->
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+
+            <!-- DESTRA -->
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      ITA<span class="visually-hidden">: italiano</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" lang="en">
+                      ENG<span class="visually-hidden">: english</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+
+            <div class="col-auto">
+              <img
+                src="img/logo_prova1.svg"
+                alt="Logo Capitanerie di Porto"
+                class="logo"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Supporto</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="index.html">Manuali Smart Guide</a>
+            </li>
+
+            <li class="breadcrumb-item active" aria-current="page">
+              Soste – Agente Raccomandatario Marittimo
+            </li>
+          </ol>
+        </nav>
+        <!-- SIDEBAR (DESKTOP) -->
+        <div class="row">
+        <div class="col-12 col-lg-3 my-3">
+  <div class="sidebar-sticky-wrapper sticky-top">
+    <nav
+      class="sidebar sidebar-expand-lg sidebar-dark sticky-top"
+      aria-label="Menu della sezione"
+    >
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">
+          Indice<span class="visually-hidden"> della sezione</span>
+        </h2>
+        <button
+          type="button"
+          class="navbar-toggler collapsed d-block d-lg-none"
+          data-bs-toggle="collapse"
+          data-bs-target="#sidebar-menu"
+          aria-controls="sidebar-menu"
+          aria-expanded="false"
+        >
+          <span class="visually-hidden">Apri menu della sezione</span>
+          <i class="bi bi-list bi-lg"></i>
+        </button>
+      </div>
+      <div class="sidebar-collapse collapse" id="sidebar-menu">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#valutazione-bozza">
+              01. Valutazione di una sosta in bozza confermata
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#valutazione-modifica">
+              02. Valutazione proposta di modifica
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#valutazione-eliminazione">
+              03. Valutazione proposta eliminazione
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+          <!-- Content -->
+          <div class="col-12 col-lg-9 my-3">
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between">
+                  <h4>Gestione Soste – Agente Raccomandatario Marittimo</h4>
+                </div>
+
+                <p class="mb-0">
+                  Il portale delle Smart Guide è uno spazio digitale che
+                  raccoglie risorse pratiche e aggiornate in un unico ambiente
+                  intuitivo. Strumenti chiari e organizzati per organizzarti e
+                  trovare subito ciò che ti serve.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+     SEZIONE 01 — VALUTAZIONE DI UNA SOSTA IN BOZZA CONFERMATA
+     Pagine: 32 (intro) · 33 (punti di accesso) · 34 (azioni post conferma)
+             35 (salva e invia) · 36 (richiedi rettifica)
+             37 (modifica) · 38 (elimina)
+     ============================================================ -->
+<section id="valutazione-bozza" class="mb-6">
+  <div class="sg-section__frame rounded-3 overflow-hidden">
+
+    <!-- HEAD -->
+    <div class="sg-section__head p-2 p-lg-4">
+      <div class="d-flex align-items-center gap-3">
+        <p class="h1 text-white mb-0 me-2">01.</p>
+        <div>
+          <h6 class="text-white h1 mb-2">Valutazione di una sosta in bozza confermata</h6>
+          <p class="text-white mb-0">
+            Panoramica sulle azioni disponibili per la valutazione di una sosta posta
+            in stato "Bozza Pronta" da parte del collaboratore.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 33 — PUNTI DI ACCESSO ──────────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <h2 class="h1 mb-2">Punti di accesso per valutare l'attività</h2>
+      <p class="mb-4">Di seguito i punti di accesso per valutare l'attività di una sosta in bozza confermata:</p>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 w-100">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-3">
+                <div class="sg-icon-box flex-shrink-0"><i class="bi bi-house text-primary"></i></div>
+                <h5 class="fw-bold text-uppercase mb-0">Lista attività dalla dashboard</h5>
+              </div>
+              <p class="mb-3">È possibile visualizzare le proposte tramite le <strong>azioni disponibili</strong> per ciascuna attività presente nella dashboard nel tab <strong>"Aggiornamento soste"</strong>.</p>
+              <div class="mt-auto"><img src="./img/sosta-agente/1.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 w-100">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-3">
+                <div class="sg-icon-box flex-shrink-0"><i class="bi bi-bell text-primary"></i></div>
+                <h5 class="fw-bold text-uppercase mb-0">Notifiche</h5>
+              </div>
+              <p class="mb-3">Attraverso la <strong>sezione delle notifiche</strong> è possibile accedere al dettaglio della sosta in stato <strong>"Bozza pronta"</strong>, visualizzando le azioni disponibili.</p>
+              <div class="mt-auto"><img src="./img/sosta-agente/2.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 w-100">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-3">
+                <div class="sg-icon-box flex-shrink-0"><i class="bi bi-search text-primary"></i></div>
+                <h5 class="fw-bold text-uppercase mb-0">Ricerca dichiarazione</h5>
+              </div>
+              <p class="mb-3">Nella ricerca sia nel tab <strong>"Lista soste"</strong> che nel tab <strong>"Aggiornamenti soste"</strong>, sarà possibile visualizzare e accedere alla sosta in stato <strong>"Bozza pronta"</strong>.</p>
+              <div class="mt-auto"><img src="./img/sosta-agente/3.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 34 — AZIONI DISPONIBILI POST "CONFERMA BOZZA" ──── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3">
+        <div>
+          <p class="fw-semibold text-secondary mb-1">Valutazione di una sosta in bozza confermata</p>
+          <h2 class="h1 mb-2">Azioni disponibili post "Conferma bozza"</h2>
+          <p class="mb-0">Dopo che il collaboratore ha confermato la bozza, l'Agente avrà la possibilità di procedere con le seguenti azioni:</p>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-end mb-4">
+        <span class="sg-rimando">
+          <i class="bi bi-eye text-primary"></i>
+          Visualizza il dettaglio del flusso di
+          <a href="#" class="link-primary fw-semibold ms-1">"Conferma bozza" a pagina 53</a>
+        </span>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-7">
+          <img src="./img/sosta-agente/4.png" alt="" class="w-100 rounded-3" />
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="d-flex flex-column gap-4">
+            <div>
+              <span class="sg-action-btn rounded-3 mb-2 d-inline-flex">
+                <i class="bi bi-check-circle"></i> Salva e invia
+              </span>
+              <p class="mb-0">L'utente, dopo aver verificato i dati presenti nella sosta, può decidere di Salvarla e inviarla.</p>
+            </div>
+            <hr class="my-0" />
+            <div>
+              <span class="badge text-bg-warning rounded-3 mb-2 d-inline-flex align-items-center gap-1 px-3 py-2">
+                <i class="bi bi-check-circle"></i> Richiedi rettifica al collaboratore
+              </span>
+              <p class="mb-0">L'utente, dopo aver verificato i dati presenti nella sosta, può decidere se richiedere al collaboratore di rettificarla.</p>
+            </div>
+            <hr class="my-0" />
+            <div>
+              <div class="d-flex gap-2 mb-2">
+                <span class="btn btn-outline-secondary btn-sm rounded-3"><i class="bi bi-pencil"></i> Modifica Dati Sosta</span>
+                <span class="btn btn-danger btn-sm rounded-3"><i class="bi bi-trash"></i> Cancella</span>
+              </div>
+              <p class="mb-0">L'utente, dopo aver verificato i dati presenti nella sosta, può decidere se <strong>modificarla</strong> o <strong>eliminarla</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 35 — PASSAGGI PER SALVARE E INVIARE UNA SOSTA ──── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <p class="fw-semibold text-secondary mb-1">Valutazione di una sosta in bozza confermata</p>
+      <h2 class="h1 mb-2">Passaggi per salvare e inviare una sosta</h2>
+      <p class="mb-4">Dopo essere entrati nella pagina di dettaglio della sosta seguire i passaggi indicati per procedere con il salvataggio e l'invio:</p>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Stato della sosta e avvio della modifica</h5>
+                  <p class="mb-0">All'interno del dettaglio la sosta è nello stato <strong>"Bozza pronta"</strong>. Per salvare e inviare cliccare il pulsante <strong>"Salva e invia"</strong>.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/5.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Finestra di conferma e successo</h5>
+                  <p class="mb-0">Il sistema mostra una <strong>finestra di conferma</strong> all'utente. Una volta cliccato <strong>"Salva e invia"</strong> viene comunicato l'<strong>avvenuto successo</strong> dell'azione.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/6.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">3</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Dettaglio e cambio stato</h5>
+                  <p class="mb-0">Dopo aver inviato e salvato la sosta, all'interno del dettaglio lo stato passa in <strong>"Aperta"</strong> e verrà associato un visit ID.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/7.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 36 — PASSAGGI PER RICHIEDERE LA RETTIFICA ──────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
+        <div>
+          <p class="fw-semibold text-secondary mb-1">Valutazione di una sosta in bozza confermata</p>
+          <h2 class="h1 mb-2">Passaggi per richiedere la rettifica</h2>
+          <p class="mb-0">Dopo aver fatto l'accesso al dettaglio della sosta confermata in bozza, seguire tutti i passaggi indicati per richiedere la rettifica al collaboratore.</p>
+        </div>
+        <span class="badge text-bg-warning rounded-3 flex-shrink-0 d-inline-flex align-items-center gap-1 px-3 py-2">
+          <i class="bi bi-check-circle"></i> Richiedi rettifica al collaboratore
+        </span>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Richiedi rettifica a collaboratore</h5>
+                  <p class="mb-0">All'interno del dettaglio della sosta, è possibile richiedere la rettifica tramite il pulsante <strong>"Richiedi rettifica al collaboratore"</strong>.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/8.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Inserimento della motivazione della rettifica</h5>
+                  <p class="mb-0">Il sistema mostra una finestra in cui l'utente deve <strong>obbligatoriamente indicare il motivo</strong> e confermare tramite l'apposito pulsante.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/9.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">3</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Dettaglio e cambio stato</h5>
+                  <p class="mb-0">Dopo aver richiesto la rettifica della sosta, all'interno del dettaglio della stessa lo stato passa in <strong>"Correzione richiesta"</strong>.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/10.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 37 — PASSAGGI PER MODIFICARE UNA SOSTA ─────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3">
+        <div>
+          <p class="fw-semibold text-secondary mb-1">Valutazione di una sosta in bozza confermata</p>
+          <h2 class="h1 mb-2">Passaggi per modificare una sosta</h2>
+          <p class="mb-0">Dopo aver fatto l'accesso al dettaglio della sosta confermata in bozza, seguire tutti i passaggi indicati per modificare una sosta.</p>
+        </div>
+        <span class="btn btn-outline-secondary rounded-3 flex-shrink-0"><i class="bi bi-pencil"></i> Modifica Dati Sosta</span>
+      </div>
+
+      <div class="d-flex justify-content-end mb-4">
+        <span class="sg-rimando">
+          <i class="bi bi-eye text-primary"></i>
+          Visualizza il dettaglio di
+          <a href="#" class="link-primary fw-semibold ms-1">"Modifica di una sosta" a pagina 23</a>
+        </span>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Azione di modifica</h5>
+                  <p class="mb-0">All'interno del dettaglio della sosta, è possibile modificare i dati della sosta tramite il pulsante <strong>"Modifica dati sosta"</strong>.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/11.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Modifica a step</h5>
+                  <p class="mb-0">Il processo di aggiornamento delle informazioni è a step guidati, dove è possibile modificare dati generali e informazioni aggiuntive.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/12.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">3</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Dettaglio e salvataggio</h5>
+                  <p class="mb-0">Una volta completate le modifiche, è necessario salvare le informazioni cliccando il pulsante <strong>"Salva e invia"</strong>.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/13.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 38 — PASSAGGI PER ELIMINARE UNA SOSTA ──────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
+        <div>
+          <p class="fw-semibold text-secondary mb-1">Valutazione di una sosta in bozza confermata</p>
+          <h2 class="h1 mb-2">Passaggi per eliminare una sosta</h2>
+          <p class="mb-0">Dopo aver fatto l'accesso al dettaglio della sosta confermata in bozza, seguire tutti i passaggi indicati per eliminare una sosta.</p>
+        </div>
+        <div class="text-end flex-shrink-0">
+          <p class="mb-2 small">La sosta, una volta cancellata, non sarà più disponibile e i relativi Obblighi di Dichiarazione verranno posti in stato "Annullata".</p>
+          <span class="btn btn-danger rounded-3"><i class="bi bi-trash"></i> Cancella</span>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-6 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Cancella dal dettaglio della sosta</h5>
+                  <p class="mb-0">All'interno del dettaglio della sosta, è possibile cancellare la sosta tramite il pulsante <strong>"Cancella"</strong>.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/14.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Finestra di conferma e giustificazione</h5>
+                  <p class="mb-0">Il sistema mostra una finestra di conferma che informa l'utente che l'eliminazione della sosta è <strong>irreversibile</strong> e che, una volta cancellata, non sarà più disponibile. Cliccare <strong>"Cancella sosta"</strong> per confermare.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/15.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /sg-section__frame -->
+</section>
+<!-- FINE SEZIONE 01 — VALUTAZIONE DI UNA SOSTA IN BOZZA CONFERMATA -->
+
+<!-- ============================================================
+     SEZIONE 02 — VALUTAZIONE PROPOSTA DI MODIFICA
+     Pagine: 39 (intro) · 40 (punti di accesso) · 41 (passaggi per valutare)
+     ============================================================ -->
+<section id="valutazione-modifica" class="mb-6">
+  <div class="sg-section__frame rounded-3 overflow-hidden">
+
+    <!-- HEAD -->
+    <div class="sg-section__head p-2 p-lg-4">
+      <div class="d-flex align-items-center gap-3">
+        <p class="h1 text-white mb-0 me-2">02.</p>
+        <div>
+          <h6 class="text-white h1 mb-2">Valutazione proposta di modifica</h6>
+          <p class="text-white mb-0">
+            Di seguito una panoramica sulle azioni disponibili per la valutazione di una proposta di modifica di una sosta.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 40 — PUNTI DI ACCESSO ──────────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <h2 class="h1 mb-2">Punti di accesso per valutare le proposte di modifica di una sosta</h2>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 w-100">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-3">
+                <div class="sg-icon-box flex-shrink-0"><i class="bi bi-house text-primary"></i></div>
+                <h5 class="fw-bold text-uppercase mb-0">Lista attività dalla dashboard</h5>
+              </div>
+              <p class="mb-3">È possibile visualizzare le proposte tramite le <strong>azioni disponibili</strong> per ciascuna attività presente nella dashboard nel tab <strong>"Aggiornamento soste"</strong>.</p>
+              <div class="mt-auto"><img src="./img/sosta-agente/16.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 w-100">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-3">
+                <div class="sg-icon-box flex-shrink-0"><i class="bi bi-bell text-primary"></i></div>
+                <h5 class="fw-bold text-uppercase mb-0">Notifiche</h5>
+              </div>
+              <p class="mb-3">Attraverso la <strong>sezione delle notifiche</strong> è possibile visualizzare e accedere alla proposte di modifica della sosta.</p>
+              <div class="mt-auto"><img src="./img/sosta-agente/17.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 w-100">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-3">
+                <div class="sg-icon-box flex-shrink-0"><i class="bi bi-search text-primary"></i></div>
+                <h5 class="fw-bold text-uppercase mb-0">Ricerca dichiarazione</h5>
+              </div>
+              <p class="mb-3">Nella ricerca sia nel tab <strong>"Lista soste"</strong> che nel tab <strong>"Aggiornamenti soste"</strong>, sarà possibile visualizzare e accedere alle proposte di modifica della sosta.</p>
+              <div class="mt-auto"><img src="./img/sosta-agente/18.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 41 — PASSAGGI PER VALUTARE LA PROPOSTA ─────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
+        <div>
+          <p class="fw-semibold text-secondary mb-1">Valutazione proposta di modifica</p>
+          <h2 class="h1 mb-2">Passaggi per valutare la proposta</h2>
+          <p class="mb-0">Dopo che il collaboratore ha proposto la modifica, l'agente potrà valutare se <strong>accettare o rifiutare la proposta</strong>.</p>
+        </div>
+        <span class="sg-action-btn rounded-3 flex-shrink-0">
+          <i class="bi bi-eye"></i> Visualizza Proposta Modifica
+        </span>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Dettaglio e conferma modifica</h5>
+                  <p class="mb-0">All'interno del dettaglio, confermare la proposta di modifica cliccando l'apposito pulsante <strong>"Visualizza proposta modifica"</strong>.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/19.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Motivazione e conferma</h5>
+                  <p class="mb-0">Il sistema mostra una finestra al cui interno sono evidenziate le modifiche apportate dal collaboratore; cliccare il tasto <strong>"Approva"</strong> per continuare.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/20.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">3</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Stato e informazioni della modifica</h5>
+                  <p class="mb-0">Dopo aver approvato la proposta di modifica, all'interno del dettaglio la sosta assumerà lo stato passa in <strong>"Aperta"</strong> e verrà posto un focus sulle informazioni modificate.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/21.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-warning d-flex align-items-center gap-2 rounded-3 mb-0">
+        <i class="bi bi-exclamation-triangle flex-shrink-0"></i>
+        <p class="mb-0">In caso di rifiuto della proposta di modifica, la sosta assumerà nuovamente lo stato creata e le modifiche proposte non saranno più visibili.</p>
+      </div>
+    </div>
+
+  </div><!-- /sg-section__frame -->
+</section>
+<!-- FINE SEZIONE 02 — VALUTAZIONE PROPOSTA DI MODIFICA -->
+
+<!-- ============================================================
+     SEZIONE 03 — VALUTAZIONE PROPOSTA ELIMINAZIONE
+     Pagine: 42 (intro) · 43 (punti di accesso) · 44 (passaggi per valutare)
+     ============================================================ -->
+<section id="valutazione-eliminazione" class="mb-6">
+  <div class="sg-section__frame rounded-3 overflow-hidden">
+
+    <!-- HEAD -->
+    <div class="sg-section__head p-2 p-lg-4">
+      <div class="d-flex align-items-center gap-3">
+        <p class="h1 text-white mb-0 me-2">03.</p>
+        <div>
+          <h6 class="text-white h1 mb-2">Valutazione proposta eliminazione</h6>
+          <p class="text-white mb-0">
+            Di seguito una panoramica sulle azioni disponibili per la valutazione di una proposta di eliminazione di una sosta.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 43 — PUNTI DI ACCESSO ──────────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <h2 class="h1 mb-2">Punti di accesso per valutare le proposte di eliminazione di una sosta</h2>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 w-100">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-3">
+                <div class="sg-icon-box flex-shrink-0"><i class="bi bi-house text-primary"></i></div>
+                <h5 class="fw-bold text-uppercase mb-0">Lista attività dalla dashboard</h5>
+              </div>
+              <p class="mb-3">È possibile visualizzare le proposte tramite le <strong>azioni disponibili</strong> per ciascuna attività presente nella dashboard nel tab <strong>"Aggiornamento soste"</strong>.</p>
+              <div class="mt-auto"><img src="./img/sosta-agente/22.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 w-100">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-3">
+                <div class="sg-icon-box flex-shrink-0"><i class="bi bi-bell text-primary"></i></div>
+                <h5 class="fw-bold text-uppercase mb-0">Notifiche</h5>
+              </div>
+              <p class="mb-3">Attraverso la <strong>sezione delle notifiche</strong> è possibile visualizzare e accedere alla proposte di eliminazione di una sosta.</p>
+              <div class="mt-auto"><img src="./img/sosta-agente/23.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 w-100">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-3">
+                <div class="sg-icon-box flex-shrink-0"><i class="bi bi-search text-primary"></i></div>
+                <h5 class="fw-bold text-uppercase mb-0">Ricerca dichiarazione</h5>
+              </div>
+              <p class="mb-3">Nella ricerca sia nel tab <strong>"Lista soste"</strong> che nel tab <strong>"Aggiornamenti soste"</strong>, sarà possibile visualizzare e accedere alle proposte di eliminazione di una sosta.</p>
+              <div class="mt-auto"><img src="./img/sosta-agente/24.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 44 — PASSAGGI PER VALUTARE LA PROPOSTA DI ELIMINAZIONE ─────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
+        <div>
+          <p class="fw-semibold text-secondary mb-1">Proposta di Modifica o Eliminazione</p>
+          <h2 class="h1 mb-2">Valutazione proposta di eliminazione</h2>
+          <p class="mb-0">Dopo che il collaboratore ha proposto l'eliminazione della sosta, l'agente potrà valutare se <strong>accettare o rifiutare le proposte</strong>.</p>
+        </div>
+        <span class="sg-action-btn rounded-3 flex-shrink-0">
+          <i class="bi bi-pencil"></i> Accetta proposta eliminazione
+        </span>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">1</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Dettaglio e accetta proposta eliminazione</h5>
+                  <p class="mb-0">All'interno del dettaglio, per confermare la proposta di eliminazione cliccare il pulsante <strong>"Accetta proposta eliminazione"</strong>.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/25.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">2</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Finestra di successo</h5>
+                  <p class="mb-0">Il sistema mostra una finestra in cui informa l'Agente che l'operazione di eliminazione della sosta è completata con successo.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/26.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 overflow-hidden w-100">
+            <div class="card-body bg-light p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-4">
+                <div class="sg-step-badge flex-shrink-0">3</div>
+                <div>
+                  <h5 class="fw-bold text-uppercase mb-2">Sosta eliminata</h5>
+                  <p class="mb-0">La sosta eliminata non comparirà più all'interno dei risultati di ricerca nella lista soste.</p>
+                </div>
+              </div>
+              <div class="mt-auto"><img src="./img/sosta-agente/27.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-warning d-flex align-items-center gap-2 rounded-3 mb-0">
+        <i class="bi bi-exclamation-triangle flex-shrink-0"></i>
+        <p class="mb-0">In caso di rifiuto della proposta di eliminazione, la sosta assumerà nuovamente lo stato creata e continuerà ad essere visibile.</p>
+      </div>
+    </div>
+
+  </div><!-- /sg-section__frame -->
+</section>
+<!-- FINE SEZIONE 03 — VALUTAZIONE PROPOSTA ELIMINAZIONE -->
+
+          </div>
+          <!-- /col-content -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </main>
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto">
+              <img src="./img/logo_footer.svg" alt="" class="logo" />
+            </div>
+
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold">Ente appartenenza</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- MODAL BOOTSTRAP ITALIA -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content" style="background: rgba(0,0,0,.92);">
+      <div class="modal-header border-0">
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Chiudi"
+        ></button>
+      </div>
+      <div class="modal-body d-flex align-items-center justify-content-center p-2">
+        <img
+          id="lightbox-img"
+          src=""
+          alt=""
+          class="img-fluid rounded"
+          style="max-height: 90vh; object-fit: contain;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.querySelectorAll(".sidebar .nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          // Rimuove active da tutti
+          document
+            .querySelectorAll(".sidebar .nav-link")
+            .forEach((el) => el.classList.remove("active"));
+
+          // Aggiunge active a quello cliccato
+          this.classList.add("active");
+        });
+      });
+    </script>
+    <script>
+  (function () {
+    const contenuto = document.querySelector('.col-12.col-lg-9');
+    if (!contenuto) return;
+
+    const lbImg  = document.getElementById('lightbox-img');
+    const modal  = document.getElementById('lightboxModal');
+    const bsModal = new bootstrap.Modal(modal);
+
+    contenuto.querySelectorAll('img').forEach(function (img) {
+      img.addEventListener('click', function () {
+        lbImg.src = this.src;
+        lbImg.alt = this.alt || '';
+        bsModal.show();
+      });
+    });
+
+    // Pulisce src alla chiusura (evita flash dell'immagine precedente)
+    modal.addEventListener('hidden.bs.modal', function () {
+      lbImg.src = '';
+    });
+  })();
+</script>
+
+  </body>
+</html>
