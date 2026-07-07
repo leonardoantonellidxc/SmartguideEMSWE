@@ -1,0 +1,618 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap icons -->
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <!-- CSS del tema -->
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <!-- CSS del tema -->
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Consultazione cataloghi </title>
+
+    <style>
+    .col-12.col-lg-9 img {
+      cursor: zoom-in;
+      transition: opacity .2s;
+    }
+    .col-12.col-lg-9 img:hover {
+      opacity: .85;
+    }
+  </style>
+
+  </head>
+
+  <body>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <!-- SINISTRA -->
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+
+            <!-- DESTRA -->
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      ITA<span class="visually-hidden">: italiano</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" lang="en">
+                      ENG<span class="visually-hidden">: english</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+
+            <div class="col-auto">
+              <img
+                src="img/logo_prova1.svg"
+                alt="Logo Capitanerie di Porto"
+                class="logo"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Supporto</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="index.html">Manuali Smart Guide</a>
+            </li>
+
+            <li class="breadcrumb-item active" aria-current="page">
+              Consultazione cataloghi 
+            </li>
+          </ol>
+        </nav>
+        <!-- SIDEBAR (DESKTOP) -->
+        <div class="row">
+        <div class="col-12 col-lg-3 my-3">
+  <div class="sidebar-sticky-wrapper sticky-top">
+    <nav
+      class="sidebar sidebar-expand-lg sidebar-dark sticky-top"
+      aria-label="Menu della sezione"
+    >
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">
+          Indice<span class="visually-hidden"> della sezione</span>
+        </h2>
+        <button
+          type="button"
+          class="navbar-toggler collapsed d-block d-lg-none"
+          data-bs-toggle="collapse"
+          data-bs-target="#sidebar-menu"
+          aria-controls="sidebar-menu"
+          aria-expanded="false"
+        >
+          <span class="visually-hidden">Apri menu della sezione</span>
+          <i class="bi bi-list bi-lg"></i>
+        </button>
+      </div>
+      <div class="sidebar-collapse collapse" id="sidebar-menu">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#consultazione-cataloghi">
+              01. Consultazione cataloghi
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+          <!-- Content -->
+          <div class="col-12 col-lg-9 my-3">
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between">
+                  <h4>Consultazione cataloghi </h4>
+                </div>
+
+                <p class="mb-0">
+                  Il portale delle Smart Guide è uno spazio digitale che
+                  raccoglie risorse pratiche e aggiornate in un unico ambiente
+                  intuitivo. Strumenti chiari e organizzati per organizzarti e
+                  trovare subito ciò che ti serve.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+     SEZIONE 01 — CONSULTAZIONE CATALOGHI
+     Pagine: 01 (intro) · 02 (punto di accesso) · 03 (ricerca cataloghi)
+             04-05 (catalogo LOCODE) · 06-07 (catalogo CODICI WASTE)
+             08-09 (catalogo IMDG CODE) · 10 (tipologie di catalogo)
+             11 (funzionalità configurazioni: ricerca, esporta, paginazione)
+     ============================================================ -->
+<section id="consultazione-cataloghi" class="mb-6">
+  <div class="sg-section__frame rounded-3 overflow-hidden">
+
+    <!-- HEAD -->
+    <div class="sg-section__head p-2 p-lg-4">
+      <div class="d-flex align-items-center gap-3">
+        <p class="h1 text-white mb-0 me-2">01.</p>
+        <div>
+          <h6 class="text-white h1 mb-2">Consultazione cataloghi</h6>
+          <p class="text-white mb-0">
+            Una panoramica sulla ricerca e consultazione dei cataloghi.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 02 — PUNTO DI ACCESSO ───────────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <h2 class="h1 mb-2">Punto di accesso</h2>
+      <h3 class="h4 text-secondary mb-4">La voce di menù</h3>
+
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-lg-5">
+          <p class="mb-4">Dalla dashboard, è possibile accedere alle principali sezioni tramite le voci di menu.</p>
+
+          <div class="card border-0 rounded-3 p-3 bg-primary">
+            <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+            <p class="text-white mb-0">Cliccando sulla voce <strong>"Consultazione cataloghi"</strong> sarà possibile accedere direttamente alla pagina dedicata.</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-7">
+          <img src="./img/consultazione-cataloghi/1.png" alt="" class="w-100 rounded-3" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 03 — RICERCA CATALOGHI ─────────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <h2 class="h1 mb-2">Ricerca cataloghi</h2>
+      <p class="mb-4">In questa pagina è possibile ricercare e visualizzare tutti i cataloghi disponibili a sistema.</p>
+
+      <div class="card border-0 rounded-3 bg-light p-4 mb-4">
+        <div class="d-flex gap-3">
+          <span class="border border-2 border-dark rounded-3 px-3 py-2 fw-bold fs-4 d-inline-block flex-shrink-0">1</span>
+          <div>
+            <h5 class="fw-bold mb-2">Consultazione cataloghi</h5>
+            <p class="mb-0">In questa pagina l'utente può selezionare il tipo di catalogo che vuole consultare. Dopo aver selezionato il catalogo verrà presentata la sezione filtri contestuale al catalogo selezionato che consente di ricercare i cataloghi utilizzando diversi criteri.</p>
+          </div>
+        </div>
+      </div>
+
+      <img src="./img/consultazione-cataloghi/2.png" alt="" class="w-100 rounded-3" />
+    </div>
+
+    <!-- ── PAG. 04 — RICERCA: CATALOGO LOCODE ──────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <p class="fw-semibold text-secondary mb-1">Ricerca</p>
+      <h2 class="h1 mb-2">Catalogo LOCODE</h2>
+      <p class="mb-4">È possibile avviare la ricerca utilizzando i filtri disponibili. La schermata è suddivisa nelle seguenti sezioni:</p>
+
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-lg-6">
+          <img src="./img/consultazione-cataloghi/3.png" alt="" class="w-100 rounded-3" />
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="d-flex flex-column gap-4">
+            <div class="d-flex gap-3">
+              <div class="sg-step-badge flex-shrink-0">1</div>
+              <div>
+                <h5 class="fw-bold text-uppercase mb-2">Sezione filtri</h5>
+                <p class="mb-3">Per avviare la ricerca è necessario inserire almeno uno dei parametri disponibili, tra cui <strong>LOCODE, Nazione, Funzione, Attivo e Port facility</strong>, e successivamente cliccare sul pulsante <strong>"Cerca"</strong>.</p>
+                <img src="./img/consultazione-cataloghi/4.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+            <div class="d-flex gap-3">
+              <div class="sg-step-badge flex-shrink-0">2</div>
+              <div>
+                <h5 class="fw-bold text-uppercase mb-2">Visualizzazione richiesta tramite tabella</h5>
+                <p class="mb-3">I risultati della ricerca vengono presentati in una tabella, mostrando le <strong>informazioni principali</strong> e le <strong>azioni disponibili</strong>.</p>
+                <div class="d-flex justify-content-end mb-3">
+               
+                </div>
+                <img src="./img/consultazione-cataloghi/5.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-warning d-flex align-items-center gap-2 rounded-3 mb-0">
+        <i class="bi bi-exclamation-triangle flex-shrink-0"></i>
+        <p class="mb-0">Inserendo un valore all'interno del campo <strong>"LOCODE"</strong>, il sistema pre-valorizza in automatico tutti i campi presenti nella ricerca al netto del campo <strong>"port facility"</strong>, il cui elenco deve essere pre-filtrato nel caso in cui il LOCODE selezionato abbia funzione <strong>"1 - Port, as defined in Rec 16"</strong>.</p>
+      </div>
+    </div>
+
+    <!-- ── PAG. 05 — VISUALIZZAZIONE DETTAGLIO CATALOGO LOCODE ─── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="row g-4">
+        <div class="col-12 col-lg-5">
+          <p class="fw-semibold text-secondary mb-1">Consultazione cataloghi</p>
+          <h2 class="h1 mb-3">Visualizzazione dettaglio catalogo LOCODE</h2>
+          <p class="mb-3">All'interno della pagina sono consultabili le seguenti informazioni:</p>
+          <ul class="mb-4">
+            <li>LOCODE</li>
+            <li>Nome con segni diacritici</li>
+            <li>Nome senza segni diacritici</li>
+            <li>Attivo</li>
+            <li>Tipo LOCODE</li>
+            <li>Nazione</li>
+            <li>Latitudine</li>
+            <li>Longitudine</li>
+            <li>Funzione</li>
+            <li>Elenco port-facility</li>
+            <li>Informazioni aggiuntive</li>
+          </ul>
+          <p class="fw-semibold mb-2">Possibili azioni sulla visualizzazione del dettaglio del catalogo CODICI WASTE</p>
+          <span class="btn btn-outline-secondary rounded-3"><i class="bi bi-arrow-left"></i> Indietro</span>
+        </div>
+        <div class="col-12 col-lg-7">
+          <div class="d-flex flex-column gap-3">
+            <img src="./img/consultazione-cataloghi/6.png" alt="" class="w-100 rounded-3" />
+            <p class="mb-0">Espandere l'accordion <strong>"Elenco Port Facilities"</strong>, per visualizzarne il dettaglio.</p>
+            <img src="./img/consultazione-cataloghi/7.png" alt="" class="w-100 rounded-3" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 06 — RICERCA: CATALOGO CODICI WASTE ────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <p class="fw-semibold text-secondary mb-1">Ricerca</p>
+      <h2 class="h1 mb-2">Catalogo CODICI WASTE</h2>
+      <p class="mb-4">È possibile avviare la ricerca utilizzando i filtri disponibili. La schermata è suddivisa nelle seguenti sezioni:</p>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <img src="./img/consultazione-cataloghi/8.png" alt="" class="w-100 rounded-3" />
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="d-flex flex-column gap-4">
+            <div class="d-flex gap-3">
+              <div class="sg-step-badge flex-shrink-0">1</div>
+              <div>
+                <h5 class="fw-bold text-uppercase mb-2">Sezione filtri</h5>
+                <p class="mb-3">Per avviare la ricerca è necessario inserire almeno uno dei parametri disponibili, tra cui <strong>Tipologia rifiuto, Allegato MARPOL, Indicatore descrizione aggiuntiva</strong> e successivamente cliccare sul pulsante <strong>"Cerca"</strong>.</p>
+                <div class="row g-3 mb-3">
+                  <div class="col-6"><img src="./img/consultazione-cataloghi/9.png" alt="" class="w-100 rounded-3" /></div>
+                  <div class="col-6"><img src="./img/consultazione-cataloghi/10.png" alt="" class="w-100 rounded-3" /></div>
+                </div>
+                <p class="mb-0">Inserendo un valore all'interno del campo <strong>"Tipologia Rifiuti"</strong>, il sistema pre-valorizza in automatico il campo <strong>"Allegato MARPOL"</strong>; inserendo un valore all'interno del campo <strong>"Allegato MARPOL"</strong>, il sistema pre-filtra in automatico gli elenchi per il campo <strong>"Tipologia rifiuto"</strong>.</p>
+              </div>
+            </div>
+            <div class="d-flex gap-3">
+              <div class="sg-step-badge flex-shrink-0">2</div>
+              <div>
+                <h5 class="fw-bold text-uppercase mb-2">Visualizzazione richiesta tramite tabella</h5>
+                <p class="mb-3">I risultati della ricerca vengono presentati in una tabella, mostrando le <strong>informazioni principali</strong> e le <strong>azioni disponibili</strong>.</p>
+                
+                <img src="./img/consultazione-cataloghi/11.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 07 — VISUALIZZAZIONE DETTAGLIO CATALOGO CODICI WASTE ── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-lg-5">
+          <p class="fw-semibold text-secondary mb-1">Consultazione cataloghi</p>
+          <h2 class="h1 mb-3">Visualizzazione dettaglio catalogo CODICI WASTE</h2>
+          <p class="mb-3">All'interno della pagina sono consultabili le seguenti informazioni:</p>
+          <ul class="mb-4">
+            <li>Data di creazione</li>
+            <li>Tipologia di rifiuto</li>
+            <li>Allegato MARPOL</li>
+            <li>Indicatore descrizione aggiuntiva</li>
+          </ul>
+          <p class="fw-semibold mb-2">Possibili azioni sulla visualizzazione del dettaglio del catalogo CODICI WASTE</p>
+          <span class="btn btn-outline-secondary rounded-3"><i class="bi bi-arrow-left"></i> Indietro</span>
+        </div>
+        <div class="col-12 col-lg-7">
+          <img src="./img/consultazione-cataloghi/12.png" alt="" class="w-100 rounded-3" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 08 — RICERCA: CATALOGO IMDG CODE ───────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <p class="fw-semibold text-secondary mb-1">Ricerca</p>
+      <h2 class="h1 mb-2">Catalogo IMDG CODE</h2>
+      <p class="mb-4">È possibile avviare la ricerca utilizzando i filtri disponibili. La schermata è suddivisa nelle seguenti sezioni:</p>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <img src="./img/consultazione-cataloghi/13.png" alt="" class="w-100 rounded-3" />
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="d-flex flex-column gap-4">
+            <div class="d-flex gap-3">
+              <div class="sg-step-badge flex-shrink-0">1</div>
+              <div>
+                <h5 class="fw-bold text-uppercase mb-2">Sezione filtri</h5>
+                <p class="mb-3">Per avviare la ricerca è necessario inserire almeno uno dei parametri disponibili, tra cui <strong>Descrizione merce pericolosa, Classe di pericolosità, Categoria, Gruppo di imballaggio</strong> e successivamente cliccare sul pulsante <strong>"Cerca"</strong>.</p>
+                <div class="row g-3 mb-3">
+                  <div class="col-6"><img src="./img/consultazione-cataloghi/14.png" alt="" class="w-100 rounded-3" /></div>
+                  <div class="col-6"><img src="./img/consultazione-cataloghi/15.png" alt="" class="w-100 rounded-3" /></div>
+                </div>
+                <p class="mb-0">Inserendo un valore all'interno del campo <strong>"Descrizione merce pericolosa"</strong>, il sistema pre-valorizza in automatico i campi presenti nella ricerca; inserendo un valore all'interno del campo <strong>"Classe di pericolosità"</strong>, il sistema pre-filtra in automatico gli altri campi presenti nella ricerca.</p>
+              </div>
+            </div>
+            <div class="d-flex gap-3">
+              <div class="sg-step-badge flex-shrink-0">2</div>
+              <div>
+                <h5 class="fw-bold text-uppercase mb-2">Visualizzazione richiesta tramite tabella</h5>
+                <p class="mb-3">I risultati della ricerca vengono presentati in una tabella, mostrando le <strong>informazioni principali</strong> e le <strong>azioni disponibili</strong>.</p>
+               
+                <img src="./img/consultazione-cataloghi/16.png" alt="" class="w-100 rounded-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 09 — VISUALIZZAZIONE DETTAGLIO CATALOGO IMDG CODE ── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-lg-5">
+          <p class="fw-semibold text-secondary mb-1">Consultazione cataloghi</p>
+          <h2 class="h1 mb-3">Visualizzazione dettaglio catalogo IMDG CODE</h2>
+          <p class="mb-3">All'interno della pagina sono consultabili le seguenti informazioni:</p>
+          <ul class="mb-4">
+            <li>Data di creazione</li>
+            <li>Ultimo aggiornamento</li>
+            <li>Denominazione</li>
+            <li>Numero UNDG</li>
+            <li>Gruppo di imballaggio</li>
+            <li>Classe di pericolosità</li>
+            <li>Rischi sussidiari</li>
+            <li>Tipo di prodotto</li>
+            <li>Tipo di inquinamento marino</li>
+            <li>Numero EmS</li>
+            <li>Punto di infiammabilità</li>
+            <li>Modalità di trasporto</li>
+            <li>Tipo di liquido</li>
+            <li>Tipo di edizione</li>
+            <li>Informazioni aggiuntive</li>
+          </ul>
+          <p class="fw-semibold mb-2">Possibili azioni sulla visualizzazione del dettaglio del catalogo CODICI WASTE</p>
+          <span class="btn btn-outline-secondary rounded-3"><i class="bi bi-arrow-left"></i> Indietro</span>
+        </div>
+        <div class="col-12 col-lg-7">
+          <img src="./img/consultazione-cataloghi/17.png" alt="" class="w-100 rounded-3" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 10 — TIPOLOGIE DI CATALOGO ─────────────────────── -->
+    <div class="sg-section__body p-2 p-lg-4">
+      <p class="fw-semibold text-secondary mb-1">Consultazione cataloghi</p>
+      <h2 class="h1 mb-2">Tipologie di catalogo</h2>
+      <p class="mb-4">Sulla base di quanto illustrato nei precedenti cataloghi è possibile ricercare e consultare in maniera complessiva tutte le tipologie di catalogo merci presenti a sistema.</p>
+
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-lg-6">
+          <img src="./img/consultazione-cataloghi/18.png" alt="" class="w-100 rounded-3" />
+        </div>
+        <div class="col-12 col-lg-6">
+          <img src="./img/consultazione-cataloghi/19.png" alt="" class="w-100 rounded-3" />
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-lg-4">
+          <img src="./img/consultazione-cataloghi/20.png" alt="" class="w-100 rounded-3" />
+        </div>
+        <div class="col-12 col-lg-4">
+          <img src="./img/consultazione-cataloghi/21.png" alt="" class="w-100 rounded-3" />
+        </div>
+        <div class="col-12 col-lg-4">
+          <img src="./img/consultazione-cataloghi/22.png" alt="" class="w-100 rounded-3" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAG. 11 — FUNZIONALITÀ CONFIGURAZIONI: RICERCA, ESPORTA, PAGINAZIONE ── -->
+    <div class="sg-section__body p-2 p-lg-4" id="funzionalita-configurazioni">
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
+        <div>
+          <p class="fw-semibold text-secondary mb-1">Funzionalità configurazioni</p>
+          <h2 class="h1 mb-0">Ricerca, esporta e paginazione</h2>
+        </div>
+        <span class="sg-action-btn rounded-3 flex-shrink-0">
+          <i class="bi bi-search"></i> Cerca
+        </span>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 w-100">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-3">
+                <div class="sg-icon-box flex-shrink-0"><i class="bi bi-search text-primary"></i></div>
+                <h5 class="fw-bold text-uppercase mb-0">Ricerca</h5>
+              </div>
+              <p class="mb-3">Al click sulla barra di ricerca sarà possibile inserire un testo da cercare e avviare la ricerca premendo il pulsante <strong>"Cerca"</strong>.</p>
+              <div class="mt-auto"><img src="./img/consultazione-cataloghi/23.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 w-100">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-3">
+                <div class="sg-icon-box flex-shrink-0"><i class="bi bi-box-arrow-up text-primary"></i></div>
+                <h5 class="fw-bold text-uppercase mb-0">Esporta</h5>
+              </div>
+              <p class="mb-3">Al click sul pulsante <strong>"Esporta"</strong> sarà possibile esportare tutte le configurazioni attive in <strong>PDF</strong> o <strong>XLS</strong>.</p>
+              <div class="mt-auto"><img src="./img/consultazione-cataloghi/24.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex">
+          <div class="card border-0 rounded-3 w-100">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex gap-3 mb-3">
+                <div class="sg-icon-box flex-shrink-0"><i class="bi bi-list-ol text-primary"></i></div>
+                <h5 class="fw-bold text-uppercase mb-0">Paginazione</h5>
+              </div>
+              <p class="mb-3">Facendo click su <strong>"Elementi visualizzati"</strong> si aprirà un menu a tendina che permetterà di selezionare quanti elementi mostrare nella pagina, da 10 a 100.</p>
+              <div class="mt-auto"><img src="./img/consultazione-cataloghi/25.png" alt="" class="w-100 rounded-3" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /sg-section__frame -->
+</section>
+<!-- FINE SEZIONE 01 — CONSULTAZIONE CATALOGHI -->
+
+          </div>
+          <!-- /col-content -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </main>
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto">
+              <img src="./img/logo_footer.svg" alt="" class="logo" />
+            </div>
+
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold">Ente appartenenza</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- MODAL BOOTSTRAP ITALIA -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content" style="background: rgba(0,0,0,.92);">
+      <div class="modal-header border-0">
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Chiudi"
+        ></button>
+      </div>
+      <div class="modal-body d-flex align-items-center justify-content-center p-2">
+        <img
+          id="lightbox-img"
+          src=""
+          alt=""
+          class="img-fluid rounded"
+          style="max-height: 90vh; object-fit: contain;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.querySelectorAll(".sidebar .nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          // Rimuove active da tutti
+          document
+            .querySelectorAll(".sidebar .nav-link")
+            .forEach((el) => el.classList.remove("active"));
+
+          // Aggiunge active a quello cliccato
+          this.classList.add("active");
+        });
+      });
+    </script>
+    <script>
+  (function () {
+    const contenuto = document.querySelector('.col-12.col-lg-9');
+    if (!contenuto) return;
+
+    const lbImg  = document.getElementById('lightbox-img');
+    const modal  = document.getElementById('lightboxModal');
+    const bsModal = new bootstrap.Modal(modal);
+
+    contenuto.querySelectorAll('img').forEach(function (img) {
+      img.addEventListener('click', function () {
+        lbImg.src = this.src;
+        lbImg.alt = this.alt || '';
+        bsModal.show();
+      });
+    });
+
+    // Pulisce src alla chiusura (evita flash dell'immagine precedente)
+    modal.addEventListener('hidden.bs.modal', function () {
+      lbImg.src = '';
+    });
+  })();
+</script>
+
+  </body>
+</html>
