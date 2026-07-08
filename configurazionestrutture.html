@@ -17,10 +17,15 @@
       .col-12.col-lg-9 img:hover {
         opacity: .85;
       }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
     </style>
   </head>
 
   <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
     <header aria-label="Funzioni di servizio">
       <div class="header-top-dark">
         <div class="container py-2">
@@ -92,9 +97,9 @@
             <div class="sidebar-sticky-wrapper sticky-top">
               <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
                 <div class="sidebar-header">
-                  <h2 class="sidebar-title">
+                  <p class="sidebar-title h6 mb-0">
                     Indice<span class="visually-hidden"> della sezione</span>
-                  </h2>
+                  </p>
                   <button
                     type="button"
                     class="navbar-toggler collapsed d-block d-lg-none"
@@ -142,7 +147,7 @@
             <section class="sg-hero my-6">
               <div class="rounded-3 mb-4">
                 <div class="d-flex justify-content-between">
-                  <h4>Configurazione strutture portuali</h4>
+                  <h1 class="h4">Configurazione strutture portuali</h1>
                 </div>
                 <p class="mb-0">
                   Il portale delle Smart Guide è uno spazio digitale che
@@ -166,9 +171,9 @@
                   <div class="d-flex align-items-center gap-3">
                     <p class="sg-section__num text-white mb-0 me-2">01.</p>
                     <div>
-                      <h6 class="text-white h1 mb-2">
+                      <h2 class="text-white h1 mb-2">
                         Creazione nuova configurazione porto e strutture portuali
-                      </h6>
+                      </h2>
                       <p class="text-white mb-0">
                         Panoramica sulla creazione e gestione delle
                         configurazioni Porto e delle strutture portuali ad
@@ -181,8 +186,8 @@
                 <!-- ── 01.01 — PUNTO DI ACCESSO ──────────────────────────── -->
                 <div class="sg-section__body p-2 p-lg-4">
 
-                  <h2 class="h1 mb-2">Punto di accesso</h2>
-                  <h3 class="h4 fw-bold mb-3">La voce di menù</h3>
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 fw-bold mb-3">La voce di menù</h4>
                   <p class="mb-4">
                     Dalla dashboard, è possibile <strong>accedere alle
                     principali sezioni tramite le voci di menu</strong>.
@@ -205,7 +210,7 @@
                         </div>
 
                         <div class="col-12 col-lg-7">
-                          <img src="./img/configurazioni/1.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/1.png" alt="Menu a tendina ‘Configurazioni’ con la voce ‘Porto e relative Strutture Portuali’ evidenziata" class="w-100 rounded-3" />
                         </div>
 
                       </div>
@@ -215,9 +220,9 @@
                 </div>
 
                 <!-- ── 01.02 — CREAZIONE NUOVA CONFIGURAZIONE PORTO ──────── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
-                  <h2 class="h1 mb-3">Creazione nuova configurazione Porto</h2>
+                  <h3 class="h1 mb-3">Creazione nuova configurazione Porto</h3>
                   <p class="mb-4">
                     Dopo aver effettuato l'accesso alla pagina
                     <strong>"Porto e relative strutture portuali"</strong>,
@@ -227,13 +232,13 @@
 
                   <div class="row g-4 align-items-center">
                     <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/2.png" alt="" class="w-100 rounded-3" />
+                      <img src="./img/configurazioni/2.png" alt="Pagina ‘Porto e relative strutture portuali’ con il pulsante ‘Nuova configurazione’ evidenziato" class="w-100 rounded-3" />
                     </div>
                     <div class="col-12 col-lg-5">
-                      <div class="sg-action-btn d-inline-flex align-items-center gap-2 mb-3">
+                      <span class="btn btn-primary rounded-3 d-inline-flex align-items-center gap-2 mb-3">
                         <i class="bi bi-plus-lg"></i>
                         <span>Nuova configurazione</span>
-                      </div>
+                      </span>
                       <p class="mb-0">
                         Dopo aver effettuato l'accesso alla pagina
                         <strong>"Porto e relative strutture portuali"</strong>,
@@ -246,12 +251,12 @@
                 </div>
 
                 <!-- ── 01.03 — PASSAGGI PER CREARE UNA NUOVA CONFIGURAZIONE ── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
                   <p class="fw-semibold text-secondary mb-1">
                     Creazione nuova configurazione porto e strutture portuali
                   </p>
-                  <h2 class="h1 mb-3">Passaggi per creare una nuova configurazione</h2>
+                  <h3 class="h1 mb-3">Passaggi per creare una nuova configurazione</h3>
                   <p class="mb-4">
                     Per creare una nuova configurazione è necessario che
                     l'utente compili i campi obbligatori.
@@ -262,10 +267,10 @@
                     <!-- Step 1 -->
                     <div class="col-12 col-lg-6">
                       <div class="card border-0 rounded-3 h-100">
-                        <div class="card-body bg-light p-4">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">1</div>
-                            <h5 class="fw-bold text-uppercase mb-0">Inserimento delle informazioni</h5>
+                            <h4 class="fw-bold text-uppercase mb-0">Inserimento delle informazioni</h4>
                           </div>
                           <p class="mb-3">
                             Per configurare un <strong>Porto</strong> è necessario
@@ -280,7 +285,7 @@
                             sul pulsante <strong>"Salva"</strong> per creare una nuova
                             Configurazione Porto.
                           </p>
-                          <img src="./img/configurazioni/3.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/3.png" alt="Form di inserimento con i campi Porto, Latitudine, Longitudine, Autorità Portuale e il pulsante Salva" class="w-100 rounded-3 mt-auto" />
                         </div>
                       </div>
                     </div>
@@ -288,10 +293,10 @@
                     <!-- Step 2 -->
                     <div class="col-12 col-lg-6">
                       <div class="card border-0 rounded-3 h-100">
-                        <div class="card-body bg-light p-4">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">2</div>
-                            <h5 class="fw-bold text-uppercase mb-0">Dettaglio configurazione porto</h5>
+                            <h4 class="fw-bold text-uppercase mb-0">Dettaglio configurazione porto</h4>
                           </div>
                           <p class="mb-3">
                             A seguito del salvataggio il sistema presenta la
@@ -302,7 +307,7 @@
                             <strong>Dati Organizzazione</strong>, cliccando il
                             tasto <strong>"Modifica"</strong>.
                           </p>
-                          <img src="./img/configurazioni/4.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/4.png" alt="Pagina di dettaglio della configurazione porto dopo il salvataggio, con le sezioni Strutture portuali e Dati Organizzazione" class="w-100 rounded-3 mt-auto" />
                         </div>
                       </div>
                     </div>
@@ -321,12 +326,12 @@
                 </div>
 
                 <!-- ── 01.04 — PASSAGGI PER AGGIUNGERE DATI DI ORGANIZZAZIONE ── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
                   <p class="fw-semibold text-secondary mb-1">
                     Creazione nuova configurazione porto e strutture portuali
                   </p>
-                  <h2 class="h1 mb-3">Passaggi per aggiungere Dati di organizzazione</h2>
+                  <h3 class="h1 mb-3">Passaggi per aggiungere Dati di organizzazione</h3>
                   <p class="mb-4">
                     Oltre a poter aggiungere nuovi uffici, per ognuno di essi
                     è possibile aggiungere email e associare profili tramite i
@@ -338,10 +343,10 @@
                     <!-- Step 1 -->
                     <div class="col-12 col-lg-4">
                       <div class="card border-0 rounded-3 h-100">
-                        <div class="card-body bg-light p-4">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">1</div>
-                            <h5 class="fw-bold text-uppercase mb-0">Sezione dati di organizzazione</h5>
+                            <h4 class="fw-bold text-uppercase mb-0">Sezione dati di organizzazione</h4>
                           </div>
                           <p class="mb-3">
                             Dopo aver cliccato il pulsante <strong>"Modifica"</strong>,
@@ -355,7 +360,7 @@
                             pagina in cui inserire il nome ufficio e successivamente
                             salvare cliccando il pulsante <strong>"Salva"</strong>.
                           </p>
-                          <img src="./img/configurazioni/5.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/5.png" alt="Sezione Dati di organizzazione con l'elenco degli uffici preimpostati e il pulsante Aggiungi ufficio" class="w-100 rounded-3 mt-auto" />
                         </div>
                       </div>
                     </div>
@@ -363,10 +368,10 @@
                     <!-- Step 2 -->
                     <div class="col-12 col-lg-4">
                       <div class="card border-0 rounded-3 h-100">
-                        <div class="card-body bg-light p-4">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">2</div>
-                            <h5 class="fw-bold text-uppercase mb-0">Aggiunta email e possibilità di eliminazione</h5>
+                            <h4 class="fw-bold text-uppercase mb-0">Aggiunta email e possibilità di eliminazione</h4>
                           </div>
                           <p class="mb-3">
                             Per ogni ufficio è possibile inserire l'indirizzo
@@ -379,7 +384,7 @@
                             <strong>"Elimina"</strong> o singolarmente cliccando il
                             pulsante con l'<strong>icona del cestino</strong>.
                           </p>
-                          <img src="./img/configurazioni/6.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/6.png" alt="Elenco email inserite per un ufficio, con le azioni di eliminazione singola e massiva" class="w-100 rounded-3 mt-auto" />
                         </div>
                       </div>
                     </div>
@@ -387,17 +392,17 @@
                     <!-- Step 3 -->
                     <div class="col-12 col-lg-4">
                       <div class="card border-0 rounded-3 h-100">
-                        <div class="card-body bg-light p-4">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">3</div>
-                            <h5 class="fw-bold text-uppercase mb-0">Selezione profili associati</h5>
+                            <h4 class="fw-bold text-uppercase mb-0">Selezione profili associati</h4>
                           </div>
                           <p class="mb-3">
                             Ad ogni ufficio sarà possibile associare uno o più
                             profili presenti nell'<strong>"Elenco Profili associati"</strong>,
                             selezionandoli tramite checkbox.
                           </p>
-                          <img src="./img/configurazioni/7.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/7.png" alt="Elenco profili associati con checkbox di selezione" class="w-100 rounded-3 mt-auto" />
                         </div>
                       </div>
                     </div>
@@ -417,23 +422,23 @@
                 </div>
 
                 <!-- ── 01.05 — PASSAGGI PER CONFIGURARE NOTIFICHE DI SICUREZZA ── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
                   <p class="fw-semibold text-secondary mb-1">
                     Creazione nuova configurazione porto e strutture portuali
                   </p>
-                  <h2 class="h1 mb-3">Passaggi per configurare notifiche di sicurezza</h2>
+                  <h3 class="h1 mb-3">Passaggi per configurare notifiche di sicurezza</h3>
                   <p class="mb-4">
                     Selezionare i profili a cui inoltrare le notifiche in
                     caso di ingresso non autorizzato tramite i seguenti passaggi:
                   </p>
 
-                  <div class="row g-4 align-items-start">
+                  <div class="row g-4 align-items-stretch">
 
                     <div class="col-12 col-lg-5">
-                      <div class="card border-0 rounded-3">
-                        <div class="card-body bg-light p-4">
-                          <h5 class="fw-bold text-uppercase mb-3">Gestione notifiche sicurezza</h5>
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column justify-content-center">
+                          <h4 class="fw-bold text-uppercase mb-3">Gestione notifiche sicurezza</h4>
                           <p class="mb-0">
                             Selezionare tramite checkbox, uno o più profili a
                             cui inoltrare le notifiche in caso di ingresso in
@@ -444,7 +449,7 @@
                     </div>
 
                     <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/8.png" alt="" class="w-100 rounded-3" />
+                      <img src="./img/configurazioni/8.png" alt="Sezione Gestione notifiche sicurezza con l'elenco dei profili selezionabili tramite checkbox" class="w-100 rounded-3" />
                     </div>
 
                   </div>
@@ -452,12 +457,12 @@
                 </div>
 
                 <!-- ── 01.06 — PASSAGGI PER AGGIUNGERE UNA NUOVA STRUTTURA ── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
                   <p class="fw-semibold text-secondary mb-1">
                     Creazione nuova configurazione porto e strutture portuali
                   </p>
-                  <h2 class="h1 mb-3">Passaggi per aggiungere una nuova struttura</h2>
+                  <h3 class="h1 mb-3">Passaggi per aggiungere una nuova struttura</h3>
                   <p class="mb-4">
                     Configurare una nuova struttura portuale tramite i seguenti passaggi:
                   </p>
@@ -467,10 +472,10 @@
                     <!-- Step 1 -->
                     <div class="col-12 col-lg-4">
                       <div class="card border-0 rounded-3 h-100">
-                        <div class="card-body bg-light p-4">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">1</div>
-                            <h5 class="fw-bold text-uppercase mb-0">Aggiungi struttura</h5>
+                            <h4 class="fw-bold text-uppercase mb-0">Aggiungi struttura</h4>
                           </div>
                           <p class="mb-3">
                             Dopo aver cliccato il pulsante <strong>"Modifica"</strong>,
@@ -480,7 +485,7 @@
                             viene mostrata l'apposita sezione per aggiungere la
                             struttura portuale.
                           </p>
-                          <img src="./img/configurazioni/9.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/9.png" alt="Pagina di dettaglio configurazione porto con il pulsante Aggiungi struttura evidenziato" class="w-100 rounded-3 mt-auto" />
                         </div>
                       </div>
                     </div>
@@ -488,10 +493,10 @@
                     <!-- Step 2 -->
                     <div class="col-12 col-lg-4">
                       <div class="card border-0 rounded-3 h-100">
-                        <div class="card-body bg-light p-4">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">2</div>
-                            <h5 class="fw-bold text-uppercase mb-0">Selezione tipologia struttura e struttura</h5>
+                            <h4 class="fw-bold text-uppercase mb-0">Selezione tipologia struttura e struttura</h4>
                           </div>
                           <p class="mb-3">
                             Dopo aver avviato il processo di aggiunta nuova
@@ -503,7 +508,7 @@
                             campo <strong>"Struttura"</strong> saranno disponibili
                             le strutture contestuali a quanto indicato precedentemente.
                           </p>
-                          <img src="./img/configurazioni/10.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/10.png" alt="Form di selezione della Tipologia struttura e della Struttura da configurare" class="w-100 rounded-3 mt-auto" />
                         </div>
                       </div>
                     </div>
@@ -511,10 +516,10 @@
                     <!-- Step 3 -->
                     <div class="col-12 col-lg-4">
                       <div class="card border-0 rounded-3 h-100">
-                        <div class="card-body bg-light p-4">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">3</div>
-                            <h5 class="fw-bold text-uppercase mb-0">Strutture di Terra e Mare</h5>
+                            <h4 class="fw-bold text-uppercase mb-0">Strutture di Terra e Mare</h4>
                           </div>
                           <p class="mb-2">
                             Per la tipologia struttura <strong>"Terra"</strong>,
@@ -526,7 +531,7 @@
                             disponibili sono: Imboccatura, Area di Fonda, Punto
                             di Fonda e Boa.
                           </p>
-                          <img src="./img/configurazioni/11.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/11.png" alt="Elenco delle strutture disponibili per le tipologie Terra e Mare" class="w-100 rounded-3 mt-auto" />
                         </div>
                       </div>
                     </div>
@@ -535,25 +540,25 @@
 
                 </div>
 
-                <!-- ── 01.07 — ESEMPIO TERMINAL: STEP 1 AGGIUNGI STRUTTURA ── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <!-- ── 01.07 — ESEMPIO TERMINAL (STEP 1-2) ─────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
                   <p class="fw-semibold text-secondary mb-1">
-                    Creazione nuova configurazione strutture di "Terra" — Esempio Terminal
+                    Creazione nuova configurazione porto e strutture portuali
                   </p>
-                  <h2 class="h1 mb-3">Passaggi per aggiungere una nuova struttura</h2>
+                  <h3 class="h1 mb-3">Creazione nuova configurazione strutture di "Terra" — Esempio Terminal</h3>
                   <p class="mb-4">
                     Configurare una nuova struttura di tipologia "Terra" tramite i seguenti passaggi:
                   </p>
 
-                  <div class="row g-4 align-items-start">
+                  <div class="row g-4 align-items-start mb-4">
 
                     <div class="col-12 col-lg-5">
                       <div class="card border-0 rounded-3">
                         <div class="card-body bg-light p-4">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">1</div>
-                            <h5 class="fw-bold text-uppercase mb-0">Aggiungi struttura</h5>
+                            <h4 class="fw-bold text-uppercase mb-0">Aggiungi struttura</h4>
                           </div>
                           <p class="mb-0">
                             Dopo aver valorizzato i campi <strong>"Tipologia
@@ -576,20 +581,10 @@
                     </div>
 
                     <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/12.png" alt="" class="w-100 rounded-3" />
+                      <img src="./img/configurazioni/12.png" alt="Form di inserimento dati per la struttura Terminal, con Denominazione, Attivo, Latitudine e Longitudine" class="w-100 rounded-3" />
                     </div>
 
                   </div>
-
-                </div>
-
-                <!-- ── 01.08 — ESEMPIO TERMINAL: STEP 2 INSERIMENTO E SALVATAGGIO ── -->
-                <div class="sg-section__body p-2 p-lg-4">
-
-                  <p class="fw-semibold text-secondary mb-1">
-                    Creazione nuova configurazione strutture di "Terra" — Esempio Terminal
-                  </p>
-                  <h2 class="h1 mb-3">Passaggi per aggiungere una nuova struttura</h2>
 
                   <div class="row g-4 align-items-start">
 
@@ -598,7 +593,7 @@
                         <div class="card-body bg-light p-4">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">2</div>
-                            <h5 class="fw-bold text-uppercase mb-0">Inserimento informazioni e salvataggio</h5>
+                            <h4 class="fw-bold text-uppercase mb-0">Inserimento informazioni e salvataggio</h4>
                           </div>
                           <ul class="mb-0">
                             <li class="mb-2"><strong>"Area interamente soggetta alle norme sulla Maritime Security"</strong> (Sì/No), se impostato su Sì anche le eventuali strutture associate al terminal saranno soggette alle norme sulla Maritime Security;</li>
@@ -613,7 +608,7 @@
                     </div>
 
                     <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/13.png" alt="" class="w-100 rounded-3" />
+                      <img src="./img/configurazioni/13.png" alt="Form Terminal con le opzioni Maritime Security, Port Facility, banchine in concessione e merci pericolose" class="w-100 rounded-3" />
                     </div>
 
                   </div>
@@ -621,12 +616,12 @@
                 </div>
 
                 <!-- ── 01.09 — AZIONI DISPONIBILI DOPO AGGIUNTA STRUTTURA ─── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <div class="sg-section__body p-2 p-lg-4 border-top" id="azioni-post-salvataggio-struttura">
 
                   <p class="fw-semibold text-secondary mb-1">
                     Creazione nuova configurazione porto e strutture portuali
                   </p>
-                  <h2 class="h1 mb-3">Azioni disponibili dopo aggiunta struttura</h2>
+                  <h3 class="h1 mb-3">Azioni disponibili dopo aggiunta struttura</h3>
                   <p class="mb-4">
                     Di seguito sono elencate le azioni disponibili sulla
                     struttura portuale della configurazione del porto:
@@ -635,17 +630,16 @@
                   <div class="row g-4 align-items-start">
 
                     <div class="col-12 col-lg-6">
-                      <img src="./img/configurazioni/14.png" alt="" class="w-100 rounded-3" />
+                      <img src="./img/configurazioni/14.png" alt="Elenco strutture portuali con i pulsanti Seleziona struttura, Aggiungi Terminal, Elimina e Modifica" class="w-100 rounded-3" />
                     </div>
 
                     <div class="col-12 col-lg-6 d-flex flex-column gap-3">
 
                       <div class="card border rounded-3">
                         <div class="card-body p-3">
-                          <div class="d-flex align-items-center gap-2 mb-2">
-                            <i class="bi bi-list-ul text-primary fs-5"></i>
-                            <span class="fw-semibold">Seleziona struttura</span>
-                          </div>
+                          <span class="btn btn-outline-secondary btn-sm rounded-3 d-inline-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-list-ul"></i> Seleziona struttura
+                          </span>
                           <p class="mb-0">
                             L'utente può tornare alla pagina in cui può
                             selezionare una nuova struttura da configurare.
@@ -655,10 +649,9 @@
 
                       <div class="card border rounded-3">
                         <div class="card-body p-3">
-                          <div class="d-flex align-items-center gap-2 mb-2">
-                            <i class="bi bi-plus-lg text-primary fs-5"></i>
-                            <span class="fw-semibold">Aggiungi Terminal</span>
-                          </div>
+                          <span class="btn btn-primary btn-sm rounded-3 d-inline-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-plus-lg"></i> Aggiungi Terminal
+                          </span>
                           <p class="mb-2">
                             L'utente può inserire un nuovo terminal associato
                             alla configurazione porto di interesse.
@@ -677,11 +670,13 @@
 
                       <div class="card border rounded-3">
                         <div class="card-body p-3">
-                          <div class="d-flex align-items-center gap-2 mb-2">
-                            <i class="bi bi-trash text-danger fs-5"></i>
-                            <span class="fw-semibold">Elimina</span>
-                            <i class="bi bi-pencil text-primary fs-5 ms-2"></i>
-                            <span class="fw-semibold">Modifica</span>
+                          <div class="d-flex gap-2 mb-2">
+                            <span class="btn btn-danger btn-sm rounded-3 d-inline-flex align-items-center gap-2">
+                              <i class="bi bi-trash"></i> Elimina
+                            </span>
+                            <span class="btn btn-outline-secondary btn-sm rounded-3 d-inline-flex align-items-center gap-2">
+                              <i class="bi bi-pencil"></i> Modifica
+                            </span>
                           </div>
                           <p class="mb-0">
                             L'utente può decidere se eliminare o modificare
@@ -695,41 +690,41 @@
 
                 </div>
 
-                <!-- ── 01.10 — ALTRI ESEMPI TIPOLOGIA TERRA (VARCO + BANCHINA) ── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <!-- ── 01.10 — ALTRI ESEMPI TIPOLOGIA TERRA ────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
                   <p class="fw-semibold text-secondary mb-1">
                     Creazione nuova configurazione strutture di "Terra"
                   </p>
-                  <h2 class="h1 mb-3">Altri esempi configurazioni portuali — Tipologia TERRA</h2>
+                  <h3 class="h1 mb-3">Altri esempi configurazioni portuali — Tipologia TERRA</h3>
                   <p class="mb-4">Di seguito alcuni esempi di configurazione portuali di Tipologia Terra.</p>
 
                   <div class="row g-4">
 
                     <!-- Varco -->
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-md-6 col-lg-3">
                       <div class="card border rounded-3 h-100">
                         <div class="card-header bg-light py-2 px-3">
                           <p class="fw-bold text-uppercase mb-0 small">Tipologia Varco</p>
                         </div>
-                        <div class="card-body p-3">
+                        <div class="card-body p-3 d-flex flex-column">
                           <p class="mb-3 small">
                             Le informazioni da inserire sono: Denominazione,
                             indicare se è attivo o meno tramite pulsante
                             Sì/No, Latitudine e Longitudine.
                           </p>
-                          <img src="./img/configurazioni/15.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/15.png" alt="Form di inserimento per la struttura di tipologia Varco" class="w-100 rounded-3 mt-auto" />
                         </div>
                       </div>
                     </div>
 
                     <!-- Banchina -->
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-md-6 col-lg-3">
                       <div class="card border rounded-3 h-100">
                         <div class="card-header bg-light py-2 px-3">
                           <p class="fw-bold text-uppercase mb-0 small">Tipologia Banchina</p>
                         </div>
-                        <div class="card-body p-3">
+                        <div class="card-body p-3 d-flex flex-column">
                           <p class="mb-3 small">
                             Le informazioni da inserire sono: indicare se la
                             banchina è associata ad un terminal tramite
@@ -740,33 +735,18 @@
                             Latitudine e Longitudine, lunghezza e larghezza
                             (se necessario), "Pescaggio (metri)" (obbligatorio).
                           </p>
-                          <img src="./img/configurazioni/16.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/16.png" alt="Form di inserimento per la struttura di tipologia Banchina" class="w-100 rounded-3 mt-auto" />
                         </div>
                       </div>
                     </div>
 
-                  </div>
-
-                </div>
-
-                <!-- ── 01.11 — ALTRI ESEMPI TIPOLOGIA TERRA (SEZ. BANCHINA + BITTA) ── -->
-                <div class="sg-section__body p-2 p-lg-4">
-
-                  <p class="fw-semibold text-secondary mb-1">
-                    Creazione nuova configurazione strutture di "Terra"
-                  </p>
-                  <h2 class="h1 mb-3">Altri esempi configurazioni portuali — Tipologia TERRA</h2>
-                  <p class="mb-4">Di seguito alcuni esempi di configurazione portuali di Tipologia Terra.</p>
-
-                  <div class="row g-4">
-
                     <!-- Sezione Banchina -->
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-md-6 col-lg-3">
                       <div class="card border rounded-3 h-100">
                         <div class="card-header bg-light py-2 px-3">
                           <p class="fw-bold text-uppercase mb-0 small">Tipologia Sezione Banchina</p>
                         </div>
-                        <div class="card-body p-3">
+                        <div class="card-body p-3 d-flex flex-column">
                           <p class="mb-3 small">
                             Le informazioni da inserire sono: Denominazione,
                             Nome banchina, indicare se è attivo o meno tramite
@@ -776,18 +756,18 @@
                             "Zona franca" sarà precompilato in base a quanto
                             riportato nella struttura a cui la si vuole associare.
                           </p>
-                          <img src="./img/configurazioni/17.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/17.png" alt="Form di inserimento per la struttura di tipologia Sezione Banchina" class="w-100 rounded-3 mt-auto" />
                         </div>
                       </div>
                     </div>
 
                     <!-- Bitta -->
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-md-6 col-lg-3">
                       <div class="card border rounded-3 h-100">
                         <div class="card-header bg-light py-2 px-3">
                           <p class="fw-bold text-uppercase mb-0 small">Tipologia Bitta</p>
                         </div>
-                        <div class="card-body p-3">
+                        <div class="card-body p-3 d-flex flex-column">
                           <p class="mb-3 small">
                             Le informazioni da inserire sono: il numero di
                             bitte da inserire e cliccare il pulsante
@@ -795,7 +775,7 @@
                             selezionare la banchina/sezione di banchina
                             nell'elenco sottostante.
                           </p>
-                          <img src="./img/configurazioni/18.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/18.png" alt="Form di inserimento per la struttura di tipologia Bitta, con il pulsante Aggiungi" class="w-100 rounded-3 mt-auto" />
                         </div>
                       </div>
                     </div>
@@ -804,13 +784,10 @@
 
                 </div>
 
-                <!-- ── 01.12 — ESEMPIO BOA: STRUTTURA DI MARE ────────────── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <!-- ── 01.11 — ESEMPIO BOA: STRUTTURA DI MARE ────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
-                  <p class="fw-semibold text-secondary mb-1">
-                    Creazione nuova configurazione strutture di "Mare" — Esempio Boa
-                  </p>
-                  <h2 class="h1 mb-3">Passaggi per aggiungere una nuova struttura</h2>
+                  <h3 class="h1 mb-3">Creazione nuova configurazione strutture di "Mare" — Esempio Boa</h3>
                   <p class="mb-4">
                     Configurare una nuova struttura di tipologia "Mare" tramite i seguenti passaggi:
                   </p>
@@ -820,7 +797,7 @@
                     <div class="col-12 col-lg-5">
                       <div class="card border-0 rounded-3">
                         <div class="card-body bg-light p-4">
-                          <h5 class="fw-bold text-uppercase mb-3">Inserimento informazioni e salvataggio</h5>
+                          <h4 class="fw-bold text-uppercase mb-3">Inserimento informazioni e salvataggio</h4>
                           <ul class="mb-3">
                             <li class="mb-2">dopo aver valorizzato i campi <strong>"Tipologia struttura"</strong> (Mare) e <strong>"Struttura"</strong> (Boa), proseguire con la compilazione dei campi richiesti. Inserire la Denominazione, Denominazione Tabellone e indicare se il terminal è effettivamente utilizzabile o meno indicando nel campo <strong>"Attivo"</strong> Sì o No;</li>
                             <li class="mb-2">è possibile aggiungere <strong>Note a supporto</strong>;</li>
@@ -832,17 +809,17 @@
                           <p class="mb-0">Per salvare la struttura portuale cliccare il pulsante <strong>"Salva"</strong>.</p>
                         </div>
                       </div>
-                      <div class="sg-rimando rounded-3 p-3 mt-3 d-flex align-items-start gap-2">
+                      <div class="alert alert-info rounded-3 mt-3 d-flex align-items-start gap-2 mb-0">
                         <i class="bi bi-eye flex-shrink-0 mt-1"></i>
                         <p class="mb-0">
-                          Focus su <strong>"azioni post salvataggio struttura portuale"</strong>
+                          Focus su <a href="#azioni-post-salvataggio-struttura" class="alert-link">"azioni post salvataggio struttura portuale"</a>
                           nella sezione precedente.
                         </p>
                       </div>
                     </div>
 
                     <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/19.png" alt="" class="w-100 rounded-3" />
+                      <img src="./img/configurazioni/19.png" alt="Form di inserimento per la struttura di tipologia Boa, con i campi Denominazione, Terminal, Port Facility, Latitudine, Longitudine e Pescaggio" class="w-100 rounded-3" />
                     </div>
 
                   </div>
@@ -850,12 +827,12 @@
                 </div>
 
                 <!-- ── 01.13 — ALTRI ESEMPI TIPOLOGIA MARE ───────────────── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
                   <p class="fw-semibold text-secondary mb-1">
                     Creazione nuova configurazione strutture di "Mare"
                   </p>
-                  <h2 class="h1 mb-3">Altri esempi configurazioni portuali — Tipologia MARE</h2>
+                  <h3 class="h1 mb-3">Altri esempi configurazioni portuali — Tipologia MARE</h3>
                   <p class="mb-4">Di seguito alcuni esempi di configurazione portuali di Tipologia Mare.</p>
 
                   <div class="row g-4">
@@ -866,13 +843,13 @@
                         <div class="card-header bg-light py-2 px-3">
                           <p class="fw-bold text-uppercase mb-0 small">Tipologia Imboccatura</p>
                         </div>
-                        <div class="card-body p-3">
+                        <div class="card-body p-3 d-flex flex-column">
                           <p class="mb-3 small">
                             Le informazioni da inserire sono: Denominazione,
                             indicare se è attivo o meno tramite pulsante
                             Sì/No, Note a supporto, Latitudine e Longitudine.
                           </p>
-                          <img src="./img/configurazioni/19.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/19.png" alt="Form di inserimento per la struttura di tipologia Imboccatura" class="w-100 rounded-3 mt-auto" />
                         </div>
                       </div>
                     </div>
@@ -883,7 +860,7 @@
                         <div class="card-header bg-light py-2 px-3">
                           <p class="fw-bold text-uppercase mb-0 small">Tipologia Area di Fonda</p>
                         </div>
-                        <div class="card-body p-3">
+                        <div class="card-body p-3 d-flex flex-column">
                           <p class="mb-3 small">
                             Le informazioni da inserire sono: Denominazione
                             Area, indicare se è attivo o meno tramite pulsante
@@ -896,7 +873,7 @@
                             "Aggiungi in elenco" per aggiungerli in
                             <strong>"Elenco coordinate"</strong>.
                           </p>
-                          <img src="./img/configurazioni/20.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/20.png" alt="Form di inserimento per la struttura di tipologia Area di Fonda, con la sezione Dati del Poligono ed Elenco coordinate" class="w-100 rounded-3 mt-auto" />
                         </div>
                       </div>
                     </div>
@@ -907,7 +884,7 @@
                         <div class="card-header bg-light py-2 px-3">
                           <p class="fw-bold text-uppercase mb-0 small">Tipologia Punto di Fonda</p>
                         </div>
-                        <div class="card-body p-3">
+                        <div class="card-body p-3 d-flex flex-column">
                           <p class="mb-3 small">
                             Le informazioni da inserire sono: Denominazione,
                             indicare se è attivo o meno tramite pulsante
@@ -917,7 +894,7 @@
                             Facility, Note a supporto, inserire Latitudine e
                             Longitudine e Raggio (m).
                           </p>
-                           <img src="./img/configurazioni/21.png" alt="" class="w-100 rounded-3" />
+                           <img src="./img/configurazioni/21.png" alt="Form di inserimento per la struttura di tipologia Punto di Fonda, con Latitudine, Longitudine e Raggio" class="w-100 rounded-3 mt-auto" />
                         </div>
                       </div>
                     </div>
@@ -940,7 +917,7 @@
                   <div class="d-flex align-items-center gap-3">
                     <p class="sg-section__num text-white mb-0 me-2">02.</p>
                     <div>
-                      <h6 class="text-white h1 mb-2">Ricerca e Visualizzazione configurazione porto</h6>
+                      <h2 class="text-white h1 mb-2">Ricerca e Visualizzazione configurazione porto</h2>
                       <p class="text-white mb-0">
                         Una panoramica sulla ricerca e consultazione delle
                         configurazioni di Porto.
@@ -952,8 +929,8 @@
                 <!-- ── 02.01 — PUNTO DI ACCESSO ──────────────────────────── -->
                 <div class="sg-section__body p-2 p-lg-4">
 
-                  <h2 class="h1 mb-2">Punto di accesso</h2>
-                  <h3 class="h4 fw-bold mb-3">La voce di menù</h3>
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 fw-bold mb-3">La voce di menù</h4>
                   <p class="mb-4">
                     Dalla dashboard, è possibile <strong>accedere alle
                     principali sezioni tramite le voci di menu</strong>.
@@ -974,7 +951,7 @@
                           </div>
                         </div>
                         <div class="col-12 col-lg-7">
-                          <img src="./img/configurazioni/22.png" alt="" class="w-100 rounded-3" />
+                          <img src="./img/configurazioni/22.png" alt="Menu a tendina ‘Configurazioni’ con la voce ‘Porto e relative Strutture Portuali’ evidenziata" class="w-100 rounded-3" />
                         </div>
                       </div>
                     </div>
@@ -983,10 +960,10 @@
                 </div>
 
                 <!-- ── 02.02 — FUNZIONALITÀ IN PAGINA ────────────────────── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
                   <p class="fw-semibold text-secondary mb-1">Ricerca e Visualizzazione configurazione porto</p>
-                  <h2 class="h1 mb-3">Funzionalità in pagina</h2>
+                  <h3 class="h1 mb-3">Funzionalità in pagina</h3>
                   <p class="mb-4">
                     Per ricercare le configurazioni porto, indicare uno dei
                     campi presenti nella sezione filtri. Selezionando tramite
@@ -998,20 +975,17 @@
                     La schermata è suddivisa nelle seguenti <strong>tre sezioni</strong>:
                   </p>
 
-                  <div class="row g-4 align-items-start">
+                  <img src="./img/configurazioni/23.png" alt="Sezione filtri di ricerca configurazione porto con i campi Porto, VTS, SSN, Autorità e Port Facility" class="w-100 rounded-3 mb-4" />
 
-                    <div class="col-12 col-lg-5">
-                      <img src="./img/configurazioni/23.png" alt="" class="w-100 rounded-3" />
-                    </div>
+                  <div class="row g-4">
 
-                    <div class="col-12 col-lg-7 d-flex flex-column gap-4">
-
-                      <!-- 1 SEZIONE FILTRI -->
-                      <div class="card border-0 rounded-3">
-                        <div class="card-body bg-light p-4">
+                    <!-- 1 SEZIONE FILTRI -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">1</div>
-                            <h5 class="fw-bold text-uppercase mb-0">Sezione filtri</h5>
+                            <h4 class="fw-bold text-uppercase mb-0">Sezione filtri</h4>
                           </div>
                           <p class="mb-0">
                             La sezione Filtri consente di ricercare le
@@ -1031,13 +1005,15 @@
                           </div>
                         </div>
                       </div>
+                    </div>
 
-                      <!-- 2 AZIONI SULLA TABELLA DEI RISULTATI -->
-                      <div class="card border-0 rounded-3">
-                        <div class="card-body bg-light p-4">
+                    <!-- 2 AZIONI SULLA TABELLA DEI RISULTATI -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">2</div>
-                            <h5 class="fw-bold text-uppercase mb-0">Azioni sulla tabella dei risultati</h5>
+                            <h4 class="fw-bold text-uppercase mb-0">Azioni sulla tabella dei risultati</h4>
                           </div>
                           <p class="mb-0">
                             È possibile esportare i risultati di ricerca
@@ -1050,13 +1026,15 @@
                           </p>
                         </div>
                       </div>
+                    </div>
 
-                      <!-- 3 VISUALIZZAZIONE TRAMITE TABELLA -->
-                      <div class="card border-0 rounded-3">
-                        <div class="card-body bg-light p-4">
+                    <!-- 3 VISUALIZZAZIONE TRAMITE TABELLA -->
+                    <div class="col-12 col-lg-4">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">3</div>
-                            <h5 class="fw-bold text-uppercase mb-0">Visualizzazione configurazioni porto tramite tabella</h5>
+                            <h4 class="fw-bold text-uppercase mb-0">Visualizzazione configurazioni porto tramite tabella</h4>
                           </div>
                           <p class="mb-0">
                             I risultati della ricerca vengono presentati in una
@@ -1067,17 +1045,17 @@
                           </p>
                         </div>
                       </div>
-
                     </div>
+
                   </div>
 
                 </div>
 
                 <!-- ── 02.03 — VISUALIZZAZIONE DETTAGLIO CONFIGURAZIONE PORTO ── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
                   <p class="fw-semibold text-secondary mb-1">Ricerca e Visualizzazione configurazione porto</p>
-                  <h2 class="h1 mb-3">Visualizzazione dettaglio Configurazione porto</h2>
+                  <h3 class="h1 mb-3">Visualizzazione dettaglio Configurazione porto</h3>
                   <p class="mb-4">
                     All'interno della pagina sono consultabili le seguenti
                     informazioni sulla configurazione:
@@ -1110,7 +1088,7 @@
                         </li>
                       </ul>
 
-                      <h3 class="h5 fw-bold mb-3">Possibili azioni sulla Configurazione porto:</h3>
+                      <h4 class="h5 fw-bold mb-3">Possibili azioni sulla Configurazione porto:</h4>
                       <div class="d-flex gap-3">
                         <div class="card border rounded-3 px-3 py-2 d-inline-flex align-items-center gap-2">
                           <i class="bi bi-pencil text-primary"></i>
@@ -1124,7 +1102,7 @@
                     </div>
 
                     <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/24.png" alt="" class="w-100 rounded-3" />
+                      <img src="./img/configurazioni/24.png" alt="Pagina di dettaglio configurazione porto con Dati LOCODE, Strutture portuali e Dati organizzazione" class="w-100 rounded-3" />
                     </div>
 
                   </div>
@@ -1132,10 +1110,9 @@
                 </div>
 
                 <!-- ── 02.04 — VISUALIZZAZIONE ELENCO STRUTTURE PORTUALI ─── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
-                  <p class="fw-semibold text-secondary mb-1">Ricerca e Visualizzazione configurazione porto</p>
-                  <h2 class="h1 mb-3">Visualizzazione elenco "Strutture Portuali"</h2>
+                  <h3 class="h1 mb-3">Visualizzazione elenco "Strutture Portuali"</h3>
 
                   <div class="row g-4 align-items-start">
 
@@ -1146,270 +1123,222 @@
                         strutture portuali create per il porto che si sta
                         visualizzando.
                       </p>
-                      <h3 class="h5 fw-bold mb-3">Possibili azioni sulla sezione Strutture Portuali:</h3>
-                      <div class="sg-action-btn d-inline-flex align-items-center gap-2">
+                      <h4 class="h5 fw-bold mb-3">Possibili azioni sulla sezione Strutture Portuali:</h4>
+                      <span class="btn btn-primary rounded-3 d-inline-flex align-items-center gap-2">
                         <i class="bi bi-plus-lg"></i>
                         <span>Aggiungi struttura</span>
-                      </div>
+                      </span>
                     </div>
 
                     <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/25.png" alt="" class="w-100 rounded-3" />
+                      <img src="./img/configurazioni/25.png" alt="Sezione Strutture Portuali con l'elenco delle strutture create e il pulsante Aggiungi struttura" class="w-100 rounded-3" />
                     </div>
 
                   </div>
 
                 </div>
 
-                <!-- ── 02.05 — DETTAGLIO STRUTTURE PORTUALI: TERMINAL ────── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <!-- ── 02.05 — DETTAGLIO STRUTTURE PORTUALI (TERMINAL → BITTA) ── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
                   <p class="fw-semibold text-secondary mb-1">Ricerca e Visualizzazione configurazione porto — Esempio Terminal</p>
-                  <h2 class="h1 mb-3">Visualizzazione dettaglio "Strutture Portuali"</h2>
+                  <h3 class="h1 mb-4">Visualizzazione dettaglio "Strutture Portuali"</h3>
 
-                  <div class="row g-4 align-items-start">
-
-                    <div class="col-12 col-lg-5">
-                      <p class="mb-3">
-                        I dati di dettaglio per ogni tipologia di
-                        <strong>struttura</strong> sono visualizzabili
-                        aprendo l'accordion. All'interno dell'accordion sono
-                        elencate gerarchicamente le strutture presenti:
-                      </p>
-                      <ul class="list-unstyled mb-4">
-                        <li class="d-flex align-items-center gap-2 mb-2">
-                          <i class="bi bi-dot fs-4 text-primary"></i>
-                          <span><strong>Elenco Terminal</strong>: per visualizzare i terminal presenti è necessario espandere l'accordion.</span>
-                        </li>
-                      </ul>
-                      <h3 class="h5 fw-bold mb-2">Possibili azioni sul singolo Terminal presente nell'elenco:</h3>
-                      <div class="d-flex align-items-center gap-2 mt-2">
-                        <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
-                          <i class="bi bi-eye text-primary"></i>
-                        </div>
-                        <span class="small">Visualizzazione del dettaglio</span>
-                      </div>
-                    </div>
-
-                    <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/26.png" alt="" class="w-100 rounded-3" />
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <!-- ── 02.06 — STRUTTURE GERARCHICHE DA TERMINAL ──────────── -->
-                <div class="sg-section__body p-2 p-lg-4">
-
-                  <p class="fw-semibold text-secondary mb-1">Ricerca e Visualizzazione configurazione porto — Esempio Terminal</p>
-                  <h2 class="h1 mb-3">Visualizzazione dettaglio "Strutture Portuali"</h2>
-                  <p class="mb-4">
-                    Per ogni Terminal presente nell'elenco sono visualizzabili
-                    gli elenchi delle strutture gerarchiche da esso dipendenti:
-                  </p>
-
-                  <div class="row g-4 align-items-start">
-
-                    <div class="col-12 col-lg-5">
-                      <ul class="list-unstyled mb-0">
-                        <li class="d-flex align-items-center gap-2 mb-2">
-                          <i class="bi bi-dot fs-4 text-primary"></i>
-                          <span><strong>Elenco Boe</strong></span>
-                        </li>
-                        <li class="d-flex align-items-start gap-2 mb-2">
-                          <i class="bi bi-dot fs-4 text-primary flex-shrink-0"></i>
-                          <div>
-                            <strong>Elenco Banchine</strong>
-                            <ul class="mt-1">
-                              <li>Elenco Sezioni di Banchine</li>
-                              <ul><li>Elenco Bitte</li></ul>
-                              <li>Elenco Bitte: nel caso in cui alla banchina non siano associate sezioni di banchina.</li>
-                            </ul>
+                  <!-- Terminal -->
+                  <div class="bg-light rounded-3 p-4 mb-4">
+                    <p class="mb-3">
+                      I dati di dettaglio per ogni tipologia di
+                      <strong>struttura</strong> sono visualizzabili
+                      aprendo l'accordion. All'interno dell'accordion sono
+                      elencate gerarchicamente le strutture presenti:
+                    </p>
+                    <div class="row g-4 align-items-start">
+                      <div class="col-12 col-lg-5">
+                        <ul class="list-unstyled mb-4">
+                          <li class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-dot fs-4 text-primary"></i>
+                            <span><strong>Elenco Terminal</strong>: per visualizzare i terminal presenti è necessario espandere l'accordion.</span>
+                          </li>
+                        </ul>
+                        <h4 class="h5 fw-bold mb-2">Possibili azioni sul singolo Terminal presente nell'elenco:</h4>
+                        <div class="d-flex align-items-center gap-2 mt-2">
+                          <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                            <i class="bi bi-eye text-primary"></i>
                           </div>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/27.png" alt="" class="w-100 rounded-3" />
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <!-- ── 02.07 — DETTAGLIO BOA ──────────────────────────────── -->
-                <div class="sg-section__body p-2 p-lg-4">
-
-                  <p class="fw-semibold text-secondary mb-1">Ricerca e Visualizzazione configurazione porto — Esempio Terminal</p>
-                  <h2 class="h1 mb-3">Visualizzazione dettaglio "Strutture Portuali"</h2>
-                  <p class="mb-3">All'interno dell'accordion Terminal è presente l'elenco delle boe:</p>
-
-                  <div class="row g-4 align-items-start">
-
-                    <div class="col-12 col-lg-5">
-                      <ul class="list-unstyled mb-4">
-                        <li class="d-flex align-items-center gap-2 mb-2">
-                          <i class="bi bi-dot fs-4 text-primary"></i>
-                          <span><strong>Elenco Boe</strong></span>
-                        </li>
-                      </ul>
-                      <h3 class="h5 fw-bold mb-2">Possibili azioni sulla singola Boa nell'elenco:</h3>
-                      <div class="d-flex align-items-center gap-2 mt-2">
-                        <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
-                          <i class="bi bi-eye text-primary"></i>
+                          <span class="small">Visualizzazione del dettaglio</span>
                         </div>
-                        <span class="small">Visualizzazione del dettaglio</span>
+                      </div>
+                      <div class="col-12 col-lg-7">
+                        <img src="./img/configurazioni/26.png" alt="Accordion con l'elenco dei Terminal e l'icona per visualizzarne il dettaglio" class="w-100 rounded-3" />
                       </div>
                     </div>
-
-                    <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/28.png" alt="" class="w-100 rounded-3" />
-                    </div>
-
                   </div>
 
-                </div>
-
-                <!-- ── 02.08 — DETTAGLIO BANCHINA ────────────────────────── -->
-                <div class="sg-section__body p-2 p-lg-4">
-
-                  <p class="fw-semibold text-secondary mb-1">Ricerca e Visualizzazione configurazione porto — Esempio Terminal</p>
-                  <h2 class="h1 mb-3">Visualizzazione dettaglio "Strutture Portuali"</h2>
-                  <p class="mb-3">All'interno dell'accordion Terminal è presente l'elenco Banchine:</p>
-
-                  <div class="row g-4 align-items-start">
-
-                    <div class="col-12 col-lg-5">
-                      <ul class="list-unstyled mb-4">
-                        <li class="d-flex align-items-center gap-2 mb-2">
-                          <i class="bi bi-dot fs-4 text-primary"></i>
-                          <span><strong>Elenco Banchine</strong>: per visualizzare le banchine presenti è necessario espandere l'accordion.</span>
-                        </li>
-                      </ul>
-                      <h3 class="h5 fw-bold mb-2">Possibili azioni sulla singola banchina nell'elenco:</h3>
-                      <div class="d-flex align-items-center gap-2 mt-2">
-                        <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
-                          <i class="bi bi-eye text-primary"></i>
-                        </div>
-                        <span class="small">Visualizzazione del dettaglio</span>
+                  <!-- Strutture gerarchiche da Terminal -->
+                  <div class="bg-light rounded-3 p-4 mb-4">
+                    <p class="mb-3">
+                      Per ogni Terminal presente nell'elenco sono visualizzabili
+                      gli elenchi delle strutture gerarchiche da esso dipendenti:
+                    </p>
+                    <div class="row g-4 align-items-start">
+                      <div class="col-12 col-lg-5">
+                        <ul class="list-unstyled mb-0">
+                          <li class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-dot fs-4 text-primary"></i>
+                            <span><strong>Elenco Boe</strong></span>
+                          </li>
+                          <li class="d-flex align-items-start gap-2 mb-2">
+                            <i class="bi bi-dot fs-4 text-primary flex-shrink-0"></i>
+                            <div>
+                              <strong>Elenco Banchine</strong>
+                              <ul class="mt-1">
+                                <li>Elenco Sezioni di Banchine</li>
+                                <ul><li>Elenco Bitte</li></ul>
+                                <li>Elenco Bitte: nel caso in cui alla banchina non siano associate sezioni di banchina.</li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-12 col-lg-7">
+                        <img src="./img/configurazioni/27.png" alt="Elenco gerarchico delle strutture dipendenti da un Terminal: Boe, Banchine, Sezioni di Banchina e Bitte" class="w-100 rounded-3" />
                       </div>
                     </div>
-
-                    <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/29.png" alt="" class="w-100 rounded-3" />
-                    </div>
-
                   </div>
 
-                </div>
-
-                <!-- ── 02.09 — SEZIONI DI BANCHINA / ELENCO BITTE ────────── -->
-                <div class="sg-section__body p-2 p-lg-4">
-
-                  <p class="fw-semibold text-secondary mb-1">Ricerca e Visualizzazione configurazione porto — Esempio Terminal</p>
-                  <h2 class="h1 mb-3">Visualizzazione dettaglio "Strutture Portuali"</h2>
-                  <p class="mb-4">
-                    Per ogni Banchina presente nell'elenco sono visualizzabili
-                    gli elenchi delle strutture gerarchiche da essa dipendenti:
-                  </p>
-
-                  <div class="row g-4 align-items-start">
-
-                    <div class="col-12 col-lg-5">
-                      <ul class="list-unstyled mb-0">
-                        <li class="d-flex align-items-center gap-2 mb-2">
-                          <i class="bi bi-dot fs-4 text-primary"></i>
-                          <span><strong>Sezioni di Banchine</strong></span>
-                        </li>
-                        <li class="d-flex align-items-start gap-2 mb-2">
-                          <i class="bi bi-dot fs-4 text-primary flex-shrink-0"></i>
-                          <div>
-                            <strong>Elenco bitte:</strong>
-                            <p class="mb-0 small mt-1">nel caso in cui alla banchina non siano associate sezioni di banchina.</p>
+                  <!-- Boa -->
+                  <div class="bg-light rounded-3 p-4 mb-4">
+                    <p class="mb-3">All'interno dell'accordion Terminal è presente l'elenco delle boe:</p>
+                    <div class="row g-4 align-items-start">
+                      <div class="col-12 col-lg-5">
+                        <ul class="list-unstyled mb-4">
+                          <li class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-dot fs-4 text-primary"></i>
+                            <span><strong>Elenco Boe</strong></span>
+                          </li>
+                        </ul>
+                        <h4 class="h5 fw-bold mb-2">Possibili azioni sulla singola Boa nell'elenco:</h4>
+                        <div class="d-flex align-items-center gap-2 mt-2">
+                          <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                            <i class="bi bi-eye text-primary"></i>
                           </div>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/30.png" alt="" class="w-100 rounded-3" />
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <!-- ── 02.10 — DETTAGLIO SEZIONE BANCHINA ────────────────── -->
-                <div class="sg-section__body p-2 p-lg-4">
-
-                  <p class="fw-semibold text-secondary mb-1">Ricerca e Visualizzazione configurazione porto — Esempio Terminal</p>
-                  <h2 class="h1 mb-3">Visualizzazione dettaglio "Strutture Portuali"</h2>
-                  <p class="mb-3">
-                    All'interno dell'accordion Banchina è presente l'elenco
-                    delle sezioni di banchina.
-                  </p>
-
-                  <div class="row g-4 align-items-start">
-
-                    <div class="col-12 col-lg-5">
-                      <ul class="list-unstyled mb-4">
-                        <li class="d-flex align-items-center gap-2 mb-2">
-                          <i class="bi bi-dot fs-4 text-primary"></i>
-                          <span><strong>Elenco Sezione di banchina</strong>: per visualizzare le sezioni di banchina presenti è necessario espandere l'accordion.</span>
-                        </li>
-                      </ul>
-                      <h3 class="h5 fw-bold mb-2">Possibili azioni sulla singola sezione di banchina nell'elenco:</h3>
-                      <div class="d-flex align-items-center gap-2 mt-2">
-                        <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
-                          <i class="bi bi-eye text-primary"></i>
+                          <span class="small">Visualizzazione del dettaglio</span>
                         </div>
-                        <span class="small">Visualizzazione del dettaglio</span>
+                      </div>
+                      <div class="col-12 col-lg-7">
+                        <img src="./img/configurazioni/28.png" alt="Accordion con l'elenco delle Boe associate al Terminal" class="w-100 rounded-3" />
                       </div>
                     </div>
-
-                    <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/31.png" alt="" class="w-100 rounded-3" />
-                    </div>
-
                   </div>
 
-                </div>
-
-                <!-- ── 02.11 — DETTAGLIO BITTA ────────────────────────────── -->
-                <div class="sg-section__body p-2 p-lg-4">
-
-                  <p class="fw-semibold text-secondary mb-1">Ricerca e Visualizzazione configurazione porto — Esempio Terminal</p>
-                  <h2 class="h1 mb-3">Visualizzazione dettaglio "Strutture Portuali"</h2>
-                  <p class="mb-3">
-                    Per ogni Sezione di Banchina presente nell'elenco sono
-                    visualizzabili gli elenchi delle strutture gerarchiche da
-                    esso dipendenti:
-                  </p>
-
-                  <div class="row g-4 align-items-start">
-
-                    <div class="col-12 col-lg-5">
-                      <ul class="list-unstyled mb-4">
-                        <li class="d-flex align-items-center gap-2 mb-2">
-                          <i class="bi bi-dot fs-4 text-primary"></i>
-                          <span><strong>Elenco bitte</strong></span>
-                        </li>
-                      </ul>
-                      <h3 class="h5 fw-bold mb-2">Possibili azioni sulla singola bitta di banchina nell'elenco:</h3>
-                      <div class="d-flex align-items-center gap-2 mt-2">
-                        <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
-                          <i class="bi bi-eye text-primary"></i>
+                  <!-- Banchina -->
+                  <div class="bg-light rounded-3 p-4 mb-4">
+                    <p class="mb-3">All'interno dell'accordion Terminal è presente l'elenco Banchine:</p>
+                    <div class="row g-4 align-items-start">
+                      <div class="col-12 col-lg-5">
+                        <ul class="list-unstyled mb-4">
+                          <li class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-dot fs-4 text-primary"></i>
+                            <span><strong>Elenco Banchine</strong>: per visualizzare le banchine presenti è necessario espandere l'accordion.</span>
+                          </li>
+                        </ul>
+                        <h4 class="h5 fw-bold mb-2">Possibili azioni sulla singola banchina nell'elenco:</h4>
+                        <div class="d-flex align-items-center gap-2 mt-2">
+                          <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                            <i class="bi bi-eye text-primary"></i>
+                          </div>
+                          <span class="small">Visualizzazione del dettaglio</span>
                         </div>
-                        <span class="small">Visualizzazione del dettaglio</span>
+                      </div>
+                      <div class="col-12 col-lg-7">
+                        <img src="./img/configurazioni/29.png" alt="Accordion con l'elenco delle Banchine associate al Terminal" class="w-100 rounded-3" />
                       </div>
                     </div>
+                  </div>
 
-                    <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/32.png" alt="" class="w-100 rounded-3" />
+                  <!-- Sezioni di banchina / Elenco bitte -->
+                  <div class="bg-light rounded-3 p-4 mb-4">
+                    <p class="mb-3">
+                      Per ogni Banchina presente nell'elenco sono visualizzabili
+                      gli elenchi delle strutture gerarchiche da essa dipendenti:
+                    </p>
+                    <div class="row g-4 align-items-start">
+                      <div class="col-12 col-lg-5">
+                        <ul class="list-unstyled mb-0">
+                          <li class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-dot fs-4 text-primary"></i>
+                            <span><strong>Sezioni di Banchine</strong></span>
+                          </li>
+                          <li class="d-flex align-items-start gap-2 mb-2">
+                            <i class="bi bi-dot fs-4 text-primary flex-shrink-0"></i>
+                            <div>
+                              <strong>Elenco bitte:</strong>
+                              <p class="mb-0 small mt-1">nel caso in cui alla banchina non siano associate sezioni di banchina.</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-12 col-lg-7">
+                        <img src="./img/configurazioni/30.png" alt="Accordion con l'elenco delle Sezioni di Banchina o delle Bitte associate" class="w-100 rounded-3" />
+                      </div>
                     </div>
+                  </div>
 
+                  <!-- Sezione di banchina -->
+                  <div class="bg-light rounded-3 p-4 mb-4">
+                    <p class="mb-3">
+                      All'interno dell'accordion Banchina è presente l'elenco
+                      delle sezioni di banchina.
+                    </p>
+                    <div class="row g-4 align-items-start">
+                      <div class="col-12 col-lg-5">
+                        <ul class="list-unstyled mb-4">
+                          <li class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-dot fs-4 text-primary"></i>
+                            <span><strong>Elenco Sezione di banchina</strong>: per visualizzare le sezioni di banchina presenti è necessario espandere l'accordion.</span>
+                          </li>
+                        </ul>
+                        <h4 class="h5 fw-bold mb-2">Possibili azioni sulla singola sezione di banchina nell'elenco:</h4>
+                        <div class="d-flex align-items-center gap-2 mt-2">
+                          <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                            <i class="bi bi-eye text-primary"></i>
+                          </div>
+                          <span class="small">Visualizzazione del dettaglio</span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-7">
+                        <img src="./img/configurazioni/31.png" alt="Accordion con l'elenco delle Sezioni di banchina" class="w-100 rounded-3" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Bitta -->
+                  <div class="bg-light rounded-3 p-4">
+                    <p class="mb-3">
+                      Per ogni Sezione di Banchina presente nell'elenco sono
+                      visualizzabili gli elenchi delle strutture gerarchiche da
+                      esso dipendenti:
+                    </p>
+                    <div class="row g-4 align-items-start">
+                      <div class="col-12 col-lg-5">
+                        <ul class="list-unstyled mb-4">
+                          <li class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-dot fs-4 text-primary"></i>
+                            <span><strong>Elenco bitte</strong></span>
+                          </li>
+                        </ul>
+                        <h4 class="h5 fw-bold mb-2">Possibili azioni sulla singola bitta di banchina nell'elenco:</h4>
+                        <div class="d-flex align-items-center gap-2 mt-2">
+                          <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                            <i class="bi bi-eye text-primary"></i>
+                          </div>
+                          <span class="small">Visualizzazione del dettaglio</span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-7">
+                        <img src="./img/configurazioni/32.png" alt="Accordion con l'elenco delle Bitte di banchina" class="w-100 rounded-3" />
+                      </div>
+                    </div>
                   </div>
 
                 </div>
@@ -1428,7 +1357,7 @@
                   <div class="d-flex align-items-center gap-3">
                     <p class="sg-section__num text-white mb-0 me-2">03.</p>
                     <div>
-                      <h6 class="text-white h1 mb-2">Modifica configurazione porto</h6>
+                      <h2 class="text-white h1 mb-2">Modifica configurazione porto</h2>
                       <p class="text-white mb-0">
                         Panoramica sulle modalità di modifica delle configurazioni Porto.
                       </p>
@@ -1440,7 +1369,7 @@
                 <div class="sg-section__body p-2 p-lg-4">
 
                   <p class="fw-semibold text-secondary mb-1">Modifica configurazione Porto</p>
-                  <h2 class="h1 mb-3">Punto di Accesso della modifica di una configurazione Porto</h2>
+                  <h3 class="h1 mb-3">Punto di Accesso della modifica di una configurazione Porto</h3>
 
                   <div class="row g-4">
 
@@ -1450,7 +1379,7 @@
                         <div class="card-body bg-light p-4">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">1</div>
-                            <h5 class="fw-bold mb-0">Dettaglio configurazione porto</h5>
+                            <h4 class="fw-bold mb-0">Dettaglio configurazione porto</h4>
                           </div>
                           <p class="mb-0">
                             Nell'elenco risultati della configurazione è
@@ -1468,7 +1397,7 @@
                         <div class="card-body bg-light p-4">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">2</div>
-                            <h5 class="fw-bold mb-0">Avvio della modifica</h5>
+                            <h4 class="fw-bold mb-0">Avvio della modifica</h4>
                           </div>
                           <p class="mb-0">
                             All'interno del dettaglio della configurazione
@@ -1480,7 +1409,7 @@
                     </div>
 
                     <div class="col-12">
-                      <img src="./img/configurazioni/33.png" alt="" class="w-100 rounded-3" />
+                      <img src="./img/configurazioni/33.png" alt="Pagina di dettaglio configurazione porto con il pulsante Modifica evidenziato" class="w-100 rounded-3" />
                     </div>
 
                   </div>
@@ -1488,10 +1417,10 @@
                 </div>
 
                 <!-- ── 03.02 — PASSAGGI PER MODIFICARE UNA CONFIGURAZIONE ── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
                   <p class="fw-semibold text-secondary mb-1">Modifica configurazione Porto</p>
-                  <h2 class="h1 mb-3">Passaggi per modificare una configurazione</h2>
+                  <h3 class="h1 mb-3">Passaggi per modificare una configurazione</h3>
                   <p class="mb-4">
                     Dopo aver cliccato il pulsante <strong>"Modifica"</strong>,
                     segui tutti i passaggi indicati a sistema e inserisci le
@@ -1525,263 +1454,231 @@
                     </div>
 
                     <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/34.png" alt="" class="w-100 rounded-3" />
+                      <img src="./img/configurazioni/34.png" alt="Form di modifica della configurazione porto in modalità Modifica" class="w-100 rounded-3" />
                     </div>
 
                   </div>
 
                 </div>
 
-                <!-- ── 03.03 — MODIFICA STRUTTURE PORTUALI: TERMINAL ─────── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <!-- ── 03.03 — MODIFICA STRUTTURE PORTUALI (TERMINAL → BITTA) ── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
                   <p class="fw-semibold text-secondary mb-1">Modifica configurazione Strutture portuali — Esempio Terminal e Strutture associate</p>
-                  <h2 class="h1 mb-3">Modifica "Strutture Portuali"</h2>
-                  <p class="mb-3">
-                    I dati di dettaglio per ogni tipologia di struttura sono
-                    visualizzabili aprendo l'accordion.
-                  </p>
+                  <h3 class="h1 mb-4">Modifica "Strutture Portuali"</h3>
 
-                  <div class="row g-4 align-items-start">
-
-                    <div class="col-12 col-lg-5">
-                      <p class="mb-3">
-                        In corrispondenza di ogni <strong>Terminal</strong>
-                        presente nell'elenco, sarà possibile modificare:
-                      </p>
-                      <ul class="mb-4">
-                        <li>cliccando l'<strong>icona della matita</strong>;</li>
-                        <li>oppure all'interno del dettaglio (entrando cliccando
-                        l'icona dell'occhio) tramite il pulsante <strong>"Modifica"</strong>.</li>
-                      </ul>
-                      <h3 class="h5 fw-bold mb-3">Possibili azioni sul singolo Terminal presente nell'elenco:</h3>
-                      <div class="d-flex gap-3 flex-wrap">
-                        <div class="d-flex align-items-center gap-2">
-                          <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
-                            <i class="bi bi-pencil text-primary"></i>
+                  <!-- Terminal -->
+                  <div class="bg-light rounded-3 p-4 mb-4">
+                    <p class="mb-3">
+                      I dati di dettaglio per ogni tipologia di struttura sono
+                      visualizzabili aprendo l'accordion.
+                    </p>
+                    <div class="row g-4 align-items-start">
+                      <div class="col-12 col-lg-5">
+                        <p class="mb-3">
+                          In corrispondenza di ogni <strong>Terminal</strong>
+                          presente nell'elenco, sarà possibile modificare:
+                        </p>
+                        <ul class="mb-4">
+                          <li>cliccando l'<strong>icona della matita</strong>;</li>
+                          <li>oppure all'interno del dettaglio (entrando cliccando
+                          l'icona dell'occhio) tramite il pulsante <strong>"Modifica"</strong>.</li>
+                        </ul>
+                        <h4 class="h5 fw-bold mb-3">Possibili azioni sul singolo Terminal presente nell'elenco:</h4>
+                        <div class="d-flex gap-3 flex-wrap">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                              <i class="bi bi-pencil text-primary"></i>
+                            </div>
+                            <span class="small">Modifica Terminal</span>
                           </div>
-                          <span class="small">Modifica Terminal</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                          <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
-                            <i class="bi bi-eye text-primary"></i>
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                              <i class="bi bi-eye text-primary"></i>
+                            </div>
+                            <span class="small">Visualizzazione del dettaglio</span>
                           </div>
-                          <span class="small">Visualizzazione del dettaglio</span>
                         </div>
                       </div>
+                      <div class="col-12 col-lg-7">
+                        <img src="./img/configurazioni/35.png" alt="Elenco Terminal con le icone Modifica e Visualizza dettaglio" class="w-100 rounded-3" />
+                      </div>
                     </div>
-
-                    <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/35.png" alt="" class="w-100 rounded-3" />
-                    </div>
-
                   </div>
 
-                </div>
-
-                <!-- ── 03.04 — MODIFICA STRUTTURE PORTUALI: BOA ──────────── -->
-                <div class="sg-section__body p-2 p-lg-4">
-
-                  <p class="fw-semibold text-secondary mb-1">Modifica configurazione Strutture portuali — Esempio Terminal e Strutture associate</p>
-                  <h2 class="h1 mb-3">Modifica "Strutture Portuali"</h2>
-                  <p class="mb-3">
-                    All'interno dell'accordion Terminal è presente l'elenco delle boe:
-                  </p>
-
-                  <div class="row g-4 align-items-start">
-
-                    <div class="col-12 col-lg-5">
-                      <ul class="list-unstyled mb-3">
-                        <li class="d-flex align-items-center gap-2 mb-2">
-                          <i class="bi bi-dot fs-4 text-primary"></i>
-                          <span><strong>Elenco Boe</strong></span>
-                        </li>
-                      </ul>
-                      <p class="mb-3">
-                        In corrispondenza di ogni Boa presente nell'elenco,
-                        sarà possibile modificare:
-                      </p>
-                      <ul class="mb-4">
-                        <li>cliccando l'<strong>icona della matita</strong>;</li>
-                        <li>oppure all'interno del dettaglio tramite il pulsante <strong>"Modifica"</strong>.</li>
-                      </ul>
-                      <h3 class="h5 fw-bold mb-3">Possibili azioni sulla singola Boa nell'elenco:</h3>
-                      <div class="d-flex gap-3 flex-wrap">
-                        <div class="d-flex align-items-center gap-2">
-                          <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
-                            <i class="bi bi-pencil text-primary"></i>
+                  <!-- Boa -->
+                  <div class="bg-light rounded-3 p-4 mb-4">
+                    <p class="mb-3">
+                      All'interno dell'accordion Terminal è presente l'elenco delle boe:
+                    </p>
+                    <div class="row g-4 align-items-start">
+                      <div class="col-12 col-lg-5">
+                        <ul class="list-unstyled mb-3">
+                          <li class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-dot fs-4 text-primary"></i>
+                            <span><strong>Elenco Boe</strong></span>
+                          </li>
+                        </ul>
+                        <p class="mb-3">
+                          In corrispondenza di ogni Boa presente nell'elenco,
+                          sarà possibile modificare:
+                        </p>
+                        <ul class="mb-4">
+                          <li>cliccando l'<strong>icona della matita</strong>;</li>
+                          <li>oppure all'interno del dettaglio tramite il pulsante <strong>"Modifica"</strong>.</li>
+                        </ul>
+                        <h4 class="h5 fw-bold mb-3">Possibili azioni sulla singola Boa nell'elenco:</h4>
+                        <div class="d-flex gap-3 flex-wrap">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                              <i class="bi bi-pencil text-primary"></i>
+                            </div>
+                            <span class="small">Modifica Boa</span>
                           </div>
-                          <span class="small">Modifica Boa</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                          <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
-                            <i class="bi bi-eye text-primary"></i>
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                              <i class="bi bi-eye text-primary"></i>
+                            </div>
+                            <span class="small">Visualizzazione del dettaglio</span>
                           </div>
-                          <span class="small">Visualizzazione del dettaglio</span>
                         </div>
                       </div>
+                      <div class="col-12 col-lg-7">
+                        <img src="./img/configurazioni/36.png" alt="Elenco Boe con le icone Modifica e Visualizza dettaglio" class="w-100 rounded-3" />
+                      </div>
                     </div>
-
-                    <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/36.png" alt="" class="w-100 rounded-3" />
-                    </div>
-
                   </div>
 
-                </div>
-
-                <!-- ── 03.05 — MODIFICA STRUTTURE PORTUALI: BANCHINA ─────── -->
-                <div class="sg-section__body p-2 p-lg-4">
-
-                  <p class="fw-semibold text-secondary mb-1">Modifica configurazione Strutture portuali — Esempio Terminal e Strutture associate</p>
-                  <h2 class="h1 mb-3">Modifica "Strutture Portuali"</h2>
-                  <p class="mb-3">
-                    All'interno dell'accordion Terminal è presente l'elenco Banchine:
-                  </p>
-
-                  <div class="row g-4 align-items-start">
-
-                    <div class="col-12 col-lg-5">
-                      <ul class="list-unstyled mb-3">
-                        <li class="d-flex align-items-center gap-2 mb-2">
-                          <i class="bi bi-dot fs-4 text-primary"></i>
-                          <span><strong>Elenco Banchine</strong>: per visualizzare le banchine presenti è necessario espandere l'accordion.</span>
-                        </li>
-                      </ul>
-                      <p class="mb-3">
-                        In corrispondenza di ogni Banchina presente
-                        nell'elenco, sarà possibile modificare:
-                      </p>
-                      <ul class="mb-4">
-                        <li>cliccando l'<strong>icona della matita</strong>;</li>
-                        <li>oppure all'interno del dettaglio tramite il pulsante <strong>"Modifica"</strong>.</li>
-                      </ul>
-                      <h3 class="h5 fw-bold mb-3">Possibili azioni sulla singola banchina nell'elenco:</h3>
-                      <div class="d-flex gap-3 flex-wrap">
-                        <div class="d-flex align-items-center gap-2">
-                          <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
-                            <i class="bi bi-pencil text-primary"></i>
+                  <!-- Banchina -->
+                  <div class="bg-light rounded-3 p-4 mb-4">
+                    <p class="mb-3">
+                      All'interno dell'accordion Terminal è presente l'elenco Banchine:
+                    </p>
+                    <div class="row g-4 align-items-start">
+                      <div class="col-12 col-lg-5">
+                        <ul class="list-unstyled mb-3">
+                          <li class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-dot fs-4 text-primary"></i>
+                            <span><strong>Elenco Banchine</strong>: per visualizzare le banchine presenti è necessario espandere l'accordion.</span>
+                          </li>
+                        </ul>
+                        <p class="mb-3">
+                          In corrispondenza di ogni Banchina presente
+                          nell'elenco, sarà possibile modificare:
+                        </p>
+                        <ul class="mb-4">
+                          <li>cliccando l'<strong>icona della matita</strong>;</li>
+                          <li>oppure all'interno del dettaglio tramite il pulsante <strong>"Modifica"</strong>.</li>
+                        </ul>
+                        <h4 class="h5 fw-bold mb-3">Possibili azioni sulla singola banchina nell'elenco:</h4>
+                        <div class="d-flex gap-3 flex-wrap">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                              <i class="bi bi-pencil text-primary"></i>
+                            </div>
+                            <span class="small">Modifica Banchina</span>
                           </div>
-                          <span class="small">Modifica Banchina</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                          <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
-                            <i class="bi bi-eye text-primary"></i>
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                              <i class="bi bi-eye text-primary"></i>
+                            </div>
+                            <span class="small">Visualizzazione del dettaglio</span>
                           </div>
-                          <span class="small">Visualizzazione del dettaglio</span>
                         </div>
                       </div>
+                      <div class="col-12 col-lg-7">
+                        <img src="./img/configurazioni/37.png" alt="Elenco Banchine con le icone Modifica e Visualizza dettaglio" class="w-100 rounded-3" />
+                      </div>
                     </div>
-
-                    <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/37.png" alt="" class="w-100 rounded-3" />
-                    </div>
-
                   </div>
 
-                </div>
-
-                <!-- ── 03.06 — MODIFICA STRUTTURE PORTUALI: SEZIONE BANCHINA ── -->
-                <div class="sg-section__body p-2 p-lg-4">
-
-                  <p class="fw-semibold text-secondary mb-1">Modifica configurazione Strutture portuali — Esempio Terminal e Strutture associate</p>
-                  <h2 class="h1 mb-3">Modifica "Strutture Portuali"</h2>
-                  <p class="mb-3">
-                    All'interno dell'accordion Banchina è presente l'elenco
-                    delle sezioni di banchina.
-                  </p>
-
-                  <div class="row g-4 align-items-start">
-
-                    <div class="col-12 col-lg-5">
-                      <ul class="list-unstyled mb-3">
-                        <li class="d-flex align-items-center gap-2 mb-2">
-                          <i class="bi bi-dot fs-4 text-primary"></i>
-                          <span><strong>Elenco Sezione di banchina</strong>: per visualizzare le sezioni di banchina presenti è necessario espandere l'accordion.</span>
-                        </li>
-                      </ul>
-                      <p class="mb-3">
-                        In corrispondenza di ogni sezione di Banchina presente
-                        nell'elenco, sarà possibile modificare:
-                      </p>
-                      <ul class="mb-4">
-                        <li>cliccando l'<strong>icona della matita</strong>;</li>
-                        <li>oppure all'interno del dettaglio tramite il pulsante <strong>"Modifica"</strong>.</li>
-                      </ul>
-                      <h3 class="h5 fw-bold mb-3">Possibili azioni sulla singola Sezione di banchina nell'elenco:</h3>
-                      <div class="d-flex gap-3 flex-wrap">
-                        <div class="d-flex align-items-center gap-2">
-                          <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
-                            <i class="bi bi-pencil text-primary"></i>
+                  <!-- Sezione di banchina -->
+                  <div class="bg-light rounded-3 p-4 mb-4">
+                    <p class="mb-3">
+                      All'interno dell'accordion Banchina è presente l'elenco
+                      delle sezioni di banchina.
+                    </p>
+                    <div class="row g-4 align-items-start">
+                      <div class="col-12 col-lg-5">
+                        <ul class="list-unstyled mb-3">
+                          <li class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-dot fs-4 text-primary"></i>
+                            <span><strong>Elenco Sezione di banchina</strong>: per visualizzare le sezioni di banchina presenti è necessario espandere l'accordion.</span>
+                          </li>
+                        </ul>
+                        <p class="mb-3">
+                          In corrispondenza di ogni sezione di Banchina presente
+                          nell'elenco, sarà possibile modificare:
+                        </p>
+                        <ul class="mb-4">
+                          <li>cliccando l'<strong>icona della matita</strong>;</li>
+                          <li>oppure all'interno del dettaglio tramite il pulsante <strong>"Modifica"</strong>.</li>
+                        </ul>
+                        <h4 class="h5 fw-bold mb-3">Possibili azioni sulla singola Sezione di banchina nell'elenco:</h4>
+                        <div class="d-flex gap-3 flex-wrap">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                              <i class="bi bi-pencil text-primary"></i>
+                            </div>
+                            <span class="small">Modifica Sezioni di banchina</span>
                           </div>
-                          <span class="small">Modifica Sezioni di banchina</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                          <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
-                            <i class="bi bi-eye text-primary"></i>
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                              <i class="bi bi-eye text-primary"></i>
+                            </div>
+                            <span class="small">Visualizzazione del dettaglio</span>
                           </div>
-                          <span class="small">Visualizzazione del dettaglio</span>
                         </div>
                       </div>
+                      <div class="col-12 col-lg-7">
+                        <img src="./img/configurazioni/38.png" alt="Elenco Sezioni di banchina con le icone Modifica e Visualizza dettaglio" class="w-100 rounded-3" />
+                      </div>
                     </div>
-
-                    <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/38.png" alt="" class="w-100 rounded-3" />
-                    </div>
-
                   </div>
 
-                </div>
-
-                <!-- ── 03.07 — MODIFICA STRUTTURE PORTUALI: BITTA ────────── -->
-                <div class="sg-section__body p-2 p-lg-4">
-
-                  <p class="fw-semibold text-secondary mb-1">Modifica configurazione Strutture portuali — Esempio Terminal e Strutture associate</p>
-                  <h2 class="h1 mb-3">Modifica "Strutture Portuali"</h2>
-                  <p class="mb-3">
-                    Per ogni Sezione di Banchina presente nell'elenco sono
-                    visualizzabili gli elenchi delle strutture gerarchiche
-                    da esso dipendenti:
-                  </p>
-
-                  <div class="row g-4 align-items-start">
-
-                    <div class="col-12 col-lg-5">
-                      <ul class="list-unstyled mb-3">
-                        <li class="d-flex align-items-center gap-2 mb-2">
-                          <i class="bi bi-dot fs-4 text-primary"></i>
-                          <span><strong>Elenco bitte</strong></span>
-                        </li>
-                      </ul>
-                      <p class="mb-3">
-                        In corrispondenza di ogni sezione di Bitta presente
-                        nell'elenco, sarà possibile modificare:
-                      </p>
-                      <ul class="mb-4">
-                        <li>cliccando l'<strong>icona della matita</strong>;</li>
-                        <li>oppure all'interno del dettaglio tramite il pulsante <strong>"Modifica"</strong>.</li>
-                      </ul>
-                      <h3 class="h5 fw-bold mb-3">Possibili azioni sulla singola Bitta nell'elenco:</h3>
-                      <div class="d-flex gap-3 flex-wrap">
-                        <div class="d-flex align-items-center gap-2">
-                          <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
-                            <i class="bi bi-pencil text-primary"></i>
+                  <!-- Bitta -->
+                  <div class="bg-light rounded-3 p-4">
+                    <p class="mb-3">
+                      Per ogni Sezione di Banchina presente nell'elenco sono
+                      visualizzabili gli elenchi delle strutture gerarchiche
+                      da esso dipendenti:
+                    </p>
+                    <div class="row g-4 align-items-start">
+                      <div class="col-12 col-lg-5">
+                        <ul class="list-unstyled mb-3">
+                          <li class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-dot fs-4 text-primary"></i>
+                            <span><strong>Elenco bitte</strong></span>
+                          </li>
+                        </ul>
+                        <p class="mb-3">
+                          In corrispondenza di ogni sezione di Bitta presente
+                          nell'elenco, sarà possibile modificare:
+                        </p>
+                        <ul class="mb-4">
+                          <li>cliccando l'<strong>icona della matita</strong>;</li>
+                          <li>oppure all'interno del dettaglio tramite il pulsante <strong>"Modifica"</strong>.</li>
+                        </ul>
+                        <h4 class="h5 fw-bold mb-3">Possibili azioni sulla singola Bitta nell'elenco:</h4>
+                        <div class="d-flex gap-3 flex-wrap">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                              <i class="bi bi-pencil text-primary"></i>
+                            </div>
+                            <span class="small">Modifica Bitta</span>
                           </div>
-                          <span class="small">Modifica Bitta</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                          <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
-                            <i class="bi bi-eye text-primary"></i>
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                              <i class="bi bi-eye text-primary"></i>
+                            </div>
+                            <span class="small">Visualizzazione del dettaglio</span>
                           </div>
-                          <span class="small">Visualizzazione del dettaglio</span>
                         </div>
                       </div>
+                      <div class="col-12 col-lg-7">
+                        <img src="./img/configurazioni/39.png" alt="Elenco Bitte con le icone Modifica e Visualizza dettaglio" class="w-100 rounded-3" />
+                      </div>
                     </div>
-
-                    <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/39.png" alt="" class="w-100 rounded-3" />
-                    </div>
-
                   </div>
 
                 </div>
@@ -1800,7 +1697,7 @@
                   <div class="d-flex align-items-center gap-3">
                     <p class="sg-section__num text-white mb-0 me-2">04.</p>
                     <div>
-                      <h6 class="text-white h1 mb-2">Elimina configurazione porto</h6>
+                      <h2 class="text-white h1 mb-2">Elimina configurazione porto</h2>
                       <p class="text-white mb-0">
                         Panoramica sulle modalità di eliminazioni delle
                         configurazioni Porto.
@@ -1813,17 +1710,17 @@
                 <div class="sg-section__body p-2 p-lg-4">
 
                   <p class="fw-semibold text-secondary mb-1">Eliminazione configurazione Porto</p>
-                  <h2 class="h1 mb-3">Punti di accesso per eliminare una configurazione Porto</h2>
+                  <h3 class="h1 mb-3">Punti di accesso per eliminare una configurazione Porto</h3>
 
                   <div class="row g-4">
 
                     <!-- Box 1 -->
                     <div class="col-12 col-lg-6">
                       <div class="card border-0 rounded-3 h-100">
-                        <div class="card-body bg-light p-4">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">1</div>
-                            <h5 class="fw-bold mb-0">Attivazione "Elimina" dall'elenco risultati di ricerca</h5>
+                            <h4 class="fw-bold mb-0">Attivazione "Elimina" dall'elenco risultati di ricerca</h4>
                           </div>
                           <p class="mb-0">
                             Nell'elenco dei risultati di ricerca delle
@@ -1839,10 +1736,10 @@
                     <!-- Box 2 -->
                     <div class="col-12 col-lg-6">
                       <div class="card border-0 rounded-3 h-100">
-                        <div class="card-body bg-light p-4">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
                           <div class="d-flex gap-3 mb-3">
                             <div class="sg-step-badge flex-shrink-0">2</div>
-                            <h5 class="fw-bold mb-0">Attivazione "Elimina" da pagina di dettaglio della configurazione</h5>
+                            <h4 class="fw-bold mb-0">Attivazione "Elimina" da pagina di dettaglio della configurazione</h4>
                           </div>
                           <p class="mb-0">
                             Nell'elenco dei risultati di ricerca delle soste
@@ -1857,7 +1754,7 @@
                     </div>
 
                     <div class="col-12">
-                      <img src="./img/configurazioni/40.png" alt="" class="w-100 rounded-3" />
+                      <img src="./img/configurazioni/40.png" alt="Elenco risultati di ricerca configurazioni con checkbox di selezione e pulsante Elimina, e pagina di dettaglio con pulsante Elimina" class="w-100 rounded-3" />
                     </div>
 
                   </div>
@@ -1865,10 +1762,10 @@
                 </div>
 
                 <!-- ── 04.02 — PASSAGGI PER ELIMINARE STRUTTURE PORTUALI ─── -->
-                <div class="sg-section__body p-2 p-lg-4">
+                <div class="sg-section__body p-2 p-lg-4 border-top">
 
                   <p class="fw-semibold text-secondary mb-1">Eliminazione configurazione Porto</p>
-                  <h2 class="h1 mb-3">Passaggi per eliminare strutture portuali</h2>
+                  <h3 class="h1 mb-3">Passaggi per eliminare strutture portuali</h3>
                   <p class="mb-4">
                     Eliminare le strutture portuali associate alla
                     configurazione portuale, tramite i seguenti passaggi:
@@ -1883,7 +1780,7 @@
                         <div class="card-body bg-light p-4">
                           <div class="d-flex gap-3 mb-2">
                             <div class="sg-step-badge flex-shrink-0">1</div>
-                            <h5 class="fw-bold text-uppercase mb-0">Punto di accesso eliminazione strutture portuali</h5>
+                            <h4 class="fw-bold text-uppercase mb-0">Punto di accesso eliminazione strutture portuali</h4>
                           </div>
                           <p class="mb-0">
                             A seconda della struttura portuale che si vuole
@@ -1899,7 +1796,7 @@
                         <div class="card-body bg-light p-4">
                           <div class="d-flex gap-3 mb-2">
                             <div class="sg-step-badge flex-shrink-0">2</div>
-                            <h5 class="fw-bold text-uppercase mb-0">Eliminazione struttura portuale</h5>
+                            <h4 class="fw-bold text-uppercase mb-0">Eliminazione struttura portuale</h4>
                           </div>
                           <p class="mb-0">
                             Per eliminare la struttura portuale selezionata,
@@ -1926,7 +1823,7 @@
                     </div>
 
                     <div class="col-12 col-lg-7">
-                      <img src="./img/configurazioni/41.png" alt="" class="w-100 rounded-3" />
+                      <img src="./img/configurazioni/41.png" alt="Pagina di dettaglio struttura portuale con il pulsante Elimina evidenziato" class="w-100 rounded-3" />
                     </div>
 
                   </div>
@@ -1940,6 +1837,31 @@
         </div><!-- /row -->
       </div><!-- /container -->
     </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- LIGHTBOX MODAL -->
     <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
@@ -1973,13 +1895,29 @@
         const lbImg  = document.getElementById('lightbox-img');
         const modal  = document.getElementById('lightboxModal');
         const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
         contenuto.querySelectorAll('img').forEach(function (img) {
+          // Rende l'immagine un elemento interattivo accessibile da tastiera
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+
           img.addEventListener('click', function () {
-            lbImg.src = this.src;
-            lbImg.alt = this.alt || '';
-            bsModal.show();
+            apriLightbox(this);
+          });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
           });
         });
+
         modal.addEventListener('hidden.bs.modal', function () {
           lbImg.src = '';
         });
