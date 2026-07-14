@@ -1,0 +1,1791 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Gestione Ruoli e Profili</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Gestione Ruoli e Profili</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#creazione-ruolo">
+                        01. Creazione ruolo
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#modifica-configurazione-ruolo">
+                        02. Modifica configurazione Ruolo
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#cancellazione-ruolo">
+                        03. Cancellazione ruolo
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#associazione-competenze-tecniche">
+                        04. Associazione competenze tecniche a ruolo
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#modifica-ruoli-componente-tecnica">
+                        05. Modifica ruoli associati alla componente tecnica
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#eliminazione-associazione-componente-tecnica">
+                        06. Eliminazione associazione componente tecnica a ruolo
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#ricerca-consultazione-ruolo">
+                        07. Ricerca e consultazione ruolo
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                  <h1 class="h4 mb-0">Gestione Ruoli e Profili</h1>
+                 
+                </div>
+                <p class="mb-0 mt-2">
+                  Il portale delle Smart Guide è uno spazio digitale che
+                  raccoglie risorse pratiche e aggiornate in un unico ambiente
+                  intuitivo. Strumenti chiari e organizzati per organizzarti e
+                  trovare subito ciò che ti serve.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — CREAZIONE RUOLO
+                 Profilo: Amministratore centrale
+                 ============================================================ -->
+            <section id="creazione-ruolo" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Creazione Ruolo</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla creazione dei ruoli.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 03 — PUNTO DI ACCESSO ─────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 text-secondary mb-4">La voce di menù</h4>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-4">
+                        Dalla dashboard, è possibile <strong>accedere alle
+                        principali sezioni tramite le voci di menu</strong>.
+                      </p>
+
+                      <div class="card border-0 rounded-3 p-3 bg-primary">
+                        <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                        <p class="text-white mb-0">
+                          Cliccando sulla voce <strong>"Configurazioni"</strong>
+                          viene visualizzato un menu a tendina, da cui è
+                          possibile accedere a <strong>"Gestione Ruoli"</strong>.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-ruoli/1.png" alt="Menu a tendina 'Configurazioni' con la voce 'Gestione ruoli' evidenziata" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 04 — CREAZIONE NUOVO RUOLO ────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Creazione nuovo ruolo</h3>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-0">
+                        Dopo aver effettuato l'accesso alla pagina
+                        <strong>"Configurazione Ruoli"</strong>, cliccare sul
+                        pulsante <strong>"Nuovo ruolo"</strong> per avviare il
+                        flusso di creazione.
+                      </p>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-ruoli/2.png" alt="Pagina Configurazione Ruoli con filtri di ricerca e pulsante Nuovo Ruolo evidenziato" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 05 — PASSAGGI PER CREARE UN NUOVO RUOLO ───────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Passaggi per creare un nuovo ruolo</h3>
+                  <p class="mb-4">
+                    Dopo aver cliccato il pulsante "Nuovo ruolo", segui tutti i
+                    passaggi indicati a sistema e inserisci le informazioni
+                    necessarie per completare la creazione del nuovo ruolo.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Inserimento delle informazioni</h4>
+                          </div>
+                          <p class="mb-3">
+                            Inserire i dati del ruolo come <strong>"Codice
+                            ruolo"</strong> e <strong>"Descrizione
+                            ruolo"</strong>, indicare se il ruolo è attivo (Sì
+                            o No) e indicare se il ruolo può essere associato
+                            a Obblighi di Dichiarazione (Sì/No).
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/3.png" alt="Form Nuovo Ruolo con i campi Codice ruolo, Descrizione ruolo, Ruolo attivo e Indicatore obblighi di dichiarazione" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6">
+                      <div class="card border-0 rounded-3 h-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Salvataggio e conferma</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver cliccato il pulsante <strong>"Salva"</strong>,
+                            il sistema mostra una finestra di conferma,
+                            chiedendo all'utente se è sicuro di confermare la
+                            creazione del ruolo. Cliccare <strong>"Conferma"</strong>
+                            per creare il ruolo. All'interno del dettaglio
+                            saranno disponibili i pulsanti di <strong>Modifica</strong>
+                            ed <strong>Elimina</strong>. Per aggiungere
+                            componenti tecniche al ruolo cliccare sul pulsante
+                            <strong>"Modifica"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/4.png" alt="Finestra di conferma Salva ruolo e dettaglio del ruolo creato con pulsanti Modifica ed Elimina" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 06 — PASSAGGI PER AGGIUNGERE COMPONENTI TECNICHE AL RUOLO ── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Passaggi per aggiungere componenti tecniche al ruolo</h3>
+                  <p class="mb-4">
+                    Dopo aver creato il ruolo procedi con l'associazione delle
+                    componenti tecniche, seguendo i passaggi indicati:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Aggiunta componenti tecniche</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo il salvataggio, per aggiungere una o più
+                            componenti tecniche al ruolo cliccare il pulsante
+                            <strong>"Aggiungi componente tecnica"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/5.png" alt="Pagina Modifica Configurazione Ruolo con il pulsante Aggiungi componente tecnica" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">4</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Selezione componenti tecniche</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra tramite la quale è
+                            possibile selezionare una o più componenti
+                            tecniche da associare al ruolo. Dopo la selezione
+                            delle stesse, cliccare il pulsante <strong>"Salva"</strong>
+                            per confermare l'associazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/6.png" alt="Finestra Selezione della componente tecnica da associare con elenco a tendina multiselezione" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">5</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Azioni sulle componenti tecniche</h4>
+                          </div>
+                          <p class="mb-3">
+                            Le componenti tecniche associate saranno
+                            visualizzate all'interno del relativo elenco e
+                            sarà possibile disassociarle deselezionandole
+                            tramite checkbox o eliminarle attraverso l'icona
+                            del cestino.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/7.png" alt="Elenco componenti tecniche associate con checkbox Associated e icona cestino nella colonna Azioni" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row g-4">
+
+                    <!-- Step 6 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">6</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Salvataggio</h4>
+                          </div>
+                          <p class="mb-3">
+                            Per salvare il ruolo con le componenti tecniche
+                            associate cliccare il pulsante <strong>"Salva"</strong>.
+                            Se l'utente clicca il pulsante <strong>"Annulla"</strong>,
+                            verranno annullate le modifiche apportate.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/8.png" alt="Pagina Modifica Configurazione Ruolo con l'elenco delle componenti tecniche associate e i pulsanti Salva e Annulla" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">7</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Azioni disponibili sulle competenze tecniche</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra di conferma.
+                            Cliccare il pulsante <strong>"Conferma"</strong>
+                            per confermare le modifiche apportate alla
+                            configurazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/9.png" alt="Finestra di conferma modifica Configurazione con pulsanti Conferma e Chiudi" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 02 — MODIFICA CONFIGURAZIONE RUOLO
+                 (in lavorazione — in attesa delle slide)
+                 ============================================================ -->
+            <section id="modifica-configurazione-ruolo" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">02.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Modifica configurazione Ruolo</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla modifica configurazione dei ruoli.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 09 — PUNTO DI ACCESSO ALLA MODIFICA ────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-3">Punto di Accesso alla modifica configurazione Ruolo</h3>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione "Modifica" dall'elenco risultati di ricerca</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati dei ruoli è possibile
+                            accedere al dettaglio in modalità modifica
+                            cliccando sull'<strong>"icona della matita"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/10.png" alt="Elenco risultati ruoli con icona matita evidenziata nella colonna Azioni" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione Modifica da pagina di dettaglio del Ruolo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati dei ruoli è possibile
+                            accedere al dettaglio in modalità visualizzazione
+                            cliccando sull'<strong>"icona dell'occhio"</strong>.
+                            All'interno del dettaglio, per procedere con la
+                            modifica sarà necessario cliccare sul pulsante
+                            <strong>"Modifica"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/11.png" alt="Dettaglio del ruolo con pulsante Modifica evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 10 — PASSAGGI PER MODIFICARE LA CONFIGURAZIONE RUOLO ── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Passaggi per modificare la configurazione ruolo</h3>
+                  <p class="mb-3">
+                    Dopo aver creato il ruolo procedi con la modifica,
+                    seguendo i passaggi indicati:
+                  </p>
+
+                  <div class="text-center mb-4">
+                    <a href="#creazione-ruolo" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none">
+                      <i class="bi bi-record-circle me-1"></i>
+                      Focus su "aggiunta Componenti tecniche" a pagina 6
+                    </a>
+                  </div>
+
+                  <div class="row g-4 mb-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Modifica informazioni</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il codice ruolo non è modificabile. Eventualmente
+                            procedere con l'aggiornamento delle informazioni,
+                            descrizione ruolo, ruolo attivo (Sì o No) e
+                            indicare se il ruolo può essere associato a
+                            Obblighi di Dichiarazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/12.png" alt="Form Modifica Configurazione Ruolo con elenco delle componenti tecniche associate" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Azioni disponibili sulle competenze tecniche</h4>
+                          </div>
+                          <p class="mb-3">
+                            L'utente ha la possibilità di aggiungere
+                            competenze tecniche attraverso l'apposito
+                            pulsante, associare o meno la competenza tramite
+                            selezione della checkbox e/o eliminare la
+                            competenza attraverso il pulsante con l'icona del
+                            cestino.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/13.png" alt="Elenco componenti tecniche associate con pulsante Aggiungi componente tecnica, checkbox Associated e icona cestino" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Salvataggio del ruolo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Cliccare il pulsante <strong>"Salva"</strong> per
+                            salvare le modifiche, successivamente il sistema
+                            mostra una finestra di conferma della modifica.
+                            Cliccare il pulsante <strong>"Conferma"</strong>
+                            per proseguire.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/14.png" alt="Elenco componenti tecniche con pulsanti Salva e Annulla e finestra di conferma modifica Configurazione" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-0" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">
+                      Durante l'aggiunta delle componenti tecniche,
+                      all'interno dell'elenco non saranno visibili le
+                      componenti tecniche che risultano già associate al
+                      ruolo.
+                    </p>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 03 — CANCELLAZIONE RUOLO
+                 Profilo: Amministratore centrale
+                 ============================================================ -->
+            <section id="cancellazione-ruolo" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">03.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Cancellazione ruolo</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla cancellazione dei ruoli.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 12 — CANCELLAZIONE DA TABELLA ──────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-3">Passaggi per cancellare un ruolo da tabella</h3>
+                  <p class="mb-4">
+                    Dopo aver creato un ruolo, l'utente può eliminarlo tramite
+                    i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Cancellazione tramite risultati di ricerca</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati della ricerca dei ruoli è
+                            possibile procedere con l'eliminazione
+                            <strong>selezionando uno o più ruoli</strong>
+                            attraverso la checkbox e successivamente cliccando
+                            il pulsante <strong>"Elimina"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/15.png" alt="Elenco risultati ruoli con più righe selezionate tramite checkbox e pulsante Elimina" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Finestra di conferma eliminazione e successo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra in cui l'utente
+                            deve confermare di essere sicuro di voler
+                            eliminare il ruolo. Cliccare <strong>"Elimina"</strong>
+                            per confermare. Una volta eliminata, non sarà più
+                            possibile recuperare i dati eliminati.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/16.png" alt="Finestra di conferma Elimina ruolo e messaggio Ruoli eliminati con successo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 13 — CANCELLAZIONE DAL DETTAGLIO ───────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Passaggi per cancellare un ruolo dal dettaglio</h3>
+                  <p class="mb-4">
+                    Dopo aver creato un ruolo, l'utente può eliminarlo tramite
+                    i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Accesso al dettaglio</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati della ricerca del ruolo è
+                            possibile accedere nel dettaglio del ruolo
+                            cliccando l'<strong>icona dell'occhio</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/17.png" alt="Elenco risultati ruoli con icona occhio evidenziata e dettaglio componenti tecniche associate" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Finestra di conferma eliminazione e successo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Per eliminare cliccare il pulsante <strong>"Elimina"</strong>.
+                            Il sistema mostra una finestra in cui l'utente
+                            deve confermare di essere sicuro di voler
+                            eliminare il ruolo. Cliccare <strong>"Elimina"</strong>
+                            per confermare. Una volta eliminata, non sarà più
+                            possibile recuperare i dati eliminati.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/18.png" alt="Dettaglio ruolo con pulsanti Modifica ed Elimina e finestra di conferma Elimina ruolo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 04 — ASSOCIAZIONE COMPETENZE TECNICHE A RUOLO
+                 (in lavorazione — in attesa delle slide)
+                 ============================================================ -->
+            <section id="associazione-competenze-tecniche" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">04.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Associazione competenze tecniche a ruolo</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sull'associazione competenze tecniche ai ruoli.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 15 — PUNTO DI ACCESSO ──────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-3">Punto di Accesso</h3>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-ruoli/19.png" alt="Pagina Associazione componenti tecniche a ruoli con filtri di ricerca e pulsante Nuova Associazione con menu a tendina Manuale e Da file" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">
+                        Dopo aver effettuato l'accesso alla pagina
+                        <strong>"Associazione componenti tecniche a
+                        ruoli"</strong>, cliccare sul pulsante <strong>"Nuova
+                        Associazione"</strong> per avviare il flusso di
+                        creazione.
+                      </p>
+                      <p class="mb-0">
+                        Il sistema darà la possibilità di creare una nuova
+                        associazione in maniera <strong>manuale</strong> o
+                        <strong>caricando un file</strong>.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 16-17 — ASSOCIAZIONE "MANUALMENTE" ─────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Passaggi per associare "Manualmente" una nuova competenza tecnica</h3>
+                  <p class="mb-4">
+                    Dopo aver cliccato il pulsante <strong>"Nuova
+                    associazione"</strong> e selezionato <strong>"Manuale"</strong>,
+                    segui tutti i passaggi indicati:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Ricerca e selezione del ruolo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Selezionare il ruolo dal menu a tendina.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/20.png" alt="Pagina Nuova associazione manuale componenti tecniche a ruolo con menu a tendina Ruolo aperto" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Aggiungi componente tecnica</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver selezionato il ruolo, il sistema attiva
+                            il pulsante <strong>"+ Associa componenti
+                            tecniche"</strong>. Per avviare il processo di
+                            associazione cliccare il pulsante.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/21.png" alt="Elenco delle componenti tecniche associate con pulsante Associa componenti tecniche" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-4" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">
+                      Nel caso in cui al ruolo non risultino associate
+                      componenti tecniche, il sistema mostra un'informativa.
+                    </p>
+                  </div>
+
+                  <div class="row g-4">
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Selezione della componente tecnica</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra in cui è possibile
+                            selezionare una o più componenti tecniche da
+                            associare al ruolo. Dopo averle selezionate,
+                            cliccare il pulsante <strong>"Salva"</strong> per
+                            confermare l'associazione delle componenti
+                            tecniche al ruolo.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/22.png" alt="Finestra Associa componenti tecniche con elenco a tendina Technical Component e componenti selezionate" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">4</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Salva e conferma</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver cliccato il pulsante <strong>"Salva"</strong>,
+                            il sistema mostra una finestra di conferma.
+                            Cliccare il pulsante <strong>"Conferma"</strong>
+                            per procedere con il salvataggio.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/23.png" alt="Elenco componenti tecniche associate con pulsanti Salva e Annulla e finestra di conferma Salva associazione" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 18 — ASSOCIAZIONE "DA FILE" ────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Passaggi per associare "Da file" una nuova competenza tecnica</h3>
+                  <p class="mb-4">
+                    Dopo aver cliccato il pulsante <strong>"Nuova
+                    associazione"</strong> e selezionato <strong>"Da
+                    file"</strong>, segui tutti i passaggi indicati per
+                    associare una nuova competenza tecnica "Da File":
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Esempio scaricabile e caricamento</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nel caricamento tramite file, il sistema fornisce
+                            le indicazioni sulla struttura che il documento
+                            deve rispettare e mette a disposizione un
+                            tracciato file di esempio scaricabile. Per
+                            caricare il documento, cliccare l'apposito
+                            pulsante <strong>"Carica documento"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/24.png" alt="Pagina Nuova associazione da file di componenti tecniche a ruolo con istruzioni sul formato CSV e campo Carica documento" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">File caricato</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver cliccato il pulsante <strong>"Carica
+                            Documento"</strong>, il sistema mostra
+                            un'informativa che comunica all'utente che
+                            l'importazione da file è avvenuta con successo.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/25.png" alt="Campo Carica documento con file selezionato e messaggio Importazione da file avvenuta con successo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row g-4 align-items-center bg-dark text-white rounded-3 p-4">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-0">
+                        Nel caso in cui ci siano errori nei dati del file
+                        caricato, il sistema informa l'utente tramite testi
+                        informativi e messaggi di alert, impedendo il
+                        proseguimento dell'operazione. Di seguito un esempio:
+                      </p>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <div class="alert alert-warning d-flex gap-2 rounded-3 mb-0" role="alert">
+                        <i class="bi bi-x-circle flex-shrink-0 mt-1"></i>
+                        <div>
+                          <p class="fw-bold mb-1">Importazione da file avvenuta con errori</p>
+                          <p class="mb-1">Importazione avvenuta con errori. Righe totali: 2, elaborate: 0</p>
+                          <p class="mb-0">La riga 1 non è formalmente valida. Errore valore "RL001" nella colonna 1 non è ammesso.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 05 — MODIFICA RUOLI ASSOCIATI ALLA COMPONENTE TECNICA
+                 Profilo: Amministratore centrale
+                 ============================================================ -->
+            <section id="modifica-ruoli-componente-tecnica" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">05.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Modifica ruoli associati alla componente tecnica</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla modifica dei ruoli associati alla componente tecnica.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 20 — DETTAGLIO E ACCESSO ALLA MODIFICA ─────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-3">Passaggi per modificare i ruoli associati alla componente tecnica</h3>
+                  <p class="mb-4">
+                    Dopo aver associato le componenti tecniche al ruolo,
+                    l'utente può procedere con la modifica della stessa
+                    seguendo i passaggi indicati:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Dettaglio componente tecnica</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati della ricerca dei ruoli, è
+                            possibile accedere al dettaglio della componente
+                            tecnica associata cliccando l'<strong>icona
+                            dell'occhio</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/26.png" alt="Elenco componenti tecniche con icona occhio evidenziata nella colonna Azioni" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Modifica ruoli associati</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nel dettaglio della componente tecnica, per
+                            modificare i ruoli associati, cliccare il tasto
+                            <strong>"Modifica"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/27.png" alt="Dettaglio associazione componente tecnica a ruoli con elenco Ruoli associati e pulsante Modifica" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Possibilità di aggiungere ruoli</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver cliccato il tasto <strong>"Modifica"</strong>,
+                            per associare nuovi ruoli alla componente tecnica
+                            cliccare il pulsante <strong>"Aggiungi
+                            Ruoli"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/28.png" alt="Dettaglio associazione componente tecnica a ruoli in modalità modifica con pulsante Aggiungi Ruoli" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 21-22 — AGGIUNTA, ELIMINAZIONE E SALVATAGGIO RUOLI ── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <div class="row g-4 mb-4">
+
+                    <!-- Step 4 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">4</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Finestra Aggiungi Ruoli</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra di selezione dei
+                            ruoli da associare alla componente tecnica.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/29.png" alt="Finestra Aggiungi Ruoli con campo di ricerca ruolo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">5</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Selezione ruolo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Selezionare uno o più ruoli da associare alla
+                            componente tecnica attraverso il menu a tendina.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/30.png" alt="Finestra Aggiungi Ruoli con menu a tendina aperto ed elenco dei ruoli disponibili" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">6</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Conferma aggiunta ruoli</h4>
+                          </div>
+                          <p class="mb-3">
+                            Per associare i ruoli selezionati alla componente
+                            tecnica, cliccare il tasto <strong>"Aggiungi"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/31.png" alt="Finestra Aggiungi Ruoli con ruolo selezionato e pulsante Aggiungi" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row g-4">
+
+                    <!-- Step 7 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">7</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Associazione e eliminazione ruolo</h4>
+                          </div>
+                          <p class="mb-3">
+                            I ruoli associati saranno aggiunti all'elenco
+                            <strong>"Ruoli associati"</strong>. È possibile
+                            gestire l'associazione attraverso la selezione
+                            con checkbox. Per eliminare, cliccare il pulsante
+                            con l'<strong>icona del cestino</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/32.png" alt="Dettaglio associazione componente tecnica a ruoli con elenco Ruoli associati, checkbox Associato e icona cestino" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 8 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">8</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Finestra conferma eliminazione</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra di conferma
+                            dell'eliminazione. Cliccare su <strong>"Elimina
+                            configurazione"</strong> per confermare.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/33.png" alt="Finestra di conferma Elimina configurazione" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 9 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">9</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Salvataggio modifica</h4>
+                          </div>
+                          <p class="mb-3">
+                            Per salvare cliccare il pulsante <strong>"Salva"</strong>.
+                            Successivamente il sistema mostra una finestra di
+                            conferma del salvataggio. Per confermare la
+                            modifica cliccare il pulsante <strong>"Conferma"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/34.png" alt="Elenco Ruoli associati con pulsante Salva e finestra di conferma modifica Configurazione" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 06 — ELIMINAZIONE ASSOCIAZIONE COMPONENTE TECNICA A RUOLO
+                 (in lavorazione — in attesa delle slide)
+                 ============================================================ -->
+            <section id="eliminazione-associazione-componente-tecnica" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">06.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Eliminazione associazione componente tecnica a ruolo</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla cancellazione della componente tecnica.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 24 — PASSAGGI PER CANCELLARE UN'ASSOCIAZIONE DI UNA CT ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-3">Passaggi per cancellare un'associazione di una CT</h3>
+                  <p class="mb-4">
+                    Dopo aver associato una componente tecnica a uno o più
+                    ruoli, l'utente può eliminare l'associazione tramite i
+                    seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Dettaglio componente tecnica</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati della ricerca dei ruoli è
+                            possibile accedere al dettaglio della componente
+                            tecnica cliccando l'<strong>icona dell'occhio</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/35.png" alt="Elenco componenti tecniche con icona occhio evidenziata nella colonna Azioni" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Eliminazione associazione</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nel dettaglio della componente tecnica, per
+                            eliminare l'associazione della componente tecnica
+                            al ruolo, cliccare il tasto <strong>"Elimina"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/36.png" alt="Dettaglio associazione componente tecnica a ruoli con pulsanti Modifica ed Elimina" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Finestra di conferma eliminazione e successo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra in cui l'utente
+                            deve confermare di essere sicuro di voler
+                            eliminare l'operazione. Una volta eliminata, non
+                            sarà più possibile recuperarla.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/37.png" alt="Finestra di conferma Elimina associazioni componente tecnica" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 07 — RICERCA E CONSULTAZIONE RUOLO
+                 (in lavorazione — in attesa delle slide)
+                 ============================================================ -->
+            <section id="ricerca-consultazione-ruolo" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">07.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Ricerca e consultazione ruolo</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla ricerca e consultazione dei ruoli.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 26 — PUNTO DI ACCESSO ──────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 text-secondary mb-4">La voce di menù</h4>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-4">
+                        Dalla dashboard, è possibile <strong>accedere alle
+                        principali sezioni tramite le voci di menu</strong>.
+                      </p>
+
+                      <div class="card border-0 rounded-3 p-3 bg-primary">
+                        <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                        <p class="text-white mb-0">
+                          Cliccando sulla voce <strong>"Configurazioni"</strong>
+                          viene visualizzato un menu a tendina, da cui è
+                          possibile accedere a <strong>"Gestione Ruoli"</strong>.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-ruoli/38.png" alt="Menu a tendina 'Configurazioni' con la voce 'Gestione ruoli' evidenziata" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 27 — RICERCA TRA LE DUE SEZIONI ────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Ricerca tra Configurazione ruoli e Associazione componenti tecniche a ruoli</h3>
+                  <p class="mb-4">
+                    In questa pagina l'utente può effettuare la ricerca per
+                    Configurazione Ruoli e Associazione delle componenti
+                    tecniche al ruolo.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Configurazione ruoli</h4>
+                          </div>
+                          <p class="mb-3">
+                            Selezionare il seguente tab per ricercare i ruoli
+                            presenti nel sistema.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/39.png" alt="Tab Configurazione Ruoli con filtri di ricerca Ruolo, Ruolo attivo e Technical Component" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Associazione componenti tecniche a ruoli</h4>
+                          </div>
+                          <p class="mb-3">
+                            Selezionare il seguente tab per ricercare le
+                            competenze tecniche associate ai ruoli.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-ruoli/40.png" alt="Tab Associazione componenti tecniche a ruoli con filtri di ricerca Technical Component e Ruolo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 28-29 — CONFIGURAZIONE RUOLI ───────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <div class="sg-step-badge mb-3">1</div>
+                  <h3 class="h1 mb-2">Configurazione ruoli</h3>
+                  <p class="mb-4">
+                    È possibile avviare subito la ricerca oppure aggiungere
+                    dei parametri per rendere i risultati più precisi. La
+                    schermata è suddivisa nelle seguenti <strong>tre
+                    sezioni</strong>:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+                    <div class="col-12 col-lg-5">
+                      <img src="./img/gestione-ruoli/41.png" alt="Pagina Configurazione Ruoli con filtri, elenco risultati e componenti tecniche associate" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <div class="d-flex flex-column gap-4">
+                        <div class="d-flex gap-3">
+                          <div class="sg-step-badge flex-shrink-0">1</div>
+                          <div>
+                            <h4 class="h5 fw-bold text-uppercase mb-2">Sezione filtri</h4>
+                            <p class="mb-3">
+                              La sezione filtri permette di ricercare per
+                              <strong>Ruolo, Ruolo attivo e Componenti
+                              tecniche</strong>. Avviare la ricerca attraverso
+                              il pulsante <strong>"Cerca"</strong> e pulire i
+                              filtri tramite il pulsante <strong>"Pulisci"</strong>.
+                              I filtri applicati sono visualizzati e
+                              cancellabili.
+                            </p>
+                            <img src="./img/gestione-ruoli/42.png" alt="Sezione filtri con i campi Ruolo, Ruolo attivo e Technical Component" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <div>
+                            <h4 class="h5 fw-bold text-uppercase mb-2">Azioni sulla tabella dei risultati</h4>
+                            <p class="mb-3">
+                              È possibile esportare i risultati di ricerca
+                              attraverso il pulsante <strong>"Esporta"</strong>
+                              e, dopo aver selezionato una o più ruoli, è
+                              possibile eliminare tramite il pulsante
+                              <strong>"Elimina"</strong>. È possibile filtrare
+                              ulteriormente i risultati di ricerca
+                              valorizzando il relativo campo.
+                            </p>
+                            <img src="./img/gestione-ruoli/43.png" alt="Barra di filtro risultati con pulsanti Elimina ed Esporta" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <div>
+                            <h4 class="h5 fw-bold text-uppercase mb-2">Visualizzazione ruoli e componenti tecniche associate tramite tabella</h4>
+                            <p class="mb-3">
+                              I risultati della ricerca vengono presentati in
+                              una tabella, mostrando le <strong>informazioni
+                              principali</strong> e le <strong>azioni
+                              disponibili</strong>: visualizzazione dettaglio
+                              tramite icona dell'occhio e modifica del ruolo
+                              tramite icona della matita. L'elenco delle
+                              componenti tecniche associate al ruolo è
+                              visualizzabile tramite apertura ad accordion.
+                            </p>
+                            <img src="./img/gestione-ruoli/44.png" alt="Tabella risultati con elenco ruoli e componenti tecniche associate mostrate ad accordion" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="my-4" />
+
+                  <h4 class="h5 fw-bold text-uppercase mb-3">Visualizzazione dettaglio Ruolo</h4>
+                  <p class="mb-4">
+                    All'interno della pagina sono consultabili le seguenti
+                    informazioni:
+                  </p>
+
+                  <div class="row g-4 align-items-center mb-4">
+                    <div class="col-12 col-lg-5">
+                      <ul class="mb-0">
+                        <li>Dati ruolo;</li>
+                        <li>Componenti tecniche associate.</li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-ruoli/45.png" alt="Pagina Dettaglio Configurazione Ruolo con componenti tecniche associate e pulsanti Modifica ed Elimina" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                  <div class="row g-3">
+                    <div class="col-12 col-lg-6">
+                      <div class="sg-note p-3 rounded-3 h-100 d-flex align-items-start gap-2">
+                        <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+                        <div>
+                          <p class="fw-bold mb-1">Possibili azioni primarie</p>
+                          <p class="mb-0">
+                            <strong>"Modifica"</strong> per aggiornare il
+                            ruolo o <strong>"Elimina"</strong> per cancellarlo.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="sg-note p-3 rounded-3 h-100 d-flex align-items-start gap-2">
+                        <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+                        <div>
+                          <p class="fw-bold mb-1">Possibili azioni secondarie</p>
+                          <p class="mb-0">
+                            È possibile aggiungere componenti tecniche
+                            cliccando il pulsante <strong>"Aggiungi
+                            componente tecnica"</strong>.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 30-31 — ASSOCIAZIONE COMPONENTI TECNICHE A RUOLI ── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <div class="sg-step-badge mb-3">2</div>
+                  <h3 class="h1 mb-2">Associazione componenti tecniche a ruoli</h3>
+                  <p class="mb-4">
+                    È possibile avviare subito la ricerca oppure aggiungere
+                    dei parametri per rendere i risultati più precisi. La
+                    schermata è suddivisa nelle seguenti <strong>tre
+                    sezioni</strong>:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+                    <div class="col-12 col-lg-5">
+                      <img src="./img/gestione-ruoli/46.png" alt="Pagina Associazione componenti tecniche a ruoli con filtri, elenco risultati e ruoli associati" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <div class="d-flex flex-column gap-4">
+                        <div class="d-flex gap-3">
+                          <div class="sg-step-badge flex-shrink-0">1</div>
+                          <div>
+                            <h4 class="h5 fw-bold text-uppercase mb-2">Sezione filtri</h4>
+                            <p class="mb-3">
+                              La sezione filtri permette di ricercare per
+                              <strong>Componenti tecniche o Ruoli</strong>,
+                              avviare la ricerca attraverso il pulsante
+                              <strong>"Cerca"</strong> e pulire i filtri
+                              tramite il pulsante <strong>"Pulisci"</strong>.
+                              I filtri applicati sono visualizzati e
+                              cancellabili.
+                            </p>
+                            <img src="./img/gestione-ruoli/47.png" alt="Sezione filtri con i campi Technical Component e Ruolo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <div>
+                            <h4 class="h5 fw-bold text-uppercase mb-2">Azioni sulla tabella dei risultati</h4>
+                            <p class="mb-3">
+                              È possibile esportare i risultati di ricerca
+                              attraverso il pulsante <strong>"Esporta"</strong>
+                              e, dopo aver selezionato una o più componenti
+                              tecniche, è possibile eliminare tramite il
+                              pulsante <strong>"Elimina"</strong>. È possibile
+                              filtrare ulteriormente i risultati di ricerca
+                              valorizzando il relativo campo.
+                            </p>
+                            <img src="./img/gestione-ruoli/48.png" alt="Barra di filtro risultati con pulsanti Elimina ed Esporta" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <div>
+                            <h4 class="h5 fw-bold text-uppercase mb-2">Visualizzazione componenti tecniche e ruoli associati tramite tabella</h4>
+                            <p class="mb-3">
+                              I risultati della ricerca vengono presentati in
+                              una tabella, mostrando le <strong>informazioni
+                              principali</strong> e le <strong>azioni
+                              disponibili</strong>. L'elenco dei ruoli
+                              associati alla componente tecnica è
+                              visualizzabile tramite apertura ad accordion.
+                            </p>
+                            <img src="./img/gestione-ruoli/49.png" alt="Tabella risultati con elenco componenti tecniche e ruoli associati mostrati ad accordion" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="my-4" />
+
+                  <h4 class="h5 fw-bold text-uppercase mb-3">Visualizzazione dettaglio Competenza tecnica</h4>
+                  <p class="mb-4">
+                    All'interno della pagina sono consultabili le seguenti
+                    informazioni:
+                  </p>
+
+                  <div class="row g-4 align-items-center mb-4">
+                    <div class="col-12 col-lg-5">
+                      <ul class="mb-0">
+                        <li>Codice componente;</li>
+                        <li>Descrizione componente tecnica;</li>
+                        <li>Ruoli associati.</li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-ruoli/50.png" alt="Pagina Dettaglio associazione componente tecnica a ruoli con elenco Ruoli associati e pulsanti Modifica ed Elimina" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                  <div class="sg-note p-3 rounded-3 d-flex align-items-start gap-2">
+                    <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+                    <div>
+                      <p class="fw-bold mb-1">Possibili azioni primarie</p>
+                      <p class="mb-0">
+                        <strong>"Modifica"</strong> per aggiornare
+                        l'associazione o <strong>"Elimina"</strong> per
+                        cancellarla.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          {
+            root: null,
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0,
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            const id = this.getAttribute('href').replace('#', '');
+            activate(id);
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg  = document.getElementById('lightbox-img');
+        const modal  = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+
+          img.addEventListener('click', function () {
+            apriLightbox(this);
+          });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () {
+          lbImg.src = '';
+        });
+      })();
+    </script>
+
+  </body>
+</html>
