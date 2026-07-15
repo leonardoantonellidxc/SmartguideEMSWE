@@ -1,0 +1,1911 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Gestione Profili</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Gestione Profili</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#creazione-profilo">
+                        01. Creazione profilo
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#modifica-profilo">
+                        02. Modifica Profilo
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#cancellazione-profilo">
+                        03. Cancellazione profilo
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#associazione-ruoli-profili">
+                        04. Associazione ruoli a profili
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#modifica-associazione-ruoli-profili">
+                        05. Modifica Associazione Ruoli a profili
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#eliminazione-associazione-ruoli-profili">
+                        06. Eliminazione Associazione Ruoli a profili
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#ricerca-consultazione-profili">
+                        07. Ricerca e consultazione profili
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                  <h1 class="h4 mb-0">Gestione Profili</h1>
+                  
+                </div>
+                <p class="mb-0 mt-2">
+                  Il portale delle Smart Guide è uno spazio digitale che
+                  raccoglie risorse pratiche e aggiornate in un unico ambiente
+                  intuitivo. Strumenti chiari e organizzati per organizzarti e
+                  trovare subito ciò che ti serve.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — CREAZIONE PROFILO
+                 Profilo: Amministratore centrale
+                 ============================================================ -->
+            <section id="creazione-profilo" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Creazione Profilo</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sul flusso di creazione di un profilo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 34 — PUNTO DI ACCESSO ──────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 text-secondary mb-4">La voce di menù</h4>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-4">
+                        Dalla dashboard, è possibile <strong>accedere alle
+                        principali sezioni tramite le voci di menu</strong>.
+                      </p>
+
+                      <div class="card border-0 rounded-3 p-3 bg-primary">
+                        <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                        <p class="text-white mb-0">
+                          Cliccando sulla voce <strong>"Configurazioni"</strong>
+                          viene visualizzato un menu a tendina, da cui è
+                          possibile accedere a <strong>"Gestione Profili"</strong>.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-profili/1.png" alt="Menu a tendina 'Configurazioni' con la voce 'Gestione profili' evidenziata" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 35 — CREAZIONE NUOVO PROFILO ───────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Creazione nuovo profilo</h3>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-0">
+                        Dopo aver effettuato l'accesso alla pagina
+                        <strong>"Configurazione Profili"</strong>, cliccare
+                        sul pulsante <strong>"Nuovo Profilo"</strong> per
+                        avviare il flusso di creazione.
+                      </p>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-profili/2.png" alt="Pagina Configurazione Profili con filtri di ricerca e pulsante Nuovo Profilo evidenziato" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 36 — PASSAGGI PER CREARE UN NUOVO PROFILO ──────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Passaggi per creare un nuovo profilo</h3>
+                  <p class="mb-4">
+                    Dopo aver cliccato il pulsante "Nuovo profilo", segui
+                    tutti i passaggi indicati a sistema e inserisci le
+                    informazioni necessarie per completare la creazione del
+                    nuovo profilo.
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Inserimento delle informazioni</h4>
+                          </div>
+                          <p class="mb-3">
+                            Inserire i dati del profilo come <strong>Tipologia
+                            Utente, Codice Profilo e Descrizione</strong>.
+                            Infine indicare se il ruolo sarà attivo.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/3.png" alt="Form Nuovo Profilo con i campi Tipo Account, Tipologia Utente, Codice Profilo, Descrizione e Attivo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Salvataggio e conferma</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver cliccato il pulsante <strong>"Salva"</strong>,
+                            il sistema mostra una finestra di conferma,
+                            chiedendo all'utente se è sicuro di confermare la
+                            creazione del profilo. Cliccare <strong>"Conferma"</strong>
+                            per creare il profilo. All'interno del dettaglio
+                            saranno disponibili i pulsanti di <strong>Modifica</strong>
+                            e <strong>Elimina</strong>. Per associare i ruoli
+                            al profilo cliccare il pulsante <strong>"Modifica"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/4.png" alt="Finestra di conferma Salva profilo e dettaglio del profilo creato con elenco Ruoli associati e pulsanti Modifica ed Elimina" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-0" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">
+                      È possibile creare esclusivamente nuovi profili per il
+                      tipo account <strong>"Capitanerie di Porto"</strong>.
+                    </p>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 37-40 — PASSAGGI PER ASSOCIARE RUOLI AL PROFILO ── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Passaggi per associare ruoli al profilo</h3>
+                  <p class="mb-4">
+                    Dopo aver creato il profilo procedi con l'associazione dei
+                    ruoli ai profili, seguendo i passaggi indicati:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Associazione ruoli a profili</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo il salvataggio, per aggiungere uno o più
+                            ruoli al profilo cliccare il pulsante <strong>"Associazione
+                            ruoli a profili"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/5.png" alt="Pagina Modifica Profilo con il pulsante Associazione ruoli a profili" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">4</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Selezione ruoli</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra tramite la quale è
+                            possibile selezionare uno o più ruoli da associare
+                            al profilo. Dopo la selezione degli stessi,
+                            cliccare il pulsante <strong>"Salva"</strong> per
+                            confermare l'associazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/6.png" alt="Finestra Associazione ruoli a profili con menu a tendina Selezione ruoli e ruoli selezionati" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">5</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Azioni sulle componenti tecniche</h4>
+                          </div>
+                          <p class="mb-3">
+                            I ruoli saranno visualizzati all'interno del
+                            relativo elenco e sarà possibile disassociarli
+                            deselezionandoli tramite checkbox, eliminarli
+                            attraverso l'icona del cestino e associare
+                            Obblighi di Dichiarazione tramite l'icona <strong>"+"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/7.png" alt="Elenco Ruoli associati con checkbox Attivo e icone per eliminazione e aggiunta obblighi di dichiarazione" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row g-4 mb-4">
+
+                    <!-- Step 6 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">6</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Aggiunta Obblighi di Dichiarazione al ruolo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver cliccato il pulsante con l'icona <strong>"+"</strong>,
+                            il sistema mostra una finestra tramite la quale è
+                            possibile selezionare uno o più Obblighi di
+                            Dichiarazione da associare. Dopo la selezione
+                            degli stessi, cliccare il pulsante <strong>"Salva"</strong>
+                            per confermare l'associazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/8.png" alt="Finestra Associazione Report Obligation con elenco a tendina Selezione Report Obligation e obblighi selezionati" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">7</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Azioni sugli Obblighi di Dichiarazione</h4>
+                          </div>
+                          <p class="mb-3">
+                            Gli Obblighi di Dichiarazione saranno visualizzati
+                            all'interno del relativo elenco e sarà possibile
+                            eliminarli tramite il pulsante con l'<strong>"icona
+                            del cestino"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/9.png" alt="Elenco Reporting Obligation con icona cestino per eliminazione" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 8 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">8</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Obblighi di Dichiarazione non associabili</h4>
+                          </div>
+                          <p class="mb-3">
+                            Cliccando sul pulsante con l'<strong>"icona del
+                            divieto"</strong>, il sistema mostra una finestra
+                            che comunica all'utente che gli Obblighi di
+                            Dichiarazione non sono associabili al ruolo
+                            selezionato.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/10.png" alt="Finestra Associazione Report Obligation con messaggio Gli obblighi di dichiarazione non sono associabili a questo ruolo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-4" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">
+                      Sarà possibile associare gli Obblighi di Dichiarazione a
+                      un ruolo esclusivamente se, quel ruolo, è stato
+                      abilitato a gestire gli Obblighi di Dichiarazione.
+                    </p>
+                  </div>
+
+                  <div class="row g-4">
+
+                    <!-- Step 9 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">9</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Salvataggio</h4>
+                          </div>
+                          <p class="mb-3">
+                            Per proseguire con il salvataggio della creazione
+                            del profilo cliccare il pulsante <strong>"Salva"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/11.png" alt="Elenco componenti tecniche associate con pulsante Salva" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 10 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">10</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Conferma creazione profilo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver cliccato il pulsante <strong>"Salva"</strong>,
+                            il sistema mostra una finestra di conferma della
+                            creazione del profilo, cliccare <strong>"Conferma"</strong>
+                            per procedere.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/12.png" alt="Finestra di conferma modifica profilo con pulsanti Conferma e Chiudi" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 02 — MODIFICA PROFILO
+                 (in lavorazione — in attesa delle slide)
+                 ============================================================ -->
+            <section id="modifica-profilo" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">02.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Modifica Profilo</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sul flusso di modifica dei profili.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 42 — PUNTO DI ACCESSO ALLA MODIFICA ────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-3">Punto di Accesso alla modifica di un profilo</h3>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione "Modifica" dall'elenco risultati di ricerca</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati dei profili è possibile
+                            accedere al dettaglio in modalità modifica
+                            cliccando sull'<strong>"icona della matita"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/13.png" alt="Elenco risultati profili con icona matita evidenziata nella colonna Azioni" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione Modifica da pagina di dettaglio del Profilo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati dei profili è possibile
+                            accedere al dettaglio in modalità visualizzazione
+                            cliccando sull'<strong>"icona dell'occhio"</strong>.
+                            All'interno del dettaglio, per procedere con la
+                            modifica sarà necessario cliccare sul pulsante
+                            <strong>"Modifica"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/14.png" alt="Dettaglio del profilo con pulsante Modifica evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 43 — PASSAGGI PER MODIFICARE UN PROFILO ────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Passaggi per modificare un profilo</h3>
+                  <p class="mb-3">
+                    Dopo aver creato il profilo procedi con la modifica,
+                    seguendo i passaggi indicati:
+                  </p>
+
+                  <div class="text-center mb-4">
+                    <a href="#creazione-profilo" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none">
+                      <i class="bi bi-record-circle me-1"></i>
+                      Focus su "Associazione ruoli a profili" a pagina 37
+                    </a>
+                  </div>
+
+                  <div class="row g-4 mb-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Modifica informazioni</h4>
+                          </div>
+                          <p class="mb-3">
+                            Tipo Account, Tipologia Utente e codice Profilo
+                            non sono modificabili. Eventualmente procedere con
+                            l'aggiornamento delle informazioni, come
+                            descrizione profilo e ruolo attivo (Sì/No).
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/15.png" alt="Form Modifica Profilo con campi Tipo Account, Tipologia Utente, Codice Profilo e Descrizione profilo non modificabili" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Azioni disponibili sui ruoli associati</h4>
+                          </div>
+                          <p class="mb-3">
+                            L'utente ha la possibilità di associare ruoli a
+                            profili attraverso l'apposito pulsante, attivare
+                            il ruolo tramite selezione della checkbox ed
+                            eliminarlo attraverso il pulsante con l'<strong>"icona
+                            del cestino"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/16.png" alt="Elenco Ruoli associati con pulsante Associazione ruoli a profili, checkbox Attivo e icona cestino" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Salvataggio del profilo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Cliccare il pulsante <strong>"Salva"</strong> per
+                            salvare il profilo, successivamente il sistema
+                            mostra una finestra di conferma della modifica.
+                            Cliccare il pulsante <strong>"Conferma"</strong>
+                            per proseguire.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/17.png" alt="Elenco componenti tecniche con pulsante Salva e finestra di conferma modifica profilo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-0" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">
+                      Durante l'associazione dei ruoli ai profili, all'interno
+                      dell'elenco non saranno visibili i ruoli che risultano
+                      già associati al profilo.
+                    </p>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 03 — CANCELLAZIONE PROFILO
+                 Profilo: Amministratore centrale / Operatore di Capitanerie
+                 ============================================================ -->
+            <section id="cancellazione-profilo" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">03.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Cancellazione profilo</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sul flusso di cancellazione di un profilo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 45 — CANCELLAZIONE DA TABELLA ──────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-3">Passaggi per cancellare un profilo da tabella</h3>
+                  <p class="mb-4">
+                    Dopo aver creato un profilo, l'utente può eliminarlo
+                    tramite i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Cancellazione tramite risultati di ricerca</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati della ricerca dei profili è
+                            possibile eliminare il profilo <strong>selezionando
+                            uno o più profili</strong> attraverso la checkbox
+                            e successivamente cliccando il pulsante <strong>"Elimina"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/18.png" alt="Elenco risultati profili con più righe selezionate tramite checkbox e pulsante Elimina" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Finestra di conferma eliminazione e successo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra in cui l'utente
+                            deve confermare di essere sicuro di voler
+                            eliminare l'operazione. Cliccare <strong>"Elimina
+                            Profilo"</strong> per confermare. Una volta
+                            eliminata, non sarà più possibile recuperarla.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/19.png" alt="Finestra di conferma Si sta eliminando il profilo e messaggio Eliminazione completata con successo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">
+                      L'eliminazione comporterà la cancellazione dei soli
+                      profili interni.
+                    </p>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 46 — CANCELLAZIONE DAL DETTAGLIO ───────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Passaggi per cancellare un profilo da dettaglio</h3>
+                  <p class="mb-4">
+                    Dopo aver creato un profilo, l'utente può eliminarlo
+                    tramite i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Cancellazione tramite azione nel dettaglio del profilo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati della ricerca dei profili è
+                            possibile accedere al dettaglio cliccando l'<strong>icona
+                            dell'occhio</strong>. Una volta all'interno del
+                            dettaglio, per eliminare il profilo cliccare il
+                            pulsante <strong>"Elimina"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/20.png" alt="Elenco risultati profili con icona occhio evidenziata e dettaglio con pulsante Elimina" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Finestra di conferma eliminazione e successo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra in cui l'utente
+                            deve confermare di essere sicuro di voler
+                            eliminare l'operazione. Cliccare <strong>"Elimina
+                            Profilo"</strong> per confermare. Una volta
+                            eliminata, non sarà più possibile recuperarla.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/21.png" alt="Finestra di conferma Si sta eliminando il profilo e messaggio Eliminazione completata con successo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">
+                      L'eliminazione comporterà la cancellazione dei soli
+                      profili interni.
+                    </p>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 04 — ASSOCIAZIONE RUOLI A PROFILI
+                 (in lavorazione — in attesa delle slide)
+                 ============================================================ -->
+            <section id="associazione-ruoli-profili" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">04.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Associazione ruoli a profili</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sull'associazione dei ruoli a profili.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 48 — PUNTO DI ACCESSO ──────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-3">Punto di Accesso</h3>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-profili/22.png" alt="Pagina Associazione ruoli a profili con filtri di ricerca e pulsante Nuova associazione ruoli a profilo con menu a tendina Manuale e Da file" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">
+                        Dopo aver effettuato l'accesso alla pagina
+                        <strong>"Associazione ruoli a profili"</strong>,
+                        cliccare sul pulsante <strong>"Nuova associazione
+                        ruoli a profilo"</strong> per avviare il flusso di
+                        creazione.
+                      </p>
+                      <p class="mb-0">
+                        Il sistema darà la possibilità di creare una nuova
+                        associazione in maniera <strong>manuale</strong> o
+                        <strong>caricando un file</strong>.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 49 — ASSOCIAZIONE "MANUALMENTE" ────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Passaggi per associare "Manualmente" ruoli e profili</h3>
+                  <p class="mb-4">
+                    Dopo aver cliccato il pulsante <strong>"Associa ruoli a
+                    profilo"</strong>, segui tutti i passaggi indicati:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Ricerca e selezione del profilo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Selezionare il profilo dal menu a tendina.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/23.png" alt="Pagina Nuova associazione manuale ruoli a profili con menu a tendina Profilo aperto" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Ruolo aggiunto e azioni disponibili</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver selezionato il profilo, il sistema
+                            attiva il pulsante <strong>"Associa ruoli a
+                            Profili"</strong>. Per avviare il processo di
+                            associazione cliccare il pulsante.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/24.png" alt="Elenco ruoli associati al profilo con pulsante Associa ruoli a Profili" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-0" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">
+                      Nel caso in cui al profilo non risultino associati
+                      ruoli, il sistema mostra un'informativa.
+                    </p>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 50 — ASSOCIAZIONE "DA FILE" ────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Passaggi per associare "Da file" ruoli e profili</h3>
+                  <p class="mb-4">
+                    Dopo aver cliccato il pulsante con la tipologia <strong>"Da
+                    File"</strong>, segui tutti i passaggi indicati:
+                  </p>
+
+                  <div class="row g-4 align-items-center mb-4">
+                    <div class="col-12 col-lg-6">
+                      <img src="./img/gestione-profili/25.png" alt="Pagina Nuova associazione da file ruoli a profili con istruzioni sul formato CSV e campo Carica documento" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <p class="mb-3">
+                        Nel caricamento tramite file, il sistema fornisce le
+                        indicazioni sulla struttura che il documento deve
+                        rispettare e mette a disposizione un file di esempio
+                        scaricabile.
+                      </p>
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
+                        <div class="d-flex gap-2">
+                          <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+                          <div>
+                            <p class="fw-bold mb-2">Caricamento da un file CSV</p>
+                            <p class="mb-1">Il file deve essere strutturato come segue:</p>
+                            <ul class="mb-0">
+                              <li>contenere la seguente intestazione formata dai campi <strong>"PROFILE_CODE", "ROLE_CODE", "ASSOCIATED", "REPORTING_OBLIGATION_CODE"</strong>;</li>
+                              <li>il carattere separatore di colonna è la virgola;</li>
+                              <li>tutti i campi sono obbligatori.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="mb-0">
+                        Infine, per caricare il documento, cliccare l'apposito
+                        pulsante <strong>"Carica documento"</strong>.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="row g-4 align-items-center bg-dark text-white rounded-3 p-4">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-0">
+                        Nel caso in cui ci siano errori nei dati del file
+                        caricato, il sistema informa l'utente tramite testi
+                        informativi e messaggi di alert, impedendo il
+                        proseguimento dell'operazione. Di seguito un esempio:
+                      </p>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <div class="alert alert-warning d-flex gap-2 rounded-3 mb-0" role="alert">
+                        <i class="bi bi-x-circle flex-shrink-0 mt-1"></i>
+                        <div>
+                          <p class="fw-bold mb-1">Importazione da file avvenuta con errori</p>
+                          <p class="mb-1">Importazione avvenuta con errori. Righe totali: 2, elaborate: 0</p>
+                          <p class="mb-0">La riga 1 non è formalmente valida. Errore valore "RL001" nella colonna 1 non è ammesso.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 05 — MODIFICA ASSOCIAZIONE RUOLI A PROFILI
+                 Profilo: Amministratore centrale
+                 ============================================================ -->
+            <section id="modifica-associazione-ruoli-profili" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">05.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Modifica associazione ruoli e profili</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla modifica dell'associazione ruoli e profili.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 52 — PUNTO DI ACCESSO ALLA MODIFICA ────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-3">Punto di Accesso alla modifica associazione di ruolo e profili</h3>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione "Modifica" dall'elenco risultati di ricerca</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco dei risultati di ricerca è possibile
+                            accedere al dettaglio in modalità modifica
+                            cliccando sull'<strong>"icona della matita"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/26.png" alt="Elenco risultati ricerca ruoli con icona matita evidenziata nella colonna Azioni" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione Modifica da pagina di dettaglio associazione ruoli e profili</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati di ricerca è possibile
+                            accedere al dettaglio in modalità visualizzazione
+                            cliccando sull'<strong>"icona dell'occhio"</strong>.
+                            All'interno del dettaglio, per procedere con la
+                            modifica sarà necessario cliccare sul pulsante
+                            <strong>"Modifica"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/27.png" alt="Dettaglio associazione ruoli e profili con elenco profili associati al ruolo e pulsante Modifica" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 53-54 — PASSAGGI PER MODIFICARE L'ASSOCIAZIONE ── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Passaggi per modificare l'associazione ruoli e profili</h3>
+                  <p class="mb-4">
+                    Dopo aver associato Profili e ruoli, l'utente può
+                    procedere con la modifica seguendo i passaggi indicati:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Aggiungi profilo</h4>
+                          </div>
+                          <p class="mb-3">
+                            All'interno della pagina di Modifica l'utente può
+                            aggiungere nuovi profili cliccando il pulsante
+                            <strong>"Aggiungi profilo"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/28.png" alt="Pagina Modifica ruoli associati a profilo con pulsante Aggiungi profilo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Aggiunta nuovi profili</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra attraverso la quale
+                            l'utente seleziona i profili da associare ai
+                            ruoli. Dopo averne selezionato uno o più, per
+                            salvare cliccare il pulsante <strong>"Salva"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/29.png" alt="Finestra Associazione ruoli a profili con campo Selezione del profilo da associare" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Profilo aggiunto in elenco</h4>
+                          </div>
+                          <p class="mb-3">
+                            I profili aggiunti saranno visualizzati
+                            nell'<strong>"Elenco profili associati al
+                            ruolo"</strong>. Le azioni disponibili sul profilo
+                            sono: Associa/Dissocia (checkbox), Aggiungi
+                            Obbligo di Dichiarazione (icona <strong>"+"</strong>)
+                            ed Eliminazione (icona del cestino). Le azioni
+                            sull'Obbligo di Dichiarazione sono: indicazione
+                            visibilità stato (Sì/No) ed Eliminazione (icona
+                            del cestino).
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/30.png" alt="Elenco profili associati al ruolo con checkbox Associa/Dissocia, icone Aggiungi ed Elimina, ed elenco Reporting Obligation" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row g-4">
+
+                    <!-- Step 4 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">4</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Elimina e ripristina</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver cliccato il pulsante con l'icona del
+                            cestino, il sistema sbarra il profilo eliminato.
+                            Successivamente, per ripristinarlo cliccare il
+                            pulsante con l'<strong>icona della freccia</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/31.png" alt="Elenco profili associati al ruolo con un profilo sbarrato e pulsante Ripristina" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">5</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Salva modifiche</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver apportato le modifiche, salvare
+                            l'associazione cliccando il pulsante <strong>"Salva"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/32.png" alt="Elenco profili associati al ruolo con pulsante Salva" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">6</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Finestra di conferma salvataggio</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra di conferma del
+                            salvataggio. Cliccare <strong>"Conferma"</strong>
+                            per proseguire. Il sistema mostra una finestra che
+                            informa l'utente che il salvataggio della
+                            modifica è avvenuto con successo.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/33.png" alt="Finestra di conferma modifica associazione tra il profilo e il ruolo e messaggio di successo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 06 — ELIMINAZIONE ASSOCIAZIONE RUOLI A PROFILI
+                 (in lavorazione — in attesa delle slide)
+                 ============================================================ -->
+            <section id="eliminazione-associazione-ruoli-profili" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">06.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Eliminazione associazione ruoli e profili</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sull'eliminazione associazione ruoli e profili.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 56 — PUNTI DI ACCESSO ──────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-3">Punti di accesso per eliminare l'associazione ruoli e profili</h3>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione "Elimina" dall'elenco risultati di ricerca</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco dei risultati di ricerca delle
+                            associazioni è possibile eliminarne una o più
+                            selezionandole tramite checkbox e
+                            successivamente cliccando il pulsante <strong>"Elimina"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/34.png" alt="Pagina Associazione ruoli a profili con elenco risultati e pulsante Elimina" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione "Elimina" da pagina di dettaglio della configurazione</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco dei risultati di ricerca è possibile
+                            accedere al dettaglio in modalità visualizzazione
+                            cliccando sull'<strong>"icona dell'occhio"</strong>.
+                            All'interno del dettaglio, per procedere con
+                            l'eliminazione sarà necessario cliccare sul
+                            pulsante <strong>"Elimina"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/35.png" alt="Pagina di dettaglio con pulsante Elimina evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 57 — ELIMINAZIONE DA TABELLA ───────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Punti di accesso per eliminare l'associazione ruoli e profili da tabella</h3>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Eliminazione in tabella</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati di ricerca è possibile
+                            eliminare uno o più ruoli e profili associati
+                            dall'elenco selezionandoli tramite checkbox e
+                            successivamente cliccando sul pulsante <strong>"Elimina"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/36.png" alt="Elenco risultati Associazione ruoli a profili con riga selezionata tramite checkbox e pulsante Elimina" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Finestra di conferma eliminazione</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver cliccato il pulsante, il sistema mostra
+                            una finestra di conferma dell'eliminazione.
+                            Cliccare il pulsante <strong>"Elimina
+                            associazione ruoli a profilo"</strong> per
+                            proseguire.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/37.png" alt="Finestra di conferma Si sta eliminando l'associazione tra il profilo e il ruolo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 58 — ELIMINAZIONE DAL DETTAGLIO ────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Punti di accesso per eliminare l'associazione ruoli e profili dal dettaglio</h3>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Pulsante dettaglio</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati della ricerca è possibile
+                            accedere al dettaglio cliccando il pulsante con
+                            l'<strong>"icona dell'occhio"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/38.png" alt="Elenco risultati Associazione ruoli a profili con icona occhio evidenziata nella colonna Azioni" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Elimina ruolo associato a profilo e finestra di conferma</h4>
+                          </div>
+                          <p class="mb-3">
+                            All'interno del dettaglio, dopo aver cliccato il
+                            pulsante <strong>"Elimina"</strong>, il sistema
+                            mostra una finestra di conferma dell'eliminazione.
+                            Cliccare il pulsante <strong>"Elimina
+                            associazione ruoli a profilo"</strong> per
+                            proseguire.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/39.png" alt="Dettaglio associazione con pulsante Elimina e finestra di conferma Si sta eliminando l'associazione tra il profilo e il ruolo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 07 — RICERCA E CONSULTAZIONE PROFILI
+                 Profilo: Amministratore centrale
+                 ============================================================ -->
+            <section id="ricerca-consultazione-profili" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">07.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Ricerca e consultazione profili</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sul flusso di ricerca e consultazione di un profilo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 60 — PUNTO DI ACCESSO ──────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 text-secondary mb-4">La voce di menù</h4>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-4">
+                        Dalla dashboard, è possibile <strong>accedere alle
+                        principali sezioni tramite le voci di menu</strong>.
+                      </p>
+
+                      <div class="card border-0 rounded-3 p-3 bg-primary">
+                        <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                        <p class="text-white mb-0">
+                          Cliccando sulla voce <strong>"Configurazioni"</strong>
+                          viene visualizzato un menu a tendina, da cui è
+                          possibile accedere a <strong>"Gestione Profili"</strong>.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-profili/40.png" alt="Menu a tendina 'Configurazioni' con la voce 'Gestione profili' evidenziata" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 61 — RICERCA TRA LE DUE SEZIONI ────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Punto di Accesso alla ricerca e consultazione dei profili</h3>
+                  <p class="mb-4">
+                    In questa pagina l'utente può effettuare la ricerca per
+                    Configurazione Profili e Associazione ruoli a profili.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Ricerca "Configurazione profili"</h4>
+                          </div>
+                          <p class="mb-3">
+                            Selezionare il seguente tab per ricercare i
+                            profili presenti nel sistema.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/41.png" alt="Tab Configurazione Profili con filtri di ricerca Tipo Account, Tipologia utente, Profilo, Attivo, Ruolo e Reporting Obligation" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Ricerca "Associazione ruoli a profili"</h4>
+                          </div>
+                          <p class="mb-3">
+                            Selezionare il seguente tab per ricercare i ruoli
+                            associati ai profili.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/gestione-profili/42.png" alt="Tab Associazione ruoli a profili con filtri di ricerca Ruolo, Obbligo di dichiarazione e Profilo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 62-63 — CONFIGURAZIONE PROFILI ─────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <div class="sg-step-badge mb-3">1</div>
+                  <h3 class="h1 mb-2">Configurazione profili</h3>
+                  <p class="mb-4">
+                    È possibile avviare subito la ricerca oppure aggiungere
+                    dei parametri per rendere i risultati più precisi. La
+                    schermata è suddivisa nelle seguenti <strong>tre
+                    sezioni</strong>:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+                    <div class="col-12 col-lg-5">
+                      <img src="./img/gestione-profili/43.png" alt="Pagina Ricerca e consultazione profili Configurazione profili con filtri ed elenco risultati" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <div class="d-flex flex-column gap-4">
+                        <div class="d-flex gap-3">
+                          <div class="sg-step-badge flex-shrink-0">1</div>
+                          <div>
+                            <h4 class="h5 fw-bold text-uppercase mb-2">Sezione filtri</h4>
+                            <p class="mb-3">
+                              La sezione filtri permette di ricercare per
+                              <strong>Tipo Account, Attivo, Ruolo, Obblighi
+                              di Dichiarazione</strong>. Tipologia utente e
+                              Profilo saranno attivati e opportunamente
+                              pre-filtrati in relazione a quanto selezionato
+                              nel campo Tipo Account. Avviare la ricerca
+                              attraverso il pulsante <strong>"Cerca"</strong>
+                              e pulire i filtri tramite il pulsante <strong>"Pulisci"</strong>.
+                              I filtri applicati sono visualizzati e
+                              cancellabili.
+                            </p>
+                            <img src="./img/gestione-profili/44.png" alt="Sezione filtri con i campi Tipo Account, Tipologia utente, Profilo, Attivo, Ruolo e Reporting Obligation" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <div>
+                            <h4 class="h5 fw-bold text-uppercase mb-2">Azioni sulla tabella</h4>
+                            <p class="mb-3">
+                              È possibile esportare i risultati di ricerca
+                              attraverso il pulsante <strong>"Esporta"</strong>
+                              e, dopo aver selezionato uno o più profili, è
+                              possibile eliminare tramite il pulsante
+                              <strong>"Elimina"</strong>. È possibile
+                              filtrare ulteriormente i risultati di ricerca
+                              valorizzando il relativo campo.
+                            </p>
+                            <img src="./img/gestione-profili/45.png" alt="Barra di filtro risultati con pulsanti Elimina ed Esporta" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <div>
+                            <h4 class="h5 fw-bold text-uppercase mb-2">Visualizzazione componenti tramite tabella</h4>
+                            <p class="mb-3">
+                              I risultati della ricerca vengono presentati in
+                              una tabella, mostrando le <strong>informazioni
+                              principali</strong> e le <strong>azioni
+                              disponibili</strong>: visualizzazione e
+                              modifica del profilo. L'elenco dei ruoli
+                              associati è visualizzabile tramite apertura ad
+                              accordion.
+                            </p>
+                            <img src="./img/gestione-profili/46.png" alt="Tabella risultati con elenco profili e ruoli associati mostrati ad accordion" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="my-4" />
+
+                  <h4 class="h5 fw-bold text-uppercase mb-3">Visualizzazione dettaglio Profilo</h4>
+                  <p class="mb-4">
+                    All'interno della pagina sono consultabili le seguenti
+                    informazioni:
+                  </p>
+
+                  <div class="row g-4 align-items-center mb-4">
+                    <div class="col-12 col-lg-5">
+                      <ul class="mb-0">
+                        <li>Tipo Account;</li>
+                        <li>Tipologia Utente;</li>
+                        <li>Codice Profilo;</li>
+                        <li>Descrizione Profilo;</li>
+                        <li>Ruoli Associati
+                          <ul>
+                            <li>Elenco Obblighi di Dichiarazione (se presenti);</li>
+                            <li>Elenco componenti tecniche.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-profili/47.png" alt="Pagina Dettaglio Profilo con Ruoli associati, elenco Reporting Obligation, elenco componenti tecniche e pulsanti Modifica ed Elimina" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                  <div class="row g-3">
+                    <div class="col-12 col-lg-6">
+                      <div class="sg-note p-3 rounded-3 h-100 d-flex align-items-start gap-2">
+                        <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+                        <div>
+                          <p class="fw-bold mb-1">Possibili azioni primarie</p>
+                          <p class="mb-0">
+                            <strong>"Modifica"</strong> per aggiornare il
+                            profilo o <strong>"Elimina"</strong> per
+                            cancellarlo.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="sg-note p-3 rounded-3 h-100 d-flex align-items-start gap-2">
+                        <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+                        <div>
+                          <p class="fw-bold mb-1">Possibili azioni sulle componenti tecniche associate</p>
+                          <p class="mb-0">
+                            <strong>Visualizzazione del dettaglio</strong>
+                            tramite icona dell'occhio.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 64-65 — ASSOCIAZIONE RUOLI A PROFILI ───────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <div class="sg-step-badge mb-3">2</div>
+                  <h3 class="h1 mb-2">Associazione ruoli a profili</h3>
+                  <p class="mb-4">
+                    È possibile avviare subito la ricerca oppure aggiungere
+                    dei parametri per rendere i risultati più precisi. La
+                    schermata è suddivisa nelle seguenti <strong>tre
+                    sezioni</strong>:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+                    <div class="col-12 col-lg-5">
+                      <img src="./img/gestione-profili/48.png" alt="Pagina Ricerca e consultazione profili Associazione ruoli a profili con filtri ed elenco risultati" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <div class="d-flex flex-column gap-4">
+                        <div class="d-flex gap-3">
+                          <div class="sg-step-badge flex-shrink-0">1</div>
+                          <div>
+                            <h4 class="h5 fw-bold text-uppercase mb-2">Sezione filtri</h4>
+                            <p class="mb-3">
+                              La sezione filtri permette di ricercare per
+                              <strong>Ruolo, Obblighi di Dichiarazione e
+                              Profilo</strong>. Avviare la ricerca attraverso
+                              il pulsante <strong>"Cerca"</strong> e pulire i
+                              filtri tramite il pulsante <strong>"Pulisci"</strong>.
+                              I filtri applicati sono visualizzati e
+                              cancellabili.
+                            </p>
+                            <img src="./img/gestione-profili/49.png" alt="Sezione filtri con i campi Ruolo, Obbligo di dichiarazione e Profilo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <div>
+                            <h4 class="h5 fw-bold text-uppercase mb-2">Azioni sulla tabella</h4>
+                            <p class="mb-3">
+                              È possibile esportare i risultati di ricerca
+                              attraverso il pulsante <strong>"Esporta"</strong>
+                              e, dopo aver selezionato uno o più ruoli, è
+                              possibile eliminare tramite il pulsante
+                              <strong>"Elimina"</strong>. È possibile
+                              filtrare ulteriormente i risultati di ricerca
+                              valorizzando il relativo campo.
+                            </p>
+                            <img src="./img/gestione-profili/50.png" alt="Barra di filtro risultati con pulsanti Elimina ed Esporta" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <div>
+                            <h4 class="h5 fw-bold text-uppercase mb-2">Visualizzazione componenti tramite tabella</h4>
+                            <p class="mb-3">
+                              I risultati della ricerca vengono presentati in
+                              una tabella, mostrando le <strong>informazioni
+                              principali</strong> e le <strong>azioni
+                              disponibili</strong>: visualizzazione e
+                              modifica del ruolo. L'elenco dei profili
+                              associati è visualizzabile tramite apertura ad
+                              accordion.
+                            </p>
+                            <img src="./img/gestione-profili/51.png" alt="Tabella risultati con elenco ruoli e profili associati mostrati ad accordion" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="my-4" />
+
+                  <h4 class="h5 fw-bold text-uppercase mb-3">Visualizzazione dettaglio Associazione Ruoli a Profili</h4>
+                  <p class="mb-4">
+                    All'interno della pagina sono consultabili le seguenti
+                    informazioni:
+                  </p>
+
+                  <div class="row g-4 align-items-center mb-4">
+                    <div class="col-12 col-lg-5">
+                      <ul class="mb-0">
+                        <li>Codice ruolo;</li>
+                        <li>Descrizione ruolo;</li>
+                        <li>Elenco profili associati al ruolo
+                          <ul>
+                            <li>Elenco Obblighi di Dichiarazione (se presenti).</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-profili/52.png" alt="Pagina Visualizza Associazione Ruoli a Profili con elenco profili associati al ruolo e pulsanti Modifica ed Elimina" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                  <div class="sg-note p-3 rounded-3 d-flex align-items-start gap-2">
+                    <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+                    <div>
+                      <p class="fw-bold mb-1">Possibili azioni primarie</p>
+                      <p class="mb-0">
+                        <strong>"Modifica"</strong> per aggiornare
+                        l'associazione o <strong>"Elimina"</strong> per
+                        cancellarla.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          {
+            root: null,
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0,
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            const id = this.getAttribute('href').replace('#', '');
+            activate(id);
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg  = document.getElementById('lightbox-img');
+        const modal  = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+
+          img.addEventListener('click', function () {
+            apriLightbox(this);
+          });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () {
+          lbImg.src = '';
+        });
+      })();
+    </script>
+
+  </body>
+</html>
