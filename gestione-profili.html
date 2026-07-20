@@ -993,7 +993,7 @@
                     </div>
                   </div>
 
-                  <div class="row g-4 align-items-center bg-dark  rounded-3 p-4">
+                  <div class="row g-4 align-items-center bg-warning-subtle rounded-3 p-4">
                     <div class="col-12 col-lg-5">
                       <p class="mb-0">
                         Nel caso in cui ci siano errori nei dati del file
@@ -1004,7 +1004,7 @@
                     </div>
                     <div class="col-12 col-lg-7">
                       <div class="alert alert-warning d-flex gap-2 rounded-3 mb-0" role="alert">
-                       
+                        <i class="bi bi-x-circle flex-shrink-0 mt-1"></i>
                         <div>
                           <p class="fw-bold mb-1">Importazione da file avvenuta con errori</p>
                           <p class="mb-1">Importazione avvenuta con errori. Righe totali: 2, elaborate: 0</p>
@@ -1546,15 +1546,12 @@
 
                   <div class="row g-4 mb-4">
                     <div class="col-12 col-lg-5">
-                      <img src="./img/gestione-profili/43.png" alt="Pagina Ricerca e consultazione profili Configurazione profili con filtri ed elenco risultati" class="w-100 rounded-3" />
-                    </div>
-                    <div class="col-12 col-lg-7">
-                      <div class="d-flex flex-column gap-4">
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
                         <div class="d-flex gap-3">
                           <div class="sg-step-badge flex-shrink-0">1</div>
                           <div>
                             <h4 class="h5 fw-bold text-uppercase mb-2">Sezione filtri</h4>
-                            <p class="mb-3">
+                            <p class="mb-0">
                               La sezione filtri permette di ricercare per
                               <strong>Tipo Account, Attivo, Ruolo, Obblighi
                               di Dichiarazione</strong>. Tipologia utente e
@@ -1566,14 +1563,15 @@
                               I filtri applicati sono visualizzati e
                               cancellabili.
                             </p>
-                            <img src="./img/gestione-profili/44.png" alt="Sezione filtri con i campi Tipo Account, Tipologia utente, Profilo, Attivo, Ruolo e Reporting Obligation" class="w-100 rounded-3" />
                           </div>
                         </div>
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
                         <div class="d-flex gap-3">
                           <div class="sg-step-badge flex-shrink-0">2</div>
                           <div>
                             <h4 class="h5 fw-bold text-uppercase mb-2">Azioni sulla tabella</h4>
-                            <p class="mb-3">
+                            <p class="mb-0">
                               È possibile esportare i risultati di ricerca
                               attraverso il pulsante <strong>"Esporta"</strong>
                               e, dopo aver selezionato uno o più profili, è
@@ -1582,14 +1580,15 @@
                               filtrare ulteriormente i risultati di ricerca
                               valorizzando il relativo campo.
                             </p>
-                            <img src="./img/gestione-profili/45.png" alt="Barra di filtro risultati con pulsanti Elimina ed Esporta" class="w-100 rounded-3" />
                           </div>
                         </div>
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3">
                         <div class="d-flex gap-3">
                           <div class="sg-step-badge flex-shrink-0">3</div>
                           <div>
                             <h4 class="h5 fw-bold text-uppercase mb-2">Visualizzazione componenti tramite tabella</h4>
-                            <p class="mb-3">
+                            <p class="mb-0">
                               I risultati della ricerca vengono presentati in
                               una tabella, mostrando le <strong>informazioni
                               principali</strong> e le <strong>azioni
@@ -1598,10 +1597,12 @@
                               associati è visualizzabile tramite apertura ad
                               accordion.
                             </p>
-                            <img src="./img/gestione-profili/46.png" alt="Tabella risultati con elenco profili e ruoli associati mostrati ad accordion" class="w-100 rounded-3" />
                           </div>
                         </div>
                       </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-profili/43.png" alt="Pagina Ricerca e consultazione profili Configurazione profili con filtri ed elenco risultati" class="w-100 rounded-3" />
                     </div>
                   </div>
 
@@ -1613,9 +1614,9 @@
                     informazioni:
                   </p>
 
-                  <div class="row g-4 align-items-center mb-4">
+                  <div class="row g-4 align-items-start">
                     <div class="col-12 col-lg-5">
-                      <ul class="mb-0">
+                      <ul class="mb-3">
                         <li>Tipo Account;</li>
                         <li>Tipologia Utente;</li>
                         <li>Codice Profilo;</li>
@@ -1627,37 +1628,28 @@
                           </ul>
                         </li>
                       </ul>
+
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
+                        <p class="fw-bold mb-2">Possibili azioni primarie</p>
+                        <div class="d-flex gap-2 flex-wrap">
+                          <span class="btn btn-primary btn-sm disabled" aria-disabled="true">
+                            <i class="bi bi-pencil me-1"></i>Modifica
+                          </span>
+                          <span class="btn btn-outline-secondary btn-sm disabled" aria-disabled="true">
+                            <i class="bi bi-trash me-1"></i>Elimina
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <p class="fw-bold mb-2">Possibili azioni sulle componenti tecniche associate</p>
+                        <span class="btn btn-outline-secondary btn-sm disabled" aria-disabled="true">
+                          <i class="bi bi-eye me-1"></i>Visualizzazione del dettaglio
+                        </span>
+                      </div>
                     </div>
                     <div class="col-12 col-lg-7">
                       <img src="./img/gestione-profili/47.png" alt="Pagina Dettaglio Profilo con Ruoli associati, elenco Reporting Obligation, elenco componenti tecniche e pulsanti Modifica ed Elimina" class="w-100 rounded-3" />
-                    </div>
-                  </div>
-
-                  <div class="row g-3">
-                    <div class="col-12 col-lg-6">
-                      <div class="sg-note p-3 rounded-3 h-100 d-flex align-items-start gap-2">
-                        <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
-                        <div>
-                          <p class="fw-bold mb-1">Possibili azioni primarie</p>
-                          <p class="mb-0">
-                            <strong>"Modifica"</strong> per aggiornare il
-                            profilo o <strong>"Elimina"</strong> per
-                            cancellarlo.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                      <div class="sg-note p-3 rounded-3 h-100 d-flex align-items-start gap-2">
-                        <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
-                        <div>
-                          <p class="fw-bold mb-1">Possibili azioni sulle componenti tecniche associate</p>
-                          <p class="mb-0">
-                            <strong>Visualizzazione del dettaglio</strong>
-                            tramite icona dell'occhio.
-                          </p>
-                        </div>
-                      </div>
                     </div>
                   </div>
 
@@ -1677,15 +1669,12 @@
 
                   <div class="row g-4 mb-4">
                     <div class="col-12 col-lg-5">
-                      <img src="./img/gestione-profili/48.png" alt="Pagina Ricerca e consultazione profili Associazione ruoli a profili con filtri ed elenco risultati" class="w-100 rounded-3" />
-                    </div>
-                    <div class="col-12 col-lg-7">
-                      <div class="d-flex flex-column gap-4">
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
                         <div class="d-flex gap-3">
                           <div class="sg-step-badge flex-shrink-0">1</div>
                           <div>
                             <h4 class="h5 fw-bold text-uppercase mb-2">Sezione filtri</h4>
-                            <p class="mb-3">
+                            <p class="mb-0">
                               La sezione filtri permette di ricercare per
                               <strong>Ruolo, Obblighi di Dichiarazione e
                               Profilo</strong>. Avviare la ricerca attraverso
@@ -1694,14 +1683,15 @@
                               I filtri applicati sono visualizzati e
                               cancellabili.
                             </p>
-                            <img src="./img/gestione-profili/49.png" alt="Sezione filtri con i campi Ruolo, Obbligo di dichiarazione e Profilo" class="w-100 rounded-3" />
                           </div>
                         </div>
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
                         <div class="d-flex gap-3">
                           <div class="sg-step-badge flex-shrink-0">2</div>
                           <div>
                             <h4 class="h5 fw-bold text-uppercase mb-2">Azioni sulla tabella</h4>
-                            <p class="mb-3">
+                            <p class="mb-0">
                               È possibile esportare i risultati di ricerca
                               attraverso il pulsante <strong>"Esporta"</strong>
                               e, dopo aver selezionato uno o più ruoli, è
@@ -1710,14 +1700,15 @@
                               filtrare ulteriormente i risultati di ricerca
                               valorizzando il relativo campo.
                             </p>
-                            <img src="./img/gestione-profili/50.png" alt="Barra di filtro risultati con pulsanti Elimina ed Esporta" class="w-100 rounded-3" />
                           </div>
                         </div>
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3">
                         <div class="d-flex gap-3">
                           <div class="sg-step-badge flex-shrink-0">3</div>
                           <div>
                             <h4 class="h5 fw-bold text-uppercase mb-2">Visualizzazione componenti tramite tabella</h4>
-                            <p class="mb-3">
+                            <p class="mb-0">
                               I risultati della ricerca vengono presentati in
                               una tabella, mostrando le <strong>informazioni
                               principali</strong> e le <strong>azioni
@@ -1726,10 +1717,12 @@
                               associati è visualizzabile tramite apertura ad
                               accordion.
                             </p>
-                            <img src="./img/gestione-profili/51.png" alt="Tabella risultati con elenco ruoli e profili associati mostrati ad accordion" class="w-100 rounded-3" />
                           </div>
                         </div>
                       </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-profili/48.png" alt="Pagina Ricerca e consultazione profili Associazione ruoli a profili con filtri ed elenco risultati" class="w-100 rounded-3" />
                     </div>
                   </div>
 
@@ -1741,9 +1734,9 @@
                     informazioni:
                   </p>
 
-                  <div class="row g-4 align-items-center mb-4">
+                  <div class="row g-4 align-items-start">
                     <div class="col-12 col-lg-5">
-                      <ul class="mb-0">
+                      <ul class="mb-3">
                         <li>Codice ruolo;</li>
                         <li>Descrizione ruolo;</li>
                         <li>Elenco profili associati al ruolo
@@ -1752,21 +1745,21 @@
                           </ul>
                         </li>
                       </ul>
+
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <p class="fw-bold mb-2">Possibili azioni primarie</p>
+                        <div class="d-flex gap-2 flex-wrap">
+                          <span class="btn btn-primary btn-sm disabled" aria-disabled="true">
+                            <i class="bi bi-pencil me-1"></i>Modifica
+                          </span>
+                          <span class="btn btn-outline-secondary btn-sm disabled" aria-disabled="true">
+                            <i class="bi bi-trash me-1"></i>Elimina
+                          </span>
+                        </div>
+                      </div>
                     </div>
                     <div class="col-12 col-lg-7">
                       <img src="./img/gestione-profili/52.png" alt="Pagina Visualizza Associazione Ruoli a Profili con elenco profili associati al ruolo e pulsanti Modifica ed Elimina" class="w-100 rounded-3" />
-                    </div>
-                  </div>
-
-                  <div class="sg-note p-3 rounded-3 d-flex align-items-start gap-2">
-                    <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
-                    <div>
-                      <p class="fw-bold mb-1">Possibili azioni primarie</p>
-                      <p class="mb-0">
-                        <strong>"Modifica"</strong> per aggiornare
-                        l'associazione o <strong>"Elimina"</strong> per
-                        cancellarla.
-                      </p>
                     </div>
                   </div>
 

@@ -1091,10 +1091,7 @@
 
                   </div>
 
-                </div>
-
-                <!-- ── PAG. 21-22 — AGGIUNTA, ELIMINAZIONE E SALVATAGGIO RUOLI ── -->
-                <div class="sg-section__body p-2 p-lg-4 border-top">
+                  <!-- ── AGGIUNTA, ELIMINAZIONE E SALVATAGGIO RUOLI (continua senza divider) ── -->
 
                   <div class="row g-4 mb-4">
 
@@ -1446,15 +1443,12 @@
 
                   <div class="row g-4 mb-4">
                     <div class="col-12 col-lg-5">
-                      <img src="./img/gestione-ruoli/41.png" alt="Pagina Configurazione Ruoli con filtri, elenco risultati e componenti tecniche associate" class="w-100 rounded-3" />
-                    </div>
-                    <div class="col-12 col-lg-7">
-                      <div class="d-flex flex-column gap-4">
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
                         <div class="d-flex gap-3">
                           <div class="sg-step-badge flex-shrink-0">1</div>
                           <div>
                             <h4 class="h5 fw-bold text-uppercase mb-2">Sezione filtri</h4>
-                            <p class="mb-3">
+                            <p class="mb-0">
                               La sezione filtri permette di ricercare per
                               <strong>Ruolo, Ruolo attivo e Componenti
                               tecniche</strong>. Avviare la ricerca attraverso
@@ -1463,14 +1457,15 @@
                               I filtri applicati sono visualizzati e
                               cancellabili.
                             </p>
-                            <img src="./img/gestione-ruoli/42.png" alt="Sezione filtri con i campi Ruolo, Ruolo attivo e Technical Component" class="w-100 rounded-3" />
                           </div>
                         </div>
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
                         <div class="d-flex gap-3">
                           <div class="sg-step-badge flex-shrink-0">2</div>
                           <div>
                             <h4 class="h5 fw-bold text-uppercase mb-2">Azioni sulla tabella dei risultati</h4>
-                            <p class="mb-3">
+                            <p class="mb-0">
                               È possibile esportare i risultati di ricerca
                               attraverso il pulsante <strong>"Esporta"</strong>
                               e, dopo aver selezionato una o più ruoli, è
@@ -1479,14 +1474,15 @@
                               ulteriormente i risultati di ricerca
                               valorizzando il relativo campo.
                             </p>
-                            <img src="./img/gestione-ruoli/43.png" alt="Barra di filtro risultati con pulsanti Elimina ed Esporta" class="w-100 rounded-3" />
                           </div>
                         </div>
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3">
                         <div class="d-flex gap-3">
                           <div class="sg-step-badge flex-shrink-0">3</div>
                           <div>
                             <h4 class="h5 fw-bold text-uppercase mb-2">Visualizzazione ruoli e componenti tecniche associate tramite tabella</h4>
-                            <p class="mb-3">
+                            <p class="mb-0">
                               I risultati della ricerca vengono presentati in
                               una tabella, mostrando le <strong>informazioni
                               principali</strong> e le <strong>azioni
@@ -1496,10 +1492,12 @@
                               componenti tecniche associate al ruolo è
                               visualizzabile tramite apertura ad accordion.
                             </p>
-                            <img src="./img/gestione-ruoli/44.png" alt="Tabella risultati con elenco ruoli e componenti tecniche associate mostrate ad accordion" class="w-100 rounded-3" />
                           </div>
                         </div>
                       </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-ruoli/41.png" alt="Pagina Configurazione Ruoli con filtri, elenco risultati e componenti tecniche associate" class="w-100 rounded-3" />
                     </div>
                   </div>
 
@@ -1511,43 +1509,38 @@
                     informazioni:
                   </p>
 
-                  <div class="row g-4 align-items-center mb-4">
+                  <div class="row g-4 align-items-start">
                     <div class="col-12 col-lg-5">
-                      <ul class="mb-0">
+                      <ul class="mb-3">
                         <li>Dati ruolo;</li>
                         <li>Componenti tecniche associate.</li>
                       </ul>
+
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
+                        <p class="fw-bold mb-2">Possibili azioni primarie</p>
+                        <div class="d-flex gap-2 flex-wrap">
+                          <span class="btn btn-primary btn-sm disabled" aria-disabled="true">
+                            <i class="bi bi-pencil me-1"></i>Modifica
+                          </span>
+                          <span class="btn btn-outline-secondary btn-sm disabled" aria-disabled="true">
+                            <i class="bi bi-trash me-1"></i>Elimina
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <p class="fw-bold mb-2">Possibili azioni secondarie</p>
+                        <p class="mb-2 small">
+                          È possibile aggiungere componenti tecniche cliccando
+                          il pulsante:
+                        </p>
+                        <span class="btn btn-primary btn-sm disabled" aria-disabled="true">
+                          <i class="bi bi-plus-lg me-1"></i>Aggiungi componente tecnica
+                        </span>
+                      </div>
                     </div>
                     <div class="col-12 col-lg-7">
                       <img src="./img/gestione-ruoli/45.png" alt="Pagina Dettaglio Configurazione Ruolo con componenti tecniche associate e pulsanti Modifica ed Elimina" class="w-100 rounded-3" />
-                    </div>
-                  </div>
-
-                  <div class="row g-3">
-                    <div class="col-12 col-lg-6">
-                      <div class="sg-note p-3 rounded-3 h-100 d-flex align-items-start gap-2">
-                        <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
-                        <div>
-                          <p class="fw-bold mb-1">Possibili azioni primarie</p>
-                          <p class="mb-0">
-                            <strong>"Modifica"</strong> per aggiornare il
-                            ruolo o <strong>"Elimina"</strong> per cancellarlo.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                      <div class="sg-note p-3 rounded-3 h-100 d-flex align-items-start gap-2">
-                        <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
-                        <div>
-                          <p class="fw-bold mb-1">Possibili azioni secondarie</p>
-                          <p class="mb-0">
-                            È possibile aggiungere componenti tecniche
-                            cliccando il pulsante <strong>"Aggiungi
-                            componente tecnica"</strong>.
-                          </p>
-                        </div>
-                      </div>
                     </div>
                   </div>
 
@@ -1567,15 +1560,12 @@
 
                   <div class="row g-4 mb-4">
                     <div class="col-12 col-lg-5">
-                      <img src="./img/gestione-ruoli/46.png" alt="Pagina Associazione componenti tecniche a ruoli con filtri, elenco risultati e ruoli associati" class="w-100 rounded-3" />
-                    </div>
-                    <div class="col-12 col-lg-7">
-                      <div class="d-flex flex-column gap-4">
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
                         <div class="d-flex gap-3">
                           <div class="sg-step-badge flex-shrink-0">1</div>
                           <div>
                             <h4 class="h5 fw-bold text-uppercase mb-2">Sezione filtri</h4>
-                            <p class="mb-3">
+                            <p class="mb-0">
                               La sezione filtri permette di ricercare per
                               <strong>Componenti tecniche o Ruoli</strong>,
                               avviare la ricerca attraverso il pulsante
@@ -1584,14 +1574,15 @@
                               I filtri applicati sono visualizzati e
                               cancellabili.
                             </p>
-                            <img src="./img/gestione-ruoli/47.png" alt="Sezione filtri con i campi Technical Component e Ruolo" class="w-100 rounded-3" />
                           </div>
                         </div>
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
                         <div class="d-flex gap-3">
                           <div class="sg-step-badge flex-shrink-0">2</div>
                           <div>
                             <h4 class="h5 fw-bold text-uppercase mb-2">Azioni sulla tabella dei risultati</h4>
-                            <p class="mb-3">
+                            <p class="mb-0">
                               È possibile esportare i risultati di ricerca
                               attraverso il pulsante <strong>"Esporta"</strong>
                               e, dopo aver selezionato una o più componenti
@@ -1600,14 +1591,15 @@
                               filtrare ulteriormente i risultati di ricerca
                               valorizzando il relativo campo.
                             </p>
-                            <img src="./img/gestione-ruoli/48.png" alt="Barra di filtro risultati con pulsanti Elimina ed Esporta" class="w-100 rounded-3" />
                           </div>
                         </div>
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3">
                         <div class="d-flex gap-3">
                           <div class="sg-step-badge flex-shrink-0">3</div>
                           <div>
                             <h4 class="h5 fw-bold text-uppercase mb-2">Visualizzazione componenti tecniche e ruoli associati tramite tabella</h4>
-                            <p class="mb-3">
+                            <p class="mb-0">
                               I risultati della ricerca vengono presentati in
                               una tabella, mostrando le <strong>informazioni
                               principali</strong> e le <strong>azioni
@@ -1615,10 +1607,12 @@
                               associati alla componente tecnica è
                               visualizzabile tramite apertura ad accordion.
                             </p>
-                            <img src="./img/gestione-ruoli/49.png" alt="Tabella risultati con elenco componenti tecniche e ruoli associati mostrati ad accordion" class="w-100 rounded-3" />
                           </div>
                         </div>
                       </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/gestione-ruoli/46.png" alt="Pagina Associazione componenti tecniche a ruoli con filtri, elenco risultati e ruoli associati" class="w-100 rounded-3" />
                     </div>
                   </div>
 
@@ -1630,28 +1624,28 @@
                     informazioni:
                   </p>
 
-                  <div class="row g-4 align-items-center mb-4">
+                  <div class="row g-4 align-items-start">
                     <div class="col-12 col-lg-5">
-                      <ul class="mb-0">
+                      <ul class="mb-3">
                         <li>Codice componente;</li>
                         <li>Descrizione componente tecnica;</li>
                         <li>Ruoli associati.</li>
                       </ul>
+
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <p class="fw-bold mb-2">Possibili azioni primarie</p>
+                        <div class="d-flex gap-2 flex-wrap">
+                          <span class="btn btn-primary btn-sm disabled" aria-disabled="true">
+                            <i class="bi bi-pencil me-1"></i>Modifica
+                          </span>
+                          <span class="btn btn-outline-secondary btn-sm disabled" aria-disabled="true">
+                            <i class="bi bi-trash me-1"></i>Elimina
+                          </span>
+                        </div>
+                      </div>
                     </div>
                     <div class="col-12 col-lg-7">
                       <img src="./img/gestione-ruoli/50.png" alt="Pagina Dettaglio associazione componente tecnica a ruoli con elenco Ruoli associati e pulsanti Modifica ed Elimina" class="w-100 rounded-3" />
-                    </div>
-                  </div>
-
-                  <div class="sg-note p-3 rounded-3 d-flex align-items-start gap-2">
-                    <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
-                    <div>
-                      <p class="fw-bold mb-1">Possibili azioni primarie</p>
-                      <p class="mb-0">
-                        <strong>"Modifica"</strong> per aggiornare
-                        l'associazione o <strong>"Elimina"</strong> per
-                        cancellarla.
-                      </p>
                     </div>
                   </div>
 
