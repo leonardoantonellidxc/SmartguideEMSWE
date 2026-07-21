@@ -1,0 +1,1014 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Dashboard Capitanerie</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Dashboard Capitanerie</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#dashboard">
+                        01. Dashboard
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <h1 class="h4 mb-0">Dashboard Capitanerie</h1>
+                  <span class="badge rounded-pill text-bg-primary">Operatore CdP</span>
+                </div>
+                <p class="mb-0">
+                  Il portale delle Smart Guide è uno spazio digitale che
+                  raccoglie risorse pratiche e aggiornate in un unico ambiente
+                  intuitivo. Strumenti chiari e organizzati per organizzarti e
+                  trovare subito ciò che ti serve.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — DASHBOARD
+                 Profilo: Operatore CdP
+                 Pagine: 2 (copertina) · 3 (panoramica) · 4 (intestazione)
+                         5 (comunicazioni) · 6 (notifiche) · 7 (il menu)
+                         8 (sezioni riepilogative) · 9-12 (lista attività)
+                         13 (report attività odierne)
+                 ============================================================ -->
+            <section id="dashboard" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Dashboard</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla Dashboard dell'operatore CdP.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 3 — PANORAMICA SULLA PAGINA D'INGRESSO ──────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">La Dashboard</h3>
+                  <h4 class="h4 fw-bold mb-3">Panoramica sulla pagina d'ingresso del portale</h4>
+                  <p class="mb-3">
+                    Nella Dashboard sono mostrate le <strong>interfacce</strong>
+                    e le <strong>funzionalità disponibili</strong> all'interno
+                    della home page, differenziate <strong>in base al profilo
+                    dell'utente autenticato</strong>.
+                  </p>
+                  <p class="mb-4">
+                    La home page costituisce il <strong>punto di ingresso
+                    operativo</strong> al sistema e consente l'accesso
+                    immediato alle principali aree applicative, oltre alla
+                    visualizzazione sintetica dello stato delle attività in
+                    corso, delle comunicazioni pubblicate e delle informazioni
+                    operative relative alle soste e agli obblighi di
+                    dichiarazione.
+                  </p>
+
+                  <img
+                    src="./img/dashboard-capitanerie/1.png"
+                    alt="Home page della Dashboard con i riquadri Obbligo di dichiarazione, Soste nel porto di oggi, Ricerca soste e la tabella delle attività da svolgere"
+                    class="w-100 rounded-3"
+                  />
+
+                </div>
+
+                <!-- ── PAG. 4 — INTESTAZIONE ────────────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Intestazione</h3>
+
+                  <img
+                    src="./img/dashboard-capitanerie/2.png"
+                    alt="Intestazione della Dashboard con le icone di comunicazioni e notifiche e il menu del profilo utente"
+                    class="w-100 rounded-3 mb-4"
+                  />
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Comunicazioni</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nella barra di navigazione è presente l'icona del
+                            megafono che riporta il numero di comunicazioni
+                            ricevute e non ancora lette da parte dell'utente.
+                            Selezionando l'icona si accede alla pagina delle
+                            comunicazioni ricevute.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/dashboard-capitanerie/3.png"
+                              alt="Icona del megafono con indicatore di comunicazioni non lette nella barra di navigazione"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Notifiche</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nella barra di navigazione è presente l'icona della
+                            campanella che riporta il numero di notifiche
+                            ricevute e non ancora lette da parte dell'utente.
+                            Selezionando l'icona si accede alla pagina delle
+                            notifiche ricevute.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/dashboard-capitanerie/4.png"
+                              alt="Icona della campanella con indicatore di notifiche non lette nella barra di navigazione"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Sezione profilo</h4>
+                          </div>
+                          <p class="mb-3">
+                            L'icona del profilo consente di accedere a un menu
+                            a tendina contenente le seguenti voci:
+                            <strong>La mia utenza</strong>,
+                            <strong>Le mie richieste</strong>,
+                            <strong>Cambia profilo</strong> ed
+                            <strong>Esci</strong>. Sono visualizzabili i porti
+                            di appartenenza cliccando <strong>"Mostra
+                            porti"</strong>.
+                          </p>
+                          <div class="mt-auto row g-2">
+                            <div class="col-6">
+                              <img
+                                src="./img/dashboard-capitanerie/5.png"
+                                alt="Menu a tendina del profilo con le voci La mia utenza, Le mie richieste, Cambia profilo ed Esci"
+                                class="w-100 rounded-3"
+                              />
+                            </div>
+                            <div class="col-6">
+                              <img
+                                src="./img/dashboard-capitanerie/6.png"
+                                alt="Elenco dei porti di appartenenza visualizzato cliccando su Mostra porti"
+                                class="w-100 rounded-3"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 5 — COMUNICAZIONI: FUNZIONALITÀ IN PAGINA ───────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">La Dashboard — Comunicazioni</h3>
+                  <h4 class="h4 fw-bold mb-3">Funzionalità in pagina</h4>
+                  <p class="mb-4">
+                    Accedendo alla pagina è già presente l'elenco delle
+                    comunicazioni. Per ricercare in maniera più dettagliata le
+                    comunicazioni, è necessario aggiungere almeno un parametro
+                    tra quelli disponibili nei filtri base o, per rendere i
+                    risultati più precisi, nei filtri avanzati. La schermata è
+                    suddivisa nelle seguenti <strong>tre sezioni</strong>:
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <img
+                        src="./img/dashboard-capitanerie/7.png"
+                        alt="Pagina Comunicazioni con sezione filtri, azioni sulla tabella e tabella dei risultati evidenziate"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                    <div class="col-12 col-lg-7">
+
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">1</div>
+                          <h4 class="h5 fw-bold text-uppercase mb-0">Sezione filtri</h4>
+                        </div>
+                        <p class="mb-3">
+                          La sezione filtri consente di ricercare le
+                          comunicazioni utilizzando diversi criteri, tra cui
+                          <strong>Oggetto</strong>, <strong>Stato</strong>,
+                          <strong>Importante</strong> e <strong>Data</strong>.
+                        </p>
+                        <img
+                          src="./img/dashboard-capitanerie/8.png"
+                          alt="Sezione filtri della pagina Comunicazioni con i campi Oggetto, Stato, Importante e Data"
+                          class="w-100 rounded-3"
+                        />
+                      </div>
+
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <h4 class="h5 fw-bold text-uppercase mb-0">Azioni sulla tabella</h4>
+                        </div>
+                        <p class="mb-3">
+                          È possibile eseguire operazioni massive, quali:
+                          segnare le comunicazioni come <strong>lette/non
+                          lette</strong> o eliminarle, selezionando uno o più
+                          comunicazione tramite checkbox e cliccare sui
+                          rispettivi pulsanti. È possibile filtrare
+                          ulteriormente i risultati di ricerca valorizzando il
+                          relativo campo.
+                        </p>
+                        <img
+                          src="./img/dashboard-capitanerie/9.png"
+                          alt="Barra delle azioni sulla tabella comunicazioni con i pulsanti Segna Letto/Non Letto ed Elimina"
+                          class="w-100 rounded-3"
+                        />
+                      </div>
+
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <h4 class="h5 fw-bold text-uppercase mb-0">Visualizzazione comunicazioni tramite tabella</h4>
+                        </div>
+                        <p class="mb-0">
+                          I risultati sono visualizzati in una tabella con
+                          data decrescente di pubblicazione e oggetto; l'utente
+                          può entrare nel dettaglio cliccando il pulsante
+                          <strong>"Approfondisci"</strong>. Le comunicazioni
+                          impostate come già lette non risulteranno più
+                          evidenziate all'interno dell'elenco.
+                        </p>
+                        <img
+                          src="./img/dashboard-capitanerie/10.png"
+                          alt="Tabella dei risultati delle comunicazioni con data di pubblicazione, oggetto e pulsante Approfondisci"
+                          class="w-100 rounded-3 mt-3"
+                        />
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 6 — NOTIFICHE: FUNZIONALITÀ IN PAGINA ───────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">La Dashboard — Notifiche</h3>
+                  <h4 class="h4 fw-bold mb-3">Funzionalità in pagina</h4>
+                  <p class="mb-4">
+                    Accedendo alla pagina è già presente l'elenco delle
+                    notifiche. Per ricercare in maniera più dettagliata le
+                    notifiche, è necessario aggiungere almeno un parametro tra
+                    quelli disponibili nei filtri base o, per rendere i
+                    risultati più precisi, nei filtri avanzati. La schermata è
+                    suddivisa nelle seguenti <strong>tre sezioni</strong>:
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <img
+                        src="./img/dashboard-capitanerie/11.png"
+                        alt="Pagina Notifiche con sezione filtri, azioni sulla tabella e tabella dei risultati evidenziate"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                    <div class="col-12 col-lg-7">
+
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">1</div>
+                          <h4 class="h5 fw-bold text-uppercase mb-0">Sezione filtri</h4>
+                        </div>
+                        <p class="mb-3">
+                          La sezione filtri consente di ricercare le
+                          notifiche utilizzando diversi criteri, tra cui
+                          <strong>Tipologia</strong>, <strong>Oggetto</strong>,
+                          <strong>Nave o Visit ID</strong>, <strong>Stato</strong>
+                          e <strong>Data</strong>.
+                        </p>
+                        <img
+                          src="./img/dashboard-capitanerie/12.png"
+                          alt="Sezione filtri della pagina Notifiche con i campi Tipologia, Oggetto, Nave o Visit ID, Stato e Data"
+                          class="w-100 rounded-3"
+                        />
+                      </div>
+
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <h4 class="h5 fw-bold text-uppercase mb-0">Azioni sulla tabella</h4>
+                        </div>
+                        <p class="mb-3">
+                          È possibile eseguire operazioni massive, quali:
+                          segnare le notifiche come <strong>lette/non
+                          lette</strong> o eliminarle, selezionando uno o più
+                          comunicazione tramite checkbox e cliccare sui
+                          rispettivi pulsanti. È possibile filtrare
+                          ulteriormente i risultati di ricerca valorizzando il
+                          relativo campo.
+                        </p>
+                        <img
+                          src="./img/dashboard-capitanerie/13.png"
+                          alt="Barra delle azioni sulla tabella notifiche con i pulsanti Segna Letto/Non Letto ed Elimina"
+                          class="w-100 rounded-3"
+                        />
+                      </div>
+
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <h4 class="h5 fw-bold text-uppercase mb-0">Visualizzazione notifiche tramite tabella</h4>
+                        </div>
+                        <p class="mb-0">
+                          I risultati di ricerca sono visualizzati in una
+                          tabella con data decrescente di ricezione e oggetto.
+                          Le notifiche possono essere <strong>impostate come
+                          lette/non lette</strong> cliccando il pulsante con
+                          l'icona della posta. Le notifiche impostate come già
+                          lette non risulteranno più evidenziate all'interno
+                          dell'elenco.
+                        </p>
+                        <img
+                          src="./img/dashboard-capitanerie/14.png"
+                          alt="Tabella dei risultati delle notifiche con data, oggetto e pulsante per impostare lette/non lette"
+                          class="w-100 rounded-3 mt-3"
+                        />
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">Le notifiche verranno automaticamente rimosse dopo 60 giorni.</p>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 7 — IL MENU ─────────────────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Il menu</h3>
+                  <h4 class="h4 fw-bold mb-3">Le voci per la navigazione</h4>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">
+                        Il menu consente di accedere rapidamente alle
+                        principali sezioni del sistema, organizzate per
+                        categoria, in base al tipo di utente che accede.
+                      </p>
+                      <p class="mb-0">
+                        Al <strong>passaggio del mouse</strong> sulle sezioni
+                        principali, viene visualizzato un menu a tendina che
+                        mostra le voci disponibili, facilitando la
+                        navigazione.
+                      </p>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/dashboard-capitanerie/15.png"
+                        alt="Barra di navigazione con le voci Home, Gestione e Consultazione, Assistenza"
+                        class="w-100 rounded-3 mb-3"
+                      />
+                      <img
+                        src="./img/dashboard-capitanerie/16.png"
+                        alt="Menu a tendina Gestione e Consultazione aperto con le voci Gestione Abbonamenti, Gestione Soste e Navi"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 8 — SEZIONI RIEPILOGATIVE E FUNZIONALI ──────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Sezioni riepilogative e funzionali</h3>
+
+                  <img
+                    src="./img/dashboard-capitanerie/17.png"
+                    alt="Riquadri riepilogativi Obbligo di dichiarazione, Soste nel porto di oggi e Ricerca soste nella Dashboard"
+                    class="w-100 rounded-3 mb-4"
+                  />
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Obbligo di dichiarazione</h4>
+                          </div>
+                          <p class="mb-3">
+                            La sezione mostra il numero di obblighi di
+                            dichiarazione, suddivisi per stato.
+                          </p>
+                          <ul class="mb-3">
+                            <li>le informazioni sono presentate tramite card cliccabili;</li>
+                            <li>selezionando una card, si accede alla pagina di ricerca "Obblighi di dichiarazione" pre-filtrata in base allo stato selezionato;</li>
+                            <li>il link "Vedi tutti gli obblighi di dichiarazione" consente l'accesso alla ricerca completa.</li>
+                          </ul>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/dashboard-capitanerie/18.png"
+                              alt="Riquadro Obbligo di dichiarazione con le card Da approvare, Da vistare, Da visionare e Da invalidare"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Soste nel porto di oggi</h4>
+                          </div>
+                          <p class="mb-3">
+                            La sezione, visibile solo agli operatori CdP
+                            Locali, riporta il numero di soste odierne nel
+                            porto, suddivise per stato.
+                          </p>
+                          <ul class="mb-3">
+                            <li>le informazioni sono organizzate in card cliccabili;</li>
+                            <li>ogni card rimanda alla pagina "Soste" pre-filtrata;</li>
+                            <li>il link "Vai a tutte le soste" permette di visualizzare l'elenco completo delle soste.</li>
+                          </ul>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/dashboard-capitanerie/19.png"
+                              alt="Riquadro Soste nel porto di oggi con le card In attesa, In banchina, In rada e Partite"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Ricerca soste</h4>
+                          </div>
+                          <p class="mb-3">
+                            Consente di effettuare una ricerca puntuale di una
+                            sosta tramite i seguenti filtri:
+                          </p>
+                          <ul class="mb-3">
+                            <li>Visit ID;</li>
+                            <li>Nome o ID nave;</li>
+                            <li>ETA (data e ora stimata di arrivo);</li>
+                            <li>ETD (data e ora stimata di partenza).</li>
+                          </ul>
+                          <p class="mb-3">Il pulsante "Cerca" avvia la ricerca.</p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/dashboard-capitanerie/20.png"
+                              alt="Riquadro Ricerca soste con i campi Visit ID, Nome nave, ETA, ETD e pulsante Cerca"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 9-12 — LISTA ATTIVITÀ DA SVOLGERE (continua, stessa
+                     sezione con più schede: Obblighi di dichiarazione, Lista
+                     soste, Porto Base, Accreditamento — nessun divider tra
+                     le schede) ───────────────────────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-4">Lista attività da svolgere</h3>
+
+                  <!-- SCHEDA: OBBLIGHI DI DICHIARAZIONE (PAG. 9) -->
+                  <div class="mb-5">
+                    <span class="badge rounded-pill text-bg-primary mb-3">Obblighi di dichiarazione</span>
+
+                    <img
+                      src="./img/dashboard-capitanerie/21.png"
+                      alt="Tabella Obblighi di dichiarazione con tipologia, stato/fase, nave, arrivo, partenza e azioni"
+                      class="w-100 rounded-3 mb-4"
+                    />
+
+                    <div class="row g-4">
+                      <div class="col-12 col-lg-6">
+                        <div class="card border-0 rounded-3 bg-light p-3 h-100">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Informazioni principali</h4>
+                          </div>
+                          <p class="mb-0">
+                            La tabella riporta le attività relative agli
+                            obblighi di dichiarazione con le <strong>seguenti
+                            informazioni principali</strong>: Tipologia
+                            Obblighi di Dichiarazione, Stato/Fase, Note
+                            interne, Nave/Identificativo, Arrivo (ETA e ATA),
+                            Partenza (ETD e ATD) e Data ultima modifica.
+                          </p>
+                          <img
+                            src="./img/dashboard-capitanerie/22.png"
+                            alt="Colonne della tabella Obblighi di dichiarazione con le informazioni principali evidenziate"
+                            class="w-100 rounded-3 mt-3"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-6">
+                        <div class="card border-0 rounded-3 bg-light p-3 h-100">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Azioni disponibili</h4>
+                          </div>
+                          <ul class="mb-0">
+                            <li>visualizza;</li>
+                            <li>scarica;</li>
+                            <li>storico variazioni.</li>
+                          </ul>
+                          <img
+                            src="./img/dashboard-capitanerie/23.png"
+                            alt="Menu Azioni della riga Obblighi di dichiarazione con le voci Visualizza, Scarica e Storico variazioni"
+                            class="w-100 rounded-3 mt-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- SCHEDA: LISTA SOSTE (PAG. 10) -->
+                  <div class="mb-5">
+                    <span class="badge rounded-pill text-bg-primary mb-3">Lista soste</span>
+
+                    <img
+                      src="./img/dashboard-capitanerie/24.png"
+                      alt="Tabella Lista soste con Visit ID, stato, nave, porto di sosta, ETA/ATA, ETD/ATD e azioni"
+                      class="w-100 rounded-3 mb-4"
+                    />
+
+                    <div class="row g-4">
+                      <div class="col-12 col-lg-6">
+                        <div class="card border-0 rounded-3 bg-light p-3 h-100">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Informazioni principali</h4>
+                          </div>
+                          <p class="mb-0">
+                            La tabella riporta le attività relative alle soste
+                            con le <strong>seguenti informazioni
+                            principali</strong>: Visit ID, Stato, Nave
+                            Identificativo, Stato nave, Porto di sosta/Locode,
+                            ETA/ATA, ETD/ATD, Data creazione sosta/Autore.
+                          </p>
+                          <img
+                            src="./img/dashboard-capitanerie/25.png"
+                            alt="Colonne della tabella Lista soste con le informazioni principali evidenziate"
+                            class="w-100 rounded-3 mt-3"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-6">
+                        <div class="card border-0 rounded-3 bg-light p-3 h-100">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Azioni disponibili</h4>
+                          </div>
+                          <ul class="mb-0">
+                            <li>Visualizza;</li>
+                            <li>Elimina;</li>
+                            <li>Inserisci operazione;</li>
+                            <li>Scarica.</li>
+                          </ul>
+                          <img
+                            src="./img/dashboard-capitanerie/26.png"
+                            alt="Menu Azioni della riga Lista soste con le voci Visualizza, Elimina, Inserisci operazione e Scarica"
+                            class="w-100 rounded-3 mt-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- SCHEDA: PORTO BASE (PAG. 11) -->
+                  <div class="mb-5">
+                    <span class="badge rounded-pill text-bg-primary mb-3">Porto Base</span>
+
+                    <img
+                      src="./img/dashboard-capitanerie/27.png"
+                      alt="Tabella Porto Base con tipo richiesta, id richiesta, data richiesta, nave, porto base, stato, note interne e azioni"
+                      class="w-100 rounded-3 mb-4"
+                    />
+
+                    <div class="row g-4">
+                      <div class="col-12 col-lg-6">
+                        <div class="card border-0 rounded-3 bg-light p-3 h-100">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Informazioni principali</h4>
+                          </div>
+                          <p class="mb-0">
+                            La tabella visualizza le richieste di porto base,
+                            includendo: Tipo richiesta, ID richiesta, Data
+                            richiesta, Nave (nome e identificativo; evidenzia
+                            nave bannata se presente), Porto base (LOCODE +
+                            descrizione), Stato e Note interne.
+                          </p>
+                          <img
+                            src="./img/dashboard-capitanerie/28.png"
+                            alt="Colonne della tabella Porto Base con le informazioni principali evidenziate"
+                            class="w-100 rounded-3 mt-3"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-6">
+                        <div class="card border-0 rounded-3 bg-light p-3 h-100">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Azioni disponibili</h4>
+                          </div>
+                          <ul class="mb-0">
+                            <li>Visualizza;</li>
+                            <li>Scarica;</li>
+                            <li>Presa in carico/Rilascio task;</li>
+                            <li>Storico variazioni.</li>
+                          </ul>
+                          <img
+                            src="./img/dashboard-capitanerie/29.png"
+                            alt="Menu Azioni della riga Porto Base con le voci Visualizza, Scarica, Presa in carico/Rilascio task e Storico variazioni"
+                            class="w-100 rounded-3 mt-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4" role="alert">
+                      <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                      <p class="mb-0">Il "Porto Base" è presente nella lista delle attività da svolgere soltanto per gli Operatori CdP Locali che gestiscono le Dichiarazioni di Porto Base.</p>
+                    </div>
+                  </div>
+
+                  <!-- SCHEDA: ACCREDITAMENTO (PAG. 12) -->
+                  <div>
+                    <span class="badge rounded-pill text-bg-primary mb-3">Accreditamento</span>
+
+                    <img
+                      src="./img/dashboard-capitanerie/30.png"
+                      alt="Tabella Accreditamento con tipo richiesta, id richiesta, nome/cognome/identificativo fiscale, note interne, stato e azioni"
+                      class="w-100 rounded-3 mb-4"
+                    />
+
+                    <div class="row g-4">
+                      <div class="col-12 col-lg-6">
+                        <div class="card border-0 rounded-3 bg-light p-3 h-100">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Informazioni principali</h4>
+                          </div>
+                          <p class="mb-0">
+                            La tabella mostra le richieste di accreditamento
+                            con le seguenti informazioni: Tipo richiesta, ID
+                            richiesta, Nome/Cognome/Identificativo fiscale,
+                            Note interne e Stato.
+                          </p>
+                          <img
+                            src="./img/dashboard-capitanerie/31.png"
+                            alt="Colonne della tabella Accreditamento con le informazioni principali evidenziate"
+                            class="w-100 rounded-3 mt-3"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-6">
+                        <div class="card border-0 rounded-3 bg-light p-3 h-100">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Azioni disponibili</h4>
+                          </div>
+                          <ul class="mb-0">
+                            <li>Visualizza;</li>
+                            <li>Presa in carico/Rilascio task.</li>
+                          </ul>
+                          <img
+                            src="./img/dashboard-capitanerie/32.png"
+                            alt="Menu Azioni della riga Accreditamento con le voci Visualizza e Presa in carico/Rilascio task"
+                            class="w-100 rounded-3 mt-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4" role="alert">
+                      <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                      <p class="mb-0">L'"Accreditamento" è presente nella lista delle attività da svolgere soltanto per gli Operatori CdP Locali che gestiscono le richieste di Accreditamento.</p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 13 — REPORT DELLE MIE ATTIVITÀ ODIERNE ──────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-4">Report delle mie attività odierne</h3>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-0">
+                        Nella parte inferiore della pagina è presente il
+                        blocco <strong>"Report delle mie attività
+                        odierne"</strong>.
+                      </p>
+                      <p class="mb-0 mt-3">
+                        Il sistema visualizza un <strong>riepilogo
+                        numerico</strong>, suddiviso per stato e aggiornato
+                        automaticamente dal sistema, in relazione alle
+                        attività effettuate nella data corrente dall'utente.
+                      </p>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/dashboard-capitanerie/33.png"
+                        alt="Riquadro Report delle mie attività odierne con i totali di Approvate, Invalidate, Respinte, Chiuse, Richieste di integrazione, Appuntamenti fissati, Vistate e Visionate"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          {
+            root: null,
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0,
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            const id = this.getAttribute('href').replace('#', '');
+            activate(id);
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg  = document.getElementById('lightbox-img');
+        const modal  = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+
+          img.addEventListener('click', function () {
+            apriLightbox(this);
+          });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () {
+          lbImg.src = '';
+        });
+      })();
+    </script>
+
+  </body>
+</html>
