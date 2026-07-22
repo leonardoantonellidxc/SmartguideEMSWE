@@ -1,0 +1,1055 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Soglie Rifiuti</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Soglie Rifiuti</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#crea-configurazione">
+                        01. Crea nuova configurazione
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#modifica-configurazione">
+                        02. Modifica configurazione
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#elimina-configurazione">
+                        03. Elimina configurazione
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#ricerca-visualizzazione">
+                        04. Ricerca e Visualizzazione
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <h1 class="h4 mb-0">Soglie Rifiuti</h1>
+                  <span class="badge rounded-pill text-bg-primary">Amministratore centrale</span>
+                </div>
+                <p class="mb-0">
+                  Una panoramica dei flussi relativi alla gestione delle
+                  soglie rifiuti, per orientarti passo dopo passo.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — CREA NUOVA CONFIGURAZIONE
+                 Profilo: Amministratore centrale
+                 ============================================================ -->
+            <section id="crea-configurazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Crea nuova configurazione</h2>
+                      <p class="text-white mb-0">
+                        Panoramica sulla creazione di una nuova configurazione
+                        di soglie rifiuti.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 2 — PUNTO DI ACCESSO ─────────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 fw-bold mb-3">La voce di menù</h4>
+                  <p class="mb-4">
+                    Dalla dashboard, è possibile <strong>accedere alle
+                    principali sezioni tramite le voci di menu</strong>.
+                  </p>
+
+                  <div class="card border-0 rounded-3">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+
+                        <div class="col-12 col-lg-5">
+                          <div class="card border-0 rounded-3 p-3 bg-primary">
+                            <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                            <p class="text-white mb-0">
+                              Cliccando sulla voce <strong>"Configurazioni"</strong>
+                              viene visualizzato un menu a tendina, da cui è
+                              possibile accedere a <strong>"Soglie
+                              rifiuti"</strong>.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-lg-7">
+                          <img
+                            src="./img/soglie-rifiuti/1.png"
+                            alt="Menu a tendina Configurazioni con la voce Soglie Rifiuti evidenziata"
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 3 — CREAZIONE NUOVA CONFIGURAZIONE SOGLIE RIFIUTI ── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-4">Creazione nuova configurazione soglie rifiuti</h3>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/soglie-rifiuti/2.png"
+                        alt="Pagina Soglie Rifiuti con i filtri di ricerca e il pulsante Nuova Configurazione"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-0">
+                        Dopo aver effettuato l'accesso alla pagina
+                        <strong>"Soglie rifiuti"</strong>, cliccare sul
+                        pulsante <strong>"Nuova configurazione"</strong> per
+                        avviare il flusso di creazione.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 4 e 6 — PASSAGGI PER CREARE UNA NUOVA CONFIGURAZIONE
+                     (continua, stesso titolo — nessun divider interno) ────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Creazione Configurazione</h3>
+                  <h4 class="h4 fw-bold mb-3">Passaggi per creare una nuova configurazione</h4>
+                  <p class="mb-4">
+                    Per creare una nuova configurazione è necessario che
+                    l'utente compili i campi obbligatori.
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Inserimento delle informazioni</h4>
+                          </div>
+                          <p class="mb-3">
+                            Per procedere con la configurazione della
+                            <strong>Soglie rifiuti</strong> è necessario
+                            valorizzare i campi: <strong>"Porto di scalo
+                            successivo"</strong>, <strong>"Allegato
+                            MARPOL"</strong>, <strong>"Soglia UWC
+                            (%)"</strong>. Indicare se la configurazione è
+                            <strong>attiva</strong>, il campo è prevalorizzato
+                            a <strong>"Sì"</strong> ma comunque modificabile.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/soglie-rifiuti/3.png"
+                              alt="Form Nuova Configurazione Soglie Rifiuti con i campi Porto di scalo successivo, Allegato MARPOL, Soglia UWC e Attivo"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Aggiungi in elenco</h4>
+                          </div>
+                          <p class="mb-3">
+                            Una volta inserite tutte le informazioni utili
+                            alla creazione di una nuova configurazione,
+                            cliccare sul pulsante <strong>"Aggiungi in
+                            elenco"</strong> per aggiungerla all'Elenco delle
+                            configurazioni.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/soglie-rifiuti/4.png"
+                              alt="Elenco Configurazioni con la nuova riga aggiunta dopo il click su Aggiungi in elenco"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Elimina configurazione</h4>
+                          </div>
+                          <p class="mb-3">
+                            È possibile eliminare una o più configurazioni
+                            all'interno della lista selezionando le
+                            configurazioni di interesse e successivamente
+                            cliccare sul pulsante <strong>"Elimina"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/soglie-rifiuti/5.png"
+                              alt="Finestra di conferma Elimina configurazione con il pulsante Elimina configurazione"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">4</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Salvataggio e conferma</h4>
+                          </div>
+                          <p class="mb-3">
+                            Verificato il corretto inserimento delle
+                            configurazioni selezionare il pulsante
+                            <strong>"Salva"</strong>. Dopo aver confermato
+                            l'operazione tramite una finestra che apparirà
+                            sullo schermo la configurazione verrà salvata a
+                            sistema.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/soglie-rifiuti/6.png"
+                              alt="Finestra di conferma Salva Configurazione con il pulsante Conferma"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 5 — GESTIONE ELENCO ──────────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Creazione Configurazione</h3>
+                  <h4 class="h4 fw-bold mb-3">Gestione elenco</h4>
+                  <p class="mb-4">
+                    Dopo aver cliccato il pulsante <strong>"Nuova
+                    configurazione"</strong>, seguire tutti i passaggi
+                    indicati a sistema e inserire le informazioni necessarie
+                    per completare la creazione della nuova configurazione.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Elenco configurazioni</h4>
+                          </div>
+                          <p class="mb-3">
+                            È possibile aggiungere ulteriori configurazioni
+                            compilando nuovamente tutte le informazione
+                            cliccando sul pulsante <strong>"Aggiungi in
+                            elenco"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/soglie-rifiuti/7.png"
+                              alt="Elenco Configurazioni con più righe di soglie rifiuti inserite"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Errore configurazione</h4>
+                          </div>
+                          <p class="mb-3">
+                            Se viene inserita una configurazione con gli
+                            stessi parametri di una già esistente, il sistema
+                            rileva automaticamente il duplicato e mostra un
+                            messaggio di errore a schermo.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/soglie-rifiuti/8.png"
+                              alt="Finestra di errore configurazione che segnala il Porto di scalo successivo già presente per l'allegato MARPOL definito"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">Nel caso in cui si cerchi di inserire una configurazione già presente all'interno della lista, viene visualizzato un alert che informa l'utente della presenza già registrata.</p>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 02 — MODIFICA CONFIGURAZIONE
+                 ============================================================ -->
+            <section id="modifica-configurazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">02.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Modifica configurazione</h2>
+                      <p class="text-white mb-0">
+                        Panoramica sulla modifica di una configurazione di
+                        soglie rifiuti esistente.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 8 — PUNTO DI ACCESSO DELLA MODIFICA ─────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-4">Punto di Accesso della modifica di una configurazione Soglia rifiuti</h3>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione "Modifica" dall'elenco risultati di ricerca</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati della ricerca è possibile
+                            accedere al dettaglio in modalità modifica
+                            cliccando sull'<strong>"icona della matita"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/soglie-rifiuti/9.png"
+                              alt="Elenco risultati delle configurazioni Soglie rifiuti con l'icona della matita evidenziata"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione Modifica da pagina di dettaglio della configurazione</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati della configurazione è
+                            possibile accedere al dettaglio in modalità
+                            visualizzazione cliccando sull'<strong>"icona
+                            dell'occhio"</strong>. All'interno del dettaglio
+                            per procedere con la modifica sarà necessario
+                            cliccare sul pulsante <strong>"Modifica"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/soglie-rifiuti/10.png"
+                              alt="Pagina di dettaglio della configurazione Soglie rifiuti con i pulsanti Modifica, Elimina e Indietro"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 9 — PASSAGGI PER MODIFICARE UNA CONFIGURAZIONE ──── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Modifica configurazione</h3>
+                  <h4 class="h4 fw-bold mb-3">Passaggi per modificare una configurazione</h4>
+                  <p class="mb-4">
+                    Dopo aver cliccato il pulsante <strong>"Modifica"</strong>,
+                    segui tutti i passaggi indicati a sistema e inserisci le
+                    informazioni necessarie per completare la modifica della
+                    configurazione.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Modifica della configurazione selezionata</h4>
+                          </div>
+                          <p class="mb-3">
+                            Le informazione modificabili sono <strong>Soglia
+                            UWC (%)</strong> e <strong>Attivo
+                            (Sì/No)</strong>, dopo aver effettuato le
+                            modifiche è possibile salvare nuovamente la
+                            configurazione cliccando sul pulsante
+                            <strong>"Salva"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/soglie-rifiuti/11.png"
+                              alt="Form Modifica configurazione MARPOL Annex I con i campi Soglia UWC e Attivo modificabili"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Salvataggio e conferma</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra di conferma,
+                            chiedendo all'utente <strong>se è sicuro di
+                            salvare la configurazione</strong>. Infine, dopo
+                            aver cliccato il pulsante <strong>"Conferma"</strong>,
+                            il sistema informerà l'<strong>avvenuto
+                            salvataggio della configurazione</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/soglie-rifiuti/12.png"
+                              alt="Finestre di conferma modifica configurazione e messaggio Modifica Effettuata con esito positivo"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 03 — ELIMINA CONFIGURAZIONE
+                 ============================================================ -->
+            <section id="elimina-configurazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">03.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Elimina configurazione</h2>
+                      <p class="text-white mb-0">
+                        Panoramica sull'eliminazione di una configurazione di
+                        soglie rifiuti.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 11 — PASSAGGI PER ELIMINARE UNA CONFIGURAZIONE ──── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Elimina configurazione</h3>
+                  <h4 class="h4 fw-bold mb-3">Passaggi per eliminare una configurazione</h4>
+                  <p class="mb-4">
+                    Dopo aver salvato una configurazione l'utente può
+                    eliminarla secondo le seguenti modalità.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Eliminazione in tabella</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver selezionato una o più configurazione e
+                            cliccato su elimina il sistema mostra una finestra
+                            di conferma eliminazione, per procedere cliccare
+                            su <strong>"Elimina configurazione"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/soglie-rifiuti/13.png"
+                              alt="Elenco Configurazioni con righe selezionate e finestra di conferma Elimina Configurazione"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Eliminazione all'interno del dettaglio</h4>
+                          </div>
+                          <p class="mb-3">
+                            All'interno del dettaglio di una configurazione è
+                            possibile eliminarla tramite l'apposito pulsante
+                            <strong>"Elimina"</strong>, presente in fondo alla
+                            pagina.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/soglie-rifiuti/14.png"
+                              alt="Pagina di dettaglio della configurazione con il pulsante Elimina e la finestra di conferma Elimina Configurazione"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 04 — RICERCA E VISUALIZZAZIONE
+                 ============================================================ -->
+            <section id="ricerca-visualizzazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">04.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Ricerca e Visualizzazione</h2>
+                      <p class="text-white mb-0">
+                        Panoramica sulla ricerca e sulla visualizzazione delle
+                        configurazioni di soglie rifiuti.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 13 — PUNTO DI ACCESSO ────────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 fw-bold mb-3">La voce di menù</h4>
+                  <p class="mb-4">
+                    Dalla dashboard, è possibile <strong>accedere alle
+                    principali sezioni tramite le voci di menu</strong>.
+                  </p>
+
+                  <div class="card border-0 rounded-3">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+
+                        <div class="col-12 col-lg-5">
+                          <div class="card border-0 rounded-3 p-3 bg-primary">
+                            <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                            <p class="text-white mb-0">
+                              Cliccando sulla voce <strong>"Configurazioni"</strong>
+                              viene visualizzato un menu a tendina, da cui è
+                              possibile accedere a <strong>"Soglie
+                              rifiuti"</strong>.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-lg-7">
+                          <img
+                            src="./img/soglie-rifiuti/15.png"
+                            alt="Menu a tendina Configurazioni con la voce Soglie Rifiuti evidenziata"
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 14-15 — RICERCA CONFIGURAZIONE (continua, stesso
+                     titolo — nessun divider interno) ──────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-4">Ricerca configurazione</h3>
+
+                  <div class="card border-0 rounded-3 bg-light p-3 mb-4">
+                    <div class="d-flex gap-3 mb-2">
+                      <div class="sg-step-badge flex-shrink-0">1</div>
+                      <h4 class="h5 fw-bold text-uppercase mb-0">Soglie rifiuti</h4>
+                    </div>
+                    <p class="mb-3">
+                      In questa pagina l'utente può visualizzare ed
+                      esportare l'elenco delle configurazioni relativo alle
+                      soglie rifiuti.
+                    </p>
+                    <img
+                      src="./img/soglie-rifiuti/16.png"
+                      alt="Pagina Soglie Rifiuti con i filtri di ricerca e il pulsante Nuova Configurazione"
+                      class="w-100 rounded-3"
+                    />
+                  </div>
+
+                  <p class="mb-4">
+                    È possibile avviare la ricerca utilizzando i filtri
+                    disponibili oppure applicare criteri aggiuntivi per
+                    affinare i risultati. La schermata è suddivisa nelle
+                    seguenti sezioni:
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <img
+                        src="./img/soglie-rifiuti/17.png"
+                        alt="Pagina Soglie Rifiuti con sezione filtri ed elenco risultati evidenziati"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                    <div class="col-12 col-lg-7">
+
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <h4 class="h5 fw-bold text-uppercase mb-0">Sezione filtri</h4>
+                        </div>
+                        <p class="mb-3">
+                          La sezione Filtri consente di ricercare le
+                          configurazione secondo diversi criteri. Sono
+                          disponibili i filtri, come <strong>"Porto di scalo
+                          successivo"</strong>, <strong>"Allegato
+                          MARPOL"</strong> o <strong>"Attivo"</strong>. È
+                          necessario inserire almeno uno dei valori presenti
+                          per avviare il flusso di ricerca.
+                        </p>
+                        <img
+                          src="./img/soglie-rifiuti/18.png"
+                          alt="Sezione filtri della pagina Soglie Rifiuti con il menu a tendina del campo Attivo aperto"
+                          class="w-100 rounded-3"
+                        />
+                      </div>
+
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <h4 class="h5 fw-bold text-uppercase mb-0">Visualizzazione richiesta tramite tabella</h4>
+                        </div>
+                        <p class="mb-0">
+                          I risultati della ricerca vengono presentati in
+                          una tabella, mostrando le <strong>informazioni
+                          principali</strong> e le <strong>azioni
+                          disponibili</strong>.
+                        </p>
+                        <img
+                          src="./img/soglie-rifiuti/19.png"
+                          alt="Tabella dei risultati della ricerca soglie rifiuti con porto di scalo successivo, allegato MARPOL, soglia UWC, attivo e azioni"
+                          class="w-100 rounded-3 mt-3"
+                        />
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 16 — VISUALIZZAZIONE DETTAGLIO CONFIGURAZIONE ───── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Configurazione soglie rifiuti</h3>
+                  <h4 class="h4 fw-bold mb-3">Visualizzazione dettaglio Configurazione soglie rifiuti</h4>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">All'interno della pagina sono consultabili le seguenti informazioni:</p>
+                      <ul class="mb-4">
+                        <li>Data ultima modifica;</li>
+                        <li>Porto di scalo successivo;</li>
+                        <li>Allegato MARPOL;</li>
+                        <li>Soglia UWC (%);</li>
+                        <li>Attivo.</li>
+                      </ul>
+
+                      <p class="fw-bold mb-2">Possibili azioni sulla configurazione:</p>
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-2 flex-wrap">
+                          <span class="btn btn-primary btn-sm disabled" aria-disabled="true"><i class="bi bi-pencil me-1"></i>Modifica</span>
+                          <span class="btn btn-outline-secondary btn-sm disabled" aria-disabled="true"><i class="bi bi-trash me-1"></i>Elimina</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/soglie-rifiuti/20.png"
+                        alt="Pagina di dettaglio configurazione MARPOL Annex I con data ultima modifica, porto di scalo successivo, allegato MARPOL, soglia UWC, attivo e i pulsanti Modifica ed Elimina"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 17 — FUNZIONALITÀ CONFIGURAZIONI: RICERCA E
+                     VISUALIZZAZIONE ────────────────────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Funzionalità configurazioni</h3>
+                  <h4 class="h4 fw-bold mb-4">Ricerca e visualizzazione</h4>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <i class="bi bi-trash flex-shrink-0 fs-4"></i>
+                            <h4 class="fw-bold text-uppercase mb-0">Elimina</h4>
+                          </div>
+                          <p class="mb-3">
+                            Al click sul pulsante <strong>"Elimina"</strong>
+                            sarà possibile andare ad eliminare tutte le
+                            configurazioni selezionate.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/soglie-rifiuti/21.png"
+                              alt="Elenco Configurazioni con una riga selezionata e la finestra di conferma Elimina configurazione"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <i class="bi bi-search flex-shrink-0 fs-4"></i>
+                            <h4 class="fw-bold text-uppercase mb-0">Esporta</h4>
+                          </div>
+                          <p class="mb-3">
+                            Al click sul pulsante <strong>"Esporta"</strong>
+                            sarà possibile andare ad esportare tutte le
+                            configurazioni attive in <strong>PDF</strong> o
+                            <strong>XLS</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/soglie-rifiuti/22.png"
+                              alt="Elenco risultati delle configurazioni soglie rifiuti con il pulsante Esporta evidenziato"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          {
+            root: null,
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0,
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            const id = this.getAttribute('href').replace('#', '');
+            activate(id);
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg  = document.getElementById('lightbox-img');
+        const modal  = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+
+          img.addEventListener('click', function () {
+            apriLightbox(this);
+          });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () {
+          lbImg.src = '';
+        });
+      })();
+    </script>
+
+  </body>
+</html>
