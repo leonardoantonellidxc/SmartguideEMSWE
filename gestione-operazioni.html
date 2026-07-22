@@ -1,0 +1,1699 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Gestione Operazioni</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Gestione Operazioni</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#inserimento-operazioni">
+                        01. Inserimento operazioni
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#ricerca-consultazione-operazioni">
+                        02. Ricerca e consultazione operazioni
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#modifica-operazioni">
+                        03. Modifica operazioni
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#cancellazione-operazioni">
+                        04. Cancellazione operazioni
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <h1 class="h4 mb-0">Gestione Operazioni</h1>
+                  <span class="badge rounded-pill text-bg-primary">Operatore di Capitanerie</span>
+                </div>
+                <p class="mb-0">
+                  Una panoramica dei flussi relativi alla gestione delle
+                  operazioni, per orientarti passo dopo passo.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — INSERIMENTO OPERAZIONI
+                 Profilo: Operatore di Capitanerie
+                 ============================================================ -->
+            <section id="inserimento-operazioni" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Inserimento operazioni</h2>
+                      <p class="text-white mb-0">
+                        Panoramica sull'inserimento di una nuova operazione.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 4 — PUNTO DI ACCESSO ─────────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 fw-bold mb-3">La voce di menù</h4>
+                  <p class="mb-4">
+                    Dalla dashboard è possibile <strong>accedere alle
+                    principali sezioni tramite le voci di menu</strong>.
+                  </p>
+
+                  <div class="card border-0 rounded-3 mb-4">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+
+                        <div class="col-12 col-lg-5">
+                          <div class="card border-0 rounded-3 p-3 bg-primary">
+                            <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                            <p class="text-white mb-0">
+                              Cliccando sulla voce <strong>"Gestione e
+                              Consultazione"</strong> viene visualizzato un
+                              menu a tendina, nella sezione <strong>"Gestione
+                              soste"</strong>, è possibile inserire nuove
+                              operazioni accedendo alla voci:
+                            </p>
+                            <ul class="text-white mb-0 mt-2">
+                              <li>"Soste"
+                                <ul>
+                                  <li>Risultati di ricerca soste</li>
+                                  <li>Dettaglio soste</li>
+                                </ul>
+                              </li>
+                              <li>"Gestione Operazioni".</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-lg-7">
+                          <img
+                            src="./img/gestione-operazioni/1.png"
+                            alt="Menu a tendina Gestione e Consultazione con le voci Soste e Gestione Operazioni evidenziate e la tabella Attività da svolgere con la scheda Lista soste"
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <p class="mb-0">
+                    Nella sezione <strong>Attività da svolgere</strong>,
+                    nella voce <strong>"Lista soste"</strong> sarà presente
+                    l'elenco delle soste dal quale è possibile inserire le
+                    operazioni cliccando il pulsante <strong>"+"</strong>.
+                  </p>
+
+                </div>
+
+                <!-- ── PAG. 5 — PUNTO DI ACCESSO DELL'INSERIMENTO ───────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Inserimento operazioni</h3>
+                  <h4 class="h4 fw-bold mb-4">Punto di Accesso dell'inserimento delle operazioni</h4>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione dell'"Inserimento" dall'elenco risultati soste</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati della ricerca delle soste è
+                            possibile inserire un'operazione cliccando
+                            sull'icona <strong>"+"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/2.png"
+                              alt="Elenco risultati Lista soste con l'icona più evidenziata e il pulsante Inserisci Operazione visibile"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione dell'"Inserimento" da pagina di dettaglio sosta</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati delle soste è possibile
+                            accedere al dettaglio in modalità visualizzazione
+                            cliccando sull'<strong>"icona dell'occhio"</strong>.
+                            All'interno del dettaglio per procedere con
+                            l'inserimento è necessario cliccare sul pulsante
+                            <strong>"Inserisci operazione"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/3.png"
+                              alt="Pagina di dettaglio della sosta con il pulsante Inserisci Operazione"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 6 — VISUALIZZAZIONE DETTAGLIO OPERAZIONI ────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Inserimento operazioni</h3>
+                  <h4 class="h4 fw-bold mb-3">Visualizzazione dettaglio operazioni</h4>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">All'interno della pagina sono consultabili le seguenti informazioni:</p>
+                      <ul class="mb-0">
+                        <li>Nave selezionata (link dettaglio anagrafica nave)</li>
+                        <li>Informazioni sosta</li>
+                        <li>Elenco operazioni disponibili:
+                          <ul>
+                            <li>Operazioni di ancoraggio</li>
+                            <li>Operazioni di ormeggio</li>
+                            <li>Operazioni di movimento</li>
+                            <li>Operazioni di partenza</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/gestione-operazioni/4.png"
+                        alt="Pagina Operazioni con nave selezionata e gli accordion Operazioni di ancoraggio, ormeggio, movimento e partenza"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 7-8 — OPERAZIONI DI ANCORAGGIO (continua, stesso
+                     titolo — nessun divider interno) ──────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Inserimento operazioni</h3>
+                  <h4 class="h4 fw-bold mb-3">Passaggi per l'inserimento delle "operazioni di ancoraggio"</h4>
+                  <p class="mb-4">
+                    L'utente può aggiungere le operazioni di ancoraggio
+                    attraverso i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Pulsante di nuova operazione</h4>
+                          </div>
+                          <p class="mb-3">
+                            All'interno dell'accordion <strong>"Operazioni di
+                            ancoraggio"</strong>, cliccare il pulsante
+                            <strong>"Nuova operazione"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/5.png"
+                              alt="Accordion Operazioni di ancoraggio con il pulsante Nuova operazione"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Dati ancoraggio e coordinate geografiche</h4>
+                          </div>
+                          <p class="mb-3">
+                            Inserire le informazioni richieste relative
+                            all'ancoraggio, in funzione dell'operazione
+                            prevista per la sosta corrente.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/6.png"
+                              alt="Form Dati Ancoraggio con i campi Data e ora ancoraggio, Area/Punto di fonda, Domanda di accosto e Coordinate Geografiche"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Inserimento informazioni</h4>
+                          </div>
+                          <p class="mb-3">
+                            Selezionare tramite il menu a tendina
+                            l'<strong>area/punto di fonda</strong>. Indicare
+                            se è stata inviata la <strong>domanda di
+                            accosto</strong> e se la nave risulta presente nel
+                            <strong>piano accosti giornaliero</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/7.png"
+                              alt="Form Dati Ancoraggio con il menu a tendina Area/Punto di fonda aperto"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">4</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Coordinate geografiche e salvataggio</h4>
+                          </div>
+                          <p class="mb-3">
+                            Successivamente all'inserimento delle coordinate
+                            geografiche (gradi e minuti) ed eventuali note,
+                            salvare l'operazione attraverso il pulsante
+                            <strong>"Salva operazione"</strong>. Il sistema
+                            mostra una finestra di conferma dell'inserimento.
+                            Cliccare il pulsante <strong>"Conferma"</strong>
+                            per inserire l'operazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/8.png"
+                              alt="Coordinate Geografiche, Note e finestra di conferma Inserimento Ancoraggio"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">5</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Finestra informativa</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra informativa nel
+                            caso in cui vengono riscontrate incongruenze nei
+                            dati inseriti.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/9.png"
+                              alt="Finestra di errore che segnala incongruenze nei dati dell'operazione di ancoraggio"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">6</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Aggiunta e azioni disponibili</h4>
+                          </div>
+                          <p class="mb-3">
+                            Una volta aggiunta l'operazione, sarà visibile
+                            tramite vista tabellare. Sarà possibile esportare
+                            l'elenco delle operazioni presenti, e
+                            selezionando una o più operazioni, eliminarle.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/10.png"
+                              alt="Elenco risultati operazioni di ancoraggio con la riga aggiunta e i pulsanti Elimina ed Esporta"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="text-center my-4">
+                    <a href="#possibili-azioni-tabella" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none">
+                      <i class="bi bi-record-circle me-1"></i>Focus su "Possibili azioni sulla tabella"
+                    </a>
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">Dopo il salvataggio di un'operazione di Ancoraggio, se quest'ultima fissa l'ATA, la nave assume lo stato "Arrivata in Rada", altrimenti fissa lo stato in "In attesa in Rada".</p>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 9-10 — OPERAZIONI DI ORMEGGIO (continua, stesso
+                     titolo — nessun divider interno) ──────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Inserimento operazioni</h3>
+                  <h4 class="h4 fw-bold mb-3">Passaggi per l'inserimento delle "operazioni di ormeggio"</h4>
+                  <p class="mb-4">
+                    L'utente può aggiungere le operazioni di ormeggio
+                    attraverso i seguenti passaggi, solo nel caso in cui
+                    l'operazione di Ancoraggio non abbia fissato l'ATA:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Pulsante di nuova operazione</h4>
+                          </div>
+                          <p class="mb-3">
+                            All'interno dell'accordion <strong>"Operazioni di
+                            ormeggio"</strong>, cliccare il pulsante
+                            <strong>"Nuova operazione"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/11.png"
+                              alt="Accordion Operazioni di ormeggio con il pulsante Nuova operazione"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Informazioni richieste relative all'ormeggio</h4>
+                          </div>
+                          <p class="mb-3">
+                            Inserire le informazioni richieste relative
+                            all'ormeggio, in funzione dell'operazione
+                            prevista per la sosta corrente.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/12.png"
+                              alt="Form Dati Ormeggio con i campi data e ora ormeggio, Tipo di Accosto, domanda di accosto e presenza in piano accosti giornaliero"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Inserimento dati ormeggio</h4>
+                          </div>
+                          <p class="mb-3">
+                            Selezionare tramite il menu a tendina la
+                            <strong>tipologia di Accosto</strong>. Indicare se
+                            è stata inviata la <strong>domanda di
+                            accosto</strong> e la presenza nave in
+                            <strong>piano accosti giornaliero</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/13.png"
+                              alt="Form Dati Ormeggio con il menu a tendina Tipo di Accosto aperto"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">4</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Inserimento dati banchina</h4>
+                          </div>
+                          <p class="mb-3">
+                            Inserire i dati banchina, come
+                            <strong>"Banchina/Sezione di banchina"</strong> e
+                            <strong>"Bitta"</strong> ed eventuali note.
+                            Successivamente salvare l'operazione cliccando il
+                            pulsante <strong>"Salva operazione"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/14.png"
+                              alt="Form Dati Banchina con i menu a tendina Banchina/Sezione di banchina e Bitta"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">5</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Finestra di conferma</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra di conferma
+                            dell'inserimento. Cliccare il pulsante
+                            <strong>"Conferma"</strong> per inserire
+                            l'operazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/15.png"
+                              alt="Finestra di conferma Inserisci Ormeggio con i pulsanti Conferma e Chiudi"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">6</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Aggiunta e azioni disponibili</h4>
+                          </div>
+                          <p class="mb-3">
+                            Una volta aggiunta l'operazione, sarà visibile
+                            tramite tabella. Sarà possibile esportare, e
+                            selezionando una o più operazioni, eliminarle.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/16.png"
+                              alt="Elenco risultati operazioni di ormeggio con la riga aggiunta e i pulsanti Elimina ed Esporta"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">Dopo il salvataggio di un'operazione di Ormeggio, se quest'ultima fissa l'ATA, la nave assume lo stato "Arrivata in Banchina".</p>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 11-12 — OPERAZIONI DI MOVIMENTO (continua, stesso
+                     titolo — nessun divider interno) ──────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Inserimento operazioni</h3>
+                  <h4 class="h4 fw-bold mb-3">Passaggi per l'inserimento delle "operazioni di movimento"</h4>
+                  <p class="mb-4">
+                    L'utente può aggiungere le operazioni di movimento
+                    attraverso i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Pulsante di nuova operazione</h4>
+                          </div>
+                          <p class="mb-3">
+                            All'interno dell'accordion <strong>"Operazioni di
+                            movimento"</strong>, cliccare il pulsante
+                            <strong>"Nuova operazione"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/17.png"
+                              alt="Accordion Operazioni di movimento con il pulsante Nuova operazione"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Dati relativi all'operazione di movimento</h4>
+                          </div>
+                          <p class="mb-3">
+                            Inserire le informazioni richieste relative al
+                            movimento, come <strong>"Struttura di
+                            arrivo"</strong> e <strong>"Data e ora
+                            movimento"</strong>. La struttura di partenza è
+                            <strong>pre-popolata</strong> con la struttura
+                            portuale indicata nell'operazione
+                            cronologicamente precedente.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/18.png"
+                              alt="Form Dati Movimento con i campi Struttura di partenza, Struttura di arrivo e data e ora movimento"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Inserimento informazioni (selezione porto)</h4>
+                          </div>
+                          <p class="mb-3">
+                            Se viene selezionata come struttura di arrivo la
+                            tipologia un <strong>porto</strong>, il sistema
+                            dà la possibilità di indicare la
+                            <strong>banchina</strong> tramite la lista.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/19.png"
+                              alt="Form Dati Movimento con struttura di arrivo Genoa Port Terminal selezionata e il campo Banchina"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">4</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Inserimento informazioni (selezione bitta)</h4>
+                          </div>
+                          <p class="mb-3">
+                            Se viene selezionata come struttura di arrivo la
+                            tipologia <strong>"Bitta"</strong>, dovranno
+                            essere aggiunti data e ora di movimento. È
+                            possibile inserire eventuali note.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/20.png"
+                              alt="Form Dati Movimento con struttura di arrivo Bitta selezionata, data e ora movimento e note"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">5</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Finestra di conferma</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra di conferma
+                            dell'inserimento del movimento. Cliccare il
+                            pulsante <strong>"Conferma"</strong> per inserire
+                            l'operazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/21.png"
+                              alt="Finestra di conferma Inserimento Movimento con i pulsanti Conferma e Chiudi"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">6</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Aggiunta e azioni disponibili</h4>
+                          </div>
+                          <p class="mb-3">
+                            Una volta aggiunta l'operazione, sarà visibile
+                            tramite tabella. Sarà possibile esportare, e
+                            selezionando una o più operazioni, eliminarle.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/22.png"
+                              alt="Elenco risultati operazioni di movimento con la riga aggiunta e i pulsanti Elimina ed Esporta"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">Dopo il salvataggio di un operazione di Movimento, la nave assume lo stato "Arrivata in Rada" se la tipologia di struttura di destinazione è area o punto di fonda, o "Arrivata in banchina" se la tipologia di struttura è banchina.</p>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 13-14 — OPERAZIONI DI PARTENZA (continua, stesso
+                     titolo — nessun divider interno) ──────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Inserimento operazioni</h3>
+                  <h4 class="h4 fw-bold mb-3">Passaggi per l'inserimento delle "operazioni di partenza"</h4>
+                  <p class="mb-4">
+                    L'utente può aggiungere le operazioni di partenza
+                    attraverso i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Pulsante di nuova operazione</h4>
+                          </div>
+                          <p class="mb-3">
+                            All'interno dell'accordion <strong>"Operazioni di
+                            partenza"</strong>, cliccare il pulsante
+                            <strong>"Nuova operazione"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/23.png"
+                              alt="Accordion Operazioni di partenza con il pulsante Nuova operazione"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Dati relativi all'operazione di partenza</h4>
+                          </div>
+                          <p class="mb-3">
+                            Inserire le informazioni richieste relative alla
+                            partenza. Indicare se l'operazione fissa
+                            l'<strong>ATD</strong> e <strong>data e ora di
+                            partenza</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/24.png"
+                              alt="Form Dati Partenza con i campi fissa ATD, data e ora partenza, presenza dichiarazione di partenza"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Presenza dichiarazione di partenza</h4>
+                          </div>
+                          <p class="mb-3">
+                            Indicare se è presente la <strong>dichiarazione
+                            di partenza</strong> dell'operazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/25.png"
+                              alt="Form Dati Partenza con il campo Presenza dichiarazione di partenza impostato su Sì e il campo Descrizione Ormeggio"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">4</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Aggiunta descrizione ormeggio</h4>
+                          </div>
+                          <p class="mb-3">
+                            Aggiungere nelle apposite sezioni una
+                            <strong>descrizione relativa all'ormeggio</strong>
+                            dell'operazione e possibili Note Aggiuntive.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/26.png"
+                              alt="Campo Descrizione Ormeggio compilato e campo Note Aggiuntive con il pulsante Salva operazione"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">5</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Finestra di conferma</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra di conferma
+                            dell'inserimento del movimento. Cliccare il
+                            pulsante <strong>"Conferma"</strong> per inserire
+                            l'operazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/27.png"
+                              alt="Finestra di conferma Inserimento Partenza con i pulsanti Conferma e Chiudi"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">6</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Aggiunta e azioni disponibili</h4>
+                          </div>
+                          <p class="mb-3">
+                            Una volta aggiunta l'operazione, sarà visibile
+                            tramite tabella. Sarà possibile esportare, e
+                            selezionando una o più operazioni, eliminarle.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/28.png"
+                              alt="Elenco risultati operazioni di partenza con la riga aggiunta e i pulsanti Elimina ed Esporta"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">Dopo il salvataggio di un operazione di partenza, la nave assume lo stato "Partita" e la sosta assume lo stato "Chiusa".</p>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 15 — POSSIBILI AZIONI SULLA TABELLA ─────────────── -->
+                <div id="possibili-azioni-tabella" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-4">Inserimento operazioni</h3>
+                  <h4 class="h4 fw-bold mb-4">Possibili azioni sulla tabella</h4>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-6">
+                      <img
+                        src="./img/gestione-operazioni/29.png"
+                        alt="Accordion Operazioni aggiunte con l'elenco risultati operazioni e i pulsanti Nuova operazione, Elimina ed Esporta"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <p class="mb-3">L'utente può continuare ad aggiungere operazioni.</p>
+
+                      <div class="d-flex gap-2 mb-3">
+                        <span class="btn btn-outline-secondary btn-sm disabled" aria-disabled="true">Elimina</span>
+                        <span class="btn btn-primary btn-sm disabled" aria-disabled="true">Esporta</span>
+                      </div>
+
+                      <p class="mb-4">
+                        L'utente può eliminare una o più operazioni dopo
+                        averle selezionate tramite checkbox. Inoltre ha la
+                        possibilità di esportare le operazioni in formato PDF
+                        o XLS.
+                      </p>
+
+                      <p class="fw-bold mb-3">Le azioni presenti per ogni operazione sono:</p>
+                      <div class="row g-3 text-center">
+                        <div class="col-4">
+                          <div class="card border-0 rounded-3 bg-light p-3 h-100">
+                            <i class="bi bi-eye fs-4 mb-2"></i>
+                            <p class="small fw-bold mb-0">Visualizzazione dettaglio</p>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="card border-0 rounded-3 bg-light p-3 h-100">
+                            <i class="bi bi-pencil fs-4 mb-2"></i>
+                            <p class="small fw-bold mb-0">Modifica operazione</p>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="card border-0 rounded-3 bg-light p-3 h-100">
+                            <i class="bi bi-trash fs-4 mb-2"></i>
+                            <p class="small fw-bold mb-0">Cancella operazione</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 16 — OBBLIGHI DI DICHIARAZIONE NON PRESENTI ─────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-4">Inserimento operazioni</h3>
+                  <h4 class="h4 fw-bold mb-4">Obblighi di Dichiarazione non presenti</h4>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <h5 class="fw-bold mb-3">Per operazione di "Ancoraggio" e "Ormeggio"</h5>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra informativa nel
+                            caso in cui risultino mancanti determinati
+                            Obblighi di Dichiarazione. Cliccare il pulsante
+                            <strong>"Conferma"</strong> per proseguire.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/30.png"
+                              alt="Finestra Inserimento Ancoraggio/Ormeggio che segnala la mancanza della Dichiarazione Rifiuti e della Pre notifica H24"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <h5 class="fw-bold mb-3">Per operazione di "Partenza"</h5>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra informativa nel
+                            caso in cui risultino mancanti determinati
+                            Obblighi di Dichiarazione o si stia effettuando
+                            un'operazione di partenza con una nave in stato
+                            <strong>"In attesa"</strong> o <strong>"In attesa
+                            in Rada"</strong>. Cliccare il pulsante
+                            <strong>"Conferma"</strong> per proseguire.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/31.png"
+                              alt="Due finestre Inserimento Partenza che segnalano rispettivamente la mancata approvazione della Dichiarazione di partenza e lo stato In attesa della nave"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 17 — REGOLE PER INSERIMENTO OPERAZIONI ──────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Inserimento operazioni</h3>
+                  <h4 class="h4 fw-bold mb-4">Regole per inserimento Operazioni</h4>
+
+                  <ul class="mb-0">
+                    <li class="mb-2">Nel caso di operazione di ancoraggio che fissa l'ATA non è possibile effettuare operazioni di ormeggio ma solo di movimento e partenza;</li>
+                    <li class="mb-2">Nel caso di operazione di ancoraggio che non fissa l'ATA è possibile procedere con altre operazioni di ancoraggio e con l'operazione di ormeggio che fissa l'ATA;</li>
+                    <li class="mb-2">È possibile inserire un'operazione di "Partenza" anche in assenza di operazioni di "Ancoraggio" ed "Ormeggio";</li>
+                    <li class="mb-2">Non è possibile inserire operazioni di "Ancoraggio", "Ormeggio" e "Movimento" in presenza di una operazione di "Partenza";</li>
+                    <li class="mb-2">Con operazioni che fissano l'ATA, non sarà più possibile sottomettere gli Obblighi di Dichiarazione previsti nella prenotifica, ovvero ISPS, prenotifica rifiuti (potrà essere gestita solo come istanza mantenimento a bordo), Prenotifica 72 h, D.lvo 38/20 in arrivo;</li>
+                    <li class="mb-2">Con l'operazione di partenza che fissa l'ATD non sarà più possibile sottomettere gli Obblighi di Dichiarazione ad eccezione del POB details in partenza (fino a 15 minuti dopo ATD);</li>
+                    <li class="mb-0">Il sistema segnala con opportuno messaggio che l'utente sta creando un'operazione di "Partenza", in presenza di stato della nave "in attesa" (sosta creata con un ETA) o "in attesa in rada" (ancoraggio in rada).</li>
+                  </ul>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+            <section id="ricerca-consultazione-operazioni" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">02.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Ricerca e consultazione operazioni</h2>
+                      <p class="text-white mb-0">
+                        Panoramica sulla ricerca e sulla consultazione delle
+                        operazioni.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 19 — PUNTO DI ACCESSO ────────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 fw-bold mb-3">La voce di menù</h4>
+                  <p class="mb-4">
+                    Dalla dashboard è possibile <strong>accedere alle
+                    principali sezioni tramite le voci di menu</strong>.
+                  </p>
+
+                  <div class="card border-0 rounded-3">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+
+                        <div class="col-12 col-lg-5">
+                          <div class="card border-0 rounded-3 p-3 bg-primary">
+                            <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                            <p class="text-white mb-0">
+                              Cliccando sulla voce <strong>"Gestione e
+                              Consultazione"</strong> viene visualizzato un
+                              menu a tendina, nella sezione <strong>"Gestione
+                              Soste"</strong>, è possibile accedere alla voce
+                              <strong>"Gestione Operazioni"</strong>.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-lg-7">
+                          <img
+                            src="./img/gestione-operazioni/32.png"
+                            alt="Menu a tendina Gestione e Consultazione con la voce Gestione Operazioni evidenziata nella sezione Gestione Soste"
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 20 — FUNZIONALITÀ IN PAGINA ──────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Ricerca e consultazione operazioni</h3>
+                  <h4 class="h4 fw-bold mb-3">Funzionalità in pagina</h4>
+                  <p class="mb-4">
+                    È possibile avviare subito la ricerca oppure aggiungere
+                    ulteriori filtri per rendere i risultati più precisi. La
+                    schermata è suddivisa nelle seguenti <strong>tre
+                    sezioni</strong>:
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <img
+                        src="./img/gestione-operazioni/33.png"
+                        alt="Pagina Operazioni con sezione filtri, azioni sulla tabella e tabella dei risultati evidenziate"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                    <div class="col-12 col-lg-7">
+
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">1</div>
+                          <h4 class="h5 fw-bold text-uppercase mb-0">Sezione filtri</h4>
+                        </div>
+                        <p class="mb-3">
+                          La sezione Filtri consente di ricercare le
+                          operazioni secondo diversi criteri. Sono
+                          disponibili filtri base, come <strong>Tipo di
+                          operazione, Nome nave e IMO</strong>, e filtri
+                          avanzati per affinare la ricerca per <strong>ETA,
+                          ETD, Porto di Sosta</strong> e intervallo data delle
+                          operazioni.
+                        </p>
+                        <img
+                          src="./img/gestione-operazioni/34.png"
+                          alt="Sezione filtri della pagina Operazioni con i campi Tipo di operazione, Nome nave, IMO, ETA, ETD, Porto di Sosta e Intervallo data operazioni"
+                          class="w-100 rounded-3"
+                        />
+                      </div>
+
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <h4 class="h5 fw-bold text-uppercase mb-0">Azioni sulla tabella dei risultati</h4>
+                        </div>
+                        <p class="mb-0">
+                          È possibile esportare i risultati di ricerca
+                          attraverso il pulsante <strong>"Esporta"</strong>.
+                        </p>
+                        <img
+                          src="./img/gestione-operazioni/35.png"
+                          alt="Elenco risultati operazioni con il pulsante Esporta evidenziato"
+                          class="w-100 rounded-3 mt-3"
+                        />
+                      </div>
+
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <h4 class="h5 fw-bold text-uppercase mb-0">Visualizzazione operazione tramite tabella</h4>
+                        </div>
+                        <p class="mb-0">
+                          I risultati della ricerca vengono presentati in
+                          una tabella, mostrando le <strong>informazioni
+                          principali</strong> e le <strong>azioni
+                          disponibili</strong>.
+                        </p>
+                        <img
+                          src="./img/gestione-operazioni/36.png"
+                          alt="Tabella dei risultati con Nome Nave, Tipo Operazione, Visit ID/ID sosta, Data e ora dell'Operazione e Azioni"
+                          class="w-100 rounded-3 mt-3"
+                        />
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 21 — VISUALIZZAZIONE DETTAGLIO ──────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Ricerca e consultazione operazioni</h3>
+                  <h4 class="h4 fw-bold mb-3">Visualizzazione dettaglio</h4>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">All'interno della pagina sono consultabili le seguenti informazioni:</p>
+                      <ul class="mb-4">
+                        <li>Informazioni sosta</li>
+                        <li>Dettaglio operazioni aggiunte</li>
+                        <li>Dati banchina</li>
+                        <li>Note aggiuntive</li>
+                      </ul>
+
+                      <p class="fw-bold mb-2">Possibili azioni sulle operazione:</p>
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-2 flex-wrap">
+                          <span class="btn btn-outline-secondary btn-sm disabled" aria-disabled="true"><i class="bi bi-pencil me-1"></i>Modifica operazione</span>
+                          <span class="btn btn-outline-secondary btn-sm disabled" aria-disabled="true"><i class="bi bi-trash me-1"></i>Elimina operazione</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/gestione-operazioni/37.png"
+                        alt="Pagina di dettaglio dell'operazione di ormeggio della nave NCC NAJEM con Informazioni Sosta, Dettagli Ormeggio, Dati Banchina, Note e i pulsanti Modifica operazione ed Elimina operazione"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+            <section id="modifica-operazioni" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">03.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Modifica operazioni</h2>
+                      <p class="text-white mb-0">
+                        Panoramica sulla modifica di un'operazione esistente.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 23 — PUNTO DI ACCESSO ALLA MODIFICA ─────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-4">Punto di Accesso alla modifica delle operazioni</h3>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione della "Modifica" dall'elenco risultati delle operazioni</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati delle operazioni è
+                            possibile accedere al dettaglio in modalità
+                            modifica cliccando sull'<strong>"icona della
+                            matita"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/38.png"
+                              alt="Elenco risultati delle operazioni con l'icona della matita evidenziata"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione della "modifica" da pagina di dettaglio dell'operazione</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati delle operazioni è
+                            possibile accedere al dettaglio in modalità
+                            visualizzazione cliccando sull'<strong>"icona
+                            dell'occhio"</strong>. All'interno del dettaglio
+                            per procedere con la modifica è necessario
+                            cliccare sul pulsante <strong>"Modifica
+                            operazione"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/39.png"
+                              alt="Pagina di dettaglio dell'operazione con i pulsanti Modifica operazione ed Elimina operazione"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 24 — PASSAGGI PER MODIFICARE UN'OPERAZIONE ──────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Modifica operazioni</h3>
+                  <h4 class="h4 fw-bold mb-3">Passaggi per modificare un'operazione</h4>
+                  <p class="mb-4">
+                    Dopo aver creato un operazione, l'utente può modificarla
+                    tramite i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Modifica dei dati</h4>
+                          </div>
+                          <p class="mb-3">
+                            È possibile aggiornare i dati presenti in
+                            relazione alla tipologia di operazione che si sta
+                            modificando.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/40.png"
+                              alt="Form di modifica con i campi Data e ora ancoraggio, Tipo di Accosto, Dati Banchina e Note"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Salvataggio operazione</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver modificato i dati precedentemente
+                            inseriti, cliccare su <strong>"Salva
+                            operazione"</strong> per salvare la modifica.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/41.png"
+                              alt="Form di modifica con il pulsante Salva operazione evidenziato"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Finestra di conferma</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra di conferma della
+                            modifica. Cliccare il pulsante
+                            <strong>"Conferma"</strong> per proseguire.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/42.png"
+                              alt="Finestra di conferma Modifica operazione con i pulsanti Conferma e Chiudi"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+            <section id="cancellazione-operazioni" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">04.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Cancellazione operazioni</h2>
+                      <p class="text-white mb-0">
+                        Panoramica sulla cancellazione di un'operazione.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 26 — PASSAGGI PER CANCELLARE UN'OPERAZIONE ──────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Cancellazione operazioni</h3>
+                  <h4 class="h4 fw-bold mb-3">Passaggi per cancellare un'operazione</h4>
+                  <p class="mb-4">
+                    Dopo aver creato un operazione, l'utente può eliminarla
+                    tramite i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Cancellazione tramite pagina di dettaglio</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati della ricerca delle soste è
+                            possibile eliminare lo sosta
+                            <strong>selezionandola</strong> attraverso la
+                            checkbox e successivamente cliccando il pulsante
+                            <strong>"Elimina"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/43.png"
+                              alt="Elenco risultati con una riga selezionata e il pulsante Elimina operazione evidenziato"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Finestra di conferma eliminazione e successo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra in cui l'utente
+                            deve confermare di essere sicuro di voler
+                            eliminare l'operazione. Cliccare <strong>"Elimina
+                            operazione"</strong> per proseguire. Una volta
+                            eliminata, non sarà più possibile recuperarla.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-operazioni/44.png"
+                              alt="Finestra di conferma Elimina operazione con i pulsanti Elimina operazione e Chiudi"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          {
+            root: null,
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0,
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            const id = this.getAttribute('href').replace('#', '');
+            activate(id);
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg  = document.getElementById('lightbox-img');
+        const modal  = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+
+          img.addEventListener('click', function () {
+            apriLightbox(this);
+          });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () {
+          lbImg.src = '';
+        });
+      })();
+    </script>
+
+  </body>
+</html>
