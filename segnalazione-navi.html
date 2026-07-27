@@ -1,0 +1,3420 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Segnalazioni Navi</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Segnalazioni Navi</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#inserimento-configurazioni-segnalazioni">
+                        01. Inserimento Configurazioni segnalazioni
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#ricerca-consultazione-configurazioni-segnalazioni">
+                        02. Ricerca e consultazione Configurazioni segnalazioni
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#modifica-configurazioni-segnalazioni-criteri">
+                        03. Modifica Configurazioni segnalazioni (Per criteri)
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#modifica-configurazioni-segnalazioni-navi">
+                        04. Modifica Configurazioni segnalazioni (Per Navi)
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#cancellazione-configurazioni-segnalazioni">
+                        05. Cancellazione Configurazioni segnalazioni
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#disattivazione-configurazioni-segnalazioni">
+                        06. Disattivazione Configurazioni segnalazioni
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <h1 class="h4 mb-0">Segnalazioni Navi</h1>
+                  <span class="badge rounded-pill text-bg-primary">Operatore CdP Locale</span>
+                </div>
+                <p class="mb-0">
+                  Il portale delle Smart Guide è uno spazio digitale che
+                  raccoglie risorse pratiche e aggiornate in un unico ambiente
+                  intuitivo. Strumenti chiari e organizzati per organizzarti e
+                  trovare subito ciò che ti serve.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — INSERIMENTO CONFIGURAZIONI SEGNALAZIONI
+                 Profilo: Operatore CdP Locale
+                 Pagine: 4 (punto di accesso) · 5 (inserimento) · 6 (tipologia)
+                 7-10 (flusso "Per Criteri") · 11 (tipologia "Per Navi")
+                 12-16 (flusso "Per Navi" - Manuale) · 17-20 (flusso "Per Navi" - Da File)
+                 ============================================================ -->
+            <section id="inserimento-configurazioni-segnalazioni" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Inserimento Configurazioni segnalazioni</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sull'inserimento delle Configurazioni segnalazioni.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 4 — PUNTO DI ACCESSO ─────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 fw-bold mb-3">La voce di menù</h4>
+                  <p class="mb-4">
+                    Dalla dashboard, è possibile <strong>accedere alle
+                    principali sezioni tramite le voci di menu</strong>.
+                  </p>
+
+                  <div class="card border-0 rounded-3">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+
+                        <div class="col-12 col-lg-5">
+                          <div class="card border-0 rounded-3 p-3 bg-primary">
+                            <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                            <p class="text-white mb-0">
+                              Cliccando sulla voce <strong>"Gestione e Consultazione"</strong>
+                              viene visualizzato un menu a tendina; nella sezione
+                              <strong>"Navi"</strong>, è possibile accedere alla voce
+                              <strong>"Gestione Navi Segnalate"</strong>.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-lg-7">
+                          <img
+                            src="./img/segnalazioni-navi/1.png"
+                            alt="Menu a tendina 'Gestione e Consultazione' con la voce 'Gestione Navi Segnalate' evidenziata nella sezione Navi"
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 5 — INSERIMENTO DELLE CONFIGURAZIONI SEGNALAZIONI ── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Inserimento delle Configurazioni segnalazioni</h3>
+
+                  <div class="card border-0 rounded-3">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+
+                        <div class="col-12 col-lg-7">
+                          <img
+                            src="./img/segnalazioni-navi/2.png"
+                            alt="Pagina 'Segnalazioni Navi' con la scheda 'Configurazioni segnalazioni' e il pulsante 'Nuova Segnalazione' in evidenza"
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+
+                        <div class="col-12 col-lg-5">
+                          <p class="mb-0">
+                            Dopo aver effettuato l'accesso alla pagina
+                            <strong>"Segnalazioni Navi"</strong>, cliccare sul
+                            pulsante <strong>"Nuova Segnalazione"</strong> per
+                            avviare il flusso di <strong>inserimento</strong>.
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 6 — TIPOLOGIA NUOVA SEGNALAZIONE ─────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Tipologia nuova segnalazione: "Per criteri" o "Per navi"</h3>
+                  <p class="mb-4">
+                    In questa pagina l'utente può decidere se inserire una
+                    nuova segnalazione <strong>per criteri</strong> o
+                    <strong>per navi</strong>.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Inserimento segnalazione "Per criteri"</h5>
+                          </div>
+                          <p class="mb-3">
+                            Consente di configurare le segnalazioni per le navi
+                            da attenzionare all'interno del sistema, indicando i
+                            <strong>criteri comuni</strong> per individuare le
+                            navi da segnalare.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/segnalazioni-navi/3.png"
+                              alt="Pagina di ricerca Configurazioni segnalazioni con il menu 'Nuova Segnalazione' aperto sulla voce 'Per Criteri'"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Inserimento segnalazione "Per navi"</h5>
+                          </div>
+                          <p class="mb-3">
+                            Consente di configurare le segnalazioni per le navi
+                            da attenzionare all'interno del sistema, indicando la
+                            <strong>singola nave</strong> da segnalare.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/segnalazioni-navi/4.png"
+                              alt="Pagina di ricerca Configurazioni segnalazioni con il menu 'Nuova Segnalazione' aperto sulla voce 'Per Navi'"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 7-10 — INSERIMENTO "PER CRITERI" ─────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <p class="fw-semibold text-secondary mb-1">Inserimento "Per Criteri"</p>
+                  <h3 class="h1 mb-3">Step di inserimento delle configurazioni segnalazioni</h3>
+                  <p class="mb-4">
+                    Dopo aver selezionato inserimento <strong>"Per criteri"</strong>,
+                    l'utente dovrà procedere seguendo i passaggi sottostanti.
+                  </p>
+
+                  <!-- overview 3 step -->
+                  <div class="row g-4 mb-5">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="text-center mb-3">
+                            <span class="sg-step-tag">STEP 1</span>
+                          </div>
+                          <h5 class="fw-bold text-uppercase text-center mb-3">Selezione criteri comuni</h5>
+                          <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line"></div>
+                            <div class="sg-stepper__dot"></div>
+                            <div class="sg-stepper__line"></div>
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                          <p class="mb-3">
+                            Consente di indicare quale tipo di criteri saranno
+                            relativi alla configurazione per la segnalazione
+                            delle navi.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/5.png" alt="Schermata 'Selezione criteri comuni' con i menu a tendina Bandiera, Tipo Nave e Company" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="text-center mb-3">
+                            <span class="sg-step-tag">STEP 2</span>
+                          </div>
+                          <h5 class="fw-bold text-uppercase text-center mb-3">Inserimento dati segnalazione</h5>
+                          <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line sg-stepper__line--done"></div>
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line"></div>
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                          <p class="mb-3">
+                            Consente di inserire i dati della segnalazione,
+                            aggiungere i destinatari ai quali far pervenire la
+                            comunicazione, indicare l'evento che scatena
+                            l'effetto dell'invio email e allegare eventuali
+                            documenti.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/6.png" alt="Schermata 'Inserimento dati segnalazione' con calendario per la data inizio segnalazione" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="text-center mb-3">
+                            <span class="sg-step-tag">STEP 3</span>
+                          </div>
+                          <h5 class="fw-bold text-uppercase text-center mb-3">Riepilogo configurazione segnalazione</h5>
+                          <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line sg-stepper__line--done"></div>
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line sg-stepper__line--done"></div>
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                          <p class="mb-3">
+                            Consente di visualizzare il riepilogo delle
+                            informazioni inserite negli step precedenti e
+                            procedere con il Salvataggio.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/7.png" alt="Schermata 'Riepilogo Configurazione Segnalazione' con criteri selezionati, dati segnalazione e destinatari" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- WIZARD STEP 1 -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">1</div>
+                          <div>
+                            <p class="text-white mb-1 opacity-75 small">Inserimento configurazione segnalazione "Per Criteri"</p>
+                            <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Selezione criteri comuni</h4>
+                          </div>
+                        </div>
+                        <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 1</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-white py-3 px-4">
+                      <div class="row g-0 align-items-end text-center">
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--active mb-2">SELEZIONE CRITERI COMUNI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">INSERIMENTO DATI SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">RIEPILOGO CONFIGURAZIONE SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4">
+                        <div class="col-12 col-lg-6 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">1</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Selezione criteri comuni</h5>
+                              </div>
+                              <p class="mb-3">
+                                Selezionare tramite i rispettivi menu a tendina
+                                uno o più criteri come: <strong>Bandiera, Tipo
+                                Nave e Company</strong>.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/8.png" alt="Menu a tendina 'Bandiera' aperto con l'elenco dei paesi ed elemento 'Russia' evidenziato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">2</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Conferma e step successivo</h5>
+                              </div>
+                              <p class="mb-3">
+                                Una volta selezionati uno o più criteri,
+                                cliccare il pulsante <strong>"Vai avanti"</strong>
+                                per andare allo step successivo.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/9.png" alt="Schermata 'Selezione criteri comuni' compilata con Bandiera Russia e Company Akkon Lines e pulsante 'Vai avanti' evidenziato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- WIZARD STEP 2 -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">2</div>
+                          <div>
+                            <p class="text-white mb-1 opacity-75 small">Inserimento configurazione segnalazione "Per Criteri"</p>
+                            <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Inserimento dati segnalazione</h4>
+                          </div>
+                        </div>
+                        <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 2</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-white py-3 px-4">
+                      <div class="row g-0 align-items-end text-center">
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">SELEZIONE CRITERI COMUNI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--active mb-2">INSERIMENTO DATI SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">RIEPILOGO CONFIGURAZIONE SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4">
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">1</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Inserimento dati segnalazione</h5>
+                              </div>
+                              <p class="mb-3">
+                                Aggiungere i dati della segnalazione come:
+                                <strong>Nome segnalazione, Data di inizio</strong>,
+                                eventualmente data di fine e il
+                                <strong>motivo della segnalazione</strong>.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/10.png" alt="Form 'Dati Segnalazione' compilato con Nome segnalazione, Data inizio segnalazione e Motivo segnalazione" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">2</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Inserimento destinatari</h5>
+                              </div>
+                              <p class="mb-3">
+                                Aggiungere uno o più destinatari a cui inviare
+                                l'email: inserire l'indirizzo email e cliccare
+                                il tasto <strong>"Aggiungi"</strong>. Sarà
+                                possibile <strong>eliminare</strong> il
+                                destinatario aggiunto cliccando l'icona della "x".
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/11.png" alt="Sezione 'Destinatari' con campo Email destinatari compilato e pulsante 'Aggiungi' evidenziato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">3</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Documento e step successivo</h5>
+                              </div>
+                              <p class="mb-3">
+                                È possibile allegare un documento. Per
+                                proseguire allo step finale, cliccare il tasto
+                                <strong>"Vai avanti"</strong>.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/12.png" alt="Sezione 'Aggiunta Documento' con campo Carica documento e pulsante 'Vai avanti' evidenziato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- WIZARD STEP 3 -->
+                  <div class="card border-0 rounded-3 overflow-hidden">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">3</div>
+                          <div>
+                            <p class="text-white mb-1 opacity-75 small">Inserimento configurazione segnalazione "Per Criteri"</p>
+                            <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Riepilogo configurazione segnalazione</h4>
+                          </div>
+                        </div>
+                        <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 3</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-white py-3 px-4">
+                      <div class="row g-0 align-items-end text-center">
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">SELEZIONE CRITERI COMUNI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">INSERIMENTO DATI SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--active mb-2">RIEPILOGO CONFIGURAZIONE SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4">
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">1</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Dettaglio riepilogo</h5>
+                              </div>
+                              <p class="mb-3">
+                                Nell'ultimo passaggio di riepilogo è possibile
+                                consultare tutte le informazioni inserite negli
+                                step precedenti.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/13.png" alt="Pagina 'Riepilogo Configurazione Segnalazione' con Criteri selezionati, Dati Segnalazione e Motivo segnalazione" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">2</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Verifica e salvataggio</h5>
+                              </div>
+                              <p class="mb-3">
+                                Dopo avere verificato il corretto inserimento
+                                dei dati negli step precedenti, cliccare il
+                                pulsante <strong>"Salva configurazione"</strong>
+                                per procedere.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/14.png" alt="Sezione Destinatari e Documenti allegati con pulsante 'Salva configurazione' evidenziato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">3</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Finestra di conferma</h5>
+                              </div>
+                              <p class="mb-3">
+                                Il sistema mostra una finestra di conferma del
+                                salvataggio, cliccare
+                                <strong>"Salva configurazione"</strong> per
+                                salvare la configurazione con i nuovi dati. Il
+                                sistema mostra una finestra che comunica che la
+                                creazione della configurazione segnalazione è
+                                avvenuta con successo.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/15.png" alt="Finestra modale 'Conferma' con messaggio 'Sei sicuro di voler salvare la configurazione?' e pulsante 'Salva configurazione'" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 11 — INSERIMENTO "PER NAVI": TIPOLOGIA ───────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <p class="fw-semibold text-secondary mb-1">Inserimento "Per Navi"</p>
+                  <h3 class="h1 mb-4">Tipologia di inserimento: "Manuale" o "Da File"</h3>
+
+                  <div class="card border-0 rounded-3">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+
+                        <div class="col-12 col-lg-5">
+                          <p class="mb-3">
+                            Dopo aver selezionato inserimento
+                            <strong>"Per navi"</strong>, l'utente dovrà
+                            selezionare la tipologia di inserimento tramite
+                            selezione nel menu a tendina.
+                          </p>
+                          <p class="mb-0">
+                            In questa sezione è possibile indicare
+                            <strong>quale tipo di inserimento</strong> si vuole
+                            effettuare, se manuale o caricando un file di
+                            tracciato già compilato. Inoltre, se si seleziona la
+                            modalità <strong>"Da File"</strong> sarà possibile
+                            scaricare un template del tracciato da poter
+                            compilare e successivamente caricare.
+                          </p>
+                        </div>
+
+                        <div class="col-12 col-lg-7">
+                          <img
+                            src="./img/segnalazioni-navi/16.png"
+                            alt="Schermata 'Nuova Segnalazione per Navi' con menu a tendina 'Tipo di inserimento' aperto sulle voci Manuale e Da File"
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 12-16 — INSERIMENTO "PER NAVI" - MANUALE ─────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <p class="fw-semibold text-secondary mb-1">Inserimento "Per Navi" — Manuale</p>
+                  <h3 class="h1 mb-3">Step di inserimento delle configurazioni segnalazioni</h3>
+                  <p class="mb-4">
+                    Dopo aver selezionato il tipo inserimento
+                    <strong>"Manuale"</strong>, l'utente dovrà procedere
+                    seguendo i passaggi sottostanti:
+                  </p>
+
+                  <!-- overview 4 step -->
+                  <div class="row g-4 mb-5">
+
+                    <div class="col-12 col-lg-3 col-md-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="text-center mb-3">
+                            <span class="sg-step-tag">STEP 1</span>
+                          </div>
+                          <h5 class="fw-bold text-uppercase text-center mb-3">Tipo di inserimento (manuale)</h5>
+                          <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line"></div>
+                            <div class="sg-stepper__dot"></div>
+                            <div class="sg-stepper__line"></div>
+                            <div class="sg-stepper__dot"></div>
+                            <div class="sg-stepper__line"></div>
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                          <p class="mb-3">
+                            Consente di indicare il tipo di inserimento si
+                            vuole effettuare, in questo caso "Manuale".
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/17.png" alt="Schermata 'Nuova Segnalazione per Navi' con Tipo di inserimento 'Manuale' selezionato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 col-md-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="text-center mb-3">
+                            <span class="sg-step-tag">STEP 2</span>
+                          </div>
+                          <h5 class="fw-bold text-uppercase text-center mb-3">Seleziona navi</h5>
+                          <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line sg-stepper__line--done"></div>
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line"></div>
+                            <div class="sg-stepper__dot"></div>
+                            <div class="sg-stepper__line"></div>
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                          <p class="mb-3">
+                            Consente di selezionare una o più navi per la quale
+                            si vuole creare la segnalazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/18.png" alt="Schermata 'Seleziona Navi' con filtri di ricerca nave e risultati di ricerca" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 col-md-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="text-center mb-3">
+                            <span class="sg-step-tag">STEP 3</span>
+                          </div>
+                          <h5 class="fw-bold text-uppercase text-center mb-3">Inserimento dati segnalazione</h5>
+                          <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line sg-stepper__line--done"></div>
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line sg-stepper__line--done"></div>
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line"></div>
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                          <p class="mb-3">
+                            Consente di inserire i dati della segnalazione,
+                            aggiungere i destinatari ai quali far pervenire la
+                            comunicazione, indicare l'evento che scatena
+                            l'effetto dell'invio email e allegare eventuali
+                            documenti.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/19.png" alt="Schermata 'Nuova Segnalazione per Navi' con Navi selezionate e Dati Segnalazione" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 col-md-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="text-center mb-3">
+                            <span class="sg-step-tag">STEP 4</span>
+                          </div>
+                          <h5 class="fw-bold text-uppercase text-center mb-3">Riepilogo configurazione segnalazione</h5>
+                          <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line sg-stepper__line--done"></div>
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line sg-stepper__line--done"></div>
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line sg-stepper__line--done"></div>
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                          <p class="mb-3">
+                            Consente di visualizzare il riepilogo delle
+                            informazioni inserite negli step precedenti e
+                            procedere con il Salvataggio.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/20.png" alt="Schermata 'Riepilogo Configurazione Segnalazione' con Destinatari, Evento di invio e Documenti allegati" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- WIZARD STEP 1 -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">1</div>
+                          <div>
+                            <p class="text-white mb-1 opacity-75 small">Inserimento configurazione segnalazione "Per Navi" - Manuale</p>
+                            <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Tipo di inserimento</h4>
+                          </div>
+                        </div>
+                        <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 1</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-white py-3 px-4">
+                      <div class="row g-0 align-items-end text-center">
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--active mb-2">TIPO DI INSERIMENTO</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">SELEZIONA NAVI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">INSERIMENTO DATI SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">RIEPILOGO CONFIGURAZIONE SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4">
+                        <div class="col-12 col-lg-6 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">1</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Selezione tipologia inserimento</h5>
+                              </div>
+                              <p class="mb-3">
+                                Indicare, tramite selezione da un menu a
+                                tendina, la tipologia di inserimento
+                                <strong>"Manuale"</strong>.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/21.png" alt="Menu a tendina 'Tipo di inserimento' aperto con la voce 'Manuale' evidenziata" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">2</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Conferma e step successivo</h5>
+                              </div>
+                              <p class="mb-3">
+                                Dopo aver selezionato la voce
+                                <strong>"Manuale"</strong> dal menu a tendina,
+                                cliccare <strong>"Conferma"</strong> per
+                                avanzare allo step successivo.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/22.png" alt="Campo 'Tipo di inserimento' con valore 'Manuale' selezionato e pulsante 'Conferma' evidenziato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- WIZARD STEP 2 -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">2</div>
+                          <div>
+                            <p class="text-white mb-1 opacity-75 small">Inserimento configurazione segnalazione "Per Navi" - Manuale</p>
+                            <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Seleziona navi</h4>
+                          </div>
+                        </div>
+                        <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 2</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-white py-3 px-4">
+                      <div class="row g-0 align-items-end text-center">
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">TIPO DI INSERIMENTO</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--active mb-2">SELEZIONA NAVI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">INSERIMENTO DATI SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">RIEPILOGO CONFIGURAZIONE SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4">
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">1</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Ricerca nave</h5>
+                              </div>
+                              <p class="mb-3">
+                                Ricercare la nave tramite uno o più criteri
+                                disponibili. Una volta selezionato un criterio
+                                cliccare su <strong>"Avvia ricerca"</strong>.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/23.png" alt="Form 'Ricerca e selezione nave' con campi Nome Nave, IMO, MMSI, Call Sign, Bandiera, Compagnia e Stato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">2</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Azioni disponibili</h5>
+                              </div>
+                              <p class="mb-3">
+                                Accedere al dettaglio dell'anagrafica nave
+                                tramite l'<strong>icona dell'occhio</strong>,
+                                selezionare una o più navi tramite
+                                <strong>checkbox</strong>. Per eliminare le
+                                navi selezionate, cliccare l'
+                                <strong>icona del cestino</strong>.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/24.png" alt="Elenco risultati di ricerca navi con checkbox di selezione ed elenco Navi Selezionate con icona cestino" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">3</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Verifica e step successivo</h5>
+                              </div>
+                              <p class="mb-3">
+                                Dopo aver selezionato una o più navi, cliccare
+                                il tasto <strong>"Vai avanti"</strong> per
+                                proseguire allo step successivo.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/25.png" alt="Elenco Navi Selezionate con una nave inserita e pulsante 'Vai avanti' evidenziato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- WIZARD STEP 3 -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">3</div>
+                          <div>
+                            <p class="text-white mb-1 opacity-75 small">Inserimento configurazione segnalazione "Per Navi" - Manuale</p>
+                            <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Inserimento dati segnalazione</h4>
+                          </div>
+                        </div>
+                        <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 3</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-white py-3 px-4">
+                      <div class="row g-0 align-items-end text-center">
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">TIPO DI INSERIMENTO</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">SELEZIONA NAVI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--active mb-2">INSERIMENTO DATI SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">RIEPILOGO CONFIGURAZIONE SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4">
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">1</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Inserimento dati segnalazione</h5>
+                              </div>
+                              <p class="mb-3">
+                                Aggiungere i dati della segnalazione come:
+                                <strong>Nome segnalazione, Data di inizio</strong>,
+                                eventualmente data di fine e il
+                                <strong>motivo della segnalazione</strong>.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/26.png" alt="Elenco navi selezionate con form Dati Segnalazione da compilare" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">2</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Inserimento destinatari</h5>
+                              </div>
+                              <p class="mb-3">
+                                Aggiungere uno o più destinatari a cui inviare
+                                l'email: inserire l'indirizzo email e cliccare
+                                il tasto <strong>"Aggiungi"</strong>. Sarà
+                                possibile <strong>eliminare</strong> il
+                                destinatario aggiunto cliccando l'icona della "x".
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/27.png" alt="Sezione 'Destinatari' con campo Email destinatari compilato e pulsante 'Aggiungi' evidenziato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">3</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Documento e step successivo</h5>
+                              </div>
+                              <p class="mb-3">
+                                È possibile allegare un documento. Per
+                                proseguire allo step finale, cliccare il tasto
+                                <strong>"Vai avanti"</strong>.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/28.png" alt="Sezione 'Aggiunta Documento' con campo Carica documento e pulsante 'Vai avanti' evidenziato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- WIZARD STEP 4 -->
+                  <div class="card border-0 rounded-3 overflow-hidden">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">4</div>
+                          <div>
+                            <p class="text-white mb-1 opacity-75 small">Inserimento configurazione segnalazione "Per Navi" - Manuale</p>
+                            <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Riepilogo configurazione segnalazione</h4>
+                          </div>
+                        </div>
+                        <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 4</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-white py-3 px-4">
+                      <div class="row g-0 align-items-end text-center">
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">TIPO DI INSERIMENTO</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">SELEZIONA NAVI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">INSERIMENTO DATI SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--active mb-2">RIEPILOGO CONFIGURAZIONE SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4">
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">1</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Verifica e salvataggio</h5>
+                              </div>
+                              <p class="mb-3">
+                                Dopo avere verificato il corretto inserimento
+                                dei dati negli step precedenti, cliccare il
+                                pulsante <strong>"Salva configurazione"</strong>
+                                per procedere.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/29.png" alt="Sezione Destinatari e Documenti allegati con pulsante 'Salva configurazione' evidenziato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">2</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Finestra di conferma</h5>
+                              </div>
+                              <p class="mb-3">
+                                Il sistema mostra una finestra di conferma del
+                                salvataggio. Cliccare
+                                <strong>"Salva configurazione"</strong> per
+                                salvare la configurazione con i nuovi dati.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/30.png" alt="Finestra modale 'Salva Configurazione per Navi' con messaggio 'Sei sicuro di voler salvare la configurazione?'" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">3</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Finestra di successo</h5>
+                              </div>
+                              <p class="mb-3">
+                                Il sistema mostra una finestra che comunica che
+                                la creazione della configurazione segnalazione
+                                è avvenuta con successo.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/31.png" alt="Finestra modale 'Configurazione Segnalazione' con messaggio di creazione avvenuta con successo" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 17-20 — INSERIMENTO "PER NAVI" - DA FILE ─────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <p class="fw-semibold text-secondary mb-1">Inserimento "Per Navi" — Da File</p>
+                  <h3 class="h1 mb-3">Step di inserimento delle configurazioni segnalazioni</h3>
+                  <p class="mb-4">
+                    Dopo aver selezionato il tipo inserimento
+                    <strong>"Da File"</strong>, l'utente dovrà procedere
+                    seguendo i passaggi sottostanti:
+                  </p>
+
+                  <!-- overview 4 step -->
+                  <div class="row g-4 mb-5">
+
+                    <div class="col-12 col-lg-3 col-md-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="text-center mb-3">
+                            <span class="sg-step-tag">STEP 1</span>
+                          </div>
+                          <h5 class="fw-bold text-uppercase text-center mb-3">Tipo di inserimento (da file)</h5>
+                          <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line"></div>
+                            <div class="sg-stepper__dot"></div>
+                            <div class="sg-stepper__line"></div>
+                            <div class="sg-stepper__dot"></div>
+                            <div class="sg-stepper__line"></div>
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                          <p class="mb-3">
+                            Consente di indicare il tipo di inserimento si
+                            vuole effettuare, in questo caso "Da File".
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/32.png" alt="Schermata 'Nuova Segnalazione per Navi' con Tipo di inserimento 'Da File' selezionato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 col-md-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="text-center mb-3">
+                            <span class="sg-step-tag">STEP 2</span>
+                          </div>
+                          <h5 class="fw-bold text-uppercase text-center mb-3">Upload file e estrazione dati</h5>
+                          <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line sg-stepper__line--done"></div>
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line"></div>
+                            <div class="sg-stepper__dot"></div>
+                            <div class="sg-stepper__line"></div>
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                          <p class="mb-3">
+                            Consente di caricare un file Excel o CSV contenente
+                            i dati delle navi da segnalare.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/33.png" alt="Schermata 'Carica file e estrai dati' con campo Caricamento File" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 col-md-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="text-center mb-3">
+                            <span class="sg-step-tag">STEP 3</span>
+                          </div>
+                          <h5 class="fw-bold text-uppercase text-center mb-3">Modifica dati estratti</h5>
+                          <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line sg-stepper__line--done"></div>
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line sg-stepper__line--done"></div>
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line"></div>
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                          <p class="mb-3">
+                            Consente di modificare i dati elaborati dal file
+                            caricato.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/34.png" alt="Navi selezionate estratte dal file con form Dati Segnalazione da verificare" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 col-md-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="text-center mb-3">
+                            <span class="sg-step-tag">STEP 4</span>
+                          </div>
+                          <h5 class="fw-bold text-uppercase text-center mb-3">Riepilogo configurazione segnalazione</h5>
+                          <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line sg-stepper__line--done"></div>
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line sg-stepper__line--done"></div>
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                            <div class="sg-stepper__line sg-stepper__line--done"></div>
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                          <p class="mb-3">
+                            Consente di visualizzare il riepilogo delle
+                            informazioni inserite negli step precedenti e
+                            procedere con il Salvataggio.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/35.png" alt="Schermata 'Riepilogo Configurazione Segnalazione' con Destinatari, Evento di invio e Documenti allegati" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- WIZARD STEP 1 -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">1</div>
+                          <div>
+                            <p class="text-white mb-1 opacity-75 small">Inserimento configurazione segnalazione "Per Navi" - Da File</p>
+                            <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Tipo di inserimento</h4>
+                          </div>
+                        </div>
+                        <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 1</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-white py-3 px-4">
+                      <div class="row g-0 align-items-end text-center">
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--active mb-2">TIPO DI INSERIMENTO</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">UPLOAD FILE E ESTRAZIONE DATI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">MODIFICA DATI ESTRATTI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">RIEPILOGO CONFIGURAZIONE SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4">
+                        <div class="col-12 col-lg-6 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">1</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Selezione tipologia inserimento</h5>
+                              </div>
+                              <p class="mb-3">
+                                Indicare, tramite selezione da un menu a
+                                tendina, la tipologia di inserimento
+                                <strong>"Da File"</strong>.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/36.png" alt="Menu a tendina 'Tipo di inserimento' aperto con la voce 'Da File' evidenziata" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">2</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Conferma e step successivo</h5>
+                              </div>
+                              <p class="mb-3">
+                                Dopo aver selezionato la voce
+                                <strong>"Da File"</strong> dal menu a tendina,
+                                cliccare <strong>"Conferma"</strong> per
+                                avanzare allo step successivo.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/37.png" alt="Campo 'Tipo di inserimento' con valore 'Da File' selezionato e pulsante 'Conferma' evidenziato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- WIZARD STEP 2 -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">2</div>
+                          <div>
+                            <p class="text-white mb-1 opacity-75 small">Inserimento configurazione segnalazione "Per Navi" - Da File</p>
+                            <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Upload file e estrazione dati</h4>
+                          </div>
+                        </div>
+                        <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 2</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-white py-3 px-4">
+                      <div class="row g-0 align-items-end text-center">
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">TIPO DI INSERIMENTO</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--active mb-2">UPLOAD FILE E ESTRAZIONE DATI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">MODIFICA DATI ESTRATTI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">RIEPILOGO CONFIGURAZIONE SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+
+                      <div class="text-center mb-4">
+                        <a href="#aggiungi-nave-in-elenco" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none">
+                          <i class="bi bi-record-circle me-1"></i>
+                          Visualizza il dettaglio di "Aggiungi navi"
+                        </a>
+                      </div>
+
+                      <div class="row g-4">
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">1</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Selezione del file</h5>
+                              </div>
+                              <p class="mb-3">
+                                Scegliere il file cliccando su
+                                <strong>"Scegli File"</strong> e procedere con
+                                il caricamento secondo le modalità previste dal
+                                browser.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/38.png" alt="Finestra di selezione file del sistema operativo con file 'Ship Signal Configuration_tracciato' evidenziato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">2</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Estrazione delle navi dal file caricato</h5>
+                              </div>
+                              <p class="mb-3">
+                                Per caricare il documento cliccare
+                                <strong>"Carica documento"</strong>. Il sistema
+                                mostra un'informativa di successo e l'elenco
+                                delle navi estratte dal file. Sarà comunque
+                                possibile aggiungere ulteriori navi cliccando
+                                il pulsante <strong>"Aggiungi Navi"</strong>.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/39.png" alt="Sezione 'Elenco navi estratte dal file' con tabella navi e stato validazione" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">3</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Possibile modifica e eliminazione e step successivo</h5>
+                              </div>
+                              <p class="mb-3">
+                                Dopo aver caricato il documento è possibile
+                                eliminare le navi attraverso l'
+                                <strong>icona del cestino</strong> e modificare
+                                le navi caricate attraverso l'
+                                <strong>icona della matita</strong>.
+                                Successivamente cliccare
+                                <strong>"Vai avanti"</strong> per proseguire.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/40.png" alt="Tabella 'Navi attualmente segnalate' con icone di modifica e cestino per ogni riga" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- WIZARD STEP 3 -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">3</div>
+                          <div>
+                            <p class="text-white mb-1 opacity-75 small">Inserimento configurazione segnalazione "Per Navi" - Da File</p>
+                            <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Modifica dati estratti</h4>
+                          </div>
+                        </div>
+                        <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 3</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-white py-3 px-4">
+                      <div class="row g-0 align-items-end text-center">
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">TIPO DI INSERIMENTO</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">UPLOAD FILE E ESTRAZIONE DATI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--active mb-2">MODIFICA DATI ESTRATTI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">RIEPILOGO CONFIGURAZIONE SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4">
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">1</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Verifica e modifica dati segnalazione</h5>
+                              </div>
+                              <p class="mb-3">
+                                Modificare i dati della segnalazione come:
+                                <strong>Nome segnalazione, Data di inizio</strong>,
+                                eventualmente data di fine e il
+                                <strong>motivo della segnalazione</strong>.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/41.png" alt="Form 'Dati Segnalazione' con i campi estratti dal file da verificare e modificare" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">2</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Verifica e modifica destinatari</h5>
+                              </div>
+                              <p class="mb-3">
+                                Modificare uno o più destinatari a cui inviare
+                                l'email: inserire l'indirizzo email e cliccare
+                                il tasto <strong>"Aggiungi"</strong>. Sarà
+                                possibile <strong>eliminare</strong> il
+                                destinatario aggiunto cliccando l'icona della "x".
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/42.png" alt="Sezione 'Destinatari' con campo Email destinatari compilato e pulsante 'Aggiungi' evidenziato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">3</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Documento e step successivo</h5>
+                              </div>
+                              <p class="mb-3">
+                                Se necessario, scegliere e caricare un
+                                documento. Per proseguire allo step finale,
+                                cliccare il tasto <strong>"Vai avanti"</strong>.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/43.png" alt="Sezione 'Aggiunta Documento' con campo Carica documento e pulsante 'Vai avanti' evidenziato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- WIZARD STEP 4 -->
+                  <div class="card border-0 rounded-3 overflow-hidden">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">4</div>
+                          <div>
+                            <p class="text-white mb-1 opacity-75 small">Inserimento configurazione segnalazione "Per Navi" - Da File</p>
+                            <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Riepilogo configurazione segnalazione</h4>
+                          </div>
+                        </div>
+                        <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 4</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-white py-3 px-4">
+                      <div class="row g-0 align-items-end text-center">
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">TIPO DI INSERIMENTO</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">UPLOAD FILE E ESTRAZIONE DATI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">MODIFICA DATI ESTRATTI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--active mb-2">RIEPILOGO CONFIGURAZIONE SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4">
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">1</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Verifica e salvataggio</h5>
+                              </div>
+                              <p class="mb-3">
+                                Dopo avere verificato il corretto inserimento
+                                dei dati negli step precedenti, cliccare il
+                                pulsante <strong>"Salva configurazione"</strong>
+                                per procedere.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/44.png" alt="Sezione Destinatari e Documenti allegati con pulsante 'Salva configurazione' evidenziato" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">2</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Finestra di conferma</h5>
+                              </div>
+                              <p class="mb-3">
+                                Il sistema mostra una finestra di conferma del
+                                salvataggio, cliccare
+                                <strong>"Salva configurazione"</strong> per
+                                salvare la configurazione con i nuovi dati.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/45.png" alt="Finestra modale 'Salva Configurazione per Navi' con messaggio 'Sei sicuro di voler salvare la configurazione?'" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">3</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Finestra di successo</h5>
+                              </div>
+                              <p class="mb-3">
+                                Il sistema mostra una finestra che comunica che
+                                la creazione della configurazione segnalazione
+                                è avvenuta con successo.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/46.png" alt="Pagina 'Dettaglio Configurazione Segnalazione' con finestra modale che conferma la creazione avvenuta con successo" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 22 — ULTERIORI MODALITÀ DI INSERIMENTO NAVE ──── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top" id="aggiungi-nave-in-elenco">
+
+                  <p class="fw-semibold text-secondary mb-1">Ulteriori modalità di inserimento nave</p>
+                  <h3 class="h1 mb-4">Aggiungi nave in elenco</h3>
+
+                  <div class="text-center mb-4">
+                    <a href="#inserimento-nave-non-presente-a-sistema" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none">
+                      <i class="bi bi-record-circle me-1"></i>
+                      Visualizza il dettaglio di "Inserimento di una nave non presente a sistema"
+                    </a>
+                  </div>
+
+                  <div class="row g-4">
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Aggiungi nave in elenco</h5>
+                          </div>
+                          <p class="mb-3">
+                            Nel caso in cui si debba aggiungere ulteriori navi
+                            in elenco, cliccare il pulsante
+                            <strong>"Aggiungi navi"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/47.png" alt="Elenco navi estratte dal file con pulsante 'Aggiungi navi' evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Ricerca e selezione</h5>
+                          </div>
+                          <p class="mb-3">
+                            Ricercare la nave inserendo uno dei criteri
+                            disponibili, successivamente selezionare una o più
+                            navi e cliccare il pulsante
+                            <strong>"Aggiungi"</strong> per aggiungerla
+                            all'elenco.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/48.png" alt="Form 'Ricerca e selezione nave' con risultati di ricerca, checkbox di selezione e pulsante 'Aggiungi' evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Possibile modifica e eliminazione</h5>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver aggiunto la nave in elenco, è possibile
+                            modificarne i dati tramite l'
+                            <strong>icona della matita</strong> e
+                            successivamente <strong>salvare</strong> o
+                            <strong>annullare</strong> le modifiche tramite gli
+                            appositi pulsanti.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/49.png" alt="Tabella 'Navi attualmente segnalate' in modalità modifica con pulsanti Salva e Annulla" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 23 — ULTERIORI MODALITÀ DI RICERCA ───────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top" id="inserimento-nave-non-presente-a-sistema">
+
+                  <p class="fw-semibold text-secondary mb-1">Ulteriori modalità di ricerca</p>
+                  <h3 class="h1 mb-4">Inserimento di una nave non presente a sistema</h3>
+
+                  <div class="row g-4">
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Nessun risultato trovato e inserimento nave</h5>
+                          </div>
+                          <p class="mb-3">
+                            Una volta cercata la nave tramite i criteri
+                            disponibili, se il sistema non restituisce
+                            risultati, cliccare su <strong>"Inserisci
+                            nave"</strong> per aggiungerla alla segnalazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/50.png" alt="Form 'Ricerca e selezione nave' con 'Nessun risultato trovato' e pulsante 'Inserisci Nave' evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Inserimento dati nuova nave</h5>
+                          </div>
+                          <p class="mb-3">
+                            Verrà mostrata una finestra in cui inserire almeno
+                            uno dei criteri visualizzati, come:
+                            <strong>Nome Nave, IMO, Call Sign, MMSI, Bandiera,
+                            Porto di registrazione, Numero di Registrazione e
+                            Data di registrazione</strong>. Dopo aver inserito
+                            uno o più criteri, cliccare
+                            <strong>"Salva e associa alla segnalazione"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/51.png" alt="Finestra modale 'Inserimento nuova nave' con campi Nome nave, IMO, Call Sign, MMSI, Bandiera e pulsante 'Salva e associa alla segnalazione'" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Possibili modifiche sulla nave aggiunta</h5>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver aggiunto la nave, è possibile
+                            modificarne i dati tramite l'
+                            <strong>icona della matita</strong> e
+                            successivamente <strong>salvare</strong> o
+                            <strong>annullare</strong> le modifiche tramite gli
+                            appositi pulsanti.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/52.png" alt="Tabella 'Navi attualmente segnalate' in modalità modifica con pulsanti Salva e Annulla" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 02 — RICERCA E CONSULTAZIONE CONFIGURAZIONI SEGNALAZIONI
+                 ============================================================ -->
+            <section id="ricerca-consultazione-configurazioni-segnalazioni" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">02.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Ricerca e consultazione Configurazioni segnalazioni</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla ricerca e consultazione delle Configurazioni segnalazioni.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ── PAG. 25 — PUNTO DI ACCESSO ────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 fw-bold mb-3">La voce di menù</h4>
+                  <p class="mb-4">
+                    Dalla dashboard, è possibile <strong>accedere alle
+                    principali sezioni tramite le voci di menu</strong>.
+                  </p>
+
+                  <div class="card border-0 rounded-3">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+
+                        <div class="col-12 col-lg-5">
+                          <div class="card border-0 rounded-3 p-3 bg-primary">
+                            <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                            <p class="text-white mb-0">
+                              Cliccando sulla voce <strong>"Gestione e Consultazione"</strong>
+                              viene visualizzato un menu a tendina; nella sezione
+                              <strong>"Navi"</strong>, è possibile accedere alla voce
+                              <strong>"Gestione Navi Segnalate"</strong>.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-lg-7">
+                          <img
+                            src="./img/segnalazioni-navi/53.png"
+                            alt="Menu a tendina 'Gestione e Consultazione' con la voce 'Gestione Navi Segnalate' evidenziata nella sezione Navi"
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 26 — RICERCA TRA CONFIGURAZIONI E RICERCA NAVI ─ -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Ricerca tra Configurazioni segnalazioni e Ricerca navi segnalate</h3>
+                  <p class="mb-4">
+                    In questa pagina l'utente può decidere se ricercare per
+                    <strong>configurazioni segnalazioni</strong> e
+                    <strong>navi segnalate</strong> attraverso la selezione di
+                    una delle voci.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Configurazione segnalazioni</h5>
+                          </div>
+                          <p class="mb-3">
+                            Consente di ricercare e consultare l'elenco delle
+                            segnalazioni presenti a sistema.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/segnalazioni-navi/54.png"
+                              alt="Scheda 'Configurazioni segnalazioni' con il form dei filtri di ricerca"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Ricerca navi segnalate</h5>
+                          </div>
+                          <p class="mb-3">
+                            Consente di ricercare e consultare le navi
+                            segnalate.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/segnalazioni-navi/55.png"
+                              alt="Scheda 'Ricerca navi segnalate' con il form dei filtri di ricerca"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 27 — CONFIGURAZIONE SEGNALAZIONI: FUNZIONALITÀ IN PAGINA ── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <p class="fw-semibold text-secondary mb-1">Configurazione segnalazioni</p>
+                  <h3 class="h1 mb-3">Funzionalità in pagina</h3>
+                  <p class="mb-4">
+                    È possibile avviare subito la ricerca oppure aggiungere
+                    ulteriori filtri per rendere i risultati più precisi. La
+                    schermata è suddivisa nelle seguenti <strong>tre
+                    sezioni</strong>:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-5">
+                      <img
+                        src="./img/segnalazioni-navi/56.png"
+                        alt="Schermata 'Configurazioni segnalazioni' con filtri di ricerca e tabella risultati, con badge numerati 1, 2 e 3"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+
+                    <div class="col-12 col-lg-7 d-flex flex-column gap-4">
+
+                      <div class="card border-0 rounded-3 p-3 bg-white">
+                        <div class="d-flex gap-3 align-items-start mb-3">
+                          <div class="sg-step-badge flex-shrink-0">1</div>
+                          <div>
+                            <p class="fw-bold mb-1">Sezione filtri</p>
+                            <p class="mb-0 small">
+                              La sezione Filtri consente di ricercare le
+                              segnalazioni secondo diversi criteri. La ricerca
+                              può avvenire per: <strong>Nome Segnalazione,
+                              Bandiera, Nome Nave, Company, Stato Configurazione
+                              Segnalazione, Tipo Nave e Intervallo
+                              temporale</strong>. I filtri applicati sono
+                              visualizzati e cancellabili.
+                            </p>
+                          </div>
+                        </div>
+                        <img src="./img/segnalazioni-navi/57.png" alt="Sezione filtri con campi Nome segnalazione, Bandiera, Company, Stato Configurazione Segnalazione e Tipo Nave" class="w-100 rounded-3" />
+                      </div>
+
+                      <div class="card border-0 rounded-3 p-3 bg-white">
+                        <div class="d-flex gap-3 align-items-start mb-3">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <div>
+                            <p class="fw-bold mb-1">Azioni sulla tabella dei risultati</p>
+                            <p class="mb-0 small">
+                              È possibile esportare i risultati di ricerca
+                              attraverso il pulsante <strong>"Esporta"</strong>
+                              e dopo aver selezionato una o più segnalazioni è
+                              possibile eliminarle tramite il pulsante
+                              <strong>"Elimina"</strong>.
+                            </p>
+                          </div>
+                        </div>
+                        <img src="./img/segnalazioni-navi/58.png" alt="Tabella risultati con pulsanti Esporta ed Elimina" class="w-100 rounded-3" />
+                      </div>
+
+                      <div class="card border-0 rounded-3 p-3 bg-white">
+                        <div class="d-flex gap-3 align-items-start mb-3">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <div>
+                            <p class="fw-bold mb-1">Visualizzazione segnalazioni tramite tabella</p>
+                            <p class="mb-0 small">
+                              I risultati della ricerca vengono presentati in
+                              una tabella, mostrando le <strong>informazioni
+                              principali</strong> e le <strong>azioni
+                              disponibili</strong>.
+                            </p>
+                          </div>
+                        </div>
+                        <img src="./img/segnalazioni-navi/59.png" alt="Tabella risultati Configurazioni segnalazioni con colonna Azioni" class="w-100 rounded-3" />
+                        <div class="d-flex flex-wrap gap-4 mt-3">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center">
+                              <i class="bi bi-eye text-primary"></i>
+                            </div>
+                            <span class="small">Dettaglio</span>
+                          </div>
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center">
+                              <i class="bi bi-pencil text-primary"></i>
+                            </div>
+                            <span class="small">Modifica</span>
+                          </div>
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="card border rounded-3 p-2 d-inline-flex align-items-center justify-content-center">
+                              <i class="bi bi-slash-circle text-warning"></i>
+                            </div>
+                            <span class="small">Disattivazione</span>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 28 — VISUALIZZAZIONE DETTAGLIO (PER CRITERI) ─── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <p class="fw-semibold text-secondary mb-1">Ricerca e consultazione Configurazioni segnalazioni (Per Criteri)</p>
+                  <h3 class="h1 mb-4">Visualizzazione dettaglio</h3>
+
+                  <div class="card border-0 rounded-3">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+
+                        <div class="col-12 col-lg-5 d-flex flex-column gap-4">
+                          <div>
+                            <p class="mb-2">
+                              All'interno della pagina sono consultabili le
+                              seguenti informazioni:
+                            </p>
+                            <ul class="mb-0">
+                              <li>Dati Generali</li>
+                              <li>Criteri Selezionati</li>
+                              <li>Motivo Segnalazione</li>
+                              <li>Destinatari</li>
+                              <li>Documenti Allegati</li>
+                            </ul>
+                          </div>
+
+                          <div class="card border-0 rounded-3 p-3 bg-white">
+                            <p class="fw-bold mb-3">Possibili azioni sulla Configurazione per criteri:</p>
+                            <div class="d-flex flex-wrap gap-2">
+                              <button type="button" class="btn btn-outline-secondary btn-sm disabled" aria-disabled="true">Esporta PDF</button>
+                              <button type="button" class="btn btn-outline-secondary btn-sm disabled" aria-disabled="true">Modifica</button>
+                              <button type="button" class="btn btn-warning btn-sm disabled" aria-disabled="true">Disattiva</button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-lg-7">
+                          <img
+                            src="./img/segnalazioni-navi/60.png"
+                            alt="Pagina 'Dettaglio Configurazione per Criteri' con Dati generali, Criteri selezionati, Motivo segnalazione, Destinatari e Documenti allegati"
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 29 — RICERCA NAVI SEGNALATE: FUNZIONALITÀ IN PAGINA ── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <p class="fw-semibold text-secondary mb-1">Ricerca navi segnalate</p>
+                  <h3 class="h1 mb-3">Funzionalità in pagina</h3>
+                  <p class="mb-4">
+                    È possibile avviare subito la ricerca oppure aggiungere
+                    ulteriori filtri per rendere i risultati più precisi. La
+                    schermata è suddivisa nelle seguenti <strong>tre
+                    sezioni</strong>:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-5">
+                      <img
+                        src="./img/segnalazioni-navi/61.png"
+                        alt="Schermata 'Ricerca navi segnalate' con filtri di ricerca e tabella risultati, con badge numerati 1, 2 e 3"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+
+                    <div class="col-12 col-lg-7 d-flex flex-column gap-4">
+
+                      <div class="card border-0 rounded-3 p-3 bg-white">
+                        <div class="d-flex gap-3 align-items-start mb-3">
+                          <div class="sg-step-badge flex-shrink-0">1</div>
+                          <div>
+                            <p class="fw-bold mb-1">Sezione filtri</p>
+                            <p class="mb-0 small">
+                              La sezione Filtri consente di ricercare le navi
+                              segnalate secondo diversi criteri. La ricerca può
+                              avvenire per filtri base, come <strong>Nome
+                              Nave, IMO number, MMSI, Call Sign, Bandiera, Tipo
+                              Nave e Stato Segnalazione</strong>, e filtri
+                              avanzati come <strong>l'intervallo data
+                              segnalazione</strong>. I filtri applicati sono
+                              visualizzati e cancellabili.
+                            </p>
+                          </div>
+                        </div>
+                        <img src="./img/segnalazioni-navi/62.png" alt="Sezione filtri con campi Nome Nave, IMO number, MMSI, Call Sign, Bandiera, Tipo Nave e Stato Segnalazione" class="w-100 rounded-3" />
+                      </div>
+
+                      <div class="card border-0 rounded-3 p-3 bg-white">
+                        <div class="d-flex gap-3 align-items-start mb-3">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <div>
+                            <p class="fw-bold mb-1">Azioni sulla tabella dei risultati</p>
+                            <p class="mb-0 small">
+                              È possibile esportare i risultati di ricerca
+                              attraverso il pulsante <strong>"Esporta"</strong>.
+                            </p>
+                          </div>
+                        </div>
+                        <img src="./img/segnalazioni-navi/63.png" alt="Tabella risultati 'Elenco Navi Segnalate' con pulsante Esporta" class="w-100 rounded-3" />
+                      </div>
+
+                      <div class="card border-0 rounded-3 p-3 bg-white">
+                        <div class="d-flex gap-3 align-items-start mb-3">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <div>
+                            <p class="fw-bold mb-1">Visualizzazione della navi segnalate tramite tabella</p>
+                            <p class="mb-0 small">
+                              I risultati della ricerca vengono presentati in
+                              una tabella, mostrando le <strong>informazioni
+                              principali</strong> e le <strong>azioni
+                              disponibili</strong>.
+                            </p>
+                          </div>
+                        </div>
+                        <img src="./img/segnalazioni-navi/64.png" alt="Tabella risultati con nave MSC MANON e colonna Azioni" class="w-100 rounded-3" />
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 30 — VISUALIZZAZIONE DETTAGLIO (PER NAVI) ────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <p class="fw-semibold text-secondary mb-1">Ricerca e consultazione Configurazioni segnalazioni (Per Navi)</p>
+                  <h3 class="h1 mb-4">Visualizzazione dettaglio</h3>
+
+                  <div class="card border-0 rounded-3">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+
+                        <div class="col-12 col-lg-5 d-flex flex-column gap-4">
+                          <div>
+                            <p class="mb-2">
+                              All'interno della pagina sono consultabili le
+                              seguenti informazioni:
+                            </p>
+                            <ul class="mb-0">
+                              <li>Dati Generali</li>
+                              <li>Elenco Navi</li>
+                              <li>Motivo Segnalazione</li>
+                              <li>Destinatari</li>
+                              <li>Documenti Allegati</li>
+                            </ul>
+                          </div>
+
+                          <div class="card border-0 rounded-3 p-3 bg-white">
+                            <p class="fw-bold mb-3">Possibili azioni sulla Configurazione per criteri:</p>
+                            <div class="d-flex flex-wrap gap-2">
+                              <button type="button" class="btn btn-outline-secondary btn-sm disabled" aria-disabled="true">Esporta PDF</button>
+                              <button type="button" class="btn btn-outline-secondary btn-sm disabled" aria-disabled="true">Modifica</button>
+                              <button type="button" class="btn btn-warning btn-sm disabled" aria-disabled="true">Disattiva</button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-lg-7">
+                          <img
+                            src="./img/segnalazioni-navi/65.png"
+                            alt="Pagina 'Dettaglio Configurazione per Navi' con Dati generali, Elenco navi, Motivo segnalazione, Destinatari e Documenti allegati"
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 03 — MODIFICA CONFIGURAZIONI SEGNALAZIONI (PER CRITERI)
+                 ============================================================ -->
+            <section id="modifica-configurazioni-segnalazioni-criteri" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">03.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Modifica Configurazioni segnalazioni (Per criteri)</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla modifica delle Configurazioni segnalazioni inserite per criteri.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 32 — PUNTO DI ACCESSO ALLA MODIFICA ──────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-4">Punto di Accesso alla modifica Configurazione segnalazioni</h3>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Attivazione della "Modifica" dall'elenco risultati</h5>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati delle navi segnalate è
+                            possibile accedere al dettaglio in modalità
+                            modifica cliccando sull'
+                            <strong>"icona della matita"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/66.png" alt="Elenco Navi Segnalate con icona della matita evidenziata nella colonna Azioni" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Attivazione della "modifica" da pagina di dettaglio</h5>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati delle navi segnalate, è
+                            possibile accedere al dettaglio in modalità
+                            visualizzazione cliccando sull'
+                            <strong>"icona dell'occhio"</strong>. All'interno
+                            del dettaglio, per procedere con la modifica è
+                            necessario cliccare sul pulsante
+                            <strong>"Modifica"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/67.png" alt="Pagina di dettaglio Configurazione Segnalazione con pulsante Modifica evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 33 — PASSAGGI MODIFICA (SELEZIONE CRITERI COMUNI) ── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Passaggi modifica configurazioni segnalazioni</h3>
+
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="card-body bg-white py-3 px-4">
+                      <div class="row g-0 align-items-end text-center">
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--active mb-2">SELEZIONE CRITERI COMUNI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">INSERIMENTO DATI SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">RIEPILOGO CONFIGURAZIONE SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row g-4 align-items-center">
+
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">
+                        All'interno della pagina di dettaglio in modalità
+                        <strong>Modifica</strong>, il processo di
+                        aggiornamento delle informazioni seguirà lo
+                        <strong>stesso flusso</strong> guidato a step,
+                        descritto nel flusso di
+                        <a href="#inserimento-configurazioni-segnalazioni">"Inserimento Configurazioni segnalazioni (Per Criteri)"</a>.
+                      </p>
+                      <div class="sg-note p-3 rounded-3 d-flex align-items-start gap-2">
+                        <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+                        <p class="mb-0">
+                          L'unica informazione che non sarà possibile
+                          modificare è la <strong>data inizio
+                          segnalazione</strong>.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/segnalazioni-navi/68.png"
+                        alt="Pagina 'Modifica Configurazione per Criteri' con Selezione criteri comuni e menu a tendina Bandiera aperto"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 34 — PASSAGGI MODIFICA (RIEPILOGO) ───────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <div class="card border-0 rounded-3 overflow-hidden">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">3</div>
+                          <div>
+                            <p class="text-white mb-1 opacity-75 small">Modifica Configurazioni segnalazioni (Per Criteri)</p>
+                            <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Riepilogo configurazione segnalazione</h4>
+                          </div>
+                        </div>
+                        <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 3</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-white py-3 px-4">
+                      <div class="row g-0 align-items-end text-center">
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">SELEZIONE CRITERI COMUNI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">INSERIMENTO DATI SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--active mb-2">RIEPILOGO CONFIGURAZIONE SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4">
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">1</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Dettaglio riepilogo</h5>
+                              </div>
+                              <p class="mb-3">
+                                Nell'ultimo passaggio di riepilogo è possibile
+                                consultare tutte le informazioni inserite negli
+                                step precedenti.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/69.png" alt="Riepilogo con Destinatari, Evento di invio e Documenti allegati e pulsante 'Aggiorna configurazione'" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">2</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Finestra di conferma</h5>
+                              </div>
+                              <p class="mb-3">
+                                Il sistema mostra una finestra di conferma del
+                                salvataggio, cliccare
+                                <strong>"Aggiorna configurazione"</strong> per
+                                salvare la configurazione con i nuovi dati.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/70.png" alt="Finestra modale 'Salva Configurazione per Criteri' con messaggio 'Sei sicuro di voler salvare la configurazione?' e pulsante 'Aggiorna configurazione'" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">3</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Finestra di successo</h5>
+                              </div>
+                              <p class="mb-3">
+                                Il sistema mostra una finestra che comunica che
+                                la <strong>modifica della segnalazione</strong>
+                                è avvenuta con successo.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/71.png" alt="Finestra modale 'Modifica Segnalazione' con messaggio 'Modifica della segnalazione salvata con successo'" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 04 — MODIFICA CONFIGURAZIONI SEGNALAZIONI (PER NAVI)
+                 ============================================================ -->
+            <section id="modifica-configurazioni-segnalazioni-navi" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">04.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Modifica Configurazioni segnalazioni (Per Navi)</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla modifica delle Configurazioni segnalazioni inserite per navi.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 36 — PUNTO DI ACCESSO ALLA MODIFICA ──────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-4">Punto di Accesso alla modifica Configurazione segnalazioni</h3>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Attivazione della "Modifica" dall'elenco risultati</h5>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati delle navi segnalate è
+                            possibile accedere al dettaglio in modalità
+                            modifica cliccando sull'
+                            <strong>"icona della matita"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/72.png" alt="Elenco Navi Segnalate con icona della matita evidenziata nella colonna Azioni" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Attivazione della "modifica" da pagina di dettaglio</h5>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati delle navi segnalate è
+                            possibile accedere al dettaglio in modalità
+                            visualizzazione cliccando sull'
+                            <strong>"icona dell'occhio"</strong>. All'interno
+                            del dettaglio, per procedere con la modifica è
+                            necessario cliccare sul pulsante
+                            <strong>"Modifica delega"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/73.png" alt="Pagina di dettaglio Configurazione Segnalazione per Navi con pulsante Modifica evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 37 — PASSAGGI MODIFICA (MODIFICA NAVI) ───────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Passaggi modifica configurazioni segnalazioni</h3>
+
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="card-body bg-white py-3 px-4">
+                      <div class="row g-0 align-items-end text-center">
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--active mb-2">MODIFICA NAVI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">INSERIMENTO DATI SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label mb-2">RIEPILOGO CONFIGURAZIONE SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row g-4 align-items-center">
+
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">
+                        All'interno della pagina di dettaglio in modalità
+                        <strong>Modifica</strong>, il processo di
+                        aggiornamento delle informazioni seguirà lo
+                        <strong>stesso flusso</strong> guidato a step,
+                        descritto nel flusso di
+                        <a href="#inserimento-configurazioni-segnalazioni">"Inserimento Configurazioni segnalazioni (Per Navi)"</a>.
+                      </p>
+                      <p class="mb-3">
+                        Nel primo step <strong>"Modifica Navi"</strong> si
+                        potrà procedere aggiungendo manualmente ulteriori navi
+                        o tramite <strong>caricamento da file</strong>; inoltre
+                        si potranno <strong>modificare i dati</strong> e
+                        <strong>cancellare</strong> le navi presenti in elenco.
+                      </p>
+                      <div class="sg-note p-3 rounded-3 d-flex align-items-start gap-2">
+                        <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+                        <p class="mb-0">
+                          <a href="#aggiungi-nave-in-elenco">Visualizza il dettaglio di "Aggiungi Nave"</a>.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/segnalazioni-navi/74.png"
+                        alt="Pagina 'Modifica Configurazione per Navi' con Caricamento File e tabella Navi attualmente segnalate"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 38 — PASSAGGI MODIFICA (RIEPILOGO) ───────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <div class="card border-0 rounded-3 overflow-hidden">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">4</div>
+                          <div>
+                            <p class="text-white mb-1 opacity-75 small">Modifica Configurazioni segnalazioni (Per Navi)</p>
+                            <h4 class="h4 text-white mb-0 text-uppercase fw-bold">Riepilogo configurazione segnalazione</h4>
+                          </div>
+                        </div>
+                        <span class="badge text-bg-outline-light fs-6 px-3 py-2">STEP 4</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-white py-3 px-4">
+                      <div class="row g-0 align-items-end text-center">
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">MODIFICA NAVI</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--done mb-2">INSERIMENTO DATI SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--done">
+                              <i class="bi bi-check text-white" style="font-size:.85rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto"><div class="sg-stepper__line sg-stepper__line--done mb-3"></div></div>
+                        <div class="col">
+                          <p class="sg-stepper__label sg-stepper__label--active mb-2">RIEPILOGO CONFIGURAZIONE SEGNALAZIONE</p>
+                          <div class="d-flex justify-content-center">
+                            <div class="sg-stepper__dot sg-stepper__dot--active">
+                              <i class="bi bi-pencil text-white" style="font-size:.75rem;"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4">
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">1</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Dettaglio riepilogo</h5>
+                              </div>
+                              <p class="mb-3">
+                                Nell'ultimo passaggio di riepilogo è possibile
+                                consultare tutte le informazioni inserite negli
+                                step precedenti.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/75.png" alt="Riepilogo con Destinatari, Evento di invio e Documenti allegati e pulsante 'Aggiorna configurazione'" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">2</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Finestra di conferma</h5>
+                              </div>
+                              <p class="mb-3">
+                                Il sistema mostra una finestra di conferma del
+                                salvataggio, cliccare
+                                <strong>"Aggiorna configurazione"</strong> per
+                                salvare la configurazione con i nuovi dati.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/76.png" alt="Finestra modale 'Salva Configurazione per Navi' con messaggio 'Sei sicuro di voler salvare la configurazione?' e pulsante 'Aggiorna configurazione'" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex">
+                          <div class="card border-0 rounded-3 w-100">
+                            <div class="card-body p-4 d-flex flex-column">
+                              <div class="d-flex gap-3 mb-3">
+                                <div class="sg-step-badge flex-shrink-0">3</div>
+                                <h5 class="fw-bold text-uppercase mb-0">Finestra di successo</h5>
+                              </div>
+                              <p class="mb-3">
+                                Il sistema mostra una finestra che comunica che
+                                la <strong>modifica della segnalazione</strong>
+                                è avvenuta con successo.
+                              </p>
+                              <div class="mt-auto">
+                                <img src="./img/segnalazioni-navi/77.png" alt="Finestra modale 'Modifica Segnalazione' con messaggio 'Modifica della segnalazione salvata con successo'" class="w-100 rounded-3" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 05 — CANCELLAZIONE CONFIGURAZIONI SEGNALAZIONI
+                 ============================================================ -->
+            <section id="cancellazione-configurazioni-segnalazioni" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">05.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Cancellazione Configurazioni segnalazioni</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla cancellazione delle Configurazioni segnalazioni.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 40 — PASSAGGI CANCELLAZIONE DA ELENCO RISULTATI ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Passaggi cancellazione da elenco risultati</h3>
+                  <p class="mb-4">
+                    Dopo aver creato una configurazione segnalazione, l'utente
+                    può eliminarla dall'elenco dei risultati in tabella
+                    seguendo i passaggi indicati:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Eliminazione tramite selezione massiva</h5>
+                          </div>
+                          <p class="mb-3">
+                            Selezionando una o più segnalazioni, sarà possibile
+                            eliminarle cliccando il tasto
+                            <strong>"Elimina"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/78.png" alt="Elenco Navi Segnalate con checkbox di selezione multipla e pulsante Elimina evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Eliminazione singola</h5>
+                          </div>
+                          <p class="mb-3">
+                            È possibile eliminare una singola segnalazione
+                            cliccando sull'<strong>"icona del cestino"</strong>
+                            all'interno di ogni singola riga della tabella.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/79.png" alt="Riga della tabella Elenco Navi Segnalate con icona del cestino evidenziata" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Finestra di conferma eliminazione e successo</h5>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra in cui l'utente deve
+                            confermare di essere sicuro di voler eliminare
+                            l'operazione. Cliccare <strong>"Elimina"</strong>
+                            per proseguire.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/80.png" alt="Finestra modale 'Conferma Eliminazione' con messaggio 'Questa azione non può essere annullata' e pulsante Elimina" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">Si possono eliminare solo le segnalazioni in stato <strong>"Creata"</strong>.</p>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 41 — PASSAGGI CANCELLAZIONE DAL DETTAGLIO ────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Passaggi cancellazione dal dettaglio</h3>
+                  <p class="mb-4">
+                    Dopo aver creato una configurazione segnalazione, l'utente
+                    può eliminarla dal dettaglio tramite i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Eliminazione tramite dettaglio</h5>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati è possibile accedere al
+                            dettaglio dell'operazione segnalazione cliccando
+                            sull'<strong>"icona dell'occhio"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/81.png" alt="Elenco Navi Segnalate con icona dell'occhio evidenziata nella colonna Azioni" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Eliminazione singola</h5>
+                          </div>
+                          <p class="mb-3">
+                            All'interno del dettaglio della configurazione
+                            segnalazione, cliccare il tasto
+                            <strong>"Elimina"</strong> per procedere con
+                            l'eliminazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/82.png" alt="Pagina di dettaglio Configurazione Segnalazione con pulsante Elimina evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Finestra di conferma eliminazione e successo</h5>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra in cui l'utente deve
+                            confermare di essere sicuro di voler eliminare
+                            l'operazione. Cliccare <strong>"Elimina"</strong>
+                            per proseguire.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/83.png" alt="Finestra modale 'Elimina Segnalazione' con messaggio 'La segnalazione verrà eliminata dal sistema e non sarà più possibile recuperarla'" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3" role="alert">
+                    <i class="bi bi-exclamation-triangle flex-shrink-0 mt-1"></i>
+                    <p class="mb-0">Si possono eliminare solo le segnalazioni in stato <strong>"Creata"</strong>.</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 06 — DISATTIVAZIONE CONFIGURAZIONI SEGNALAZIONI
+                 ============================================================ -->
+            <section id="disattivazione-configurazioni-segnalazioni" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">06.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Disattivazione Configurazioni segnalazioni</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla disattivazione delle Configurazioni segnalazioni.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 43 — PUNTO DI ACCESSO ALLA DISATTIVAZIONE ────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-4">Punto di Accesso alla disattivazione Configurazione segnalazioni</h3>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h5 class="fw-bold text-uppercase mb-0">"Disattivazione" dall'elenco risultati</h5>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati delle navi segnalate è
+                            possibile attivare la disattivazione della
+                            configurazione segnalazione cliccando sull'
+                            <strong>"icona ⊘"</strong>. Successivamente il
+                            sistema mostra una finestra di conferma della
+                            disattivazione. Cliccare <strong>"Disattiva"</strong>
+                            per confermare.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/84.png" alt="Elenco Navi Segnalate con finestra modale 'Conferma disattivazione' e pulsante Disattiva evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 overflow-hidden w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h5 class="fw-bold text-uppercase mb-0">Attivazione della "disattivazione" da pagina di dettaglio</h5>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati delle navi segnalate è
+                            possibile accedere al dettaglio in modalità
+                            visualizzazione cliccando sull'
+                            <strong>"icona dell'occhio"</strong>. All'interno
+                            del dettaglio, per procedere con la disattivazione
+                            è necessario cliccare sul pulsante
+                            <strong>"Disattiva"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/segnalazioni-navi/85.png" alt="Pagina di dettaglio Configurazione Segnalazione con pulsante Disattiva evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </section>
+
+          </div>
+          <!-- /col-lg-9 -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          {
+            root: null,
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0,
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            const id = this.getAttribute('href').replace('#', '');
+            activate(id);
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg  = document.getElementById('lightbox-img');
+        const modal  = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+
+          img.addEventListener('click', function () {
+            apriLightbox(this);
+          });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () {
+          lbImg.src = '';
+        });
+      })();
+    </script>
+
+  </body>
+</html>
