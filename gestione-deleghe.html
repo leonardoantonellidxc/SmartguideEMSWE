@@ -1,0 +1,1387 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Gestione Deleghe</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Gestione Deleghe</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#inserimento-deleghe">
+                        01. Inserimento deleghe
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#ricerca-consultazione-deleghe">
+                        02. Ricerca e consultazione deleghe
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#modifica-deleghe">
+                        03. Modifica deleghe
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#cancellazione-deleghe">
+                        04. Cancellazione deleghe
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <h1 class="h4 mb-0">Gestione Deleghe</h1>
+               
+                </div>
+                <p class="mb-0">
+                  Una panoramica dei flussi relativi alla gestione delle
+                  deleghe, per orientarti passo dopo passo.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — INSERIMENTO DELEGHE
+                 Profilo: Addetto alla Registrazione Passeggeri
+                 ============================================================ -->
+            <section id="inserimento-deleghe" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Inserimento deleghe</h2>
+                      <p class="text-white mb-0">
+                        Panoramica sull'inserimento di una nuova delega.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 4 — PUNTO DI ACCESSO ─────────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 fw-bold mb-3">La voce di menù</h4>
+                  <p class="mb-4">
+                    Dalla dashboard è possibile <strong>accedere alle
+                    principali sezioni tramite le voci di menu</strong>.
+                  </p>
+
+                  <div class="card border-0 rounded-3">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+
+                        <div class="col-12 col-lg-5">
+                          <div class="card border-0 rounded-3 p-3 bg-primary">
+                            <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                            <p class="text-white mb-0">
+                              Cliccando sulla voce <strong>"Gestione e
+                              Consultazione"</strong> viene visualizzato un
+                              menu a tendina, nella sezione <strong>"Gestione
+                              Deleghe"</strong>, è possibile accedere alla
+                              voce <strong>"Gestione Deleghe"</strong>.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-lg-7">
+                          <img
+                            src="./img/gestione-deleghe/1.png"
+                            alt="Menu a tendina Gestione e Consultazione con la voce Gestione Deleghe evidenziata"
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 5 — CREAZIONE DI UNA DELEGA ─────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-4">Creazione di una Delega</h3>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/gestione-deleghe/2.png"
+                        alt="Pagina Gestione Deleghe con i filtri Company e Nome Nave e il pulsante Nuova Delega"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-0">
+                        Dopo aver effettuato l'accesso alla pagina di
+                        <strong>"Gestione deleghe"</strong>, cliccare sul
+                        pulsante <strong>"Nuova delega"</strong> per avviare
+                        il flusso di <strong>creazione</strong>.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 6 — SCELTA DELLA TIPOLOGIA DI DELEGA ────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Inserimento deleghe</h3>
+                  <h4 class="h4 fw-bold mb-4">Scelta della tipologia di delega: Nuova delega e Delega generata extra-sistema</h4>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Tipologia delega: "Nuova delega"</h4>
+                          </div>
+                          <p class="mb-3">
+                            Creazione di una nuova delega tramite selezione
+                            della voce <strong>"Nuova delega"</strong> dal
+                            menu a tendina.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/3.png"
+                              alt="Form Nuova Delega con il campo Tipo delega impostato su Nuova delega"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Tipologia delega: "Delega generata extra-sistema"</h4>
+                          </div>
+                          <p class="mb-3">
+                            Creazione di una Delega generata extra-sistema
+                            tramite selezione della voce dal menu a tendina.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/4.png"
+                              alt="Form Nuova Delega con il menu a tendina Tipo delega aperto e la voce Delega generata extra-sistema selezionata"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 7-10 — INSERIMENTO NUOVA DELEGA (continua, stesso
+                     flusso numerato "1" — nessun divider interno) ─────────── -->
+                <div id="inserimento-nuova-delega" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <div class="d-flex align-items-center gap-3 mb-4">
+                    <div class="sg-step-badge flex-shrink-0">1</div>
+                    <div>
+                      <p class="text-uppercase small fw-bold mb-1">Inserimento Nuova Delega</p>
+                      <h3 class="h1 mb-0">Step di creazione di una nuova delega</h3>
+                    </div>
+                  </div>
+                  <p class="mb-4">
+                    Dopo aver selezionato <strong>"Nuova delega"</strong>,
+                    l'utente dovrà procedere seguendo i passaggi sottostanti.
+                  </p>
+
+                  <div class="row g-4 mb-5">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <p class="badge text-bg-dark align-self-start mb-2">STEP 1</p>
+                          <h4 class="h5 fw-bold text-uppercase mb-2">Dati delegato</h4>
+                          <p class="mb-3">
+                            Consente di ricercare e <strong>selezionare
+                            l'utente a cui assegnare</strong> la delega.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/5.png"
+                              alt="Step Dati delegato con il form Ricerca delegato e il campo Identificativo fiscale"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <p class="badge text-bg-dark align-self-start mb-2">STEP 2</p>
+                          <h4 class="h5 fw-bold text-uppercase mb-2">Elenco navi</h4>
+                          <p class="mb-3">
+                            Consente di selezionare una o più navi
+                            interessate alla delega.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/6.png"
+                              alt="Step Elenco navi con la tabella Navi interessate alla delega"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <p class="badge text-bg-dark align-self-start mb-2">STEP 3</p>
+                          <h4 class="h5 fw-bold text-uppercase mb-2">Riepilogo</h4>
+                          <p class="mb-3">
+                            Consente di visualizzare il riepilogo delle
+                            informazioni inserite negli step precedenti e
+                            procedere con il <strong>Salvataggio</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/7.png"
+                              alt="Step Riepilogo con Dati delegato e Navi interessate alla delega"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- ── SOTTO-STEP: DATI DELEGATO (PAG. 8) ───────────────── -->
+                  <h4 class="h4 fw-bold mb-3">Dati delegato</h4>
+
+                  <div class="row g-4 mb-5">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Ricerca dell'utente</h4>
+                          </div>
+                          <p class="mb-3">
+                            Ricercare l'utente a cui assegnare la delega
+                            inserendo l'<strong>identificativo fiscale</strong>
+                            e successivamente cliccando <strong>"Cerca"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/8.png"
+                              alt="Form Ricerca delegato con il campo Identificativo fiscale compilato"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Aggiunta del porto</h4>
+                          </div>
+                          <p class="mb-3">
+                            Una volta aggiunti uno o più delegati,
+                            selezionare uno o più <strong>porti</strong>
+                            tramite il menu a tendina.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/9.png"
+                              alt="Risultati di ricerca del delegato con il menu a tendina dei porti aperto"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Selezione profilo e step successivo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Selezionare uno o più utenti e proseguire allo
+                            step successivo cliccando il pulsante <strong>"Vai
+                            avanti"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/10.png"
+                              alt="Risultati di ricerca con il profilo Agente Raccomandatario Marittimo selezionato tramite checkbox"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- ── SOTTO-STEP: ELENCO NAVI (PAG. 9) ─────────────────── -->
+                  <h4 class="h4 fw-bold mb-3">Elenco navi</h4>
+
+                  <div class="row g-4 mb-5">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Visualizzazione navi interessate</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra l'elenco delle navi assegnate
+                            all'addetto registrazione passeggeri. L'utente ha
+                            la possibilità di filtrare i risultati per parola
+                            chiave.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/11.png"
+                              alt="Tabella Navi interessate alla delega con nome nave, IMO, MMSI, Call Sign, Bandiera e date"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Selezione navi</h4>
+                          </div>
+                          <p class="mb-3">
+                            Selezionare una o più navi interessate alla
+                            delega tramite le checkbox. Eventualmente
+                            modificare la <strong>data di inizio delega</strong>
+                            proposta dal sistema e eventualmente inserire una
+                            <strong>data di fine delega</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/12.png"
+                              alt="Tabella Navi interessate alla delega con due righe selezionate tramite checkbox"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Verifica e step successivo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Verificata la corretta delle informazioni
+                            inserite, selezionare il pulsante <strong>"Vai
+                            avanti"</strong> per procedere.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/13.png"
+                              alt="Tabella Navi interessate alla delega con il pulsante Vai Avanti evidenziato"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- ── SOTTO-STEP: RIEPILOGO (PAG. 10) ──────────────────── -->
+                  <h4 class="h4 fw-bold mb-3">Riepilogo</h4>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Visualizzazione riepilogo e salvataggio</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'ultimo passaggio di riepilogo è possibile
+                            consultare tutte le informazioni inserite.
+                            Cliccare <strong>"Salva"</strong> per proseguire.
+                            Il sistema mostra una finestra di conferma.
+                            Cliccare <strong>"Conferma"</strong> per salvare.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/14.png"
+                              alt="Riepilogo Navi interessate alla delega e finestra di conferma Salva Delega"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Dettaglio delega</h4>
+                          </div>
+                          <p class="mb-3">
+                            All'interno del dettaglio è possibile
+                            visualizzare i <strong>dati generali</strong>,
+                            <strong>dati del delegante</strong>, <strong>dati
+                            del delegato</strong> e le <strong>navi
+                            interessate</strong> alla delega.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/15.png"
+                              alt="Pagina di dettaglio Delega con Dati generali, Dati delegante e Dati delegato"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Azioni disponibili</h4>
+                          </div>
+                          <p class="mb-3">
+                            Le azioni disponibili all'interno del dettaglio
+                            della delega saranno quelle di <strong>modifica e
+                            eliminazione</strong> tramite gli appositi
+                            pulsanti.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/16.png"
+                              alt="Dettaglio delega con i pulsanti Modifica delega ed Elimina delega"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 11-13 — INSERIMENTO DELEGA GENERATA EXTRA SISTEMA
+                     (continua, stesso flusso numerato "2" — nessun divider
+                     interno) ─────────────────────────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <div class="d-flex align-items-center gap-3 mb-4">
+                    <div class="sg-step-badge flex-shrink-0">2</div>
+                    <div>
+                      <p class="text-uppercase small fw-bold mb-1">Inserimento delega generata extra sistema</p>
+                      <h3 class="h1 mb-0">Step di creazione di una delega generata extra sistema</h3>
+                    </div>
+                  </div>
+                  <p class="mb-4">
+                    Dopo aver selezionato <strong>"Delega generata extra
+                    sistema"</strong>, l'utente dovrà procedere seguendo i
+                    passaggi sottostanti.
+                  </p>
+
+                  <div class="row g-4 mb-5">
+
+                    <div class="col-12 col-lg-3 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <p class="badge text-bg-dark align-self-start mb-2">STEP 1</p>
+                          <h4 class="h5 fw-bold text-uppercase mb-2">Dati delegato</h4>
+                          <p class="mb-0">
+                            Consente di ricercare e <strong>selezionare
+                            l'utente a cui assegnare</strong> la delega.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <p class="badge text-bg-dark align-self-start mb-2">STEP 2</p>
+                          <h4 class="h5 fw-bold text-uppercase mb-2">Elenco navi</h4>
+                          <p class="mb-0">
+                            Consente di selezionare una o più navi
+                            interessate alla delega.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <p class="badge text-bg-dark align-self-start mb-2">STEP 3</p>
+                          <h4 class="h5 fw-bold text-uppercase mb-2">Atto di Delega (Obbligatorio)</h4>
+                          <p class="mb-0">
+                            Consente di caricare l'atto di delega che può
+                            valere per una nave o più navi.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <p class="badge text-bg-dark align-self-start mb-2">STEP 4</p>
+                          <h4 class="h5 fw-bold text-uppercase mb-2">Riepilogo</h4>
+                          <p class="mb-0">
+                            Consente di visualizzare il riepilogo delle
+                            informazioni inserite negli step precedenti e
+                            procedere con il Salvataggio.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <p class="mb-4">
+                    Il processo di creazione di una delega approvata
+                    extra-sistema segue lo stesso flusso guidato a step,
+                    descritto nel flusso di
+                  Focus su "Creazione Nuova delega". L'unica differenza sarà nel terzo step, dove il
+                    sistema chiederà all'utente di caricare il file
+                    dell'<strong>atto di delega</strong> valido per una o più
+                    navi.
+                  </p>
+                  <img class="w-100 mb-3" src="img/gestione-deleghe/19.png"> </img>
+
+                  <div class="row g-4 mb-4">
+                    <div class="col-6 col-lg-3">
+                      <div class="card border-0 rounded-3 bg-light p-3 text-center h-100">
+                        <p class="small mb-1">Tipologia file accettati:</p>
+                        <p class="fw-bold mb-0">PDF</p>
+                      </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                      <div class="card border-0 rounded-3 bg-light p-3 text-center h-100">
+                        <p class="small mb-1">Dimensioni massime:</p>
+                        <p class="fw-bold mb-0">5MB</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+
+                  <!-- ── SOTTO-STEP: RIEPILOGO CON ATTO DI DELEGA (PAG. 13) ── -->
+                  <h4 class="h4 fw-bold mb-3">Riepilogo </h4>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Aggiunta del documento</h4>
+                          </div>
+                          <p class="mb-3">
+                            Selezionare il file che si intende allegare
+                            cliccando il pulsante <strong>"Scegli
+                            file"</strong> e cliccare il pulsante
+                            <strong>"Carica documento"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/19.png"
+                              alt="Form Aggiunta Documento con il file selezionato Delega n.661 (1).pdf"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Caricamento e visualizzazione del file</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver caricato il documento, quest'ultimo
+                            verrà visualizzato nella tabella <strong>"Atto di
+                            delega"</strong>. È possibile eliminare o
+                            scaricare la delega tramite gli appositi
+                            pulsanti.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/20.png"
+                              alt="Tabella Atto di delega con il file Delega n.661 (1).pdf caricato e i pulsanti Elimina e Scarica"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Riepilogo con Atto di delega</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver caricato l'atto di delega, il documento
+                            verrà visualizzato nell'ultimo step di riepilogo.
+                            Cliccare il pulsante <strong>"Salva"</strong> per
+                            salvare la delega.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/21.png"
+                              alt="Riepilogo con Dati delegato, Navi interessate alla delega e Atto di delega"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+            <section id="ricerca-consultazione-deleghe" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">02.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Ricerca e consultazione deleghe</h2>
+                      <p class="text-white mb-0">
+                        Panoramica sulla ricerca e sulla consultazione delle
+                        deleghe.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 15 — PUNTO DI ACCESSO ────────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 fw-bold mb-3">La voce di menù</h4>
+                  <p class="mb-4">
+                    Dalla dashboard è possibile <strong>accedere alle
+                    principali sezioni tramite le voci di menu</strong>.
+                  </p>
+
+                  <div class="card border-0 rounded-3">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+
+                        <div class="col-12 col-lg-5">
+                          <div class="card border-0 rounded-3 p-3 bg-primary">
+                            <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                            <p class="text-white mb-0">
+                              Cliccando sulla voce <strong>"Gestione e
+                              Consultazione"</strong> viene visualizzato un
+                              menu a tendina, nella sezione <strong>"Gestione
+                              Deleghe"</strong>, è possibile accedere alla
+                              voce <strong>"Gestione Deleghe"</strong>.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-lg-7">
+                          <img
+                            src="./img/gestione-deleghe/22.png"
+                            alt="Menu a tendina Gestione e Consultazione con la voce Gestione Deleghe evidenziata"
+                            class="w-100 rounded-3"
+                          />
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 16 — FUNZIONALITÀ IN PAGINA ──────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Ricerca e consultazione Deleghe</h3>
+                  <h4 class="h4 fw-bold mb-3">Funzionalità in pagina</h4>
+                  <p class="mb-4">
+                    È possibile avviare subito la ricerca oppure aggiungere
+                    ulteriori filtri per rendere i risultati più precisi. La
+                    schermata è suddivisa nelle seguenti <strong>tre
+                    sezioni</strong>:
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <img
+                        src="./img/gestione-deleghe/23.png"
+                        alt="Pagina Gestione Deleghe con sezione filtri, azioni sulla tabella e tabella dei risultati evidenziate"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                    <div class="col-12 col-lg-7">
+
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">1</div>
+                          <h4 class="h5 fw-bold text-uppercase mb-0">Sezione filtri</h4>
+                        </div>
+                        <p class="mb-3">
+                          La sezione Filtri consente di ricercare le deleghe
+                          secondo diversi criteri. Sono disponibili filtri
+                          base, come <strong>Company, Nome Nave, Nome e
+                          Cognome delegato, Identificativo delegato e Profilo
+                          utente</strong>, e filtri avanzati per affinare la
+                          ricerca per <strong>Intervallo data delega</strong>.
+                          I filtri applicati sono visualizzati e
+                          cancellabili.
+                        </p>
+                        <img
+                          src="./img/gestione-deleghe/24.png"
+                          alt="Sezione filtri della pagina Gestione Deleghe con i campi Company, Nome Nave, Nome delegato, Cognome delegato, Identificativo Fiscale Delegato, Profilo Utente e Intervallo data delega"
+                          class="w-100 rounded-3"
+                        />
+                      </div>
+
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <h4 class="h5 fw-bold text-uppercase mb-0">Azioni sulla tabella dei risultati</h4>
+                        </div>
+                        <p class="mb-0">
+                          È possibile esportare i risultati di ricerca
+                          attraverso il pulsante <strong>"Esporta"</strong> e,
+                          dopo aver selezionato una o più deleghe, è possibile
+                          eliminarle tramite il pulsante
+                          <strong>"Elimina"</strong>. È possibile filtrare
+                          ulteriormente i risultati di ricerca valorizzando
+                          il relativo campo.
+                        </p>
+                        <img
+                          src="./img/gestione-deleghe/25.png"
+                          alt="Barra delle azioni sulla tabella deleghe con i pulsanti Elimina ed Esporta"
+                          class="w-100 rounded-3 mt-3"
+                        />
+                      </div>
+
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <h4 class="h5 fw-bold text-uppercase mb-0">Visualizzazione delega tramite tabella</h4>
+                        </div>
+                        <p class="mb-0">
+                          I risultati della ricerca vengono presentati in una
+                          tabella, mostrando le <strong>informazioni
+                          principali</strong> e le <strong>azioni
+                          disponibili</strong>: visualizzazione dettaglio
+                          tramite icona dell'occhio e modifica della delega
+                          tramite icona della matita. All'interno
+                          dell'accordion vengono visualizzate le navi per la
+                          quale è stato delegato l'utente.
+                        </p>
+                        <img
+                          src="./img/gestione-deleghe/26.png"
+                          alt="Tabella dei risultati con Identificativo Fiscale, Nome, Cognome, Profilo Utente e Azioni, con l'accordion Elenco Navi espanso"
+                          class="w-100 rounded-3 mt-3"
+                        />
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 17 — VISUALIZZAZIONE DETTAGLIO ──────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Ricerca e consultazione Deleghe</h3>
+                  <h4 class="h4 fw-bold mb-3">Visualizzazione dettaglio operazioni</h4>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">All'interno della pagina sono consultabili le seguenti informazioni:</p>
+                      <ul class="mb-4">
+                        <li>Dati generali</li>
+                        <li>Dati delegante</li>
+                        <li>Dati delegato</li>
+                        <li>Navi interessate alla delega</li>
+                      </ul>
+
+                      <p class="fw-bold mb-2">Possibili azioni sulla Delega:</p>
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-2 flex-wrap">
+                          <span class="btn btn-primary btn-sm disabled" aria-disabled="true"><i class="bi bi-pencil me-1"></i>Modifica Delega</span>
+                          <span class="btn btn-danger btn-sm disabled" aria-disabled="true"><i class="bi bi-trash me-1"></i>Elimina delega</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/gestione-deleghe/27.png"
+                        alt="Pagina di dettaglio della Delega con Dati generali, Dati delegante, Dati delegato, Navi interessate alla delega e i pulsanti Modifica Delega ed Elimina delega"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+            <section id="modifica-deleghe" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">03.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Modifica deleghe</h2>
+                      <p class="text-white mb-0">
+                        Panoramica sulla modifica di una delega esistente.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 19 — PUNTO DI ACCESSO ALLA MODIFICA ─────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-4">Punto di Accesso alla modifica delle deleghe</h3>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione della "Modifica" dall'elenco risultati delle deleghe</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati delle deleghe è possibile
+                            accedere al dettaglio in modalità modifica
+                            cliccando sull'<strong>"icona della
+                            matita"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/29.png"
+                              alt="Elenco risultati delle deleghe con l'icona della matita evidenziata"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Attivazione della "modifica" da pagina di dettaglio delle deleghe</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati delle deleghe è possibile
+                            accedere al dettaglio in modalità visualizzazione
+                            cliccando sull'<strong>"icona dell'occhio"</strong>.
+                            All'interno del dettaglio per procedere con la
+                            modifica è necessario cliccare sul pulsante
+                            <strong>"Modifica delega"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/30.png"
+                              alt="Pagina di dettaglio della delega con i pulsanti Modifica delega ed Elimina delega"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 20 — PASSAGGI PER MODIFICARE UNA DELEGA ─────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Modifica delega</h3>
+                  <h4 class="h4 fw-bold mb-4">Passaggi per modificare una delega</h4>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">
+                        All'interno della pagina di dettaglio in modalità
+                        <strong>Modifica</strong>, il processo di
+                        aggiornamento delle informazioni seguirà lo stesso
+                        flusso guidato a step, descritto nel flusso di
+                        <a href="#inserimento-nuova-delega" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none">
+                          <i class="bi bi-record-circle me-1"></i>Focus su "Inserimento deleghe"
+                        </a>.
+                      </p>
+                      <p class="mb-0">
+                        L'unica informazione che non sarà possibile
+                        modificare è la <strong>selezione dei porti
+                        associati al profilo utente</strong>.
+                      </p>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img
+                        src="./img/gestione-deleghe/31.png"
+                        alt="Pagina Modifica Delega con lo stepper Dati delegato, Elenco navi, Riepilogo delega e i dati del delegato Fabio Marini"
+                        class="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+            <section id="cancellazione-deleghe" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">04.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Cancellazione deleghe</h2>
+                      <p class="text-white mb-0">
+                        Panoramica sulla cancellazione di una delega.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 22 — CANCELLAZIONE DI UNA DELEGA DA DETTAGLIO ───── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Cancellazione deleghe</h3>
+                  <h4 class="h4 fw-bold mb-3">Cancellazione di una delega da dettaglio</h4>
+                  <p class="mb-4">
+                    Dopo aver creato una delega, l'utente può eliminarla
+                    tramite i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Eliminazione da dettaglio delega</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati di ricerca delle deleghe è
+                            possibile accedere al dettaglio cliccando
+                            sull'<strong>"icona dell'occhio"</strong>.
+                            All'interno del dettaglio per procedere con
+                            l'eliminazione è necessario cliccare sul pulsante
+                            <strong>"Elimina delega"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/32.png"
+                              alt="Elenco risultati delle deleghe con l'icona dell'occhio evidenziata e il dettaglio con il pulsante Elimina delega"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Finestra di conferma eliminazione e successo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra in cui l'utente
+                            deve confermare di essere sicuro di voler
+                            eliminare l'operazione. Cliccare <strong>"Elimina
+                            delega"</strong> per proseguire. Una volta
+                            eliminata, non sarà più possibile recuperarla.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/33.png"
+                              alt="Finestra di conferma Elimina delega e finestra di successo Delega correttamente eliminata"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 23 — CANCELLAZIONE MASSIVA DI UNA DELEGA ────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-2">Cancellazione deleghe</h3>
+                  <h4 class="h4 fw-bold mb-3">Cancellazione massiva di una delega</h4>
+                  <p class="mb-4">
+                    Dopo aver creato una o più deleghe, l'utente può
+                    eliminarle massivamente tramite i seguenti passaggi:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Eliminazione dall'elenco risultati</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nell'elenco risultati di ricerca, dopo aver
+                            selezionato uno o più deleghe tramite le
+                            checkbox, per eliminare cliccare il pulsante
+                            <strong>"Elimina"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/34.png"
+                              alt="Elenco risultati delle deleghe con due righe selezionate tramite checkbox e il pulsante Elimina evidenziato"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Finestra di conferma eliminazione e successo</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra in cui l'utente
+                            deve confermare di essere sicuro di voler
+                            eliminare l'operazione. Cliccare <strong>"Elimina
+                            delega"</strong> per proseguire. Una volta
+                            eliminata, il sistema mostra una finestra di
+                            successo.
+                          </p>
+                          <div class="mt-auto">
+                            <img
+                              src="./img/gestione-deleghe/35.png"
+                              alt="Finestra di conferma Elimina delega e finestra di successo Delega correttamente eliminata per l'eliminazione massiva"
+                              class="w-100 rounded-3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          {
+            root: null,
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0,
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            const id = this.getAttribute('href').replace('#', '');
+            activate(id);
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg  = document.getElementById('lightbox-img');
+        const modal  = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+
+          img.addEventListener('click', function () {
+            apriLightbox(this);
+          });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () {
+          lbImg.src = '';
+        });
+      })();
+    </script>
+
+  </body>
+</html>
