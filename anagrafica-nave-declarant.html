@@ -1,0 +1,1122 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Anagrafica nave (Declarant/Collaboratore)</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Anagrafica nave</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#consultazione-anagrafica-nave">
+                        01. Consultazione anagrafica nave
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#censimento-nave-non-presente">
+                        02. Censimento nave non presente in anagrafica
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#modifica-anagrafica-nave">
+                        03. Modifica anagrafica nave
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                  <h1 class="h4 mb-0">Anagrafica nave</h1>
+                 
+                </div>
+                <p class="mb-0 mt-2">
+                  Il portale delle Smart Guide è uno spazio digitale che
+                  raccoglie risorse pratiche e aggiornate in un unico ambiente
+                  intuitivo. Strumenti chiari e organizzati per organizzarti e
+                  trovare subito ciò che ti serve.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — CONSULTAZIONE ANAGRAFICA NAVE
+                 Profilo: Declarant/Collaboratore
+                 ============================================================ -->
+            <section id="consultazione-anagrafica-nave" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Consultazione anagrafica nave</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sul flusso di consultazione dell'anagrafica nave.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 12 — PUNTI DI ACCESSO ─────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h4 class="h4 text-secondary mb-2">Consultazione anagrafica nave</h4>
+                  <h3 class="h1 mb-3">Punti di accesso per consultare un'anagrafica nave</h3>
+                  <p class="mb-4">
+                    L'utente ha la possibilità di visualizzare i dati
+                    anagrafici di una nave selezionando il link
+                    <strong>"Dati nave"</strong>, presente all'interno di:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <h4 class="fw-bold text-uppercase mb-3">Dichiarazione di Porto Base</h4>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/1.png" alt="Dettaglio della Dichiarazione di Porto Base con il link Dati nave evidenziato accanto al nome della nave" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <h4 class="fw-bold text-uppercase mb-3">Soste fuori abbonamento e per unità da diporto</h4>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/2.png" alt="Dettaglio della Sosta con il link Dati nave evidenziato accanto al nome della nave" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <h4 class="fw-bold text-uppercase mb-3">Fascicoli e soste in abbonamento</h4>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/3.png" alt="Dettaglio del Fascicolo Soste in Abbonamento con il link Dati nave evidenziato accanto al nome della nave" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <h4 class="fw-bold text-uppercase mb-3">Obblighi di dichiarazione</h4>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/4.png" alt="Obbligo di dichiarazione A4.2 Ricevuta di Conferimento Rifiuti con il link Dati nave evidenziato accanto al nome della nave" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 13 — DETTAGLIO ANAGRAFICA NAVE ────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Ricerca e consultazione</h4>
+                  <h3 class="h1 mb-2">Dettaglio Anagrafica nave</h3>
+                  <p class="mb-4">
+                    All'interno della pagina sono consultabili le seguenti
+                    informazioni:
+                  </p>
+
+                  <div class="row g-4 align-items-start mb-4">
+                    <div class="col-12 col-lg-5">
+                      <ul class="mb-3">
+                        <li>Dati identificativi nave;</li>
+                        <li>Dettagli nave:
+                          <ul>
+                            <li>Movimento Trasporto Logistico;</li>
+                            <li>Organizzazione giuridica personale;</li>
+                            <li>Informazioni noleggiatore;</li>
+                            <li>Caratteristiche di costruzione;</li>
+                            <li>Motore principale a bordo;</li>
+                            <li>Motore ausiliario a bordo;</li>
+                            <li>Informazioni manager commerciale;</li>
+                            <li>Informazioni manager tecnico;</li>
+                            <li>Informazioni Compagnia di navigazione;</li>
+                            <li>Altre informazioni;</li>
+                          </ul>
+                        </li>
+                        <li>Elenco certificati;</li>
+                        <li>Elenco esenzioni;</li>
+                        <li>Lista tasse di ancoraggio;</li>
+                        <li>Spedizioni rilasciate;</li>
+                        <li>Addetto alla registrazione passeggeri;</li>
+                        <li>Elenco deleghe per la registrazione passeggeri.</li>
+                      </ul>
+
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <p class="fw-bold mb-2">Possibili azioni sull'anagrafica</p>
+                        <div class="d-flex gap-2 flex-wrap">
+                          <span class="btn btn-primary btn-sm disabled" aria-disabled="true">
+                            <i class="bi bi-pencil-square me-1"></i>Modifica
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/anagrafica-nave-declarant/5.png" alt="Pagina Dettaglio anagrafica nave con Dati identificativi, Dettagli della nave, ultime cinque soste, elenchi certificati, esenzioni, tasse di ancoraggio, spedizioni, addetto e deleghe per la registrazione passeggeri e pulsante Modifica" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-0" role="alert">
+                    <p class="mb-0">
+                      In visualizzazione vengono mostrate esclusivamente le
+                      sezioni e i campi valorizzati, mentre in inserimento o
+                      modifica vengono presentate tutte le sezioni con i
+                      relativi campi da poter valorizzare o modificare.
+                    </p>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 02 — CENSIMENTO NAVE NON PRESENTE IN ANAGRAFICA
+                 Profilo: Declarant/Collaboratore
+                 ============================================================ -->
+            <section id="censimento-nave-non-presente" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">02.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Censimento nave non presente in anagrafica</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sul flusso di censimento di una nave non presente in anagrafica.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 15 — PUNTI DI ACCESSO ─────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h4 class="h4 text-secondary mb-2">Censimento nave non presente in anagrafica</h4>
+                  <h3 class="h1 mb-4">Punti di accesso per censire una nave non presente in anagrafica</h3>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">
+                        L'utente ha la possibilità di censire una nave non
+                        presente in anagrafica <strong>all'interno del flusso
+                        di creazione</strong> di una:
+                      </p>
+                      <ul class="mb-0">
+                        <li>Dichiarazione di Porto Base;</li>
+                        <li>Sosta fuori abbonamento;</li>
+                        <li>Sosta per unità da diporto.</li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/anagrafica-nave-declarant/6.png" alt="Dashboard del Declarant con il riquadro Nuova sosta e il pulsante Crea nuova sosta" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 16 — PASSAGGI PER CENSIRE UNA NAVE ────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Censimento nave non presente in anagrafica</h4>
+                  <h3 class="h1 mb-3">Passaggi per censire una nave non presente in anagrafica</h3>
+                  <p class="mb-4">
+                    In fase di creazione di una sosta o di una dichiarazione
+                    di porto base, proseguire con i seguenti passaggi per
+                    censire una nuova nave:
+                  </p>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Ricerca nave</h4>
+                          </div>
+                          <p class="mb-3">
+                            Ricercare la nave tramite uno dei filtri base o avanzati presenti. Successivamente cliccare il pulsante <strong>"Avvia ricerca"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/7.png" alt="Pagina Creazione Sosta con la sezione Ricerca e selezione nave e il pulsante Avvia ricerca evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Censisci nuova nave</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra per comunicare che non è stato trovato alcun risultato. Per censire una nuova nave cliccare l'apposito pulsante <strong>"Censisci nuova nave"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/8.png" alt="Finestra Nessun risultato trovato con il pulsante Censisci nuova nave evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Sottometti accreditamento e finestra di conferma</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra che informa l'utente che l'inserimento diventerà effettivo dopo l'invio della sosta. Cliccare <strong>"Conferma"</strong> per proseguire con il censimento.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/9.png" alt="Finestra Attenzione sull'inserimento effettivo dopo l'invio della sosta con il pulsante Conferma evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 17-22 — STEP PER CENSIRE UNA NUOVA NAVE ───────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Censimento nave non presente in anagrafica</h4>
+                  <h3 class="h1 mb-3">Step per censire una nuova nave</h3>
+                  <p class="mb-4">
+                    Per censire una nuova nave non presente in anagrafica,
+                    procedere seguendo i passaggi sottostanti:
+                  </p>
+
+                  <div class="row g-3 mb-5">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card bg-light border-0 rounded-3 w-100">
+                        <div class="card-body p-3 d-flex flex-column">
+                          <div class="small text-uppercase text-secondary mb-2">Step 1</div>
+                          <h4 class="h6 text-uppercase mb-2">Dati identificativi della nave</h4>
+                          <p class="small mb-3">Consente di inserire i dati identificativi e il dettaglio della nave.</p>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/10.png" alt="Step Dati identificativi della nave del form Inserimento nuova nave" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card bg-light border-0 rounded-3 w-100">
+                        <div class="card-body p-3 d-flex flex-column">
+                          <div class="small text-uppercase text-secondary mb-2">Step 2</div>
+                          <h4 class="h6 text-uppercase mb-2">Aggiunta certificati (opzionale)</h4>
+                          <p class="small mb-3">Consente di inserire il documento e i dati di uno o più certificati.</p>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/11.png" alt="Step Aggiunta certificati del form Inserimento nuova nave" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card bg-light border-0 rounded-3 w-100">
+                        <div class="card-body p-3 d-flex flex-column">
+                          <div class="small text-uppercase text-secondary mb-2">Step 3</div>
+                          <h4 class="h6 text-uppercase mb-2">Riepilogo</h4>
+                          <p class="small mb-3">Consente di visualizzare il riepilogo delle informazioni inserite negli step precedenti e procedere al salvataggio della nuova nave in anagrafica.</p>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/12.png" alt="Step Riepilogo con Informazioni della Nave, Certificati allegati e pulsante Salva" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- STEP 1 — DATI IDENTIFICATIVI DELLA NAVE -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">1</div>
+                          <h4 class="h4 text-white mb-0">DATI IDENTIFICATIVI DELLA NAVE</h4>
+                        </div>
+                        <span class="badge text-bg-outline-light">STEP 1</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                        <ol class="list-unstyled d-flex gap-2 mb-4 p-0" aria-label="Avanzamento del censimento">
+                          <li class="flex-fill" aria-current="step">
+                            <span class="d-block small text-uppercase mb-2 fw-bold">Dati identificativi della nave</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2  ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Aggiunta certificati (opzionale)</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-secondary-subtle text-secondary-subtle"><i class="bi bi-circle-fill" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2  ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Riepilogo</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-secondary-subtle text-secondary-subtle"><i class="bi bi-circle-fill" aria-hidden="true"></i></span>
+                            </span>
+                          </li>
+                        </ol>
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">1</div>
+                              <div>
+                                <h5 class="h4 mb-3">Selezione compagnia di navigazione</h5>
+                                <p class="mb-0">Selezionare tramite il menu a tendina una delle compagnie di navigazione presenti.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/anagrafica-nave-declarant/13.png" alt="Form Dati identificativi della nave con il menu a tendina Nome Compagnia di navigazione aperto" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/anagrafica-nave-declarant/14.png" alt="Form Dati identificativi della nave con il pulsante + accanto al campo Nome Compagnia di navigazione evidenziato" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">2</div>
+                              <div>
+                                <h5 class="h4 mb-3">Aggiungi compagnia di navigazione</h5>
+                                <p class="mb-0">Qualora la compagnia di navigazione non fosse presente all'interno del menu a tendina, cliccare il pulsante con il tasto <strong>"+"</strong> per <strong>aggiungerne una nuova</strong>.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">3</div>
+                              <div>
+                                <h5 class="h4 mb-3">Finestra di aggiunta compagnia</h5>
+                                <p class="mb-0">Il sistema mostra una finestra nella quale inserire il nome e l'IMO (opzionale) della compagnia di navigazione. Cliccare il pulsante <strong>"Conferma"</strong> per aggiungerla.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/anagrafica-nave-declarant/15.png" alt="Finestra Nome Compagnia di navigazione con i campi nome e IMO compagnia e pulsante Conferma evidenziato" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/anagrafica-nave-declarant/16.png" alt="Form Dati identificativi della nave con Indicatore IMO Number impostato su No e campi MMSI e dati di registrazione" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">4</div>
+                              <div>
+                                <h5 class="h4 mb-3">Inserimento dati identificativi nave (IMO "No")</h5>
+                                <p class="mb-0">Dopo aver selezionato o censito una nuova compagnia, proseguire con l'inserimento del tipo nave, Call sign e nome nave. Nel campo <strong>"Indicatore IMO Number"</strong> selezionare uno tra i valori "Sì/No". Nel caso si selezioni <strong>"No"</strong>, l'utente deve indicare almeno uno dei campi tra <strong>"MMSI"</strong> e i dati di registrazione.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">5</div>
+                              <div>
+                                <h5 class="h4 mb-3">Inserimento dati identificativi nave (IMO "Sì")</h5>
+                                <p class="mb-0">Nel caso in cui venga selezionato <strong>"Sì"</strong> nel campo <strong>"Indicatore IMO Number"</strong>, viene presentato il campo IMO number da valorizzare.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/anagrafica-nave-declarant/17.png" alt="Form Dati identificativi della nave con Indicatore IMO Number impostato su Sì e campo IMO valorizzato" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/anagrafica-nave-declarant/18.png" alt="Accordion Dettagli della nave espanso con la sezione Movimento Trasporto Logistico" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">6</div>
+                              <div>
+                                <h5 class="h4 mb-3">Inserimento dati dettagli nave</h5>
+                                <p class="mb-0">Espandere l'accordion <strong>"Dettagli della nave"</strong> per poter inserire eventualmente ulteriori dati di dettaglio.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">7</div>
+                              <div>
+                                <h5 class="h4 mb-3">Step successivo</h5>
+                                <p class="mb-0">Dopo aver inserito i dati identificativi della nave, per proseguire cliccare il pulsante <strong>"Avanti"</strong>.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/anagrafica-nave-declarant/19.png" alt="Sezione Altre informazioni a fine form e pulsante Avanti evidenziato" />
+                          </div>
+                        </div>
+
+                        <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                          <p class="mb-0">Per censire una nuova nave è obbligatorio valorizzare i dati identificativi principali della nave. I dati di dettaglio sono opzionali.</p>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 2 — AGGIUNTA CERTIFICATI (OPZIONALE) -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">2</div>
+                          <h4 class="h4 text-white mb-0">AGGIUNTA CERTIFICATI (OPZIONALE)</h4>
+                        </div>
+                        <span class="badge text-bg-outline-light">STEP 2</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                        <ol class="list-unstyled d-flex gap-2 mb-4 p-0" aria-label="Avanzamento del censimento">
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Dati identificativi della nave</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-check-lg" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2 border-primary ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill" aria-current="step">
+                            <span class="d-block small text-uppercase mb-2 fw-bold">Aggiunta certificati (opzionale)</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2  ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Riepilogo</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-secondary-subtle text-secondary-subtle"><i class="bi bi-circle-fill" aria-hidden="true"></i></span>
+                            </span>
+                          </li>
+                        </ol>
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">1</div>
+                              <div>
+                                <h5 class="h4 mb-3">Aggiungi certificato</h5>
+                                <p class="mb-0">Per aggiungere il certificato cliccare il pulsante <strong>"Aggiungi"</strong>.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/anagrafica-nave-declarant/20.png" alt="Step Aggiunta certificati con tabella vuota e pulsante Aggiungi evidenziato" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/anagrafica-nave-declarant/21.png" alt="Finestra di inserimento certificato con i campi del certificato e pulsante Carica documento" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">2</div>
+                              <div>
+                                <h5 class="h4 mb-3">Inserimento informazioni certificato</h5>
+                                <p class="mb-0">Scegliere il file del certificato tramite il pulsante <strong>"Scegli file"</strong> e inserire: tipo certificato, tipo organizzazione emittente, codice emittente, descrizione emittente, luogo e data di rilascio, scadenza, data di fine estensione e data ispezione annuale. Cliccare il pulsante <strong>"Carica documento"</strong>.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">3</div>
+                              <div>
+                                <h5 class="h4 mb-3">Azioni disponibili e step successivo</h5>
+                                <p class="mb-0">Il documento viene mostrato all'interno dell'elenco. È possibile vederne il dettaglio tramite l'icona dell'occhio, modificarlo tramite l'icona della matita ed eliminarlo tramite l'icona del cestino. Cliccare il pulsante <strong>"Avanti"</strong> per proseguire.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/anagrafica-nave-declarant/22.png" alt="Elenco certificati con il certificato caricato, icone occhio, matita e cestino e pulsante Avanti evidenziato" />
+                          </div>
+                        </div>
+
+                        <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                          <p class="mb-0">L'inserimento dei certificati non è obbligatorio. È possibile proseguire allo step successivo e aggiungerli in un secondo momento.</p>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 3 — RIEPILOGO -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">3</div>
+                          <h4 class="h4 text-white mb-0">RIEPILOGO</h4>
+                        </div>
+                        <span class="badge text-bg-outline-light">STEP 3</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                        <ol class="list-unstyled d-flex gap-2 mb-4 p-0" aria-label="Avanzamento del censimento">
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Dati identificativi della nave</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-check-lg" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2 border-primary ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Aggiunta certificati (opzionale)</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-check-lg" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2 border-primary ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill" aria-current="step">
+                            <span class="d-block small text-uppercase mb-2 fw-bold">Riepilogo</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                            </span>
+                          </li>
+                        </ol>
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">1</div>
+                              <div>
+                                <h5 class="h4 mb-3">Riepilogo e salvataggio</h5>
+                                <p class="mb-0">Nell'ultimo passaggio di riepilogo è possibile consultare tutte le informazioni inserite negli step precedenti. Per salvare cliccare <strong>"Salva"</strong>.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/anagrafica-nave-declarant/23.png" alt="Step Riepilogo con Informazioni della Nave, Certificati allegati e pulsante Salva evidenziato" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/anagrafica-nave-declarant/24.png" alt="Finestra Conferma associazione nave con pulsante Conferma evidenziato" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">2</div>
+                              <div>
+                                <h5 class="h4 mb-3">Finestra di conferma</h5>
+                                <p class="mb-0">Il sistema mostra una finestra di conferma; cliccare <strong>"Conferma"</strong> per associare la nave.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">3</div>
+                              <div>
+                                <h5 class="h4 mb-3">Azioni disponibili</h5>
+                                <p class="mb-0">Dopo aver confermato, il sistema informa l'utente che la nave è stata creata e associata alla sosta.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/anagrafica-nave-declarant/25.png" alt="Pagina Creazione Sosta con la nave censita associata e messaggio informativo di avvenuta creazione" />
+                          </div>
+                        </div>
+
+                        <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                          <p class="mb-0">L'utente può aggiornare l'anagrafica della nave e la documentazione anche dopo la creazione della sosta.</p>
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 03 — MODIFICA ANAGRAFICA NAVE
+                 Profilo: Declarant/Collaboratore
+                 ============================================================ -->
+            <section id="modifica-anagrafica-nave" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">03.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Modifica anagrafica nave</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sul flusso di modifica dell'anagrafica nave.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 24-25 — PUNTI DI ACCESSO PER MODIFICARE ───────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h4 class="h4 text-secondary mb-2">Modifica di un'anagrafica nave</h4>
+                  <h3 class="h1 mb-3">Punti di accesso per modificare un'anagrafica nave</h3>
+                  <p class="mb-4">
+                    L'utente ha la possibilità di visualizzare i dati
+                    anagrafici di una nave e modificarli, selezionando il link
+                    <strong>"Dati nave"</strong>, presente all'interno di:
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <h4 class="fw-bold text-uppercase mb-3">Dichiarazione di Porto Base</h4>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/26.png" alt="Dettaglio della Dichiarazione di Porto Base con il link Dati nave evidenziato accanto al nome della nave" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <h4 class="fw-bold text-uppercase mb-3">Soste fuori abbonamento e per unità da diporto</h4>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/27.png" alt="Dettaglio della Sosta con il link Dati nave evidenziato accanto al nome della nave" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row g-4 mb-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <h4 class="fw-bold text-uppercase mb-3">Fascicoli e soste in abbonamento</h4>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/28.png" alt="Dettaglio del Fascicolo Soste in Abbonamento con il link Dati nave evidenziato accanto al nome della nave" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <h4 class="fw-bold text-uppercase mb-3">Obblighi di dichiarazione</h4>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/29.png" alt="Obbligo di dichiarazione A4.2 Ricevuta di Conferimento Rifiuti con il link Dati nave evidenziato accanto al nome della nave" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Dati identificativi della nave</h4>
+                          </div>
+                          <p class="mb-3">
+                            All'interno del dettaglio l'utente può visualizzare i dati identificativi della nave.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/30.png" alt="Pagina Dettagli della nave con la sezione Dati Identificativi della nave" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Dettagli della nave</h4>
+                          </div>
+                          <p class="mb-3">
+                            L'utente può visualizzare i dati relativi al dettaglio della nave espandendo il relativo accordion.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/31.png" alt="Accordion Dettagli della nave espanso con le sezioni Movimento Trasporto Logistico e Caratteristiche di costruzione" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Modifica dati nave</h4>
+                          </div>
+                          <p class="mb-3">
+                            In fondo alla pagina di dettaglio, per avviare il processo di modifica cliccare il pulsante <strong>"Modifica"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/anagrafica-nave-declarant/32.png" alt="Fondo della pagina di dettaglio nave con Elenco Certificati e pulsante Modifica evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 26 — MODIFICA DATI ANAGRAFICA NAVE ────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-4">Modifica dati anagrafica nave</h3>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-4">
+                        All'interno della pagina di dettaglio in modalità
+                        <strong>Modifica</strong>, il processo di aggiornamento
+                        delle informazioni seguirà <strong>lo stesso
+                        flusso</strong> guidato a step descritto nel flusso di
+                        "Censimento nave non presente in anagrafica".
+                      </p>
+                      <a href="#censimento-nave-non-presente" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none">
+                        <i class="bi bi-record-circle me-1"></i>
+                        Focus su "Step per censire una nuova nave" a pagina 17
+                      </a>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/anagrafica-nave-declarant/33.png" alt="Pagina Modifica nave con lo stepper a tre step e il form Dati Identificativi della nave precompilato" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          {
+            root: null,
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0,
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            const id = this.getAttribute('href').replace('#', '');
+            activate(id);
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg  = document.getElementById('lightbox-img');
+        const modal  = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+
+          img.addEventListener('click', function () {
+            apriLightbox(this);
+          });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () {
+          lbImg.src = '';
+        });
+      })();
+    </script>
+
+  </body>
+</html>
