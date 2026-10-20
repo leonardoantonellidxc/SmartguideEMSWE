@@ -1,0 +1,460 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Consultazione RIM</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Consultazione RIM</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#consultazione-rim">
+                        01. Consultazione RIM
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                  <h1 class="h4 mb-0">Consultazione RIM</h1>
+                 
+                </div>
+                <p class="mb-0 mt-2">
+                  Il portale delle Smart Guide è uno spazio digitale che
+                  raccoglie risorse pratiche e aggiornate in un unico ambiente
+                  intuitivo. Strumenti chiari e organizzati per organizzarti e
+                  trovare subito ciò che ti serve.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — CONSULTAZIONE RIM
+                 Profilo: Tutti i profili
+                 ============================================================ -->
+            <section id="consultazione-rim" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Consultazione RIM</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla consultazione delle informazioni provenienti dal sistema RIM - Reporting Interface Module.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 01 — PUNTO DI ACCESSO ─────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 text-secondary mb-4">La voce di menù</h4>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-4">
+                        Dalla dashboard, è possibile <strong>accedere alle
+                        principali sezioni tramite le voci di menu</strong>.
+                      </p>
+
+                      <div class="card border-0 rounded-3 p-3 bg-primary">
+                        <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                        <p class="text-white mb-0">
+                          Cliccando sulla voce <strong>"RIM"</strong> l'utente
+                          viene indirizzato alla pagina di consultazione delle
+                          informazioni che provengono dal sistema RIM:
+                          Reporting Interface Module.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/consultazione-rim/1.png" alt="Dashboard con la voce di menu RIM evidenziata nella barra di navigazione" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 02 — FUNZIONALITÀ IN PAGINA ───────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Ricerca e consultazione</h4>
+                  <h3 class="h1 mb-2">Funzionalità in pagina</h3>
+                  <p class="mb-4">
+                    È possibile avviare la ricerca utilizzando i filtri
+                    semplici e avanzati disponibili. La schermata è suddivisa
+                    nelle seguenti <strong>tre sezioni</strong>:
+                  </p>
+
+                  <div class="row g-4">
+                    <div class="col-12 col-lg-5">
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
+                        <div class="d-flex gap-3">
+                          <div class="sg-step-badge flex-shrink-0">1</div>
+                          <div>
+                            <h4 class="h5 fw-bold text-uppercase mb-2">Filtri di ricerca</h4>
+                            <p class="mb-0">
+                              La sezione filtri consente di ricercare le
+                              informazioni che provengono dal sistema RIM
+                              secondo diversi criteri. Sono disponibili filtri
+                              base, come <strong>IUT</strong> (Identificativo
+                              univoco della trasmissione), <strong>Tipo
+                              Formalità MIG, Esito dell'invio, Visit ID</strong>,
+                              e filtri avanzati per affinare la ricerca per
+                              <strong>Data invio messaggio Da</strong> e
+                              <strong>Data invio messaggio A</strong> (data e
+                              orario). I filtri applicati sono visualizzati e
+                              cancellabili.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
+                        <div class="d-flex gap-3">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <div>
+                            <h4 class="h5 fw-bold text-uppercase mb-2">Azioni sulla tabella</h4>
+                            <p class="mb-0">
+                              È possibile sia esportare i risultati di ricerca
+                              attraverso il pulsante <strong>"Esporta"</strong>,
+                              sia filtrare ulteriormente i risultati di
+                              ricerca valorizzando il relativo campo.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <div>
+                            <h4 class="h5 fw-bold text-uppercase mb-2">Visualizzazione messaggi tramite tabella</h4>
+                            <p class="mb-0">
+                              I risultati della ricerca vengono presentati in
+                              una tabella, mostrando le <strong>informazioni
+                              principali</strong> e le <strong>azioni
+                              disponibili per singolo messaggio</strong>:
+                              visualizzazione risposte e "Scarica".
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/consultazione-rim/2.png" alt="Pagina Consultazione RIM con filtri di ricerca, pulsante Esporta ed Elenco risultati" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 03 — AZIONI SUL RIM ───────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Consultazione RIM</h4>
+                  <h3 class="h1 mb-4">Azioni sul RIM</h3>
+
+                  <img src="./img/consultazione-rim/3.png" alt="Riga della tabella risultati con le icone Risposte e Scarica numerate 1 e 2" class="w-100 rounded-3 mb-4" />
+
+                  <div class="row g-4">
+
+                    <!-- Azione 1 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="fw-bold text-uppercase mb-0">Risposte</h4>
+                          </div>
+                          <p class="mb-2">
+                            Cliccare sull'<strong>icona della cartella</strong>
+                            per visualizzare tutte le risposte ricevute per il
+                            messaggio. Si apre una finestra laterale dove, per
+                            ciascuna risposta, viene visualizzato:
+                          </p>
+                          <ul class="mb-3">
+                            <li>ID Unico Trasmissione;</li>
+                            <li>Tipo Formalità;</li>
+                            <li>Data invio messaggio;</li>
+                            <li>pulsante con icona per effettuare il download del messaggio XML di risposta e degli eventuali file allegati.</li>
+                          </ul>
+                          <div class="mt-auto">
+                            <img src="./img/consultazione-rim/4.png" alt="Finestra laterale con l'elenco delle risposte ricevute per il messaggio e l'icona di download" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Azione 2 -->
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-2">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="fw-bold mb-0"><span class="text-uppercase">Scarica</span> .xml</h4>
+                          </div>
+                          <p class="mb-3">
+                            Cliccare sul pulsante con l'<strong>icona del
+                            download</strong> per scaricare il messaggio in
+                            formato .XML.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/consultazione-rim/5.png" alt="Esempio del contenuto di un messaggio RIM scaricato in formato XML" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          {
+            root: null,
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0,
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            const id = this.getAttribute('href').replace('#', '');
+            activate(id);
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg  = document.getElementById('lightbox-img');
+        const modal  = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+
+          img.addEventListener('click', function () {
+            apriLightbox(this);
+          });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () {
+          lbImg.src = '';
+        });
+      })();
+    </script>
+
+  </body>
+</html>
