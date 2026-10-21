@@ -1,0 +1,1169 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Accreditamento Comandante</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Accreditamento Comandante</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#accreditamento-comandante">
+                        01. Accreditamento Comandante
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                  <h1 class="h4 mb-0">Accreditamento Comandante</h1>
+                 
+                </div>
+                <p class="mb-0 mt-2">
+                  Il portale delle Smart Guide è uno spazio digitale che
+                  raccoglie risorse pratiche e aggiornate in un unico ambiente
+                  intuitivo. Strumenti chiari e organizzati per organizzarti e
+                  trovare subito ciò che ti serve.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — ACCREDITAMENTO COMANDANTE
+                 Profilo: Comandante
+                 ============================================================ -->
+            <section id="accreditamento-comandante" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Accreditamento Comandante</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sul flusso di accreditamento per l'utente "Comandante".
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 19-30 — PASSAGGI PER ACCREDITARSI A SISTEMA ──── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h4 class="h4 text-secondary mb-2">Accreditamento Comandante</h4>
+                  <h3 class="h1 mb-3">Passaggi per accreditarsi a sistema</h3>
+                  <p class="mb-4">
+                    Per accreditarsi a sistema, il Comandante dovrà procedere
+                    seguendo i passaggi sottostanti.
+                  </p>
+
+                  <div class="row g-3 mb-5">
+
+                    <div class="col-12 col-md-6 col-xl-3 d-flex">
+                      <div class="card bg-light border-0 rounded-3 w-100">
+                        <div class="card-body p-3 d-flex flex-column">
+                          <div class="small text-uppercase text-secondary mb-2">Step 1</div>
+                          <h4 class="h6 text-uppercase mb-2">I tuoi dati</h4>
+                          <p class="small mb-3">Consente di inserire i dati: anagrafici, di residenza e di contatto.</p>
+                          <div class="mt-auto">
+                            <img src="./img/accreditamento-comandante/1.png" alt="Step I tuoi dati del form Richiesta di accreditamento" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-3 d-flex">
+                      <div class="card bg-light border-0 rounded-3 w-100">
+                        <div class="card-body p-3 d-flex flex-column">
+                          <div class="small text-uppercase text-secondary mb-2">Step 2</div>
+                          <h4 class="h6 text-uppercase mb-2">Dettaglio utente</h4>
+                          <p class="small mb-3">Consente di aggiungere un nuovo profilo, indicando la tipologia: di account, utente e profilo.</p>
+                          <div class="mt-auto">
+                            <img src="./img/accreditamento-comandante/2.png" alt="Step Dettaglio utente con il pulsante Aggiungi profilo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-3 d-flex">
+                      <div class="card bg-light border-0 rounded-3 w-100">
+                        <div class="card-body p-3 d-flex flex-column">
+                          <div class="small text-uppercase text-secondary mb-2">Step 3</div>
+                          <h4 class="h6 text-uppercase mb-2">Documenti allegati (opzionale)</h4>
+                          <p class="small mb-3">Consente di allegare varie tipologie di documenti.</p>
+                          <div class="mt-auto">
+                            <img src="./img/accreditamento-comandante/3.png" alt="Step Documenti allegati con il caricamento file" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-3 d-flex">
+                      <div class="card bg-light border-0 rounded-3 w-100">
+                        <div class="card-body p-3 d-flex flex-column">
+                          <div class="small text-uppercase text-secondary mb-2">Step 4</div>
+                          <h4 class="h6 text-uppercase mb-2">Riepilogo</h4>
+                          <p class="small mb-3">Consente di visualizzare il riepilogo delle informazioni inserite negli step precedenti e procedere con la sottomissione dell'accreditamento.</p>
+                          <div class="mt-auto">
+                            <img src="./img/accreditamento-comandante/4.png" alt="Step Riepilogo con il pulsante Sottometti accreditamento" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- STEP 1 — I TUOI DATI -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">1</div>
+                          <h4 class="h4 text-white mb-0">I TUOI DATI</h4>
+                        </div>
+                        <span class="badge text-bg-outline-light">STEP 1</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                        <ol class="list-unstyled d-flex gap-2 mb-4 p-0" aria-label="Avanzamento dell'accreditamento">
+                          <li class="flex-fill" aria-current="step">
+                            <span class="d-block small text-uppercase mb-2 fw-bold">I tuoi dati</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2  ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Dettaglio utente</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-secondary-subtle text-secondary-subtle"><i class="bi bi-circle-fill" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2  ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Documenti allegati</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-secondary-subtle text-secondary-subtle"><i class="bi bi-circle-fill" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2  ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Riepilogo</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-secondary-subtle text-secondary-subtle"><i class="bi bi-circle-fill" aria-hidden="true"></i></span>
+                            </span>
+                          </li>
+                        </ol>
+                        <div class="mb-4"><a href="#" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none text-wrap text-start mt-3">
+                                  <i class="bi bi-record-circle me-1"></i>Focus sui punti di accesso all'accreditamento (Italiano o comunitario / Extra UE) — Modalità Generali, pag. 2
+                                </a></div>
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">1</div>
+                              <div>
+                                <h5 class="h4 mb-3">Dati anagrafici "Extra UE"</h5>
+                                <div class="mb-0">Per l'utente <strong>"Extra UE"</strong> il sistema chiederà di inserire i seguenti dati: Cittadinanza, Identificativo fiscale, Cognome, Nome, Genere, Stato, Luogo e data di nascita.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/5.png" alt="Sezione Dati anagrafici per un utente Extra UE" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/6.png" alt="Sezione Dati anagrafici per un utente italiano con il pulsante Verifica evidenziato" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">2</div>
+                              <div>
+                                <h5 class="h4 mb-3">Dati anagrafici "Italiano o comunitario"</h5>
+                                <div class="mb-0">Per l'utente <strong>"Italiano o comunitario"</strong> il sistema chiederà di inserire la cittadinanza e l'identificativo fiscale/codice fiscale. In caso di cittadinanza italiana, con l'inserimento del codice fiscale, verificarlo cliccando il pulsante <strong>"Verifica"</strong>.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">3</div>
+                              <div>
+                                <h5 class="h4 mb-3">Inserimento dati anagrafici</h5>
+                                <div class="mb-0">Dopo la verifica compilare i campi indicando: Cognome, Nome, Genere, Stato di nascita, Luogo di nascita e Data di nascita.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/7.png" alt="Sezione Dati anagrafici compilata dopo la verifica del codice fiscale" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/8.png" alt="Sezioni Dati di residenza e Dati di contatto compilate con il pulsante Vai avanti evidenziato" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">4</div>
+                              <div>
+                                <h5 class="h4 mb-3">Inserimento dati di residenza e di contatto</h5>
+                                <div class="mb-0">Indicare se la residenza è estera o meno (Sì/No), l'indirizzo, numero civico, provincia, comune e CAP/ZIP Code. Successivamente inserire il contatto e-mail e telefonico. Cliccare <strong>"Vai avanti"</strong> per proseguire.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">5</div>
+                              <div>
+                                <h5 class="h4 mb-3">Documento di riconoscimento per utente Extra UE</h5>
+                                <div class="mb-0">Se l'utente è Extra UE, è necessario inserire il documento di riconoscimento, selezionando la tipologia del documento e successivamente indicando i dati: Numero documento, Rilasciato da, Data rilascio, Data di scadenza. Cliccare <strong>"Vai avanti"</strong> per procedere.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/9.png" alt="Sezione Documenti di Riconoscimento con il pulsante Carica, l'elenco file caricati e il pulsante Vai avanti" />
+                          </div>
+                        </div>
+
+                        <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                          <p class="mb-0">Effettuando l'accesso tramite SPID, CIE, CNS ed eIDAS, i dati anagrafici vengono recuperati automaticamente in relazione alle impostazioni dei protocolli di identità digitale. In caso contrario l'utente deve inserire i dati manualmente.</p>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 2 — DETTAGLIO UTENTE -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">2</div>
+                          <h4 class="h4 text-white mb-0">DETTAGLIO UTENTE</h4>
+                        </div>
+                        <span class="badge text-bg-outline-light">STEP 2</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                        <ol class="list-unstyled d-flex gap-2 mb-4 p-0" aria-label="Avanzamento dell'accreditamento">
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">I tuoi dati</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-check-lg" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2 border-primary ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill" aria-current="step">
+                            <span class="d-block small text-uppercase mb-2 fw-bold">Dettaglio utente</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2  ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Documenti allegati</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-secondary-subtle text-secondary-subtle"><i class="bi bi-circle-fill" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2  ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Riepilogo</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-secondary-subtle text-secondary-subtle"><i class="bi bi-circle-fill" aria-hidden="true"></i></span>
+                            </span>
+                          </li>
+                        </ol>
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">1</div>
+                              <div>
+                                <h5 class="h4 mb-3">Selezione tipologia account, utente e profilo</h5>
+                                <div class="mb-0">Selezionare come tipologia account <strong>"Dichiarante"</strong>, come tipologia utente <strong>"Compagnia di navigazione"</strong> e come profilo utente <strong>"Comandante"</strong>, infine cliccare il pulsante <strong>"Aggiungi profilo"</strong>.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/10.png" alt="Campi Tipo account, Tipologia utente e Profilo utente valorizzati e pulsante Aggiungi profilo evidenziato" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/11.png" alt="Tabella profili con il profilo Comandante e il pulsante Compila richiesta evidenziato" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">2</div>
+                              <div>
+                                <h5 class="h4 mb-3">Compila richiesta</h5>
+                                <div class="mb-0">Dopo aver aggiunto uno o più profili, quest'ultimo compare all'interno della tabella. Proseguire cliccando l'apposito pulsante <strong>"Compila richiesta"</strong> per singolo profilo utente presente in tabella.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">3</div>
+                              <div>
+                                <h5 class="h4 mb-3">Aggiunta informazioni profilo selezionato</h5>
+                                <div class="mb-0">Compilare le informazioni del profilo selezionato, indicando l'eventuale abilitazione alle merci pericolose (Sì/No) e l'abilitazione per la compilazione dell'obbligo di dichiarazione "B8 Libera Pratica Sanitaria", indicando un nuovo indirizzo qualora si selezioni "Altra residenza".</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/12.png" alt="Form Compila richiesta del profilo Comandante con Dati aggiuntivi profilo e Libera Pratica Sanitaria" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/13.png" alt="Sezione Associa company con il campo Nome company e il pulsante Cerca evidenziato" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">4</div>
+                              <div>
+                                <h5 class="h4 mb-3">Ricerca company</h5>
+                                <div class="mb-0">Ricercare la company inserendo il nome e successivamente cliccare il pulsante <strong>"Cerca"</strong>.</div>
+                                <a href="#censimento-nuova-company" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none text-wrap text-start mt-3">
+                                  <i class="bi bi-record-circle me-1"></i>Focus su "Censimento di una company non presente in elenco"
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">5</div>
+                              <div>
+                                <h5 class="h4 mb-3">Selezione e associazione company</h5>
+                                <div class="mb-0">All'interno dell'elenco dei risultati della ricerca, selezionare una delle company tramite il radio button e successivamente, per associarla, cliccare l'apposito pulsante <strong>"Associa"</strong>.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/14.png" alt="Elenco risultati company con un radio button selezionato e il pulsante Associa" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/15.png" alt="Tabella company associate con il pulsante Associa nave evidenziato" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">6</div>
+                              <div>
+                                <h5 class="h4 mb-3">Associazione nave</h5>
+                                <div class="mb-0">Proseguire cliccando l'apposito pulsante <strong>"Associa nave"</strong> per singola company presente in tabella.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">7</div>
+                              <div>
+                                <h5 class="h4 mb-3">Selezione navi della company</h5>
+                                <div class="mb-0">Il sistema mostra una finestra dove è possibile selezionare tramite radio button una nave della propria company. Cliccare il pulsante <strong>"Seleziona nave"</strong> per completare l'associazione.</div>
+                                <a href="#censimento-nuova-nave" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none text-wrap text-start mt-3">
+                                  <i class="bi bi-record-circle me-1"></i>Focus su "Ricerca e censimento di una nave non presente in elenco"
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/16.png" alt="Finestra Seleziona nave con l'elenco Navi della Company e il pulsante Seleziona nave evidenziato" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/17.png" alt="Tabella company con la nave associata e le icone matita e cestino evidenziate" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">8</div>
+                              <div>
+                                <h5 class="h4 mb-3">Navi associate e azioni disponibili</h5>
+                                <div class="mb-0">La company e le relative navi associate sono visualizzate in elenco. È possibile <strong>modificare</strong> l'associazione della company alla nave (tramite il pulsante con l'icona della matita) o <strong>eliminare</strong> (tramite il pulsante con l'icona del cestino) la company associata.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">9</div>
+                              <div>
+                                <h5 class="h4 mb-3">Informazioni aggiuntive e contratto di arruolamento</h5>
+                                <div class="mb-0">Indicare se l'unità è con porto base o meno (Sì/No). Se impostata su <strong>Sì</strong>, viene richiesto di indicare il <strong>"Porto Base"</strong>; se impostata su <strong>No</strong>, indicare il primo porto di scalo. Allegare il contratto di arruolamento cliccando <strong>"Scegli file"</strong> e successivamente cliccando il pulsante <strong>"Carica"</strong>.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/18.png" alt="Sezioni Informazioni aggiuntive porto di accreditamento e Contratto di arruolamento con il pulsante Carica" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/19.png" alt="Finestra Caricamento file con il pulsante Conferma evidenziato" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">10</div>
+                              <div>
+                                <h5 class="h4 mb-3">Finestra di conferma caricamento contratto</h5>
+                                <div class="mb-0">Il sistema mostrerà una finestra per confermare il caricamento del file; cliccare <strong>"Conferma"</strong> per proseguire.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">11</div>
+                              <div>
+                                <h5 class="h4 mb-3">Azioni disponibili su file caricati e salvataggio profilo</h5>
+                                <div class="mb-0">Il documento viene mostrato nell'elenco file caricati. Il file può essere scaricato o eliminato tramite gli appositi pulsanti. Successivamente cliccare il pulsante <strong>"Salva profilo"</strong>. L'utente verrà reindirizzato alla pagina iniziale dello step del dettaglio utente.</div>
+                                <a href="#" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none text-wrap text-start mt-3">
+                                  <i class="bi bi-record-circle me-1"></i>Focus sugli stati della scansione — Modalità Generali, pag. 4
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/20.png" alt="Elenco file caricati con il contratto di arruolamento, le icone scarica ed elimina e il pulsante Salva profilo" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/21.png" alt="Tabella profili con le icone matita e cestino e il pulsante Vai avanti evidenziato" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">12</div>
+                              <div>
+                                <h5 class="h4 mb-3">Richiesta compilata e step successivo</h5>
+                                <div class="mb-0">È possibile sia <strong>modificare</strong> il profilo aggiunto tramite il pulsante con l'icona della matita, sia <strong>eliminarlo</strong> tramite il pulsante con l'icona del cestino, sia <strong>aggiungere un ulteriore profilo</strong> secondo le modalità descritte nei passaggi 1-3. Per proseguire cliccare il pulsante <strong>"Vai avanti"</strong>.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                          <p class="mb-0">Se la company non è presente nell'elenco dei risultati trovati, cliccare <strong>"Censisci company"</strong> all'interno della sezione di associazione.</p>
+                        </div>
+
+                        <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                          <p class="mb-0">Se la nave non è presente nell'elenco dei risultati trovati, cliccare <strong>"Ricerca nave non presente in elenco"</strong> all'interno della finestra di associazione.</p>
+                        </div>
+
+                        <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                          <p class="mb-0">È possibile aggiungere ulteriori profili replicando le operazioni sopra descritte.</p>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 3 — DOCUMENTI ALLEGATI (OPZIONALE) -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">3</div>
+                          <h4 class="h4 text-white mb-0">DOCUMENTI ALLEGATI (OPZIONALE)</h4>
+                        </div>
+                        <span class="badge text-bg-outline-light">STEP 3</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                        <ol class="list-unstyled d-flex gap-2 mb-4 p-0" aria-label="Avanzamento dell'accreditamento">
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">I tuoi dati</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-check-lg" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2 border-primary ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Dettaglio utente</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-check-lg" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2 border-primary ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill" aria-current="step">
+                            <span class="d-block small text-uppercase mb-2 fw-bold">Documenti allegati</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2  ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Riepilogo</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-secondary-subtle text-secondary-subtle"><i class="bi bi-circle-fill" aria-hidden="true"></i></span>
+                            </span>
+                          </li>
+                        </ol>
+
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              
+                              <div>
+                                <h5 class="h4 mb-3">Allegare documenti successivamente</h5>
+                                <div class="mb-0">È possibile allegare i documenti durante il processo di accreditamento oppure in un secondo momento, selezionando il pulsante <strong>"Salta e prosegui"</strong>.</div>
+                                <a href="#" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none text-wrap text-start mt-3">
+                                  <i class="bi bi-record-circle me-1"></i>Focus sugli stati della scansione — Modalità Generali, pag. 4
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/22.png" alt="Sezione Documenti allegati con elenco file caricati e il pulsante Salta e prosegui" />
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 4 — RIEPILOGO -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">4</div>
+                          <h4 class="h4 text-white mb-0">RIEPILOGO</h4>
+                        </div>
+                        <span class="badge text-bg-outline-light">STEP 4</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                        <ol class="list-unstyled d-flex gap-2 mb-4 p-0" aria-label="Avanzamento dell'accreditamento">
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">I tuoi dati</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-check-lg" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2 border-primary ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Dettaglio utente</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-check-lg" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2 border-primary ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Documenti allegati</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-check-lg" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2 border-primary ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill" aria-current="step">
+                            <span class="d-block small text-uppercase mb-2 fw-bold">Riepilogo</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                            </span>
+                          </li>
+                        </ol>
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">1</div>
+                              <div>
+                                <h5 class="h4 mb-3">Informazioni e possibili azioni</h5>
+                                <div class="mb-0">Nell'ultimo passaggio di riepilogo è possibile <strong>consultare</strong> tutte le <strong>informazioni inserite</strong> e sottomettere l'accreditamento tramite l'apposito pulsante <strong>"Sottometti accreditamento"</strong>.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/23.png" alt="Riepilogo con Lista profili utente, Documenti allegati e il pulsante Sottometti accreditamento evidenziato" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/24.png" alt="Finestre Conferma accreditamento per utente Extra UE e per utente Italiano o comunitario" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">2</div>
+                              <div>
+                                <h5 class="h4 mb-3">Finestra di conferma (Italiano/Comunitario e Extra UE)</h5>
+                                <div class="mb-0">Il sistema mostrerà una <strong>finestra per confermare l'invio della richiesta di accreditamento</strong> al responsabile locale del porto indicato all'interno della richiesta. Per l'utente Extra UE, la finestra di conferma riporta l'informativa che l'approvazione della richiesta è soggetta a verifica tramite appuntamento schedulato da parte di Capitanerie. Cliccare <strong>"Conferma"</strong> per proseguire.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">3</div>
+                              <div>
+                                <h5 class="h4 mb-3">Richiesta inoltrata</h5>
+                                <div class="mb-0">Il sistema informa l'utente che la richiesta è stata inoltrata correttamente e che riceverà aggiornamenti tramite e-mail.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/25.png" alt="Pagina di conferma con il messaggio Le richieste sono state inoltrate correttamente" />
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- FOCUS STEP 2 — CENSIMENTO NUOVA COMPANY — COMPANY NON PRESENTE IN ELENCO -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4" id="censimento-nuova-company">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          
+                          <h4 class="h4 text-white mb-0">CENSIMENTO NUOVA COMPANY — COMPANY NON PRESENTE IN ELENCO</h4>
+                        </div>
+                        <span class="badge text-bg-outline-light">FOCUS STEP 2</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                        <ol class="list-unstyled d-flex gap-2 mb-4 p-0" aria-label="Avanzamento dell'accreditamento">
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">I tuoi dati</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-check-lg" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2 border-primary ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill" aria-current="step">
+                            <span class="d-block small text-uppercase mb-2 fw-bold">Dettaglio utente</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2  ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Documenti allegati</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-secondary-subtle text-secondary-subtle"><i class="bi bi-circle-fill" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2  ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Riepilogo</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-secondary-subtle text-secondary-subtle"><i class="bi bi-circle-fill" aria-hidden="true"></i></span>
+                            </span>
+                          </li>
+                        </ol>
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">1</div>
+                              <div>
+                                <h5 class="h4 mb-3">Censimento company non presente</h5>
+                                <div class="mb-0">È possibile censire una company cliccando sul pulsante <strong>"Censisci company"</strong>, disponibile all'interno del banner informativo. Il sistema mostra una finestra dove inserire il nome (obbligatorio) ed eventualmente l'IMO della company. Per aggiungerla in elenco cliccare il pulsante <strong>"Aggiungi"</strong>.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/26.png" alt="Link Censisci company nel banner informativo e finestra Censisci company con il pulsante Aggiungi" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/27.png" alt="Elenco risultati con la company censita selezionata e il pulsante Associa evidenziato" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">2</div>
+                              <div>
+                                <h5 class="h4 mb-3">Selezione e associazione</h5>
+                                <div class="mb-0">All'interno dell'elenco dei risultati della ricerca, selezionare la company appena censita tramite il radio button e successivamente, per associarla, cliccare l'apposito pulsante <strong>"Associa"</strong>.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">3</div>
+                              <div>
+                                <h5 class="h4 mb-3">Company associata</h5>
+                                <div class="mb-0">Dopo averla associata, la company viene visualizzata in elenco. Sarà possibile associarle una nave tramite l'apposito pulsante <strong>"Associa nave"</strong> ed <strong>eliminarla</strong> tramite l'icona del <strong>cestino</strong>.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/28.png" alt="Tabella con la company associata e il pulsante Associa nave" />
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- FOCUS STEP 2 — CENSIMENTO NUOVA NAVE — NAVE NON PRESENTE IN ELENCO -->
+                  <div class="card border-0 rounded-3 overflow-hidden mb-4" id="censimento-nuova-nave">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          
+                          <h4 class="h4 text-white mb-0">CENSIMENTO NUOVA NAVE — NAVE NON PRESENTE IN ELENCO</h4>
+                        </div>
+                        <span class="badge text-bg-outline-light">FOCUS STEP 2</span>
+                      </div>
+                    </div>
+
+                    <div class="card-body bg-light p-4">
+                        <ol class="list-unstyled d-flex gap-2 mb-4 p-0" aria-label="Avanzamento dell'accreditamento">
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">I tuoi dati</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-check-lg" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2 border-primary ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill" aria-current="step">
+                            <span class="d-block small text-uppercase mb-2 fw-bold">Dettaglio utente</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-primary text-white"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2  ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Documenti allegati</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-secondary-subtle text-secondary-subtle"><i class="bi bi-circle-fill" aria-hidden="true"></i></span>
+                            <span class="flex-grow-1 border-top border-2  ms-2"></span>
+                            </span>
+                          </li>
+                          <li class="flex-fill">
+                            <span class="d-block small text-uppercase mb-2 text-secondary">Riepilogo</span>
+                            <span class="d-flex align-items-center">
+                            <span class="rounded-circle d-inline-flex align-items-center justify-content-center p-2 bg-secondary-subtle text-secondary-subtle"><i class="bi bi-circle-fill" aria-hidden="true"></i></span>
+                            </span>
+                          </li>
+                        </ol>
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">1</div>
+                              <div>
+                                <h5 class="h4 mb-3">Ricerca nave non presente in elenco</h5>
+                                <div class="mb-0">Dopo aver selezionato il pulsante <strong>"Associa nave"</strong>, il sistema mostra una finestra con l'elenco delle navi appartenenti alla flotta della company di appartenenza dell'utente. Per cercare e associare una nave non appartenente alla propria company, cliccare <strong>"Ricerca nave non presente in elenco"</strong>.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/29.png" alt="Pulsante Associa nave e finestra Navi della Company con il link Ricerca nave non presente in elenco" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/30.png" alt="Finestra Ricerca Navi con i campi Nome, IMO, MMSI e Call Sign e il pulsante Cerca evidenziato" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">2</div>
+                              <div>
+                                <h5 class="h4 mb-3">Ricerca nave</h5>
+                                <div class="mb-0">Per cercare una nave non presente in elenco, inserire uno dei parametri indicati: Nome, IMO, MMSI o Call Sign. Successivamente cliccare il pulsante <strong>"Cerca"</strong>.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">3</div>
+                              <div>
+                                <h5 class="h4 mb-3">Selezione e associazione nave</h5>
+                                <div class="mb-0">Il sistema mostra una finestra dove è possibile selezionare tramite radio button la nave di proprio interesse. Cliccare il pulsante <strong>"Associa nave a company"</strong> per completare l'associazione alla propria company, visibile nel campo "Stai associando la nave alla tua company".</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/31.png" alt="Elenco risultati navi con una nave selezionata e il pulsante Associa nave a company" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/32.png" alt="Finestra Ricerca Navi con il link Indica nuova nave evidenziato" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">4</div>
+                              <div>
+                                <h5 class="h4 mb-3">Censimento nave non presente</h5>
+                                <div class="mb-0">Nel caso in cui la nave non risulti presente nell'elenco dei risultati trovati, è possibile procedere con il censimento di una nuova nave cliccando il pulsante <strong>"Indica nuova nave"</strong>.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center mb-5">
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">5</div>
+                              <div>
+                                <h5 class="h4 mb-3">Inserimento informazioni e censimento</h5>
+                                <div class="mb-0">Il sistema mostra una finestra dove inserire le informazioni della nuova nave da censire: Nome, MMSI, Call Sign, Indicatore IMO, Bandiera, Stazza lorda (GT), Porto di registrazione, Numero di registrazione e Data di registrazione. Per completare il censimento cliccare il pulsante <strong>"Censisci nuova nave"</strong>.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/33.png" alt="Finestra di censimento nuova nave compilata con il pulsante Censisci nuova nave evidenziato" />
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-7">
+                            <img class="w-100 rounded-3" src="./img/accreditamento-comandante/34.png" alt="Tabella company con la nuova nave censita associata e le icone matita e cestino" />
+                          </div>
+                          <div class="col-12 col-lg-5">
+                            <div class="d-flex gap-3">
+                              <div class="sg-step-badge flex-shrink-0">6</div>
+                              <div>
+                                <h5 class="h4 mb-3">Nave censita e associata alla company</h5>
+                                <div class="mb-0">La company con associata la nuova nave censita viene visualizzata in tabella. È possibile <strong>modificare</strong> l'associazione della company alla nave (tramite il pulsante con l'icona della matita) o <strong>eliminare</strong> (tramite il pulsante con l'icona del cestino) la company associata.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                          <p class="mb-0">Il censimento della nuova nave seguirà le regole illustrate all'interno del capitolo <a href="anagrafica-nave-declarant.html#censimento-nave-non-presente" class="link-primary fw-semibold">"Anagrafica nave"</a>.</p>
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          {
+            root: null,
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0,
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            const id = this.getAttribute('href').replace('#', '');
+            activate(id);
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg  = document.getElementById('lightbox-img');
+        const modal  = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+
+          img.addEventListener('click', function () {
+            apriLightbox(this);
+          });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () {
+          lbImg.src = '';
+        });
+      })();
+    </script>
+
+  </body>
+</html>
