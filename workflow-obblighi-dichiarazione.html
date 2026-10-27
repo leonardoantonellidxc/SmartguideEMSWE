@@ -1,0 +1,970 @@
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Workflow approvativi Obblighi di Dichiarazione</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Workflow approvativi Obblighi di Dichiarazione</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#punti-accesso-valutazione">
+                        01. Punti di accesso per valutare gli Obblighi di Dichiarazione
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#valutazione-istanza">
+                        02. Valutazione Obblighi di Dichiarazione di tipo "Istanza"
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#valutazione-comunicazione">
+                        03. Valutazione Obblighi di Dichiarazione di tipo "Comunicazione"
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#visto-comunicazione">
+                        04. Apposizione visto Obblighi di Dichiarazione di tipo "Comunicazione"
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#valutazione-accosto">
+                        05. Valutazione di Obblighi di Dichiarazione di tipo "Accosto" con terminalista
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#revoca-obbligo">
+                        06. Revoca Obbligo di Dichiarazione
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#valutazione-invalidazione">
+                        07. Valutazione richiesta di invalidazione
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                  <h1 class="h4 mb-0">Workflow approvativi Obblighi di Dichiarazione</h1>
+                 
+                </div>
+                <p class="mb-0 mt-2">
+                  Il portale delle Smart Guide è uno spazio digitale che
+                  raccoglie risorse pratiche e aggiornate in un unico ambiente
+                  intuitivo. Strumenti chiari e organizzati per organizzarti e
+                  trovare subito ciò che ti serve.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — PUNTI DI ACCESSO PER VALUTARE GLI OBBLIGHI DI DICHIARAZIONE
+                 Profilo: Operatore CdP Locale
+                 ============================================================ -->
+            <section id="punti-accesso-valutazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Punti di accesso per valutare gli Obblighi di Dichiarazione</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sui punti di accesso per valutare gli Obblighi di Dichiarazione.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 50 — PUNTI DI ACCESSO ──────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h4 class="h4 text-secondary mb-2">Punti di accesso per valutare gli Obblighi di Dichiarazione</h4>
+                  <h3 class="h1 mb-4">Punti di accesso per valutare gli Obblighi di Dichiarazione</h3>
+
+                  <div class="row g-4 mb-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="flex-shrink-0">
+                              <i class="bi bi-house fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <h4 class="fw-bold text-uppercase mb-2">Dashboard</h4>
+                              <p class="mb-0">È possibile accedere agli Obblighi di Dichiarazione sia tramite la sezione dedicata, sia tramite le <strong>azioni disponibili</strong> per ciascuna attività presente nel tab <strong>"Obblighi di Dichiarazione"</strong>.</p>
+                            </div>
+                          </div>
+                          <div class="mt-auto">
+                            <img src="./img/workflow-obblighi-dichiarazione/1.png" alt="Dashboard con il riquadro Obblighi di dichiarazione, la tabella Attività da svolgere e il menu Azioni con la voce Visualizza evidenziata" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="flex-shrink-0">
+                              <i class="bi bi-bell fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <h4 class="fw-bold text-uppercase mb-2">Notifiche</h4>
+                              <p class="mb-0">Attraverso la <strong>sezione delle notifiche</strong> è possibile accedere al dettaglio dell'Obbligo di Dichiarazione <strong>sottomesso</strong> per la valutazione.</p>
+                            </div>
+                          </div>
+                          <div class="mt-auto">
+                            <img src="./img/workflow-obblighi-dichiarazione/2.png" alt="Elenco notifiche con la notifica Obbligo di dichiarazione sottomesso evidenziata" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="flex-shrink-0">
+                              <i class="bi bi-search fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <h4 class="fw-bold text-uppercase mb-2">Ricerca soste</h4>
+                              <p class="mb-0">Nella ricerca sia nel tab <strong>"Lista soste"</strong> che nel tab <strong>"Aggiornamenti soste"</strong> sarà possibile visualizzare e accedere alla sosta e al rispettivo Obbligo di Dichiarazione per la valutazione.</p>
+                            </div>
+                          </div>
+                          <div class="mt-auto">
+                            <img src="./img/workflow-obblighi-dichiarazione/3.png" alt="Tab Lista soste con l'azione Visualizza e tabella Obblighi di dichiarazione della sosta con l'icona di accesso al dettaglio" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-0" role="alert">
+                    <p class="mb-0">
+                      Per gli Obblighi di Dichiarazione che prevedono
+                      un'approvazione da parte dell'utente, sarà prevista nel
+                      tab "Azioni" la <strong>presa in carico</strong>.
+                      <a href="#" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none ms-1">
+                        <i class="bi bi-record-circle me-1"></i>Modalità Generali, pag. 8
+                      </a>
+                    </p>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 02 — VALUTAZIONE OBBLIGHI DI DICHIARAZIONE DI TIPO "ISTANZA"
+                 Profilo: Operatore CdP Locale
+                 ============================================================ -->
+            <section id="valutazione-istanza" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">02.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Valutazione Obblighi di Dichiarazione di tipo "Istanza"</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla valutazione degli Obblighi di Dichiarazione di tipo "Istanza".
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── AZIONI DISPONIBILI POST "SOTTOMISSIONE" ─────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h4 class="h4 text-secondary mb-2">Valutazione Obblighi di Dichiarazione di tipo "Istanza"</h4>
+                  <h3 class="h1 mb-3">Azioni disponibili post "Sottomissione"</h3>
+                  <p class="mb-3">
+                    A seguito di sottomissione di un Obbligo di Dichiarazione
+                    da parte del Declarant, l'autorità marittima ha la
+                    possibilità di procedere nella valutazione tramite le
+                    seguenti azioni:
+                  </p>
+
+                  <div class="mb-4">
+                    <a href="#punti-accesso-valutazione" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none text-wrap text-start">
+                      <i class="bi bi-record-circle me-1"></i>Visualizza il dettaglio di "Punti di accesso per valutare gli Obblighi di Dichiarazione"
+                    </a>
+                  </div>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/workflow-obblighi-dichiarazione/4.png" alt="Dettaglio Obbligo di Dichiarazione con Imposta di Bollo, Note interne e i pulsanti Torna alla sosta, Approva, Rifiuta e Richiesta di integrazione" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <div>
+                        <span class="btn btn-success disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-check-circle me-1" aria-hidden="true"></i>Approva
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver verificato i dati dell'Obbligo di Dichiarazione, può decidere di approvarlo.</p>
+                      </div>
+                      <hr class="my-4" />
+
+                      <div>
+                        <span class="btn btn-danger disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-x-circle me-1" aria-hidden="true"></i>Rifiuta
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver verificato i dati dell'Obbligo di Dichiarazione, può decidere di rifiutarlo.</p>
+                      </div>
+                      <hr class="my-4" />
+
+                      <div>
+                        <span class="btn btn-primary disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-pencil me-1" aria-hidden="true"></i>Richiesta di integrazione
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver verificato i dati dell'Obbligo di Dichiarazione, può decidere se richiederne l'integrazione.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 03 — VALUTAZIONE OBBLIGHI DI DICHIARAZIONE DI TIPO "COMUNICAZIONE"
+                 Profilo: Operatore CdP Locale
+                 ============================================================ -->
+            <section id="valutazione-comunicazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">03.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Valutazione Obblighi di Dichiarazione di tipo "Comunicazione"</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla valutazione degli Obblighi di Dichiarazione di tipo "Comunicazione".
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── AZIONI DISPONIBILI POST "SOTTOMISSIONE" ─────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h4 class="h4 text-secondary mb-2">Valutazione Obblighi di Dichiarazione di tipo "Comunicazione"</h4>
+                  <h3 class="h1 mb-3">Azioni disponibili post "Sottomissione"</h3>
+                  <p class="mb-3">
+                    A seguito di sottomissione di un Obbligo di Dichiarazione
+                    da parte del Declarant, l'autorità marittima ha la
+                    possibilità di procedere nella valutazione tramite le
+                    seguenti azioni:
+                  </p>
+
+                  <div class="mb-4">
+                    <a href="#punti-accesso-valutazione" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none text-wrap text-start">
+                      <i class="bi bi-record-circle me-1"></i>Visualizza il dettaglio di "Punti di accesso per valutare gli Obblighi di Dichiarazione"
+                    </a>
+                  </div>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/workflow-obblighi-dichiarazione/5.png" alt="Dettaglio Obbligo di Dichiarazione con Dati identificativi della nave, Dati sosta, Numero di persone a bordo, Note interne e i pulsanti Torna alla sosta, Presa visione e Richiesta di integrazione" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <div>
+                        <span class="btn btn-success disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-check-circle me-1" aria-hidden="true"></i>Presa visione
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver verificato i dati dell'Obbligo di Dichiarazione, può procedere con la presa visione.</p>
+                        <div class="alert alert-secondary d-flex align-items-start gap-2 rounded-3 mt-3 mb-0" role="note">
+                          <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                          <p class="mb-0">Dopo che l'utente ha preso visione dell'Obbligo di Dichiarazione lo stato passa in <strong>"Visionata"</strong>.</p>
+                        </div>
+                      </div>
+                      <hr class="my-4" />
+
+                      <div>
+                        <span class="btn btn-primary disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-pencil me-1" aria-hidden="true"></i>Richiesta di integrazione
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver verificato i dati dell'Obbligo di Dichiarazione, può decidere se richiederne l'integrazione.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 04 — APPOSIZIONE VISTO OBBLIGHI DI DICHIARAZIONE DI TIPO "COMUNICAZIONE"
+                 Profilo: Operatore CdP Locale
+                 ============================================================ -->
+            <section id="visto-comunicazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">04.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Apposizione visto Obblighi di Dichiarazione di tipo "Comunicazione"</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sul flusso di apposizione visto di un Obbligo di Dichiarazione di tipo "Comunicazione".
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── AZIONI DISPONIBILI POST "SOTTOMISSIONE" ─────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h4 class="h4 text-secondary mb-2">Apposizione visto Obblighi di Dichiarazione di tipo "Comunicazione"</h4>
+                  <h3 class="h1 mb-3">Azioni disponibili post "Sottomissione"</h3>
+                  <p class="mb-3">
+                    A seguito di sottomissione di un Obbligo di Dichiarazione
+                    da parte del Declarant, l'autorità marittima ha la
+                    possibilità di procedere nella valutazione tramite le
+                    seguenti azioni:
+                  </p>
+
+                  <div class="mb-4">
+                    <a href="#punti-accesso-valutazione" class="badge rounded-pill text-bg-dark px-3 py-2 text-decoration-none text-wrap text-start">
+                      <i class="bi bi-record-circle me-1"></i>Visualizza il dettaglio di "Punti di accesso per valutare gli Obblighi di Dichiarazione"
+                    </a>
+                  </div>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/workflow-obblighi-dichiarazione/6.png" alt="Dettaglio Obbligo di Dichiarazione con Dati identificativi della nave, Dati sosta, Numero di persone a bordo, Note interne e i pulsanti Torna alla sosta, Apponi visto, Respingi e Richiesta di integrazione" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <div>
+                        <span class="btn btn-success disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-check-circle me-1" aria-hidden="true"></i>Apponi visto
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver verificato i dati dell'Obbligo di Dichiarazione, può procedere con l'apposizione del visto.</p>
+                        <div class="alert alert-secondary d-flex align-items-start gap-2 rounded-3 mt-3 mb-0" role="note">
+                          <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                          <p class="mb-0">Dopo che l'utente ha apposto il visto all'Obbligo di Dichiarazione lo stato passa in <strong>"Vistata"</strong>.</p>
+                        </div>
+                      </div>
+                      <hr class="my-4" />
+
+                      <div>
+                        <span class="btn btn-danger disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-slash-circle me-1" aria-hidden="true"></i>Respingi
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver verificato i dati dell'Obbligo di Dichiarazione, può decidere se respingerlo.</p>
+                      </div>
+                      <hr class="my-4" />
+
+                      <div>
+                        <span class="btn btn-primary disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-pencil me-1" aria-hidden="true"></i>Richiesta di integrazione
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver verificato i dati dell'Obbligo di Dichiarazione, può decidere se richiederne l'integrazione.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 05 — VALUTAZIONE DI OBBLIGHI DI DICHIARAZIONE DI TIPO "ACCOSTO" CON TERMINALISTA
+                 Profilo: Terminalista, Operatore CdP Locale
+                 ============================================================ -->
+            <section id="valutazione-accosto" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">05.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Valutazione di Obblighi di Dichiarazione di tipo "Accosto" con terminalista</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla valutazione di Obblighi di Dichiarazione di tipo "Accosto" con terminalista.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <span class="badge text-bg-dark px-3 py-2 mb-3">Profilo: Terminalista</span>
+                  <h4 class="h4 text-secondary mb-2">Valutazione di Obblighi di Dichiarazione di tipo "Accosto" con terminalista</h4>
+                  <h3 class="h1 mb-3">Azioni disponibili per valutare gli Obblighi di Dichiarazione di tipo "Accosto": apposizione visto da parte del terminalista</h3>
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-4" role="alert">
+                    <p class="mb-0">
+                      Questo step viene attivato nel caso in cui, in fase di
+                      creazione Obbligo di Dichiarazione che prevedono
+                      l'indicazione della struttura portuale di accosto, la
+                      struttura portuale indicata abbia il terminalista, abbia
+                      come attributi terminal e banchina non pubblici e il
+                      porto sia gestito da Autorità di Sistema Portuale.
+                    </p>
+                  </div>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/workflow-obblighi-dichiarazione/7.png" alt="Dettaglio Obbligo di Dichiarazione con la sezione Terminal compilata e i pulsanti Torna alla sosta, Modifica e Apponi visto" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <div>
+                        <span class="btn btn-outline-primary disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-pencil me-1" aria-hidden="true"></i>Modifica
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver verificato i dati presenti nell'Obbligo di Dichiarazione, nella sezione "Terminal", può procedere con la modifica dei dati.</p>
+                      </div>
+                      <hr class="my-4" />
+
+                      <div>
+                        <span class="btn btn-primary disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-check-circle me-1" aria-hidden="true"></i>Apponi visto
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver verificato i dati presenti nell'Obbligo di Dichiarazione, può decidere se apporre il visto.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <span class="badge text-bg-dark px-3 py-2 mb-3">Profilo: Terminalista</span>
+                  <h4 class="h4 text-secondary mb-2">Valutazione di Obblighi di Dichiarazione di tipo "Accosto" con terminalista</h4>
+                  <h3 class="h1 mb-3">Azioni disponibili per valutare gli Obblighi di Dichiarazione di tipo "Accosto": apposizione visto da parte del terminalista</h3>
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/workflow-obblighi-dichiarazione/8.png" alt="Sezione Terminal in modifica con i campi Disponibilità banchina, Cambio accosto effettuato, Data e ora ingresso, Posizione prevista, bitte di ormeggio e Note, e i pulsanti Salva e Salva e apponi visto" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <div>
+                        <span class="btn btn-outline-primary disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-floppy me-1" aria-hidden="true"></i>Salva
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver modificato i dati presenti nell'Obbligo di Dichiarazione, nella sezione "Terminal", può procedere al salvataggio.</p>
+                      </div>
+                      <hr class="my-4" />
+
+                      <div>
+                        <span class="btn btn-primary disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-check-circle me-1" aria-hidden="true"></i>Salva e Apponi visto
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver modificato i dati presenti nell'Obbligo di Dichiarazione, nella sezione "Terminal", può procedere al salvataggio e contestuale apposizione visto.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <span class="badge text-bg-dark px-3 py-2 mb-3">Profilo: Operatore CdP Locale</span>
+                  <h4 class="h4 text-secondary mb-2">Valutazione di Obblighi di Dichiarazione di tipo "Accosto" con terminalista</h4>
+                  <h3 class="h1 mb-3">Azioni disponibili per valutare gli Obblighi di Dichiarazione di tipo "Accosto": valutazione da parte di CdP locale dopo apposizione visto da parte del terminalista</h3>
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/workflow-obblighi-dichiarazione/9.png" alt="Sezione Terminal vistata dal terminalista con il Riepilogo modifiche e i pulsanti Apponi visto, Richiesta di integrazione e Respingi" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <div>
+                        <span class="btn btn-success disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-check-circle me-1" aria-hidden="true"></i>Apponi visto
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver verificato i dati dell'Obbligo di Dichiarazione, e nello specifico la sezione <strong>"Terminal"</strong> vistata dal terminalista, può procedere con l'apposizione del visto.</p>
+                        <div class="alert alert-secondary d-flex align-items-start gap-2 rounded-3 mt-3 mb-0" role="note">
+                          <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                          <p class="mb-0">Dopo che l'utente ha apposto il visto all'Obbligo di Dichiarazione lo stato passa in <strong>"Vistata"</strong>.</p>
+                        </div>
+                      </div>
+                      <hr class="my-4" />
+
+                      <div>
+                        <span class="btn btn-primary disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-pencil me-1" aria-hidden="true"></i>Richiesta di integrazione
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver verificato i dati dell'Obbligo di Dichiarazione, può decidere se richiederne l'integrazione.</p>
+                      </div>
+                      <hr class="my-4" />
+
+                      <div>
+                        <span class="btn btn-danger disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-slash-circle me-1" aria-hidden="true"></i>Respingi
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver verificato i dati dell'Obbligo di Dichiarazione, può decidere se respingerlo.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 06 — REVOCA OBBLIGO DI DICHIARAZIONE
+                 Profilo: Operatore CdP Locale
+                 ============================================================ -->
+            <section id="revoca-obbligo" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">06.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Revoca Obbligo di Dichiarazione</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla revoca di un Obbligo di Dichiarazione che si trova nello stato "Approvata" o "Vistata".
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 62 — PASSAGGI PER REVOCARE ──────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h4 class="h4 text-secondary mb-2">Revoca Obbligo di Dichiarazione</h4>
+                  <h3 class="h1 mb-3">Passaggi per revocare un Obbligo di Dichiarazione</h3>
+                  <p class="mb-4">
+                    L'Operatore di Capitaneria può revocare un Obbligo di
+                    Dichiarazione <strong>"Vistato"</strong> o
+                    <strong>"Approvato"</strong> tramite i seguenti passaggi.
+                    Al termine l'Obbligo assumerà lo stato
+                    <strong>"Revocato"</strong>.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <div>
+                              <h4 class="fw-bold text-uppercase mb-2">Dettaglio e pulsante</h4>
+                              <p class="mb-0">Per revocare l'Obbligo di Dichiarazione cliccare il pulsante <strong>"Revoca Obbligo di Dichiarazione"</strong>.</p>
+                            </div>
+                          </div>
+                          <div class="mt-auto">
+                            <img src="./img/workflow-obblighi-dichiarazione/10.png" alt="Dettaglio Obbligo di Dichiarazione con il pulsante Revoca evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <div>
+                              <h4 class="fw-bold text-uppercase mb-2">Aggiunta della motivazione della revoca</h4>
+                              <p class="mb-0">Il sistema mostra una <strong>finestra per inserire obbligatoriamente il motivo della revoca</strong> dell'Obbligo di Dichiarazione; compilare e confermare.</p>
+                            </div>
+                          </div>
+                          <div class="mt-auto">
+                            <img src="./img/workflow-obblighi-dichiarazione/11.png" alt="Finestra Revoca Obbligo di Dichiarazione con il campo Motivo della revoca e finestra Successo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <div>
+                              <h4 class="fw-bold text-uppercase mb-2">Dettaglio e stato</h4>
+                              <p class="mb-0">Dopo aver revocato l'Obbligo di Dichiarazione, nel dettaglio lo stesso assumerà lo stato <strong>"Revocato"</strong>.</p>
+                            </div>
+                          </div>
+                          <div class="mt-auto">
+                            <img src="./img/workflow-obblighi-dichiarazione/12.png" alt="Dettaglio Obbligo di Dichiarazione A4.1 Notifica Rifiuti con lo stato Revocato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 07 — VALUTAZIONE RICHIESTA DI INVALIDAZIONE
+                 Profilo: Operatore CdP Locale
+                 ============================================================ -->
+            <section id="valutazione-invalidazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">07.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Valutazione richiesta di invalidazione</h2>
+                      <p class="text-white mb-0">
+                        Una panoramica sulla valutazione della richiesta di invalidazione di un Obbligo di Dichiarazione.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 64 — PUNTI DI ACCESSO ──────────────────────────── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h4 class="h4 text-secondary mb-2">Valutazione richiesta di invalidazione</h4>
+                  <h3 class="h1 mb-4">Punti di accesso per valutare la richiesta di invalidazione</h3>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="flex-shrink-0"><i class="bi bi-house fs-3" aria-hidden="true"></i></div>
+                            <div>
+                              <h4 class="fw-bold text-uppercase mb-2">Lista attività dalla dashboard</h4>
+                              <p class="mb-0">È possibile visualizzare le proposte tramite le <strong>azioni disponibili</strong> per ciascuna attività presente nella dashboard nel tab <strong>"Obblighi di Dichiarazione"</strong>.</p>
+                            </div>
+                          </div>
+                          <div class="mt-auto">
+                            <img src="./img/workflow-obblighi-dichiarazione/13.png" alt="Dashboard con la tabella Obblighi di dichiarazione e il menu Azioni con la voce Visualizza evidenziata" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="flex-shrink-0"><i class="bi bi-bell fs-3" aria-hidden="true"></i></div>
+                            <div>
+                              <h4 class="fw-bold text-uppercase mb-2">Notifiche</h4>
+                              <p class="mb-0">Attraverso la <strong>sezione delle notifiche</strong> è possibile accedere al dettaglio dell'Obbligo di Dichiarazione <strong>"In attesa di invalidazione"</strong>.</p>
+                            </div>
+                          </div>
+                          <div class="mt-auto">
+                            <img src="./img/workflow-obblighi-dichiarazione/14.png" alt="Elenco notifiche con la notifica Richiesta invalidazione inviata evidenziata" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="flex-shrink-0"><i class="bi bi-search fs-3" aria-hidden="true"></i></div>
+                            <div>
+                              <h4 class="fw-bold text-uppercase mb-2">Ricerca soste</h4>
+                              <p class="mb-0">Nella ricerca sia nel tab <strong>"Lista soste"</strong> che nel tab <strong>"Aggiornamenti soste"</strong> sarà possibile visualizzare e accedere all'Obbligo di Dichiarazione <strong>"In attesa di invalidazione"</strong>.</p>
+                            </div>
+                          </div>
+                          <div class="mt-auto">
+                            <img src="./img/workflow-obblighi-dichiarazione/15.png" alt="Tab Lista soste e tabella Obblighi di dichiarazione con l'obbligo In attesa invalidazione evidenziato" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Valutazione richiesta di invalidazione</h4>
+                  <h3 class="h1 mb-3">Azioni disponibili per valutare la richiesta di invalidazione</h3>
+                  <p class="mb-4">
+                    A seguito di invio della richiesta di invalidazione da parte del Declarant, l'autorità marittima ha la possibilità di procedere nella valutazione tramite le seguenti azioni:
+                  </p>
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/workflow-obblighi-dichiarazione/16.png" alt="Dettaglio Obbligo di Dichiarazione con Imposta di Bollo, Note interne e i pulsanti Approva richiesta di invalidazione e Respingi richiesta di invalidazione" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <div>
+                        <span class="btn btn-success disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-check-circle me-1" aria-hidden="true"></i>Approva richiesta di invalidazione
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver preso visione della richiesta di invalidazione, può decidere se approvarla. L'Obbligo di Dichiarazione assumerà lo stato <strong>"Invalidata"</strong>.</p>
+                      </div>
+                      <hr class="my-4" />
+
+                      <div>
+                        <span class="btn btn-danger disabled mb-3" aria-disabled="true">
+                          <i class="bi bi-slash-circle me-1" aria-hidden="true"></i>Respingi richiesta di invalidazione
+                        </span>
+                        <p class="mb-0">L'utente, dopo aver preso visione della richiesta di invalidazione, può decidere se respingerla. L'Obbligo di Dichiarazione assumerà lo stato in cui si trovava prima della richiesta di invalidazione.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          {
+            root: null,
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0,
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            const id = this.getAttribute('href').replace('#', '');
+            activate(id);
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg  = document.getElementById('lightbox-img');
+        const modal  = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+
+          img.addEventListener('click', function () {
+            apriLightbox(this);
+          });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () {
+          lbImg.src = '';
+        });
+      })();
+    </script>
+
+  </body>
+</html>
