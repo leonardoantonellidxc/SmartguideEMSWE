@@ -208,14 +208,14 @@
 
             <!-- ALERT INIZIALI PER PROFILO -->
             <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-3" role="note">
-             
+              <i class="bi bi-info-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
               <div>
                 <p class="fw-bold mb-1">Utente Agenzia marittima</p>
                 <p class="mb-0">Le funzionalità di seguito descritte possono essere gestite dall’Agente Raccomandatario Marittimo e dai suoi collaboratori esclusivamente se indicati come utenti dichiaranti all’interno della Dichiarazione di Porto Base.</p>
               </div>
             </div>
             <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-6" role="note">
-             
+              <i class="bi bi-info-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
               <div>
                 <p class="fw-bold mb-1">Utente Azienda</p>
                 <p class="mb-0">Le funzionalità di seguito descritte possono essere gestite dall’Armatore e dal Comandante, quest’ultimo esclusivamente se indicato come utente dichiarante all’interno della Dichiarazione di Porto Base.</p>
@@ -3651,7 +3651,8 @@
                   </div>
                   <p class="mb-3">
                     Selezionare il tipo di inserimento che si vuole effettuare, tra inserimento
-                    <strong>manuale</strong> o <strong>da file</strong>.
+                    <strong>manuale</strong> o <strong>da file</strong>. Successivamente cliccare
+                    <strong>"Conferma"</strong>.
                   </p>
                   <div class="mt-auto">
                     <img src="./img/fascioli/63.png" alt="" class="w-100">
@@ -3677,6 +3678,16 @@
                     <img src="./img/fascioli/64.png" alt="" class="w-100">
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <!-- NOTA CARICAMENTO DA FILE -->
+            <div class="col-12">
+              <div class="sg-note p-3 rounded-3 d-flex align-items-start gap-2">
+                <i class="bi bi-info-circle flex-shrink-0 mt-1"></i>
+                <p class="mb-0">
+                  Per utilizzare il caricamento da file è necessario prima creare almeno una sosta manualmente.
+                </p>
               </div>
             </div>
 
@@ -3801,12 +3812,31 @@
               </div>
             </div>
 
-            <!-- SOTTO-CARD 9 — SELEZIONE DELLE SOSTE E CONFERMA -->
+            <!-- SOTTO-CARD 9 — INSERISCI NUMERO PASSEGGERI -->
             <div class="col-12 col-lg-4 d-flex">
               <div class="card border-0 rounded-3 w-100">
                 <div class="card-body p-4 d-flex flex-column">
                   <div class="d-flex gap-3 mb-3">
                     <div class="sg-step-badge flex-shrink-0">9</div>
+                    <h5 class="fw-bold text-uppercase mb-0">Inserisci numero passeggeri</h5>
+                  </div>
+                  <p class="mb-3">
+                    Il sistema mostra una finestra di dove poter aggiungere il numero dei passeggeri.
+                    Confermare cliccando il pulsante <strong>"Conferma"</strong>.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="./img/fascioli/99.png" alt="Finestra Inserisci numero passeggeri con il campo Passeggeri compilato e il pulsante Conferma" class="w-100">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SOTTO-CARD 10 — SELEZIONE DELLE SOSTE E CONFERMA -->
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card border-0 rounded-3 w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="d-flex gap-3 mb-3">
+                    <div class="sg-step-badge flex-shrink-0">10</div>
                     <h5 class="fw-bold text-uppercase mb-0">Selezione delle soste e conferma</h5>
                   </div>
                   <p class="mb-3">
@@ -3814,18 +3844,18 @@
                     cliccare il pulsante <strong>"Conferma e apri soste"</strong>.
                   </p>
                   <div class="mt-auto">
-                    <img src="./img/fascioli/70.png" alt="" class="w-100">
+                    <img src="./img/fascioli/100.png" alt="Elenco soste con la prima sosta selezionata tramite checkbox e il pulsante Conferma e apri soste evidenziato" class="w-100">
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- SOTTO-CARD 10 — FINESTRA INFORMATIVA SOSTA PRESENTE -->
+            <!-- SOTTO-CARD 11 — FINESTRA INFORMATIVA SOSTA PRESENTE -->
             <div class="col-12 col-lg-4 d-flex">
               <div class="card border-0 rounded-3 w-100">
                 <div class="card-body p-4 d-flex flex-column">
                   <div class="d-flex gap-3 mb-3">
-                    <div class="sg-step-badge flex-shrink-0">10</div>
+                    <div class="sg-step-badge flex-shrink-0">11</div>
                     <h5 class="fw-bold text-uppercase mb-0">Finestra informativa sosta presente</h5>
                   </div>
                   <p class="mb-3">
@@ -3842,12 +3872,12 @@
               </div>
             </div>
 
-            <!-- SOTTO-CARD 11 — FINESTRE DI CONFERMA E SUCCESSO -->
+            <!-- SOTTO-CARD 12 — FINESTRE DI CONFERMA E SUCCESSO -->
             <div class="col-12 col-lg-4 d-flex">
               <div class="card border-0 rounded-3 w-100">
                 <div class="card-body p-4 d-flex flex-column">
                   <div class="d-flex gap-3 mb-3">
-                    <div class="sg-step-badge flex-shrink-0">11</div>
+                    <div class="sg-step-badge flex-shrink-0">12</div>
                     <h5 class="fw-bold text-uppercase mb-0">Finestre di conferma e successo</h5>
                   </div>
                   <p class="mb-3">
@@ -3861,12 +3891,12 @@
               </div>
             </div>
 
-            <!-- SOTTO-CARD 12 — CAMBIO STATO -->
+            <!-- SOTTO-CARD 13 — CAMBIO STATO -->
             <div class="col-12 col-lg-4 d-flex">
               <div class="card border-0 rounded-3 w-100">
                 <div class="card-body p-4 d-flex flex-column">
                   <div class="d-flex gap-3 mb-3">
-                    <div class="sg-step-badge flex-shrink-0">12</div>
+                    <div class="sg-step-badge flex-shrink-0">13</div>
                     <h5 class="fw-bold text-uppercase mb-0">Cambio stato</h5>
                   </div>
                   <p class="mb-3">
@@ -3882,7 +3912,7 @@
               </div>
             </div>
 
-          </div><!-- /row 12 card -->
+          </div><!-- /row 13 card -->
         </div><!-- /card-body -->
       </div><!-- /card step -->
 
