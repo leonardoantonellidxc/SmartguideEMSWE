@@ -1,0 +1,1286 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Compilazione A4.1 - Notifica Rifiuti</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item"><a href="obblighi-di-dichiarazione.html">Obblighi di Dichiarazione</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Compilazione A4.1 - Notifica Rifiuti</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#passaggi-compilazione">01. Passaggi per compilare l'Obbligo di Dichiarazione</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#step-compilazione">02. Step di compilazione</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO (pag. 283) -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <p class="fw-semibold text-secondary mb-1">9.1 | Obblighi di Dichiarazione</p>
+                <h1 class="h4 mb-2">Compilazione A4.1 - Notifica Rifiuti</h1>
+                <p class="mb-3">Notifica pre-arrivo capacità stoccaggio rifiuti (UWC%).</p>
+                <ul class="list-unstyled d-flex flex-wrap gap-2 mb-0">
+                  <li class="border rounded-2 bg-light small px-3 py-2">Fase: <strong>Pre arrivo/Arrivo</strong></li>
+                  <li class="border rounded-2 bg-light small px-3 py-2"><strong>Categoria A</strong></li>
+                  <li class="border rounded-2 bg-light small px-3 py-2"><strong>Dir. (UE) 2019/883 — Reg. UE 2022/89</strong></li>
+                  <li class="border rounded-2 bg-light small px-3 py-2">Multi Istanza: <strong>No</strong></li>
+                  <li class="border rounded-2 bg-light small px-3 py-2">Workflow: <strong>Presa Visione/Approvazione</strong></li>
+                  <li class="border rounded-2 bg-light small px-3 py-2">Imposta di bollo: <strong>No/Sì se mantenimento rifiuti a bordo</strong></li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — PASSAGGI PER COMPILARE (pag. 284)
+                 ============================================================ -->
+            <section id="passaggi-compilazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Passaggi per compilare l'Obbligo di Dichiarazione A4.1</h2>
+                      <p class="text-white mb-0">Per poter compilare l'Obbligo di Dichiarazione A4.1, seguire i passaggi di seguito descritti.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sg-section__body p-2 p-lg-4">
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Ricerca sosta</h5>
+                                </div>
+                                <p class="mb-3">Ricercare la sosta tramite una delle modalità presenti a sistema: home page e nella voce di menu <strong>"gestione e consultazione"</strong> nella sezione gestione soste. In home page nella sezione <strong>"Ricerca sosta"</strong> inserire il nome nave e cliccare il pulsante con l'icona della lente per avviare la <strong>ricerca</strong> delle soste.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/1.png" alt="Home page con la sezione Ricerca Sosta e il pulsante con l'icona della lente evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Dettaglio sosta</h5>
+                                </div>
+                                <p class="mb-3">I risultati verranno mostrati in tabella. Cliccare l'<strong>icona dell'occhio</strong> per entrare nel dettaglio della sosta.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/2.png" alt="Tabella risultati della ricerca soste con l'icona dell'occhio evidenziata" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">3</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Compilazione Obbligo di Dichiarazione</h5>
+                                </div>
+                                <p class="mb-3">All'interno del dettaglio della sosta è visualizzato l'elenco degli obblighi di dichiarazione. Per compilare l'Obbligo di Dichiarazione <strong>"A4.1 - Notifica rifiuti"</strong>, cliccare <strong>"Compila"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/3.png" alt="Elenco degli obblighi di dichiarazione della sosta con il pulsante Compila dell'A4.1 evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                        <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                          <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                          <p class="mb-0">L'utente avrà la possibilità di compilare solamente gli Obblighi di Dichiarazione con stato <strong>"Da compilare"</strong>.</p>
+                        </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 02 — STEP DI COMPILAZIONE (pag. 285-294)
+                 ============================================================ -->
+            <section id="step-compilazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">02.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Step di compilazione dell'Obbligo di Dichiarazione A4.1</h2>
+                      <p class="text-white mb-0">Per compilare l'Obbligo di Dichiarazione, procedere seguendo i passaggi sottostanti.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <!-- overview step (pag. 285) -->
+                  <div class="row g-3 mb-5">
+                    <div class="col-12 col-md-6 col-xl d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3 d-flex flex-column">
+                          <p class="small text-uppercase text-secondary mb-2">Step 1</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-3"><a href="#step-1">Dati dichiarante</a></h4>
+                          <div class="mt-auto">
+                            <img src="./img/compilazione-a4-1/4.png" alt="Anteprima dello step Dati dichiarante" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3 d-flex flex-column">
+                          <p class="small text-uppercase text-secondary mb-2">Step 2</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-3"><a href="#step-2">Dati nave</a></h4>
+                          <div class="mt-auto">
+                            <img src="./img/compilazione-a4-1/5.png" alt="Anteprima dello step Dati nave" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3 d-flex flex-column">
+                          <p class="small text-uppercase text-secondary mb-2">Step 3</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-3"><a href="#step-3">Dati sosta</a></h4>
+                          <div class="mt-auto">
+                            <img src="./img/compilazione-a4-1/6.png" alt="Anteprima dello step Dati sosta" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3 d-flex flex-column">
+                          <p class="small text-uppercase text-secondary mb-2">Step 4</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-3"><a href="#step-4">Dati conferimento rifiuti</a></h4>
+                          <div class="mt-auto">
+                            <img src="./img/compilazione-a4-1/7.png" alt="Anteprima dello step Dati conferimento rifiuti" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3 d-flex flex-column">
+                          <p class="small text-uppercase text-secondary mb-2">Step 5</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-3"><a href="#step-5">Imposta di bollo</a></h4>
+                          <div class="mt-auto">
+                            <img src="./img/compilazione-a4-1/8.png" alt="Anteprima dello step Imposta di bollo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3 d-flex flex-column">
+                          <p class="small text-uppercase text-secondary mb-2">Step 6</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-3"><a href="#step-6">Note</a></h4>
+                          <div class="mt-auto">
+                            <img src="./img/compilazione-a4-1/9.png" alt="Anteprima dello step Note" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3 d-flex flex-column">
+                          <p class="small text-uppercase text-secondary mb-2">Step 7</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-3"><a href="#step-7">Riepilogo</a></h4>
+                          <div class="mt-auto">
+                            <img src="./img/compilazione-a4-1/10.png" alt="Anteprima dello step Riepilogo" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 1 — DATI DICHIARANTE (pag. 286) -->
+                  <div id="step-1" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">1</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione A4.1 - Notifica Rifiuti</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Dati dichiarante</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 1</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati dichiarante</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati conferimento rifiuti</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Imposta di bollo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Accordion dati dichiarante</h5>
+                                </div>
+                                <p class="mb-3">L'utente ha la possibilità di visualizzare i dati del dichiarante all'interno dell'accordion <strong>"Dati dichiarante"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/11.png" alt="Accordion Dati dichiarante espanso con nome, ruolo, camera di commercio, indirizzo e telefono del dichiarante" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Dati dichiarante e step successivo</h5>
+                                </div>
+                                <p class="mb-3">I campi <strong>"Ruolo"</strong> e <strong>"Numero identificazione"</strong> saranno pre-popolati in base all'utente e non sono modificabili. È possibile modificare la persona di contatto. Per proseguire allo step successivo, cliccare il pulsante <strong>"Vai Avanti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/12.png" alt="Sezione Dati Dichiarante con Ruolo, Numero identificazione, Persona di contatto e il pulsante Vai Avanti evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 2 — DATI NAVE (pag. 287) -->
+                  <div id="step-2" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">2</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione A4.1 - Notifica Rifiuti</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Dati nave</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 2</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati dichiarante</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati conferimento rifiuti</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Imposta di bollo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Inserimento dati e dettaglio nave</h5>
+                                </div>
+                                <p class="mb-3">I dati identificativi della nave e del dettaglio sono pre-popolati in base alla nave della sosta selezionata e non sono modificabili.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/13.png" alt="Step Dati nave con i Dati Identificativi della Nave pre-popolati e il link Dati nave evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Step successivo</h5>
+                                </div>
+                                <p class="mb-3">Per proseguire allo step successivo, cliccare il pulsante <strong>"Vai Avanti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/14.png" alt="Dati Identificativi della Nave e Dettaglio Nave con il pulsante Vai Avanti evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                          <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                          <p class="mb-0">L'utente può modificare i dati della nave entrando in visualizzazione dal link <strong>"Dati nave →"</strong>.</p>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 3 — DATI SOSTA (pag. 288) -->
+                  <div id="step-3" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">3</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione A4.1 - Notifica Rifiuti</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Dati sosta</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 3</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati dichiarante</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati conferimento rifiuti</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Imposta di bollo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Dati sosta e viaggio</h5>
+                                </div>
+                                <p class="mb-3">I campi della sosta sono pre-compilati ad eccezione del campo <strong>"prima posizione prevista"</strong>, sono modificabili ad eccezione del campo <strong>"porto di sosta"</strong>. I dati del viaggio sono pre-popolati e modificabili.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/15.png" alt="Sezioni Dati sosta e Dati Viaggio con porto di sosta, prima posizione prevista, ETA, ETD e porti di scalo" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Step successivo</h5>
+                                </div>
+                                <p class="mb-3">Dopo aver compilato i dati della sezione <strong>"arrivo per lo scalo in porto"</strong>, per proseguire allo step successivo, cliccare il pulsante <strong>"Vai Avanti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/16.png" alt="Sezione Arrivo per lo scalo in porto con i campi del terminal e il pulsante Vai Avanti evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 4 — DATI CONFERIMENTO RIFIUTI (pag. 289-291) -->
+                  <div id="step-4" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">4</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione A4.1 - Notifica Rifiuti</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Dati conferimento rifiuti</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 4</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati dichiarante</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati conferimento rifiuti</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Imposta di bollo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="mb-4">
+                          <a href="obblighi-di-dichiarazione.html#modalita-di-compilazione-obblighi-di-dichiarazione" class="d-inline-block rounded-pill bg-primary text-white fw-semibold small px-3 py-2 text-decoration-none">
+                            <i class="bi bi-record-circle me-1" aria-hidden="true"></i>Visualizza il dettaglio di "Modalità di compilazione liste"
+                          </a>
+                        </div>
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Inserimento dati conferimento rifiuti</h5>
+                                </div>
+                                <p class="mb-3">Inserire i dati conferimento rifiuti: ultimo porto in cui sono stati conferiti i rifiuti, data dell'ultimo conferimento rifiuti e porto di conferimento successivo dei rifiuti.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/17.png" alt="Sezione Dati Conferimento Rifiuti e form Tipo e Quantitativo dei Rifiuti e Capacità di Stoccaggio vuoto" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Inserimento dati rifiuti e capacità stoccaggio</h5>
+                                </div>
+                                <p class="mb-3">Indicare la tipologia del rifiuto, la quantità, la massima capacità di stoccaggio, il quantitativo di rifiuti trattenuti a bordo, il porto di conferimento e il quantitativo stimato di produzione tra notifica e scalo. La descrizione sarà pre-popolata in base alla tipologia. Successivamente cliccare <strong>"Aggiungi in elenco"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/18.png" alt="Form Tipo e Quantitativo dei Rifiuti compilato con il pulsante Aggiungi in Elenco evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">3</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Step successivo</h5>
+                                </div>
+                                <p class="mb-3">Dopo aver aggiunto in elenco una o più tipologie di rifiuti, cliccare il pulsante <strong>"Vai avanti"</strong> per proseguire allo step successivo.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/19.png" alt="Elenco Rifiuti con un elemento e il pulsante Vai Avanti evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                          <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                          <p class="mb-0">La data di ultimo conferimento rifiuti non può essere una data futura.</p>
+                        </div>
+                        <hr class="my-4" />
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">4</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Avviso soglia rifiuti trattenuti</h5>
+                                </div>
+                                <p class="mb-3">Qualora venga inserita una capacità di rifiuti trattenuti (UWC) che supera la soglia configurata, rispetto alla tipologia di rifiuto, il sistema mostrerà una finestra informativa in cui viene data la possibilità o di procedere allo step successivo cliccando <strong>"Procedi"</strong> o annulla l'operazione e tornare alla pagina per modificare i dati inseriti tramite il pulsante <strong>"Annulla"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/20.png" alt="Finestra Avviso Soglia Rifiuti Trattenuti con i pulsanti Annulla e Procedi" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">5</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Aggiornamento dati</h5>
+                                </div>
+                                <p class="mb-3">Per <strong>aggiornare</strong> i dati inseriti, cliccare il pulsante con l'icona della matita.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/21.png" alt="Elenco Rifiuti con l'icona della matita evidenziata nella colonna Azioni" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="my-4" />
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">6</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Conferma aggiornamento dati</h5>
+                                </div>
+                                <p class="mb-3">I dati della soglia rifiuti da modificare saranno di nuovo visibili nella sezione di inserimento. Procedere con le modifiche e successivamente cliccare il pulsante <strong>"Aggiorna"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/22.png" alt="Form Tipo e Quantitativo dei Rifiuti in modifica con il pulsante Aggiorna evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">7</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Dati aggiornati e step successivo</h5>
+                                </div>
+                                <p class="mb-3">Gli aggiornamenti effettuati saranno visibili all'interno dell'elenco rifiuti. Per proseguire allo step successivo cliccare il pulsante <strong>"Vai avanti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/23.png" alt="Elenco Rifiuti aggiornato con il pulsante Vai Avanti evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 5 — IMPOSTA DI BOLLO (pag. 292) -->
+                  <div id="step-5" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">5</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione A4.1 - Notifica Rifiuti</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Imposta di bollo</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 5</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati dichiarante</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati conferimento rifiuti</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Imposta di bollo</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Inserimento dati imposta di bollo</h5>
+                                </div>
+                                <p class="mb-3">Inserire i dati dell'imposta di bollo come: Modalità Assolvimento (Pago PA o virtuale), Numero Autorizzazione e Data pagamento. Il tipo e l'importo del bollo vengono pre-compilati e non sono modificabili.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/24.png" alt="Sezione Imposta di Bollo con Modalità di Assolvimento, Tipo di bollo, Numero autorizzazione, Data pagamento e Importo" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Step successivo</h5>
+                                </div>
+                                <p class="mb-3">Dopo aver inserito i dati, per proseguire allo step successivo, cliccare il pulsante <strong>"Vai Avanti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/25.png" alt="Sezione Imposta di Bollo compilata con il pulsante Vai Avanti evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 6 — NOTE A SUPPORTO (pag. 293) -->
+                  <div id="step-6" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">6</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione A4.1 - Notifica Rifiuti</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Note a supporto</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 6</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati dichiarante</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati conferimento rifiuti</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Imposta di bollo</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-5">
+                            <h5 class="fw-bold text-uppercase mb-3">Inserimento note a supporto</h5>
+                            <p class="mb-0">Prima di salvare la compilazione dell'obbligo di dichiarazione, l'utente può aggiungere eventuali note a supporto. Questo passaggio è facoltativo; per proseguire, è sufficiente cliccare sul pulsante <strong>"Vai avanti"</strong>.</p>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img src="./img/compilazione-a4-1/26.png" alt="Step Note con il campo di testo per le note e il pulsante Vai Avanti" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 7 — RIEPILOGO (pag. 294) -->
+                  <div id="step-7" class="card border-0 rounded-3 overflow-hidden mb-0">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">7</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione A4.1 - Notifica Rifiuti</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Riepilogo</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 7</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati dichiarante</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati conferimento rifiuti</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Imposta di bollo</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="mb-4">
+                          <a href="obblighi-di-dichiarazione.html#regole-generali-compilazione-obblighi-dichiarazione" class="d-inline-block rounded-pill bg-primary text-white fw-semibold small px-3 py-2 text-decoration-none">
+                            <i class="bi bi-record-circle me-1" aria-hidden="true"></i>Visualizza il dettaglio di "Azioni disponibili sugli Obblighi di Dichiarazione"
+                          </a>
+                        </div>
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Riepilogo e salvataggio</h5>
+                                </div>
+                                <p class="mb-3">Nell'ultimo passaggio di riepilogo è possibile consultare tutte le informazioni inserite negli step precedenti e procedere con il salvataggio o con il salvataggio e il contestuale invio all'autorità marittima tramite i pulsanti <strong>"Salva"</strong> o <strong>"Salva e sottometti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/27.png" alt="Riepilogo con elenco rifiuti, imposta di bollo e note e i pulsanti Salva e Salva e sottometti evidenziati" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Finestre di conferma e successo</h5>
+                                </div>
+                                <p class="mb-3">Il sistema mostra una finestra di conferma; cliccando <strong>"Conferma"</strong> verrà notificato il successo del salvataggio.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/28.png" alt="Finestra Salva con il pulsante Conferma e finestra Successo di salvataggio dell'obbligo di dichiarazione" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">3</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Azioni disponibili</h5>
+                                </div>
+                                <p class="mb-3">Dopo aver salvato, l'Obbligo di Dichiarazione assumerà lo stato <strong>"Creata"</strong>. Nel caso in cui si sia proceduto con il salva e sottometti l'Obbligo di dichiarazione assumerà lo stato <strong>"Inviata"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-a4-1/29.png" alt="Dettaglio dell'Obbligo di Dichiarazione A4.1 - Notifica Rifiuti con lo stato Inviata evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </section>
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          { root: null, rootMargin: '-45% 0px -45% 0px', threshold: 0 }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            activate(this.getAttribute('href').replace('#', ''));
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg = document.getElementById('lightbox-img');
+        const modal = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+          img.addEventListener('click', function () { apriLightbox(this); });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () { lbImg.src = ''; });
+      })();
+    </script>
+
+  </body>
+</html>

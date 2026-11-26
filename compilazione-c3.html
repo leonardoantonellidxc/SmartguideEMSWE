@@ -1,0 +1,2032 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Compilazione C3 - Dichiarazione di arrivo</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item"><a href="obblighi-di-dichiarazione.html">Obblighi di Dichiarazione</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Compilazione C3 - Dichiarazione di arrivo</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#passaggi-compilazione">01. Passaggi per compilare l'Obbligo di Dichiarazione</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#step-compilazione">02. Step di compilazione</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO (pag. 302) -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <p class="fw-semibold text-secondary mb-1">9.3 | Obblighi di Dichiarazione</p>
+                <h1 class="h4 mb-2">Compilazione C3 - Dichiarazione di arrivo</h1>
+                <p class="mb-3">Dichiarazione effettiva di arrivo della nave.</p>
+                <ul class="list-unstyled d-flex flex-wrap gap-2 mb-0">
+                  <li class="border rounded-2 bg-light small px-3 py-2">Fase: <strong>Pre arrivo/Arrivo</strong></li>
+                  <li class="border rounded-2 bg-light small px-3 py-2"><strong>Categoria C</strong></li>
+                  <li class="border rounded-2 bg-light small px-3 py-2"><strong>Cod. Nav. art.179</strong></li>
+                  <li class="border rounded-2 bg-light small px-3 py-2">Multi Istanza: <strong>No</strong></li>
+                  <li class="border rounded-2 bg-light small px-3 py-2">Workflow: <strong>Apposizione visto</strong></li>
+                  <li class="border rounded-2 bg-light small px-3 py-2">Imposta di bollo: <strong>No</strong></li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — PASSAGGI PER COMPILARE (pag. 303)
+                 ============================================================ -->
+            <section id="passaggi-compilazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Passaggi per compilare l'Obbligo di Dichiarazione C3</h2>
+                      <p class="text-white mb-0">Per poter compilare l'Obbligo di Dichiarazione C3, seguire i passaggi di seguito descritti.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sg-section__body p-2 p-lg-4">
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Ricerca sosta</h5>
+                                </div>
+                                <p class="mb-3">Ricercare la sosta tramite una delle modalità presenti a sistema: home page e nella voce di menu <strong>"gestione e consultazione"</strong> nella sezione gestione soste. In home page nella sezione <strong>"Ricerca sosta"</strong> inserire il nome nave e cliccare il pulsante con l'icona della lente per avviare la <strong>ricerca</strong> delle soste.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/1.png" alt="Home page con la sezione Ricerca Sosta e il pulsante con l'icona della lente evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Dettaglio sosta</h5>
+                                </div>
+                                <p class="mb-3">I risultati verranno mostrati in tabella. Cliccare l'<strong>icona dell'occhio</strong> per entrare nel dettaglio della sosta.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/2.png" alt="Tabella risultati della ricerca soste con l'icona dell'occhio evidenziata" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">3</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Compilazione Obbligo di Dichiarazione</h5>
+                                </div>
+                                <p class="mb-3">All'interno del dettaglio della sosta è visualizzato l'elenco degli obblighi di dichiarazione. Per compilare l'Obbligo di Dichiarazione <strong>"C3 - Dichiarazione di arrivo"</strong>, cliccare <strong>"Compila"</strong> per proseguire.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/3.png" alt="Elenco degli obblighi di dichiarazione della sosta con il pulsante Compila del C3 evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                        <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                          <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                          <p class="mb-0">L'utente avrà la possibilità di compilare solamente gli Obblighi di Dichiarazione con stato <strong>"Da compilare"</strong>.</p>
+                        </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 02 — STEP DI COMPILAZIONE (pag. 304-317)
+                 ============================================================ -->
+            <section id="step-compilazione" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">02.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Step di compilazione dell'Obbligo di Dichiarazione C3</h2>
+                      <p class="text-white mb-0">Per compilare l'Obbligo di Dichiarazione, procedere seguendo i passaggi sottostanti.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <!-- overview step (pag. 304) -->
+                  <div class="row g-3 mb-5">
+                    <div class="col-12 col-md-4 col-xl-3 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3">
+                          <p class="small text-uppercase text-secondary mb-2">Step 1</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-0"><a href="#step-1">Agente presso il porto</a></h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-xl-3 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3">
+                          <p class="small text-uppercase text-secondary mb-2">Step 2</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-0"><a href="#step-2">Dati nave</a></h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-xl-3 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3">
+                          <p class="small text-uppercase text-secondary mb-2">Step 3</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-0"><a href="#step-3">Dati sosta</a></h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-xl-3 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3">
+                          <p class="small text-uppercase text-secondary mb-2">Step 4</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-0"><a href="#step-4">Dati viaggio</a></h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-xl-3 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3">
+                          <p class="small text-uppercase text-secondary mb-2">Step 5</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-0"><a href="#step-5">Tasse e tributi</a></h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-xl-3 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3">
+                          <p class="small text-uppercase text-secondary mb-2">Step 6</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-0"><a href="#step-6">Dati generici del carico</a></h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-xl-3 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3">
+                          <p class="small text-uppercase text-secondary mb-2">Step 7</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-0"><a href="#step-7">Dati del comandante</a></h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-xl-3 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3">
+                          <p class="small text-uppercase text-secondary mb-2">Step 8</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-0"><a href="#step-8">Persone a bordo</a></h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-xl-3 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3">
+                          <p class="small text-uppercase text-secondary mb-2">Step 9</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-0"><a href="#step-9">Certificati</a></h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-xl-3 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3">
+                          <p class="small text-uppercase text-secondary mb-2">Step 10</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-0"><a href="#step-10">Note</a></h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-xl-3 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-3">
+                          <p class="small text-uppercase text-secondary mb-2">Step 11</p>
+                          <h4 class="h6 fw-bold text-uppercase mb-0"><a href="#step-11">Riepilogo dati</a></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 1 — AGENTE PRESSO IL PORTO (pag. 305) -->
+                  <div id="step-1" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">1</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione C3 - Dichiarazione di arrivo</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Agente presso il porto</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 1</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Agente presso il porto</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati viaggio</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Tasse e tributi</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati generici del carico</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati del comandante</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Persone a bordo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Certificati</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Accordion dati dichiarante</h5>
+                                </div>
+                                <p class="mb-3">L'utente ha la possibilità di visualizzare i dati del dichiarante all'interno dell'accordion <strong>"Dati dichiarante"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/4.png" alt="Accordion Dati dichiarante espanso con nome, ruolo, camera di commercio, indirizzo e telefono del dichiarante" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Agente presso il porto e step successivo</h5>
+                                </div>
+                                <p class="mb-3">Il nome e il cognome del contatto sono pre-valorizzati ma modificabili. Successivamente per proseguire allo step successivo cliccare il pulsante <strong>"Vai avanti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/5.png" alt="Sezione Agente presso il porto con Nome e Cognome del contatto e il pulsante Vai Avanti evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 2 — DATI NAVE (pag. 306) -->
+                  <div id="step-2" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">2</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione C3 - Dichiarazione di arrivo</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Dati nave</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 2</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Agente presso il porto</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati viaggio</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Tasse e tributi</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati generici del carico</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati del comandante</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Persone a bordo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Certificati</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Visualizzazione dati nave</h5>
+                                </div>
+                                <p class="mb-3">I dati identificativi della nave e del dettaglio sono pre-popolati in base alla nave della sosta selezionata e non sono modificabili.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/6.png" alt="Step Dati nave con i Dati identificativi della nave pre-popolati e il link Dati nave evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Step successivo</h5>
+                                </div>
+                                <p class="mb-3">Per proseguire allo step successivo, cliccare il pulsante <strong>"Vai Avanti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/7.png" alt="Sezioni Dati identificativi e Dettaglio nave con il pulsante Vai Avanti evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                          <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                          <p class="mb-0">L'utente può modificare i dati della nave entrando in visualizzazione dal link <strong>"Dati nave →"</strong>.</p>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 3 — DATI SOSTA (pag. 307) -->
+                  <div id="step-3" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">3</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione C3 - Dichiarazione di arrivo</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Dati sosta</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 3</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Agente presso il porto</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati viaggio</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Tasse e tributi</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati generici del carico</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati del comandante</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Persone a bordo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Certificati</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-5">
+                            <h5 class="fw-bold text-uppercase mb-3">Inserimento dati sosta</h5>
+                            <p class="mb-3"><strong>"Porto di sosta"</strong>, <strong>"data e ora di partenza - stimata*"</strong> e <strong>"VisitID"</strong> sono pre-popolati. Indicare <strong>"Data e ora di partenza effettiva"</strong> e la <strong>"posizione effettiva della nave in porto all'arrivo"</strong>.</p>
+                            <p class="mb-0">Successivamente per proseguire allo step successivo cliccare il pulsante <strong>"Vai avanti"</strong>.</p>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img src="./img/compilazione-c3/8.png" alt="Sezione Dati di Sosta con porto di sosta, data di partenza stimata, data di arrivo effettiva, posizione in porto e Visit ID" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 4 — DATI VIAGGIO (pag. 308) -->
+                  <div id="step-4" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">4</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione C3 - Dichiarazione di arrivo</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Dati viaggio</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 4</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Agente presso il porto</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati viaggio</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Tasse e tributi</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati generici del carico</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati del comandante</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Persone a bordo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Certificati</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Inserimento dati nave e evento straordinario</h5>
+                                </div>
+                                <p class="mb-3">Porto precedente e Data e ora stimata di partenza dell'ultimo porto di scalo sono pre-popolati ma modificabili. È possibile aggiungere uno o più eventi straordinari inserendo il nome dell'evento e cliccando il pulsante <strong>"+ Aggiungi"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/9.png" alt="Sezione Dati di Viaggio con il campo Evento straordinario compilato e il pulsante Aggiungi evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Possibile eliminazione evento straordinario e step successivo</h5>
+                                </div>
+                                <p class="mb-3">È possibile eliminare l'evento straordinario inserito cliccando <strong>"x"</strong>. Per proseguire allo step successivo, cliccare il pulsante <strong>"Vai Avanti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/10.png" alt="Sezione Dati di Viaggio con l'evento straordinario aggiunto e il pulsante Vai Avanti evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 5 — TASSE E TRIBUTI (pag. 309) -->
+                  <div id="step-5" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">5</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione C3 - Dichiarazione di arrivo</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Tasse e tributi</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 5</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Agente presso il porto</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati viaggio</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Tasse e tributi</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati generici del carico</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati del comandante</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Persone a bordo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Certificati</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="mb-4">
+                          <a href="obblighi-di-dichiarazione.html#modalita-di-compilazione-obblighi-di-dichiarazione" class="d-inline-block rounded-pill bg-primary text-white fw-semibold small px-3 py-2 text-decoration-none">
+                            <i class="bi bi-record-circle me-1" aria-hidden="true"></i>Visualizza il dettaglio di un esempio di azioni in tabella in "Modalità di compilazione obblighi di dichiarazione"
+                          </a>
+                        </div>
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Inserimento dati tasse di ancoraggio</h5>
+                                </div>
+                                <p class="mb-3">Inserire la tipologia della tassa, l'importo, la data del pagamento, la data di scadenza e l'identificativo ricevuta di pagamento dovuto. Il porto di pagamento è pre-popolato ma modificabile. Aggiungere la tassa cliccando il pulsante <strong>"+ Aggiungi"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/11.png" alt="Sezione Tasse di ancoraggio compilata con il pulsante Aggiungi evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Tributi speciali e step successivo</h5>
+                                </div>
+                                <p class="mb-3">Inserire l'importo, la data del pagamento e l'identificativo ricevuta di pagamento dovuto dei tributi speciali. Il tipo tariffa è pre-popolato e non modificabile. Per proseguire cliccare il pulsante <strong>"Vai Avanti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/12.png" alt="Lista tasse di ancoraggio con una tassa inserita, sezione Tributi speciali compilata e il pulsante Vai Avanti evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 6 — DATI GENERICI DEL CARICO (pag. 310-312) -->
+                  <div id="step-6" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">6</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione C3 - Dichiarazione di arrivo</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Dati generici del carico</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 6</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Agente presso il porto</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati viaggio</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Tasse e tributi</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati generici del carico</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati del comandante</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Persone a bordo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Certificati</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Nave vuota/passeggeri</h5>
+                                </div>
+                                <p class="mb-3">Se l'utente indica che la nave non trasporta merci o è una nave passeggeri, potrà andare allo step successivo senza inserire alcuna informazione rispetto ai dati generici del carico cliccando il pulsante <strong>"Vai avanti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/13.png" alt="Sezione Dati del carico con l'interruttore Nave Vuota/Passeggeri attivo evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Inserimento dati carico a bordo</h5>
+                                </div>
+                                <p class="mb-3">Se l'utente indica che la nave trasporta merci, deve indicare il tipo di carico, il peso e la quantità del carico a bordo, se trasporta merci pericolose (Sì/No) e nel caso in cui seleziona sì, valorizzare il campo catalogo merci pericolose. Infine per aggiungere i dati del carico cliccare il pulsante <strong>"+ Aggiungi"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/14.png" alt="Sezione Carico a bordo compilata con indicatore merci pericolose, catalogo e il pulsante Aggiungi evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="my-4" />
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">3</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Indicazione operazione sul carico</h5>
+                                </div>
+                                <p class="mb-3">Indicare, selezionando tramite menu a tendina, l'operazione sul carico: Scarico o Scarico sopra coperta.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/15.png" alt="Sezione Operazioni sul carico con il menu a tendina aperto e le voci Scarico e Scarico sopra coperta" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">4</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Informazioni merce da scaricare</h5>
+                                </div>
+                                <p class="mb-3">Indicare il tipo di carico, il peso e la quantità del carico a bordo, indicare il trasporto di merci pericolose (Sì/No) e nel caso in cui seleziona sì, valorizzare il campo catalogo merci pericolose. Infine per aggiungere l'operazione sul carico cliccare il pulsante <strong>"+ Aggiungi"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/16.png" alt="Sezione Merce da scaricare compilata con il pulsante Aggiungi evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="my-4" />
+                        <div class="mb-4">
+                          <a href="obblighi-di-dichiarazione.html#modalita-di-compilazione-obblighi-di-dichiarazione" class="d-inline-block rounded-pill bg-primary text-white fw-semibold small px-3 py-2 text-decoration-none">
+                            <i class="bi bi-record-circle me-1" aria-hidden="true"></i>Visualizza il dettaglio di "Modalità di compilazione liste"
+                          </a>
+                        </div>
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">5</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Informazioni sulla merce</h5>
+                                </div>
+                                <p class="mb-3">Per visualizzare info aggiuntive sulla merce da scaricare, cliccare l'icona <strong>"i"</strong>. Il sistema mostra una finestra che mostra l'indicatore di trasporto merci pericolose e il catalogo merci pericolose.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/17.png" alt="Tabella Merce da scaricare con l'icona Info evidenziata e la finestra Info con indicatore e catalogo merci pericolose" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">6</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Merce aggiunta e azioni disponibili</h5>
+                                </div>
+                                <p class="mb-3">La merce verrà visualizzata in elenco e sarà possibile modificarla tramite il pulsante con l'icona della matita ed eliminarla tramite il pulsante con l'icona del cestino. Per proseguire allo step successivo cliccare il pulsante <strong>"Vai avanti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/18.png" alt="Elenco Merce da scaricare con una merce inserita e il pulsante Vai Avanti evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 7 — DATI DEL COMANDANTE (pag. 313) -->
+                  <div id="step-7" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">7</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione C3 - Dichiarazione di arrivo</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Dati del comandante</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 7</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Agente presso il porto</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati viaggio</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Tasse e tributi</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati generici del carico</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati del comandante</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Persone a bordo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Certificati</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Informazioni comandante</h5>
+                                </div>
+                                <p class="mb-3">Il sistema mostra una finestra che comunica che il comandante inserito sarà associato alla nave alla sottomissione dell'Obbligo di Dichiarazione, sia nel caso in cui sia stata censita una nuova nave in caso di creazione sosta, sia nel caso in cui si modifichi il comandante che risulta associato a quella nave.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/19.png" alt="Finestra Informazione comandante con il pulsante Chiudi" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Inserimento dati comandante</h5>
+                                </div>
+                                <p class="mb-3">Nel caso in cui per la nave risulti già associato un comandante, i campi relativi al nome e cognome del comandante saranno pre-popolati e modificabili. Nel caso in cui si sia censita una nave in fase di creazione sosta, sarà necessario valorizzare i suddetti campi. Per proseguire allo step successivo cliccare il pulsante <strong>"Vai Avanti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/20.png" alt="Sezione Dati del comandante con Nome e Cognome compilati e il pulsante Vai Avanti evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 8 — PERSONE A BORDO (pag. 314) -->
+                  <div id="step-8" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">8</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione C3 - Dichiarazione di arrivo</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Persone a bordo</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 8</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Agente presso il porto</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati viaggio</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Tasse e tributi</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati generici del carico</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati del comandante</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Persone a bordo</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Certificati</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Warning di inserimento</h5>
+                                </div>
+                                <p class="mb-3">Nel caso in cui l'utente inserisca dati non corretti, il sistema visualizza un messaggio informativo al di sotto del campo interessato, indicando l'errore rilevato e fornendo le indicazioni necessarie per correggerlo.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/21.png" alt="Sezione Persone a bordo con il campo Numero di passeggeri a bordo in errore e il messaggio di campi obbligatori" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Inserimento dati persone a bordo</h5>
+                                </div>
+                                <p class="mb-3">Dopo aver inserito correttamente il numero delle persone a bordo: passeggeri a bordo, passeggeri non crocieristi, membri dell'equipaggio e dei crocieristi, per proseguire allo step successivo cliccare il pulsante <strong>"Vai Avanti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/22.png" alt="Sezione Persone a bordo compilata correttamente con il pulsante Vai Avanti evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 9 — CERTIFICATI (pag. 315) -->
+                  <div id="step-9" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">9</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione C3 - Dichiarazione di arrivo</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Certificati</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 9</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Agente presso il porto</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati viaggio</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Tasse e tributi</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati generici del carico</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati del comandante</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Persone a bordo</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Certificati</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-5">
+                            <h5 class="fw-bold text-uppercase mb-3">Visualizzazione certificati</h5>
+                            <p class="mb-3">L'utente può visualizzare i certificati allegati alla nave. Il caricamento di nuovi certificati, così come la loro modifica o cancellazione, può essere effettuato esclusivamente dalla sezione <strong>"Certificati"</strong> dell'anagrafica navi raggiungibili da link <strong>"Dati nave →"</strong>.</p>
+                            <p class="mb-0">Per proseguire allo step successivo, l'utente deve cliccare sul pulsante <strong>"Vai avanti"</strong>.</p>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img src="./img/compilazione-c3/23.png" alt="Sezione Certificati con l avviso informativo e la Lista certificati della nave" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                        <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                          <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                          <p class="mb-0">I certificati visualizzati all'interno della lista certificati saranno contestuali all'Obbligo di dichiarazione che si sta compilando.</p>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 10 — NOTE A SUPPORTO (pag. 316) -->
+                  <div id="step-10" class="card border-0 rounded-3 overflow-hidden mb-4">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">10</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione C3 - Dichiarazione di arrivo</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Note a supporto</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 10</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Agente presso il porto</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati viaggio</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Tasse e tributi</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati generici del carico</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati del comandante</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Persone a bordo</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Certificati</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (da completare)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-secondary"></span>
+                              <span class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check invisible" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="row g-4 align-items-center">
+                          <div class="col-12 col-lg-5">
+                            <h5 class="fw-bold text-uppercase mb-3">Inserimento note a supporto</h5>
+                            <p class="mb-0">Prima di salvare la compilazione dell'obbligo di dichiarazione, l'utente può aggiungere eventuali note a supporto. Questo passaggio è facoltativo; per proseguire, è sufficiente cliccare sul pulsante <strong>"Vai avanti"</strong>.</p>
+                          </div>
+                          <div class="col-12 col-lg-7">
+                            <img src="./img/compilazione-c3/24.png" alt="Step Note con il campo di testo per le note e il pulsante Vai Avanti" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 11 — RIEPILOGO (pag. 317) -->
+                  <div id="step-11" class="card border-0 rounded-3 overflow-hidden mb-0">
+                    <div class="sg-step-section__head p-3 p-lg-4">
+                      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="sg-step-index">11</div>
+                          <div>
+                            <p class="text-white small mb-1">Compilazione C3 - Dichiarazione di arrivo</p>
+                            <h4 class="h4 text-white text-uppercase fw-bold mb-0">Riepilogo</h4>
+                          </div>
+                        </div>
+                        <span class="badge border border-light text-white fs-6 px-3 py-2">STEP 11</span>
+                      </div>
+                    </div>
+                      <div class="card-body bg-white py-3 px-4">
+                        <ol class="row g-0 list-unstyled text-center mb-0">
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Agente presso il porto</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati nave</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati sosta</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati viaggio</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Tasse e tributi</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati generici del carico</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Dati del comandante</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Persone a bordo</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Certificati</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column">
+                            <p class="small text-uppercase text-secondary fw-semibold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Note a supporto</small><span class="visually-hidden"> (completato)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-check" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                            </div>
+                          </li>
+                          <li class="col d-flex flex-column" aria-current="step">
+                            <p class="small text-uppercase text-primary fw-bold lh-sm px-1 mb-2 flex-grow-1 d-flex align-items-end justify-content-center"><small>Riepilogo</small><span class="visually-hidden"> (in corso)</span></p>
+                            <div class="d-flex align-items-center">
+                              <span class="flex-grow-1 border-top border-2 border-primary"></span>
+                              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center p-2"><i class="bi bi-pencil" aria-hidden="true"></i></span>
+                              <span class="flex-grow-1 border-top border-2 invisible"></span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    <div class="card-body bg-light p-4">
+                        <div class="mb-4">
+                          <a href="obblighi-di-dichiarazione.html#regole-generali-compilazione-obblighi-dichiarazione" class="d-inline-block rounded-pill bg-primary text-white fw-semibold small px-3 py-2 text-decoration-none">
+                            <i class="bi bi-record-circle me-1" aria-hidden="true"></i>Visualizza il dettaglio di "Azioni disponibili sugli Obblighi di Dichiarazione"
+                          </a>
+                        </div>
+                        <div class="row g-4">
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Riepilogo e salvataggio</h5>
+                                </div>
+                                <p class="mb-3">Nell'ultimo passaggio di riepilogo è possibile consultare tutte le informazioni inserite negli step precedenti e procedere con il salvataggio o con il salvataggio e il contestuale invio all'autorità marittima tramite i pulsanti <strong>"Salva"</strong> o <strong>"Salva e sottometti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/25.png" alt="Riepilogo con certificati e note e i pulsanti Salva e Salva e sottometti evidenziati" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Finestre di conferma e successo</h5>
+                                </div>
+                                <p class="mb-3">Il sistema mostra una finestra di conferma della compilazione; cliccando <strong>"Conferma"</strong> verrà notificato il successo del salvataggio.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/26.png" alt="Finestra Salva e sottometti con i pulsanti Annulla e Conferma" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-white p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">3</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Azioni disponibili</h5>
+                                </div>
+                                <p class="mb-3">Dopo aver salvato, l'Obbligo di Dichiarazione assumerà lo stato <strong>"Creata"</strong>. Nel caso in cui si sia proceduto con il salva e sottometti l'Obbligo di dichiarazione assumerà lo stato <strong>"Sottomessa"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/compilazione-c3/27.png" alt="Dettaglio dell Obbligo di Dichiarazione C3 - Dichiarazione di arrivo con lo stato Sottomessa evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </section>
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          { root: null, rootMargin: '-45% 0px -45% 0px', threshold: 0 }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            activate(this.getAttribute('href').replace('#', ''));
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg = document.getElementById('lightbox-img');
+        const modal = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+          img.addEventListener('click', function () { apriLightbox(this); });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () { lbImg.src = ''; });
+      })();
+    </script>
+
+  </body>
+</html>

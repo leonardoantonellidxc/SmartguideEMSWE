@@ -1,0 +1,1588 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Funzionalità comuni e modalità operative</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Funzionalità comuni e modalità operative</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#gestione-attivita">01. Gestione delle attività</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#consultazione-informazioni">02. Consultazione delle informazioni</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#compilazione-dati">03. Compilazione dei dati</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#stati-scansione-antivirus">04. Focus sugli stati della scansione antivirus dei documenti</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#assistenza">05. Assistenza</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#tipologie-alert">06. Tipologie di alert</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#icone">07. Icone</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <h1 class="h4 mb-0">Funzionalità comuni e modalità operative</h1>
+                </div>
+                <p class="mb-0">
+                  Una panoramica delle funzionalità trasversali e delle
+                  modalità operative comuni alle diverse attività del sistema,
+                  per orientarti passo dopo passo nell'utilizzo
+                  dell'applicativo.
+                </p>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — GESTIONE DELLE ATTIVITÀ
+                 Pagine PDF: 3 (copertina) · 4 (punti di accesso) · 5 (presa in carico)
+                         6 (presa in carico già assegnata) · 7 (note interne)
+                 ============================================================ -->
+            <section id="gestione-attivita" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD (pag. 3) -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Gestione delle attività</h2>
+                      <p class="text-white mb-0">
+                        Le funzionalità descritte in questa sezione consentono di
+                        gestire le attività assegnate all'interno dell'applicativo,
+                        supportandone la lavorazione e il monitoraggio nel corso del
+                        loro ciclo di vita. Attraverso gli strumenti messi a
+                        disposizione dal sistema è possibile prendere in carico
+                        un'attività, trasferirne la gestione ad altri operatori
+                        autorizzati e registrare note interne utili alla
+                        condivisione delle informazioni e alla tracciabilità delle
+                        operazioni effettuate.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 4 — PUNTI DI ACCESSO PER ACCEDERE AD UN'ATTIVITÀ ── -->
+                <div id="punti-accesso-attivita" class="sg-section__body p-2 p-lg-4">
+
+                  <h4 class="h4 text-secondary mb-2">Gestione attività</h4>
+                  <h3 class="h1 mb-4">Punti di accesso per accedere ad un'attività</h3>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-icon-box flex-shrink-0"><i class="bi bi-house text-primary" aria-hidden="true"></i></div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Lista attività dalla dashboard</h4>
+                          </div>
+                          <p class="mb-3">
+                            La Dashboard consente di visualizzare e gestire le
+                            attività da svolgere, organizzate nelle diverse sezioni
+                            disponibili in funzione del profilo utente e
+                            dell'ambito operativo. Tramite le
+                            <strong>azioni</strong> associate a ciascuna attività è
+                            possibile accedere alla relativa pagina di dettaglio e
+                            procedere con la lavorazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/1.png" alt="Lista Attività da svolgere nella Dashboard con la colonna Azioni evidenziata" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-icon-box flex-shrink-0"><i class="bi bi-bell text-primary" aria-hidden="true"></i></div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Notifiche</h4>
+                          </div>
+                          <p class="mb-3">
+                            La sezione <strong>Notifiche</strong> consente di
+                            consultare gli eventi e gli aggiornamenti generati dal
+                            sistema e, ove previsto, di accedere direttamente alle
+                            relative attività per procedere con la lavorazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/2.png" alt="Pagina Notifiche con l'icona della campanella evidenziata nell'intestazione e l'elenco delle notifiche ricevute" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-icon-box flex-shrink-0"><i class="bi bi-search text-primary" aria-hidden="true"></i></div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Ricerca richieste</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dall'elenco dei risultati restituiti dalla ricerca è
+                            possibile accedere al dettaglio delle richieste e
+                            utilizzare le azioni disponibili in funzione dello stato
+                            della richiesta e dei permessi associati al proprio
+                            profilo utente.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/3.png" alt="Ricerca Dichiarazione di Porto Base con l'elenco risultati e le icone di azione evidenziate" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 5 — PRESA IN CARICO DI UN'ATTIVITÀ ── -->
+                <div id="presa-in-carico" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
+                    <div>
+                      <h4 class="h4 text-secondary mb-2">Gestione attività da svolgere</h4>
+                      <h3 class="h1 mb-0">Presa in carico di un'attività</h3>
+                    </div>
+                    <span class="btn btn-primary disabled" aria-disabled="true"><i class="bi bi-clipboard-check me-1" aria-hidden="true"></i>Prendi in carico</span>
+                  </div>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-icon-box flex-shrink-0"><i class="bi bi-house text-primary" aria-hidden="true"></i></div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Lista attività dalla dashboard</h4>
+                          </div>
+                          <p class="mb-3">
+                            All'interno delle sezioni della Dashboard sono
+                            disponibili le attività da svolgere. Per ciascuna
+                            attività è possibile accedere alle azioni previste dal
+                            sistema, tra cui la <strong>presa in carico</strong>,
+                            necessaria per avviarne la lavorazione.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/4.png" alt="Menu Azioni della Lista attività con la voce Presa in carico e la finestra di conferma Presa in carico con il pulsante Conferma" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-icon-box flex-shrink-0"><i class="bi bi-search text-primary" aria-hidden="true"></i></div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Dettaglio dell'attività</h4>
+                          </div>
+                          <p class="mb-3">
+                            Accedendo al dettaglio dell'attività tramite l'azione
+                            <strong>"Visualizza"</strong>, il sistema informa
+                            l'utente che, per poter procedere con la lavorazione
+                            della pratica, è necessario effettuarne la presa in
+                            carico. Per avviare la lavorazione, selezionare il
+                            pulsante <strong>"Prendi in carico"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/5.png" alt="Menu Azioni con la voce Visualizza e dettaglio della Dichiarazione di Porto Base con l'avviso di presa in carico e il pulsante Prendi in carico" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 6 — PRESA IN CARICO DI UN'ATTIVITÀ GIÀ ASSEGNATA ── -->
+                <div id="presa-in-carico-assegnata" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3">
+                    <div>
+                      <h4 class="h4 text-secondary mb-2">Gestione attività da svolgere</h4>
+                      <h3 class="h1 mb-0">Presa in carico di un'attività già assegnata a un altro operatore</h3>
+                    </div>
+                    <span class="btn btn-primary disabled" aria-disabled="true"><i class="bi bi-clipboard-check me-1" aria-hidden="true"></i>Prendi in carico</span>
+                  </div>
+                  <p class="mb-4">
+                    È possibile prendere in carico un'attività già assegnata a un
+                    altro utente; in tal caso, il sistema visualizza appositi alert
+                    e finestre di conferma.
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Presa in carico di un'attività già assegnata</h4>
+                          </div>
+                          <p class="mb-3">
+                            Accedendo a un'attività già presa in carico da un altro
+                            utente, viene visualizzato un messaggio di avviso che
+                            informa l'utente che l'attività è attualmente in
+                            lavorazione da parte di un altro operatore. È comunque
+                            possibile procedere con la presa in carico
+                            dell'attività, tenendo presente che eventuali modifiche
+                            non salvate dal precedente operatore andranno perse.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/6.png" alt="Dettaglio della Dichiarazione di Porto Base con l'avviso Attività già presa in carico e il pulsante Prendi in carico" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Finestra di conferma</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver selezionato il pulsante <strong>"Prendi in
+                            carico"</strong>, il sistema visualizza una finestra di
+                            conferma nella quale viene indicato l'utente che ha già
+                            preso in carico l'attività. Per procedere con la
+                            riassegnazione e acquisire la responsabilità della
+                            lavorazione, selezionare il pulsante <strong>"Prendi in
+                            carico"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/7.png" alt="Finestra Prendi in carico attività con il nome dell'utente che ha già preso in carico la dichiarazione e i pulsanti Prendi in carico e Annulla" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-0" role="alert">
+                    <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                    <p class="mb-0">Fino alla presa in carico dell'attività, i pulsanti associati alle operazioni di lavorazione rimangono disabilitati.</p>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 7 — INSERIMENTO DI NOTE INTERNE ── -->
+                <div id="note-interne" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3">
+                    <div>
+                      <h4 class="h4 text-secondary mb-2">Gestione attività da svolgere</h4>
+                      <h3 class="h1 mb-0">Inserimento di Note interne</h3>
+                    </div>
+                    <span class="btn btn-primary disabled" aria-disabled="true"><i class="bi bi-chat-square-text me-1" aria-hidden="true"></i>Inserisci nota</span>
+                  </div>
+                  <p class="mb-4">
+                    L'operatore CdP può inserire note interne direttamente dal
+                    dettaglio dell'attività, senza la necessità di prenderla
+                    preventivamente in carico. Le note consentono di registrare
+                    informazioni aggiuntive e di condividerle con gli altri
+                    operatori coinvolti nella gestione dell'attività.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Inserimento note interne</h4>
+                          </div>
+                          <p class="mb-3">
+                            All'interno della pagina di dettaglio dell'attività è
+                            possibile aggiungere le note cliccando il pulsante
+                            <strong>"Inserisci nota"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/8.png" alt="Sezione Note interne del dettaglio attività con il pulsante Inserisci nota" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Aggiunta note a supporto</h4>
+                          </div>
+                          <p class="mb-3">
+                            Il sistema mostra una finestra dove l'operatore CdP deve
+                            inserire <strong>obbligatoriamente</strong> le note e
+                            confermare tramite l'apposito pulsante.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/9.png" alt="Finestra Inserisci nota interna con il campo Note compilato e il pulsante Inserisci nota" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Note interne inserite</h4>
+                          </div>
+                          <p class="mb-3">
+                            Dopo aver confermato l'inserimento della nota,
+                            quest'ultima sarà visibile, solo dagli operatori CdP,
+                            all'interno della sezione <strong>"Note
+                            interne"</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/10.png" alt="Sezione Note interne con la nota inserita, l'autore e la data" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+            <!-- FINE SEZIONE 01 -->
+
+            <!-- ============================================================
+                 SEZIONE 02 — CONSULTAZIONE DELLE INFORMAZIONI
+                 Pagine PDF: 8 (copertina) · 9 (tabelle) · 10 (tooltip) · 11 (link dati nave)
+                 ============================================================ -->
+            <section id="consultazione-informazioni" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD (pag. 8) -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">02.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Consultazione delle informazioni</h2>
+                      <p class="text-white mb-0">
+                        Le funzionalità descritte in questa sezione consentono di
+                        consultare in modo rapido ed efficace le informazioni
+                        disponibili all'interno del sistema. Attraverso strumenti
+                        quali la visualizzazione dei dati dell'anagrafica nave, la
+                        gestione delle tabelle e i tooltip informativi, l'utente
+                        può accedere ai dettagli di interesse e approfondire le
+                        informazioni necessarie allo svolgimento delle proprie
+                        attività.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 9 — GESTIONE E CONSULTAZIONE DELLE TABELLE ── -->
+                <div id="consultazione-tabelle" class="sg-section__body p-2 p-lg-4">
+
+                  <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3">
+                    <div>
+                      <h4 class="h4 text-secondary mb-2">Attivazione dell'ordinamento delle voci in tabella</h4>
+                      <h3 class="h1 mb-0">Gestione e consultazione delle tabelle</h3>
+                    </div>
+                    <span class="btn btn-primary disabled" aria-disabled="true"><i class="bi bi-arrow-down-up me-1" aria-hidden="true"></i>Ordina per</span>
+                  </div>
+                  <p class="mb-4">
+                    L'utente può ordinare i dati presenti in tabella per facilitare
+                    la consultazione e individuare più rapidamente le informazioni
+                    di interesse.
+                  </p>
+
+                  <div class="row g-4 mb-4">
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Individuazione della colonna e ordinamento</h4>
+                          </div>
+                          <p class="mb-3">
+                            Per ordinare i dati, l'utente deve individuare
+                            l'intestazione della <strong>colonna
+                            interessata</strong>. Le colonne ordinabili sono
+                            contraddistinte dall'icona di ordinamento rappresentata
+                            da <strong>due frecce</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/11.png" alt="Tabella Elenco risultati con l'intestazione della colonna Stato utenza e l'icona a due frecce evidenziata" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Attivazione dell'ordinamento</h4>
+                          </div>
+                          <p class="mb-3">
+                            Cliccando sull'icona di ordinamento presente
+                            nell'intestazione della colonna, il sistema applica
+                            l'ordinamento ai dati visualizzati.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/12.png" alt="Tabella Elenco risultati ordinata per la colonna Stato utenza" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">3</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Azioni sulla tabella</h4>
+                          </div>
+                          <p class="mb-3">
+                            Nella colonna <strong>"Azioni"</strong> sono disponibili
+                            le funzionalità operative associate a ciascun elemento
+                            dell'elenco. Le azioni visualizzate possono variare in
+                            base alla tipologia di tabella e alle specifiche
+                            operazioni previste per i dati gestiti.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/13.png" alt="Due tabelle con la colonna Azioni evidenziata: elenco utenti e Lista Merci Pericolose" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-0" role="alert">
+                    <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                    <p class="mb-0">Un ulteriore clic sulla stessa icona consente di invertire la direzione dell'ordinamento, passando dall'ordine crescente a quello decrescente e viceversa.</p>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 10 — TOOLTIP INFORMATIVO ── -->
+                <div id="tooltip-informativo" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Informazioni contestuali</h4>
+                  <h3 class="h1 mb-4">Tooltip informativo</h3>
+
+                  <div class="row g-4 align-items-center mb-4">
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/modalita-generali/14.png" alt="Step Merci pericolose con il tooltip aperto sull'icona informativa accanto al pulsante Richiesta di Sub-Formalità" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">
+                        Il tooltip fornisce <strong>informazioni aggiuntive e
+                        contestuali</strong> su un elemento dell'interfaccia,
+                        aiutando l'utente a <strong>comprenderne il significato o
+                        le modalità di utilizzo</strong>.
+                      </p>
+                      <p class="mb-0">
+                        Passando il <strong>cursore sull'icona
+                        informativa</strong>, il sistema visualizza un tooltip con
+                        una spiegazione aggiuntiva relativa alla funzionalità o al
+                        campo a cui è associato.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-0" role="alert">
+                    <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                    <p class="mb-0">Il tooltip scompare quando il cursore viene spostato dall'icona, consentendo di accedere alle informazioni solo quando necessario senza appesantire la schermata.</p>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 11 — LINK AI DATI DELLA NAVE ── -->
+                <div id="link-anagrafica-nave" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Visualizzazione dati nave selezionata</h4>
+                  <h3 class="h1 mb-4">Link ai dati della nave</h3>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">
+                        L'utente ha la possibilità di visualizzare i dati
+                        anagrafici di una nave, selezionando il link
+                        <strong>"Dati Nave"</strong>, presente all'interno di:
+                      </p>
+                      <ul class="mb-4">
+                        <li>Dichiarazione di Porto Base</li>
+                        <li>Soste fuori abbonamento e per unità da Diporto</li>
+                        <li>Fascicoli e Soste in abbonamento</li>
+                        <li>Obblighi di Dichiarazione</li>
+                      </ul>
+                      <img src="./img/modalita-generali/15.png" alt="Barra della nave Costa Grandiosa IMO 6205858 con il link Dati Nave" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/modalita-generali/16.png" alt="Pagina Creazione Sosta con la barra della nave e il link Dati nave in alto" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+            <!-- FINE SEZIONE 02 -->
+
+            <!-- ============================================================
+                 SEZIONE 03 — COMPILAZIONE DEI DATI
+                 Pagine PDF: 12 (copertina) · 13 (regole generali) · 14 (campi obbligatori)
+                 ============================================================ -->
+            <section id="compilazione-dati" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD (pag. 12) -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">03.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Compilazione dei dati</h2>
+                      <p class="text-white mb-0">
+                        La presente sezione descrive le modalità di inserimento e
+                        aggiornamento delle informazioni all'interno del sistema.
+                        Vengono illustrate le funzionalità comuni di compilazione,
+                        i controlli applicati ai campi e le principali interazioni
+                        disponibili durante la gestione dei dati.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 13 — REGOLE GENERALI ── -->
+                <div id="regole-generali" class="sg-section__body p-2 p-lg-4">
+
+                  <h4 class="h4 text-secondary mb-2">Compilazione dei dati</h4>
+                  <h3 class="h1 mb-4">Regole generali</h3>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/modalita-generali/17.png" alt="Sezione Dati abbonamento con i testi informativi sotto i campi Periodicità, Data inizio abbonamento e Data fine abbonamento" class="w-100 rounded-3 mb-3" />
+                      <img src="./img/modalita-generali/18.png" alt="Campi Massa Lorda, Massa netta e Volume con il messaggio Inserire almeno uno tra massa lorda, massa netta o volume" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">
+                        All'interno delle pagine del sistema sono disponibili
+                        <strong>testi informativi</strong> e <strong>indicazioni
+                        che supportano</strong> l'utente nella corretta
+                        compilazione dei dati. Le descrizioni illustrano le
+                        informazioni da inserire e le regole di compilazione
+                        associate ai singoli campi.
+                      </p>
+                      <p class="mb-0">
+                        In corrispondenza dei campi possono essere visualizzate
+                        <strong>indicazioni specifiche</strong>, quali la
+                        valorizzazione automatica da parte del sistema,
+                        l'obbligatorietà del dato il cui campo è contrassegnato
+                        dal simbolo <strong>(*)</strong> mentre, nei casi di campi
+                        alternativamente obbligatori, è necessario valorizzarne
+                        almeno uno.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 14 — CAMPI OBBLIGATORI - ERRORI DI COMPILAZIONE ── -->
+                <div id="campi-obbligatori" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Compilazione dei dati</h4>
+                  <h3 class="h1 mb-3">Campi obbligatori - errori di compilazione</h3>
+                  <p class="mb-4">
+                    I campi obbligatori sono identificati visivamente e devono
+                    essere compilati correttamente per poter procedere con le
+                    operazioni successive.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">1</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Identificazione dei campi obbligatori</h4>
+                          </div>
+                          <p class="mb-3">
+                            I campi obbligatori sono contrassegnati da un
+                            <strong>asterisco (*)</strong> e accompagnati da un
+                            testo informativo che indica che la compilazione del
+                            campo è obbligatoria.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/19.png" alt="Step Dati abbonamento con il campo obbligatorio Data inizio abbonamento evidenziato e il testo Campo obbligatorio" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <div class="d-flex gap-3 mb-3">
+                            <div class="sg-step-badge flex-shrink-0">2</div>
+                            <h4 class="h5 fw-bold text-uppercase mb-0">Indicazione dell'errore</h4>
+                          </div>
+                          <p class="mb-3">
+                            Se l'utente indica un <strong>valore non
+                            valido</strong>, il campo viene evidenziato in rosso e
+                            viene visualizzato un <strong>messaggio</strong> che
+                            indica come compilare correttamente il campo,
+                            specificando il valore o il formato richiesto per
+                            <strong>evitare ulteriori errori</strong>.
+                          </p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/20.png" alt="Sezione Dati Generali con il campo ETA del Porto Successivo evidenziato in rosso e il messaggio ETA deve essere successivo all'ETD" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+            <!-- FINE SEZIONE 03 -->
+
+            <!-- ============================================================
+                 SEZIONE 04 — FOCUS SUGLI STATI DELLA SCANSIONE ANTIVIRUS
+                 Pagine PDF: 15 (copertina) · 16 (stati)
+                 ============================================================ -->
+            <section id="stati-scansione-antivirus" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD (pag. 15) -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">04.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Focus sugli stati della scansione antivirus dei documenti</h2>
+                      <p class="text-white mb-0">
+                        Per ogni singolo documento caricato dall'utente, viene
+                        effettuata la scansione antivirus; di seguito vengono
+                        mostrati gli stati dell'esito della scansione.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 16 — STATI DELLA SCANSIONE ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <div class="d-flex gap-3 mb-4">
+                    <div class="sg-icon-box flex-shrink-0"><i class="bi bi-shield-check text-primary" aria-hidden="true"></i></div>
+                    <p class="mb-0">
+                      Per ogni documento caricato nel sistema viene eseguita
+                      automaticamente una scansione antivirus al fine di
+                      verificarne la sicurezza prima che possa essere reso
+                      disponibile per il download o utilizzato nei processi di
+                      invio. L'esito della verifica è visualizzato nella colonna
+                      <strong>"Esito scansione antivirus"</strong> della tabella
+                      dei documenti caricati.
+                    </p>
+                  </div>
+
+                  <div class="row g-4 align-items-center mb-4">
+                    <div class="col-12 col-lg-6">
+                      <img src="./img/modalita-generali/21.png" alt="Form Aggiunta Documento con la tabella Documenti Caricati e la colonna Scansione con lo stato Sicuro evidenziato" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <p class="fw-bold mb-3">Gli stati che la scansione del documento può assumere sono:</p>
+
+                      <span class="badge rounded-2 border border-success text-success fs-6 px-3 py-2 mb-2"><i class="bi bi-check-circle me-1" aria-hidden="true"></i>Sicuro</span>
+                      <p class="mb-0">La scansione antivirus ha avuto esito positivo e il documento è stato verificato come sicuro. Il file può essere consultato e scaricato.</p>
+
+                      <hr class="my-3" />
+
+                      <span class="badge rounded-2 border border-warning text-warning fs-6 px-3 py-2 mb-2"><i class="bi bi-hourglass-split me-1" aria-hidden="true"></i>In corso</span>
+                      <p class="mb-0">La scansione antivirus del documento è ancora in esecuzione e l'esito non è ancora disponibile.</p>
+
+                      <hr class="my-3" />
+
+                      <span class="badge rounded-2 border border-danger text-danger fs-6 px-3 py-2 mb-2"><i class="bi bi-exclamation-circle me-1" aria-hidden="true"></i>Infetto</span>
+                      <p class="mb-0">La scansione antivirus ha rilevato una potenziale minaccia. Il documento viene evidenziato come non sicuro e non può essere scaricato né utilizzato per l'invio della pratica.</p>
+                    </div>
+                  </div>
+
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-0" role="alert">
+                    <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                    <p class="mb-0">
+                      Le richieste o pratiche che contengono documenti in fase di
+                      scansione rimangono nello stato <strong>"Invio in
+                      corso"</strong> fino al completamento delle verifiche
+                      antivirus. Se almeno un documento risulta infetto, la
+                      pratica assume lo stato <strong>"Invio fallito"</strong> e
+                      non viene inoltrata ai destinatari previsti.
+                    </p>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+            <!-- FINE SEZIONE 04 -->
+
+            <!-- ============================================================
+                 SEZIONE 05 — ASSISTENZA
+                 Pagine PDF: 17 (copertina) · 18 (punto di accesso) · 19 (funzionalità)
+                         20 (FAQ) · 21 (Privacy) · 22 (Manuale utente)
+                         23 (Contenuti multimediali) · 24 (Richiedi assistenza)
+                 ============================================================ -->
+            <section id="assistenza" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD (pag. 17) -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">05.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Assistenza</h2>
+                      <p class="text-white mb-0">Una panoramica sul flusso di assistenza.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 18 — PUNTO DI ACCESSO ── -->
+                <div id="assistenza-punto-accesso" class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-2">Punto di accesso</h3>
+                  <h4 class="h4 fw-bold mb-3">La voce di menù</h4>
+                  <p class="mb-4">
+                    Dalla dashboard è possibile <strong>accedere alle principali
+                    sezioni tramite le voci di menu</strong>.
+                  </p>
+
+                  <div class="card border-0 rounded-3">
+                    <div class="card-body bg-light p-4">
+                      <div class="row g-4 align-items-center">
+                        <div class="col-12 col-lg-5">
+                          <div class="card border-0 rounded-3 p-3 bg-primary">
+                            <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                            <p class="text-white mb-0">
+                              Cliccando sulla voce <strong>"Assistenza"</strong>
+                              l'utente viene indirizzato alla pagina in cui potrà
+                              richiedere assistenza, consultare documentazione,
+                              visualizzare le FAQ e inviare richieste di supporto.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-7">
+                          <img src="./img/modalita-generali/22.png" alt="Dashboard dell'Agente Raccomandatario Marittimo con la voce di menu Assistenza evidenziata" class="w-100 rounded-3" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 19 — FUNZIONALITÀ ASSISTENZA ── -->
+                <div id="assistenza-funzionalita" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-4">Funzionalità assistenza</h3>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-4">
+                      <p class="mb-3">Le voci all'interno del menu laterale sono:</p>
+                      <ul class="list-unstyled mb-0">
+                        <li class="card border-0 rounded-3 bg-light p-3 mb-2"><span><i class="bi bi-question-circle-fill text-primary me-2" aria-hidden="true"></i><a href="#assistenza-faq" class="fw-semibold">FAQ</a></span></li>
+                        <li class="card border-0 rounded-3 bg-light p-3 mb-2"><span><i class="bi bi-shield-fill text-primary me-2" aria-hidden="true"></i><a href="#assistenza-privacy" class="fw-semibold">Privacy</a></span></li>
+                        <li class="card border-0 rounded-3 bg-light p-3 mb-2"><span><i class="bi bi-book text-primary me-2" aria-hidden="true"></i><a href="#assistenza-manuale" class="fw-semibold">Manuale utente</a></span></li>
+                        <li class="card border-0 rounded-3 bg-light p-3 mb-2"><span><i class="bi bi-play-btn-fill text-primary me-2" aria-hidden="true"></i><a href="#assistenza-multimediali" class="fw-semibold">Contenuti multimediali</a></span></li>
+                        <li class="card border-0 rounded-3 bg-light p-3"><span><i class="bi bi-headset text-primary me-2" aria-hidden="true"></i><a href="#richiedi-assistenza" class="fw-semibold">Richiedi assistenza</a></span></li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg-8">
+                      <img src="./img/modalita-generali/23.png" alt="Pagina Assistenza con il menu laterale FAQ, Privacy, Manuale utente, Contenuti multimediali, Richiedi assistenza e la sezione FAQ aperta" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 20 — FAQ ── -->
+                <div id="assistenza-faq" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Assistenza</h4>
+                  <h3 class="h1 mb-4">Visualizzazione dettaglio - FAQ</h3>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-4">
+                      <p class="mb-3">
+                        All'interno della pagina sono consultabili le FAQ che
+                        raccolgono le <strong>domande più frequenti</strong>,
+                        poste dagli utenti, sugli aspetti operativi, procedurali e
+                        funzionali più ricorrenti.
+                      </p>
+                      <p class="mb-0">
+                        All'interno dell'<strong>accordion espandibile</strong> di
+                        ciascuna tematica, gli utenti possono consultare le
+                        risposte per trovare rapidamente le informazioni di
+                        interesse.
+                      </p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                      <img src="./img/modalita-generali/24.png" alt="Pagina Assistenza sezione FAQ con l'accordion Diporto aperto e la prima domanda espansa" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                      <img src="./img/modalita-generali/25.png" alt="Elenco delle domande FAQ con una risposta espansa e le tematiche Patenti nautiche, Gente di mare e SAR" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 21 — PRIVACY ── -->
+                <div id="assistenza-privacy" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Assistenza</h4>
+                  <h3 class="h1 mb-4">Visualizzazione dettaglio - Privacy</h3>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-4">
+                      <p class="mb-3">All'interno della pagina sono consultabili informazioni relative a:</p>
+                      <ul class="mb-0">
+                        <li>Informative sul trattamento dei dati personali degli utenti del sito;</li>
+                        <li>Titolare del trattamento dei dati personali;</li>
+                        <li>Responsabile per la protezione dei dati personali;</li>
+                        <li>Tipi di dati personali trattati, finalità e base giuridica del trattamento;</li>
+                        <li>Dati personali comunicati dall'utente agli indirizzi di contatto del titolare;</li>
+                        <li>Cookie e altri strumenti di tracciamento;</li>
+                        <li>Come disabilitare e abilitare i cookie;</li>
+                        <li>Controllo dell'interazione umana tramite verifica CAPTCHA;</li>
+                        <li>Destinatari della comunicazione dei dati personali;</li>
+                        <li>Periodo di conservazione dei dati personali;</li>
+                        <li>Luogo e modalità di trattamento dei dati, natura del conferimento dei dati;</li>
+                        <li>I diritti degli interessati.</li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                      <img src="./img/modalita-generali/26.png" alt="Pagina Assistenza sezione Privacy e note legali con l'informativa sul trattamento dei dati personali" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                      <img src="./img/modalita-generali/27.png" alt="Seconda parte della pagina Privacy con cookie, verifica CAPTCHA, destinatari, conservazione e diritti degli interessati" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 22 — MANUALE UTENTE ── -->
+                <div id="assistenza-manuale" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Assistenza</h4>
+                  <h3 class="h1 mb-4">Visualizzazione dettaglio - Manuale utente</h3>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-3">
+                        La sezione fornisce agli utenti un punto di accesso rapido
+                        e sicuro alla fruizione della <strong>documentazione
+                        ufficiale</strong> dedicata per ciascuna tipologia di
+                        profilo e necessaria per comprendere e utilizzare
+                        correttamente il sistema.
+                      </p>
+                      <p class="mb-2">I manuali sono disponibili nei seguenti formati:</p>
+                      <ul class="mb-0">
+                        <li><strong>PDF</strong>, che consente di effettuare il download del documento;</li>
+                        <li><strong>HTML</strong>, che consente di navigare attraverso le diverse sezioni e capitoli del manuale.</li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/modalita-generali/28.png" alt="Pagina Assistenza sezione Manuale Utente con la card del manuale e il pulsante Scarica il manuale" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 23 — CONTENUTI MULTIMEDIALI ── -->
+                <div id="assistenza-multimediali" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Assistenza</h4>
+                  <h3 class="h1 mb-4">Visualizzazione dettaglio - Contenuti multimediali</h3>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-0">
+                        La sezione consente all'utente di consultare i
+                        <strong>video tutorial</strong> per utilizzare al meglio la
+                        piattaforma EMSWe. L'utente può filtrare i contenuti per
+                        argomento e per anno, oppure utilizzare la funzione di
+                        ricerca per individuare rapidamente i video di interesse.
+                      </p>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/modalita-generali/29.png" alt="Pagina Assistenza sezione Contenuti multimediali con la barra di ricerca, i filtri e le card dei video" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 24 — RICHIEDI ASSISTENZA ── -->
+                <div id="richiedi-assistenza" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Assistenza</h4>
+                  <h3 class="h1 mb-3">Visualizzazione dettaglio - Richiedi assistenza</h3>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-6">
+                      <p class="mb-3">
+                        La sezione consente all'utente di segnalare problematiche
+                        tecniche o inoltrare richieste di supporto operativo.
+                      </p>
+                      <p class="fw-bold mb-2">Per inviare una richiesta di assistenza, l'utente dovrà:</p>
+                      <ul class="mb-3">
+                        <li>Fornire i dati utente:
+                          <ul>
+                            <li>Nome e Cognome sono pre-compilati e non modificabili;</li>
+                            <li>Email e telefono.</li>
+                          </ul>
+                        </li>
+                        <li>Indicare le informazioni relative alla richiesta:
+                          <ul>
+                            <li>Tipologia segnalazione;</li>
+                            <li>Ambito funzionale (in base alla tipologia segnalazione);</li>
+                            <li>Descrizione;</li>
+                            <li>Allegare un documento per illustrare in maniera più esaustiva la problematica.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <p class="mb-3">Infine, cliccare il pulsante <strong>"Invia richiesta"</strong>.</p>
+                      <p class="mb-0">A conferma dell'avvenuto inoltro, il sistema visualizza un messaggio di conferma e comunica il numero identificativo del ticket generato.</p>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <img src="./img/modalita-generali/30.png" alt="Form Richiesta di Assistenza con Dati utente, Invia una Richiesta di Supporto e il pulsante Invia Richiesta" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+            <!-- FINE SEZIONE 05 -->
+
+            <!-- ============================================================
+                 SEZIONE 06 — TIPOLOGIE DI ALERT
+                 Pagine PDF: 25 (copertina) · 26 (struttura) · 27 (semantica)
+                         28 (successo) · 29 (errore) · 30 (avviso) · 31 (info)
+                         32 (messaggio di conferma)
+                 ============================================================ -->
+            <section id="tipologie-alert" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD (pag. 25) -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">06.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Tipologie di alert</h2>
+                      <p class="text-white mb-0">Una panoramica sulle tipologie di alert presenti a sistema.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 26 — STRUTTURA DEL COMPONENTE ── -->
+                <div id="struttura-alert" class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-3">Struttura del componente</h3>
+                  <p class="mb-4">
+                    Il componente alert è composto da elementi visivi e testuali
+                    che lavorano insieme per comunicare all'utente
+                    un'informazione rilevante in modo immediato, chiaro e
+                    riconoscibile.
+                  </p>
+
+                  <img src="./img/modalita-generali/31.png" alt="Esempio di alert informativo con barra colorata a sinistra, icona, titolo, descrizione e icona di chiusura" class="w-100 rounded-3 mb-4" />
+
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6 col-xl d-flex">
+                      <div class="card border-0 rounded-3 bg-light p-3 w-100">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">1</div>
+                          <h4 class="h5 fw-bold mb-0">Colore</h4>
+                        </div>
+                        <p class="mb-0">Utilizza il colore per rendere immediatamente riconoscibile la tipologia di messaggio.</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl d-flex">
+                      <div class="card border-0 rounded-3 bg-light p-3 w-100">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <h4 class="h5 fw-bold mb-0">Icona</h4>
+                        </div>
+                        <p class="mb-0">Identifica visivamente la tipologia di messaggio e richiama l'attenzione dell'utente.</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl d-flex">
+                      <div class="card border-0 rounded-3 bg-light p-3 w-100">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <h4 class="h5 fw-bold mb-0">Titolo</h4>
+                        </div>
+                        <p class="mb-0">Comunica in modo sintetico l'informazione o l'azione principale richiesta all'utente.</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl d-flex">
+                      <div class="card border-0 rounded-3 bg-light p-3 w-100">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">4</div>
+                          <h4 class="h5 fw-bold mb-0">Descrizione</h4>
+                        </div>
+                        <p class="mb-0">Fornisce il contesto e le informazioni aggiuntive necessarie per comprendere il messaggio.</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl d-flex">
+                      <div class="card border-0 rounded-3 bg-light p-3 w-100">
+                        <div class="d-flex gap-3 mb-2">
+                          <div class="sg-step-badge flex-shrink-0">5</div>
+                          <h4 class="h5 fw-bold mb-0">Icona di chiusura*</h4>
+                        </div>
+                        <p class="mb-0">*Se presente, consente all'utente di chiudere l'alert e rimuoverlo dalla visualizzazione.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 27 — SEMANTICA DELL'ALERT ── -->
+                <div id="semantica-alert" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Semantica dell'alert</h3>
+                  <p class="mb-4">
+                    Il colore è un elemento distintivo della semantica dell'alert
+                    e contribuisce a comunicarne immediatamente il significato.
+                    Ogni colore identifica una specifica tipologia di messaggio e
+                    il relativo livello di attenzione richiesto all'utente.
+                  </p>
+
+                  <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <h4 class="h5 fw-bold mb-2"><a href="#alert-successo">Messaggio di conferma (Successo)</a></h4>
+                          <p class="mb-3">Messaggio che conferma il corretto completamento di un'operazione eseguita dall'utente.</p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/32.png" alt="Alert di successo verde: È stata correttamente respinta la richiesta di Invalidazione per questa Dichiarazione di Porto Base" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <h4 class="h5 fw-bold mb-2"><a href="#alert-errore">Messaggio di errore bloccante (Error)</a></h4>
+                          <p class="mb-3">Segnalazione di una condizione che impedisce l'esecuzione o il completamento dell'operazione fino alla risoluzione dell'anomalia.</p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/33.png" alt="Alert di errore rosso: Errore 400, MMSI non può essere impostato durante l'aggiornamento" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <h4 class="h5 fw-bold mb-2"><a href="#alert-avviso">Messaggio di avviso (Warning)</a></h4>
+                          <p class="mb-3">Segnalazione di una condizione che richiede attenzione o verifica da parte dell'utente, senza impedire il completamento dell'operazione.</p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/34.png" alt="Alert di avviso giallo: Sei sicuro di voler richiedere l'invalidazione della dichiarazione di porto?" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 d-flex">
+                      <div class="card border-0 rounded-3 w-100">
+                        <div class="card-body bg-light p-4 d-flex flex-column">
+                          <h4 class="h5 fw-bold mb-2"><a href="#alert-info">Messaggio informativo (info)</a></h4>
+                          <p class="mb-3">Comunicazione fornita dal sistema per informare l'utente su uno stato, un evento o un risultato, senza richiedere alcuna azione.</p>
+                          <div class="mt-auto">
+                            <img src="./img/modalita-generali/35.png" alt="Alert informativo blu: Il documento di Dichiarazione in corso di validità e approvata extra-sistema è obbligatorio" class="w-100 rounded-3" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 28 — MESSAGGIO DI CONFERMA (SUCCESSO) ── -->
+                <div id="alert-successo" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Esempio contestualizzato</h4>
+                  <h3 class="h1 mb-3">Messaggio di conferma (Successo)</h3>
+                  <p class="mb-4">
+                    Notifica visualizzata dall'applicativo a seguito del
+                    completamento positivo di un'operazione. Il messaggio conferma
+                    che i controlli previsti sono stati superati, i dati sono
+                    stati acquisiti correttamente e il processo è stato portato a
+                    termine con esito favorevole.
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-6">
+                      <img src="./img/modalita-generali/36.png" alt="Finestra Successo con il messaggio Richiesta rifiutata con successo sulla pagina Valutazione richiesta di chiusura dichiarazione porto base" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <p class="fw-bold mb-3">Possibili varianti</p>
+                      <div class="alert alert-success d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-check-circle flex-shrink-0 mt-1" aria-hidden="true"></i><p class="mb-0">Ruoli eliminati con successo.</p></div>
+                      <div class="alert alert-success d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-check-circle flex-shrink-0 mt-1" aria-hidden="true"></i><p class="mb-0">Salvataggio della bozza avvenuto con successo.</p></div>
+                      <div class="alert alert-success d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-check-circle flex-shrink-0 mt-1" aria-hidden="true"></i><p class="mb-0">È stata correttamente respinta la richiesta di Invalidazione per questa Dichiarazione di Porto Base.</p></div>
+                      <div class="alert alert-success d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-check-circle flex-shrink-0 mt-1" aria-hidden="true"></i><p class="mb-0">Sosta eliminata con successo.</p></div>
+                      <div class="alert alert-success d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-check-circle flex-shrink-0 mt-1" aria-hidden="true"></i><p class="mb-0">Modifiche alla sosta avvenute con successo.</p></div>
+                      <div class="alert alert-success d-flex align-items-start gap-2 rounded-3 mb-0" role="note"><i class="bi bi-check-circle flex-shrink-0 mt-1" aria-hidden="true"></i><p class="mb-0">Importazione del file avvenuta con successo.</p></div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 29 — MESSAGGIO DI ERRORE BLOCCANTE (ERROR) ── -->
+                <div id="alert-errore" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Esempio contestualizzato</h4>
+                  <h3 class="h1 mb-3">Messaggio di errore bloccante (Error)</h3>
+                  <p class="mb-4">
+                    Messaggio generato dall'applicativo per segnalare una
+                    condizione che impedisce il completamento dell'operazione
+                    richiesta. La presenza dell'errore richiede l'intervento
+                    dell'utente per correggere i dati o risolvere l'anomalia prima
+                    di poter proseguire con il processo.
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-6">
+                      <img src="./img/modalita-generali/37.png" alt="Finestra Errori di validazione con il messaggio Il planning deve contenere almeno un viaggio e il pulsante Chiudi" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <p class="fw-bold mb-3">Possibili varianti</p>
+                      <div class="alert alert-danger d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-shield-exclamation flex-shrink-0 mt-1" aria-hidden="true"></i><p class="mb-0">Questa nave risulta bannata.</p></div>
+                      <div class="alert alert-danger d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-x-circle flex-shrink-0 mt-1" aria-hidden="true"></i><div><p class="fw-bold mb-1">Si sta respingendo questa richiesta di Invalidazione Dichiarazione di Porto Base</p><p class="mb-0">Specificare nel campo di testo sottostante i motivi per i quali la richiesta verrà respinta.</p></div></div>
+                      <div class="alert alert-danger d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-x-circle flex-shrink-0 mt-1" aria-hidden="true"></i><p class="mb-0">Porto di scalo successivo già presente per l'allegato MARPOL definito.</p></div>
+                      <div class="alert alert-danger d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-x-circle flex-shrink-0 mt-1" aria-hidden="true"></i><p class="mb-0">ATA (Orario di arrivo effettivo) non valido per questa operazione.</p></div>
+                      <div class="alert alert-danger d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i><p class="mb-0">Si prega di compilare tutti i campi obbligatori.</p></div>
+                      <div class="alert alert-danger d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-x-circle flex-shrink-0 mt-1" aria-hidden="true"></i><p class="mb-0">Si è verificato un errore imprevisto durante l'elaborazione della richiesta. L'operazione non è stata completata: riprovare e, se il problema persiste, segnalare all'assistenza l'operazione svolta e l'orario in cui si è verificata.</p></div>
+                      <div class="alert alert-danger d-flex align-items-start gap-2 rounded-3 mb-0" role="note"><i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i><p class="mb-0"><strong>Errore di caricamento:</strong> Errore nell'estrazione dei dati. Campi obbligatori mancanti: Porto di sosta, ETA, ETD, Porto successivo</p></div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 30 — MESSAGGIO DI AVVISO (WARNING) ── -->
+                <div id="alert-avviso" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Esempio contestualizzato</h4>
+                  <h3 class="h1 mb-3">Messaggio di avviso (Warning)</h3>
+                  <p class="mb-4">
+                    Notifica generata dall'applicativo per evidenziare situazioni
+                    che, pur non configurando un errore bloccante, potrebbero
+                    richiedere una valutazione da parte dell'utente. Il messaggio
+                    di warning non interrompe il processo in corso, ma informa
+                    circa la presenza di condizioni particolari, dati incoerenti o
+                    possibili impatti derivanti dall'operazione richiesta.
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-6">
+                      <img src="./img/modalita-generali/38.png" alt="Pagina Notifiche con l'alert di avviso Hai 19 notifiche non lette da più di una settimana evidenziato" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <p class="fw-bold mb-3">Possibili varianti</p>
+                      <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i><div><p class="fw-bold mb-1">Si sta richiedendo un'integrazione</p><p class="mb-0">Specificare nel campo di testo sottostante la motivazione in modo che il declarant possa integrare con quanto chiesto.</p></div></div>
+                      <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i><div><p class="fw-bold mb-1">La nave di questa sosta non è associata al tuo profilo. Salvando le modifiche, il tuo profilo verrà aggiornato con l'associazione a questa nave.</p><p class="mb-0">Vuoi procedere con il salvataggio?</p></div></div>
+                      <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i><div><p class="fw-bold mb-1">Visit ID: ITGOA25000046</p><p class="mb-0">Per la nave Piacere è stata trovata una sosta precedente con i seguenti dati.</p></div></div>
+                      <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i><div><p class="fw-bold mb-1">Sei sicuro di voler eliminare questa sosta?</p><p class="mb-0">Una volta eliminata, la sosta non sarà più disponibile.</p></div></div>
+                      <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i><div><p class="fw-bold mb-1">Si sta richiedendo la rettifica della sosta al collaboratore</p><p class="mb-0">Specificare nel campo di testo sottostante la motivazione della richiesta di rettifica della sosta.</p></div></div>
+                      <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mb-0" role="note"><i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i><div><p class="fw-bold mb-1">Attività già presa in carico</p><p class="mb-0">Questa attività è stata presa in carico da un altro operatore. Con la presa in carico tutte le modifiche non salvate dal precedente operatore andranno perse.</p></div></div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 31 — MESSAGGIO INFORMATIVO (INFO) ── -->
+                <div id="alert-info" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Esempio contestualizzato</h4>
+                  <h3 class="h1 mb-3">Messaggio informativo (info)</h3>
+                  <p class="mb-4">
+                    Notifica visualizzata dall'applicativo con finalità
+                    esclusivamente informative, volta a comunicare all'utente
+                    dati, stati, eventi o indicazioni relativi all'utilizzo
+                    dell'applicativo, senza segnalare anomalie né influire
+                    sull'esecuzione dell'operazione in corso.
+                  </p>
+
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-6">
+                      <img src="./img/modalita-generali/39.png" alt="Finestra Approva dichiarazione con l'alert informativo Si sta approvando una dichiarazione e il pulsante Approva dichiarazione" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <p class="fw-bold mb-3">Possibili varianti</p>
+                      <div class="alert alert-info d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-info-circle flex-shrink-0 mt-1" aria-hidden="true"></i><p class="mb-0">I dati contenuti nella presente anagrafica sono frutto degli obblighi di dichiarazione riportati dai dichiaranti e non sono certificati.</p></div>
+                      <div class="alert alert-info d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-info-circle flex-shrink-0 mt-1" aria-hidden="true"></i><p class="mb-0">Compila i campi obbligatori per creare un nuovo piano accosti. Il piano verrà creato in stato bozza e potrà essere modificato successivamente.</p></div>
+                      <div class="alert alert-info d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-info-circle flex-shrink-0 mt-1" aria-hidden="true"></i><div><p class="fw-bold mb-1">Caricamento da un file CSV</p><p class="mb-1">Il file deve essere strutturato come segue:</p><ul class="mb-0"><li>contenere la seguente intestazione formata dai campi "PROFILE_CODE", "ROLE_CODE", "ASSOCIATED", "REPORTING_OBLIGATION_CODE";</li><li>il carattere separatore di colonna è la virgola;</li><li>tutti i campi sono obbligatori.</li></ul></div></div>
+                      <div class="alert alert-info d-flex align-items-start gap-2 rounded-3 mb-2" role="note"><i class="bi bi-info-circle flex-shrink-0 mt-1" aria-hidden="true"></i><div><p class="fw-bold mb-1">Si sta approvando una richiesta di Invalidazione</p><p class="mb-0">Approvando la richiesta, la dichiarazione verrà invalidata e il dichiarante dovrà procedere a generarne una nuova.</p></div></div>
+                      <div class="alert alert-info d-flex align-items-start gap-2 rounded-3 mb-0" role="note"><i class="bi bi-info-circle flex-shrink-0 mt-1" aria-hidden="true"></i><div><p class="fw-bold mb-1">Tipologia di navi gestibili tramite questa funzionalità</p><ul class="mb-0"><li>Navi da diporto dell'Unione Europea destinate a uso commerciale e navi destinate esclusivamente al noleggio per finalità turistiche che non trasportano più di dodici passeggeri (DM 27 aprile 2017 art. 4 comma 1, lettera b);</li><li>Navi da diporto di Paesi non europei destinate a uso commerciale (DM 27 aprile 2017 art. 4 comma 4).</li></ul></div></div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- ── PAG. 32 — MESSAGGIO DI CONFERMA ── -->
+                <div id="messaggio-conferma" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h3 class="h1 mb-3">Messaggio di conferma</h3>
+                  <p class="mb-4">
+                    Messaggio generato dal sistema per richiedere all'utente una
+                    conferma esplicita prima dell'esecuzione di un'operazione che
+                    potrebbe produrre effetti rilevanti, modificare dati già
+                    registrati o determinare azioni non immediatamente reversibili.
+                    L'operazione viene eseguita solo a seguito della conferma da
+                    parte dell'utente.
+                  </p>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/modalita-generali/40.png" alt="Finestra Salva con la domanda Sei sicuro di voler salvare questo obbligo di dichiarazione? e i pulsanti Chiudi e Conferma" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <span class="btn btn-primary disabled mb-2" aria-disabled="true"><i class="bi bi-check-circle me-1" aria-hidden="true"></i>Conferma</span>
+                      <p class="mb-0">L'utente può confermare l'operazione effettuata.</p>
+                      <hr class="my-4" />
+                      <span class="btn btn-outline-primary disabled mb-2" aria-disabled="true"><i class="bi bi-x-circle me-1" aria-hidden="true"></i>Chiudi</span>
+                      <p class="mb-0">L'utente chiudendo, annulla l'operazione effettuata.</p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+            <!-- FINE SEZIONE 06 -->
+
+            <!-- ============================================================
+                 SEZIONE 07 — ICONE
+                 Pagine PDF: 33 (copertina) · 34 (elenco icone)
+                 ============================================================ -->
+            <section id="icone" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <!-- HEAD (pag. 33) -->
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">07.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Icone</h2>
+                      <p class="text-white mb-0">Una panoramica sulle tipologie di icone presenti a sistema.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── PAG. 34 — ELENCO ICONE PRESENTI A SISTEMA E UTILIZZO ── -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <h3 class="h1 mb-3">Elenco icone presenti a sistema e utilizzo</h3>
+                  <p class="mb-4">
+                    La libreria di icone definisce un linguaggio visivo coerente e
+                    riconoscibile, garantendo uniformità nell'interfaccia e
+                    facilitando la comprensione delle diverse funzionalità.
+                  </p>
+
+                  <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-5">
+
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-send text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Sottometti</li><li>Richiesta sub-formalità</li><li>Salva delega/sosta</li><li>Invia</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-pencil text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Modifica</li><li>Richiesta di integrazione</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-eye text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Visualizza</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-water text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Compila profilo</li><li>Compila richiesta</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-link-45deg text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Associazione</li></ul></div></div></div></div>
+
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-check-circle text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Integrazione effettuata</li><li>Approvazione</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-slash-circle text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Respinta</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-plus-lg text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Aggiunta</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-trash text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Eliminazione</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-search text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Ricerca</li></ul></div></div></div></div>
+
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-eraser-fill text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Pulisci (ricerca)</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-arrow-left text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Torna indietro</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-arrow-right text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Vai avanti</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-info-circle text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Tooltip informativo</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-life-preserver text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Operazioni</li></ul></div></div></div></div>
+
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-upload text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Carica documento/file</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-box-arrow-in-down text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Scarica</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-floppy text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Salvataggio</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-check2-square text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Prendi in carico</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-unlock text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Rilascia task</li></ul></div></div></div></div>
+
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-x-circle text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Annulla</li><li>Chiudi</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-pause-circle text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Sospensione</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-play-circle text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Riattivazione</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-bar-chart-steps text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Dettaglio iter</li></ul></div></div></div></div>
+                    <div class="col d-flex"><div class="card border rounded-3 p-3 w-100"><div class="d-flex gap-3"><div class="sg-icon-box flex-shrink-0"><i class="bi bi-unlock text-primary" aria-hidden="true"></i></div><div><p class="small text-secondary mb-1">Azione associata:</p><ul class="small fw-semibold mb-0 ps-3"><li>Rilascia task</li></ul></div></div></div></div>
+
+                  </div>
+
+                </div>
+
+              </div><!-- /sg-section__frame -->
+            </section>
+            <!-- FINE SEZIONE 07 -->
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          { root: null, rootMargin: '-45% 0px -45% 0px', threshold: 0 }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            activate(this.getAttribute('href').replace('#', ''));
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg = document.getElementById('lightbox-img');
+        const modal = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+          img.addEventListener('click', function () { apriLightbox(this); });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () { lbImg.src = ''; });
+      })();
+    </script>
+
+  </body>
+</html>
