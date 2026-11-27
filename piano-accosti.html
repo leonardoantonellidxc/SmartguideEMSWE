@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Gestione Piano accosti</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item"><a href="index-capitanerie.html">Operatore CdP</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Gestione Piano accosti</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#inserimento-piano-accosti">01. Inserimento piano accosti</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#ricerca-piano-accosti">02. Ricerca piano accosti e previsioni</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#cancellazione-piano-accosti">03. Cancellazione piano accosti</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#inserimento-previsioni">04. Inserimento previsioni piano accosti</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#modifica-previsioni">05. Modifica previsioni piano accosti</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#cancellazione-previsioni">06. Cancellazione previsione piano accosti</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <p class="fw-semibold text-secondary mb-1">16 | Operatore CdP</p>
+                <h1 class="h4 mb-2">Gestione Piano accosti</h1>
+                <p class="mb-3">Una panoramica dei flussi relativi alla creazione e previsione del piano accosti, per orientarti passo dopo passo.</p>
+                <ul class="list-unstyled d-flex flex-wrap gap-2 mb-0">
+                  <li class="border rounded-2 bg-light small px-3 py-2">Profilo: <strong>Responsabile Locale - Accosti/Tecnica</strong></li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — INSERIMENTO PIANO ACCOSTI (pag. 438-441)
+                 Profilo: Responsabile Locale - Accosti/Tecnica
+                 ============================================================ -->
+            <section id="inserimento-piano-accosti" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Inserimento piano accosti</h2>
+                      <p class="text-white mb-0">Una panoramica sul flusso di inserimento del piano accosti.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 439 — PUNTO DI ACCESSO -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <p class="mb-3"><span class="border rounded-2 bg-light small px-3 py-2">Profilo: <strong>Responsabile Locale - Accosti/Tecnica</strong></span></p>
+                  <h4 class="h4 text-secondary mb-2">Inserimento piano accosti</h4>
+                  <h3 class="h1 mb-3">Punto di accesso</h3>
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-4">Dalla dashboard è possibile <strong>accedere alle principali sezioni tramite le voci di menu</strong>.</p>
+                      <div class="card border-0 rounded-3 p-3 bg-primary">
+                        <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                        <p class="text-white mb-0">Cliccando sulla voce <strong>"Gestione e Consultazione"</strong> viene visualizzato un menu a tendina, da cui è possibile accedere alla pagina di <strong>"Previsioni e piano accosti"</strong>.</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/piano-accosti/1.png" alt="Menu a tendina Gestione e Consultazione con la voce Previsioni e piano accosti evidenziata" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 440-441 — PASSAGGI PER INSERIRE IL PIANO ACCOSTI -->
+                <div id="passaggi-inserimento-piano" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Inserimento piano accosti</h4>
+                  <h3 class="h1 mb-3">Passaggi per inserire il piano accosti</h3>
+                  <p class="mb-4">L'utente può creare un piano accosti tramite i seguenti passaggi.</p>
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Pulsante nuovo piano accosti</h5>
+                                </div>
+                                <p class="mb-3">All'interno della pagina "Previsioni e piano accosti" cliccare il pulsante <strong>"Nuovo piano accosti"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/2.png" alt="Pagina Previsioni e piano accosti con il pulsante Nuovo piano accosti evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Inserimento informazioni piano accosti</h5>
+                                </div>
+                                <p class="mb-3">Creare un nuovo piano accosti selezionando il porto e il periodo di riferimento, poi cliccare il pulsante <strong>"Genera Piani"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/3.png" alt="Form Nuovo Piano Accosti con Data piano accosti, Data fine, Porto e il pulsante Genera Piani evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                  <hr class="my-4" />
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">3</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Finestra di successo</h5>
+                                </div>
+                                <p class="mb-3">Il sistema mostra una finestra che conferma che i piani accosto sono stati creati con successo.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/4.png" alt="Finestra Successo con il messaggio 2 piani accosti creati con successo in stato bozza" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">4</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Elenco piano accosti</h5>
+                                </div>
+                                <p class="mb-3">I piani accosto creati saranno aggiunti all'interno dell'"Elenco Piano accosti". È possibile entrare nel <strong>dettaglio</strong> di ognuno cliccando il pulsante con l'icona dell'occhio.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/5.png" alt="Elenco Piano accosti con i piani in stato In bozza e l'icona Visualizza evidenziata" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                    <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                    <p class="mb-0">Il piano verrà creato in stato <strong>"Bozza"</strong> e potrà essere modificato successivamente.</p>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 02 — RICERCA PIANO ACCOSTI E PREVISIONI (pag. 442-445)
+                 Profilo: Responsabile Locale - Accosti/Tecnica
+                 ============================================================ -->
+            <section id="ricerca-piano-accosti" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">02.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Ricerca piano accosti e previsioni</h2>
+                      <p class="text-white mb-0">Una panoramica sul flusso di ricerca del piano accosti.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 443 — PUNTO DI ACCESSO -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <p class="mb-3"><span class="border rounded-2 bg-light small px-3 py-2">Profilo: <strong>Responsabile Locale - Accosti/Tecnica</strong></span></p>
+                  <h4 class="h4 text-secondary mb-2">Ricerca piano accosti e previsioni</h4>
+                  <h3 class="h1 mb-3">Punto di accesso</h3>
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-4">Dalla dashboard è possibile <strong>accedere alle principali sezioni tramite le voci di menu</strong>.</p>
+                      <div class="card border-0 rounded-3 p-3 bg-primary">
+                        <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                        <p class="text-white mb-0">Cliccando sulla voce <strong>"Gestione e Consultazione"</strong> viene visualizzato un menu a tendina, da cui è possibile accedere alla pagina di <strong>"Previsioni e piano accosti"</strong>.</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/piano-accosti/6.png" alt="Menu a tendina Gestione e Consultazione con la voce Previsioni e piano accosti evidenziata" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 444 — FUNZIONALITÀ IN PAGINA -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Ricerca e consultazione</h4>
+                  <h3 class="h1 mb-3">Funzionalità in pagina</h3>
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-2">È possibile avviare la ricerca utilizzando i filtri disponibili.</p>
+                      <p class="mb-4">La schermata è suddivisa nelle seguenti <strong>tre sezioni</strong>:</p>
+                      <img src="./img/piano-accosti/7.png" alt="Pagina Ricerca piano accosti con le tre sezioni numerate: filtri, azioni sulla tabella ed elenco dei piani" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-7">
+                    <div class="d-flex flex-column gap-4">
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-3">
+                          <div class="sg-step-badge flex-shrink-0">1</div>
+                          <div>
+                            <h5 class="fw-bold text-uppercase mb-2">Filtri di ricerca</h5>
+                            <p class="mb-0">La sezione Filtri consente di ricercare i piani accosti secondo 2 diversi criteri: <strong>Porto</strong> e <strong>Data</strong>.</p>
+                          </div>
+                        </div>
+                        <img src="./img/piano-accosti/8.png" alt="Filtri Porto e Data con i pulsanti Cerca e Ripulisci e il filtro applicato Porto: Genova" class="w-100 rounded-3" />
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-3">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <div>
+                            <h5 class="fw-bold text-uppercase mb-2">Azioni sulla tabella</h5>
+                            <p class="mb-0">È possibile sia esportare l'elenco dei piani accosti risultanti dalla ricerca, cliccando il pulsante <strong>"Esporta"</strong>, sia eliminare uno o più piani accosto tramite il pulsante <strong>"Elimina"</strong>.</p>
+                          </div>
+                        </div>
+                        <img src="./img/piano-accosti/9.png" alt="Intestazione Elenco piano accosti con i pulsanti Elimina ed Esporta" class="w-100 rounded-3" />
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-3">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <div>
+                            <h5 class="fw-bold text-uppercase mb-2">Visualizzazione piani accosti tramite tabella</h5>
+                            <p class="mb-0">I risultati della ricerca vengono presentati in una tabella, mostrando le <strong>informazioni principali</strong> e le <strong>azioni disponibili per singolo piano accosti</strong>: vai al dettaglio.</p>
+                          </div>
+                        </div>
+                        <img src="./img/piano-accosti/10.png" alt="Tabella con Data piano accosti, Porto, Stato e il pulsante Dettaglio" class="w-100 rounded-3" />
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 445 — DETTAGLIO PIANO ACCOSTI -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Ricerca e consultazione</h4>
+                  <h3 class="h1 mb-3">Dettaglio Piano accosti</h3>
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-4">
+                      <p class="mb-3">All'interno della pagina sono consultabili le seguenti informazioni:</p>
+                      <ul class="mb-4">
+                        <li>Arrivi;</li>
+                        <li>Movimenti;</li>
+                        <li>Partenze;</li>
+                        <li>Note.</li>
+                      </ul>
+                      <div class="card border-0 rounded-3 bg-light p-3 mb-3">
+                        <h5 class="fw-bold mb-3">Possibili azioni sui piani accosto</h5>
+                        <div class="d-flex flex-wrap gap-2"><span class="d-inline-flex align-items-center gap-2 border rounded-2 bg-white fw-semibold small px-3 py-2"><i class="bi bi-send" aria-hidden="true"></i>Sottometti per Firma</span> <span class="d-inline-flex align-items-center gap-2 border rounded-2 bg-white fw-semibold small px-3 py-2"><i class="bi bi-share" aria-hidden="true"></i>Invia ai Partecipanti</span> <span class="d-inline-flex align-items-center gap-2 border rounded-2 bg-white fw-semibold small px-3 py-2"><i class="bi bi-download" aria-hidden="true"></i>Salva Bozza</span> <a href="#cancellazione-piano-accosti" class="text-decoration-none"><span class="d-inline-flex align-items-center gap-2 border rounded-2 bg-white fw-semibold small px-3 py-2"><i class="bi bi-trash" aria-hidden="true"></i>Elimina</span></a></div>
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <h5 class="fw-bold mb-3">Possibili azioni secondarie sui piani accosto</h5>
+                        <div class="d-flex flex-wrap gap-2"><a href="#inserimento-previsioni" class="text-decoration-none"><span class="d-inline-flex align-items-center gap-2 border rounded-2 bg-white fw-semibold small px-3 py-2"><i class="bi bi-plus-circle" aria-hidden="true"></i>Aggiungi previsione</span></a> <span class="d-inline-flex align-items-center gap-2 border rounded-2 bg-white fw-semibold small px-3 py-2"><i class="bi bi-download" aria-hidden="true"></i>Esporta</span></div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-8">
+                      <img src="./img/piano-accosti/11.png" alt="Dettaglio Piano accosti del 16/11/2026 con le sezioni Arrivi, Movimenti, Partenze, il testo del verbale e i pulsanti di azione" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 03 — CANCELLAZIONE PIANO ACCOSTI (pag. 446-448)
+                 Profilo: Responsabile Locale - Accosti/Tecnica
+                 ============================================================ -->
+            <section id="cancellazione-piano-accosti" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">03.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Cancellazione piano accosti</h2>
+                      <p class="text-white mb-0">Una panoramica sul flusso di cancellazione del piano accosti.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 447 — PASSAGGI PER CANCELLARE UN PIANO ACCOSTI DA TABELLA -->
+                <div id="cancellazione-da-tabella" class="sg-section__body p-2 p-lg-4">
+
+                  <p class="mb-3"><span class="border rounded-2 bg-light small px-3 py-2">Profilo: <strong>Responsabile Locale - Accosti/Tecnica</strong></span></p>
+                  <h4 class="h4 text-secondary mb-2">Cancellazione piano accosti</h4>
+                  <h3 class="h1 mb-3">Passaggi per cancellare un piano accosti da tabella</h3>
+                  <p class="mb-4">Dopo aver creato uno o più piani accosti, l'utente può eliminarli tramite i seguenti passaggi:</p>
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Cancellazione tramite risultati di ricerca</h5>
+                                </div>
+                                <p class="mb-3">Nell'elenco risultati della ricerca è possibile eliminare i piani accosto <strong>selezionandone uno o più di uno</strong> attraverso la checkbox e successivamente cliccando il pulsante <strong>"Elimina"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/12.png" alt="Elenco piano accosti con le checkbox selezionate e il pulsante Elimina evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Finestra di conferma eliminazione e successo</h5>
+                                </div>
+                                <p class="mb-3">Il sistema mostra una finestra in cui l'utente deve confermare di essere sicuro di voler eliminare i piani accosto. Cliccare <strong>"Elimina"</strong> per confermare. Una volta eliminati, il sistema mostra una finestra di successo dell'eliminazione.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/13.png" alt="Finestra Conferma Eliminazione con il pulsante Elimina e finestra Successo con il pulsante Chiudi" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                    <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                    <p class="mb-0">L'eliminazione comporterà la cancellazione istantanea dei piani accosto.</p>
+                  </div>
+                </div>
+
+                <!-- PAG. 448 — PASSAGGI PER CANCELLARE UN PIANO ACCOSTI DA DETTAGLIO -->
+                <div id="cancellazione-da-dettaglio" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Cancellazione piano accosti</h4>
+                  <h3 class="h1 mb-3">Passaggi per cancellare un piano accosti da dettaglio</h3>
+                  <p class="mb-4">Dopo aver creato uno o più piani accosti, l'utente può eliminarli tramite i seguenti passaggi:</p>
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Cancellazione tramite azione nel dettaglio del piano accosto</h5>
+                                </div>
+                                <p class="mb-3">Nell'elenco risultati della ricerca dei piani accosto è possibile accedere al dettaglio cliccando l'<strong>icona con la freccia</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/14.png" alt="Elenco piano accosti con il pulsante Dettaglio evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Finestra di conferma eliminazione e successo</h5>
+                                </div>
+                                <p class="mb-3">Una volta all'interno del dettaglio, per eliminare il piano accosto cliccare il pulsante <strong>"Elimina"</strong>. Il sistema mostra una finestra in cui l'utente deve confermare di essere sicuro di voler eliminare il piano accosto. Cliccare <strong>"Elimina"</strong> per confermare.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/15.png" alt="Pulsante Elimina nel dettaglio del piano e finestra Elimina Piano Accosti con il pulsante Elimina" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                    <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                    <p class="mb-0">L'eliminazione comporterà la cancellazione istantanea dei piani accosto.</p>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 04 — INSERIMENTO PREVISIONI PIANO ACCOSTI (pag. 449-455)
+                 Profilo: Responsabile Locale - Accosti/Tecnica
+                 ============================================================ -->
+            <section id="inserimento-previsioni" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">04.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Inserimento previsioni piano accosti</h2>
+                      <p class="text-white mb-0">Una panoramica sul flusso di inserimento delle previsioni del piano accosti.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 450 — PUNTO DI ACCESSO -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <p class="mb-3"><span class="border rounded-2 bg-light small px-3 py-2">Profilo: <strong>Responsabile Locale - Accosti/Tecnica</strong></span></p>
+                  <h4 class="h4 text-secondary mb-2">Inserimento previsione piano accosti</h4>
+                  <h3 class="h1 mb-3">Punto di accesso</h3>
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-4">Dalla dashboard è possibile <strong>accedere alle principali sezioni tramite le voci di menu</strong>.</p>
+                      <div class="card border-0 rounded-3 p-3 bg-primary">
+                        <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                        <p class="text-white mb-0">Cliccando sulla voce <strong>"Gestione e Consultazione"</strong> viene visualizzato un menu a tendina, da cui è possibile accedere alla pagina di <strong>"Previsioni e piano accosti"</strong>.</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/piano-accosti/16.png" alt="Menu a tendina Gestione e Consultazione con la voce Previsioni e piano accosti evidenziata" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 451-455 — PASSAGGI PER INSERIRE PREVISIONI SUL PIANO ACCOSTI -->
+                <div id="passaggi-inserimento-previsione" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Inserimento previsione piano accosti</h4>
+                  <h3 class="h1 mb-3">Passaggi per inserire previsioni sul piano accosti</h3>
+                  <p class="mb-4">L'utente può inserire previsioni sul piano accosti tramite i seguenti passaggi.</p>
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Dettaglio piano accosti</h5>
+                                </div>
+                                <p class="mb-3">Nell'elenco risultati della ricerca dei piani accosto è possibile accedere al <strong>dettaglio</strong> cliccando l'icona con la <strong>freccia</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/17.png" alt="Elenco piano accosti con il pulsante Dettaglio evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Aggiungi previsione</h5>
+                                </div>
+                                <p class="mb-3">All'interno del dettaglio, per aggiungere una previsione, cliccare il pulsante <strong>"Aggiungi previsione"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/18.png" alt="Dettaglio Piano accosti senza previsioni e il pulsante Aggiungi previsione evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                  <hr class="my-4" />
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">3</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Ricerca nave</h5>
+                                </div>
+                                <p class="mb-3">Ricercare la nave inserendo il nome o l'identificativo e successivamente cliccando il pulsante <strong>"Cerca"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/19.png" alt="Pagina Aggiungi nuova previsione con il campo di ricerca della nave e il pulsante Cerca evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">4</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Selezione nave e soste presenti per la nave</h5>
+                                </div>
+                                <p class="mb-3">Selezionare la nave e successivamente una delle soste presenti per la nave tramite radio button.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/20.png" alt="Nave trovata selezionata, elenco delle soste presenti per la nave e il pulsante Aggiungi sosta non presente" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                  <hr class="my-4" />
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">5</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Continua inserimento</h5>
+                                </div>
+                                <p class="mb-3">Per completare l'inserimento della previsione cliccare il pulsante <strong>"Continua"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/21.png" alt="Dati della sosta non presente con porto, ETA, ETD, porto precedente e successivo e il pulsante Continua evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">6</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Selezione fase</h5>
+                                </div>
+                                <p class="mb-3">Selezionare tramite menu a tendina una tipologia di fase, per esempio <strong>"Arrivo"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/22.png" alt="Pagina Nuova previsione con il menu a tendina Fase aperto sulle voci Arrivo, Movimento e Partenza" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                    <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                    <p class="mb-0">I passaggi successivi sono in fase di completamento in relazione alle segnalazioni emerse dagli ultimi collaudi.</p>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 05 — MODIFICA PREVISIONI PIANO ACCOSTI (pag. 456-459)
+                 Profilo: Responsabile Locale - Accosti/Tecnica
+                 ============================================================ -->
+            <section id="modifica-previsioni" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">05.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Modifica previsioni piano accosti</h2>
+                      <p class="text-white mb-0">Una panoramica sul flusso di modifica delle previsioni del piano accosti.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 457-459 — PASSAGGI PER MODIFICARE UNA PREVISIONE NEL PIANO ACCOSTI -->
+                <div id="passaggi-modifica-previsione" class="sg-section__body p-2 p-lg-4">
+
+                  <p class="mb-3"><span class="border rounded-2 bg-light small px-3 py-2">Profilo: <strong>Responsabile Locale - Accosti/Tecnica</strong></span></p>
+                  <h4 class="h4 text-secondary mb-2">Modifica previsioni piano accosti</h4>
+                  <h3 class="h1 mb-3">Passaggi per modificare una previsione nel piano accosti</h3>
+                  <p class="mb-4">L'utente può modificare le previsioni sul piano accosti tramite i seguenti passaggi.</p>
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Ricerca dettaglio piano accosti</h5>
+                                </div>
+                                <p class="mb-3">Dopo aver ricercato il piano accosti tramite il campo "Porto" e/o "Data" cliccare il pulsante <strong>"Cerca"</strong>. Nell'elenco risultati della ricerca dei piani accosto è possibile accedere al <strong>dettaglio</strong> cliccando l'icona con la <strong>freccia</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/23.png" alt="Elenco piano accosti con il pulsante Dettaglio evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Modifica previsione</h5>
+                                </div>
+                                <p class="mb-3">All'interno del dettaglio, cliccare il pulsante con l'icona della matita per la previsione che si intende modificare.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/24.png" alt="Dettaglio Piano accosti con l'icona della matita sulla previsione in Arrivi evidenziata" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                  <hr class="my-4" />
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">3</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Modifica previsione piano accosti</h5>
+                                </div>
+                                <p class="mb-3">All'interno del dettaglio della previsione, in modalità modifica, apporre le modifiche. Ad esempio, all'interno dei servizi tecnico nautici, indicare la presenza del pilotaggio, inserire la tipologia del pilotaggio e il numero dei piloti.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/25.png" alt="Sezione Servizi tecnici nautici con Pilotaggio, Tipologia pilotaggio e Numero piloti compilati" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">4</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Salvataggio</h5>
+                                </div>
+                                <p class="mb-3">Dopo aver apportato le modifiche, per salvarle, cliccare il pulsante <strong>"Salva"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/26.png" alt="Fondo del dettaglio della previsione con il pulsante Salva evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                  <hr class="my-4" />
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">5</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Conferma salvataggio</h5>
+                                </div>
+                                <p class="mb-3">Il sistema mostra una finestra di conferma e, dopo aver cliccato il pulsante <strong>"Salva"</strong>, se la previsione piano accosti è in uso presso un piano accosti in bozza l'utente viene informato tramite una seconda finestra. Cliccare <strong>"Conferma"</strong> per proseguire.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/27.png" alt="Finestra Conferma Salvataggio con il pulsante Salva e finestra Attenzione con il pulsante Conferma" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">6</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Salvataggio</h5>
+                                </div>
+                                <p class="mb-3">Dopo aver confermato, il sistema mostra una finestra informativa dell'avvenuta modifica della previsione. Chiudere la finestra tramite il pulsante <strong>"Chiudi"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/28.png" alt="Finestra Modifica Completata con il pulsante Chiudi evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 06 — CANCELLAZIONE PREVISIONE PIANO ACCOSTI (pag. 460-463)
+                 Profilo: Responsabile Locale - Accosti/Tecnica
+                 ============================================================ -->
+            <section id="cancellazione-previsioni" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">06.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Cancellazione previsione piano accosti</h2>
+                      <p class="text-white mb-0">Una panoramica sul flusso di cancellazione delle previsioni del piano accosti.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 461-463 — PASSAGGI PER CANCELLARE UNA PREVISIONE -->
+                <div id="passaggi-cancellazione-previsione" class="sg-section__body p-2 p-lg-4">
+
+                  <p class="mb-3"><span class="border rounded-2 bg-light small px-3 py-2">Profilo: <strong>Responsabile Locale - Accosti/Tecnica</strong></span></p>
+                  <h4 class="h4 text-secondary mb-2">Cancellazione previsioni piano accosti</h4>
+                  <h3 class="h1 mb-3">Passaggi per cancellare una previsione</h3>
+                  <p class="mb-4">L'utente può cancellare le previsioni sul piano accosti tramite i seguenti passaggi.</p>
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Ricerca dettaglio piano accosti</h5>
+                                </div>
+                                <p class="mb-3">Dopo aver ricercato il piano accosti tramite il campo "Porto" e/o "Data" cliccare il pulsante <strong>"Cerca"</strong>. Nell'elenco risultati della ricerca dei piani accosto è possibile accedere al <strong>dettaglio</strong> cliccando l'icona con la <strong>freccia</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/29.png" alt="Elenco piano accosti con il pulsante Dettaglio evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Modalità modifica</h5>
+                                </div>
+                                <p class="mb-3">All'interno del dettaglio, cliccare il pulsante con l'icona della matita per la previsione che si intende cancellare.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/30.png" alt="Dettaglio Piano accosti con l'icona della matita sulla previsione in Arrivi evidenziata" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                  <hr class="my-4" />
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">3</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Annullamento modifica</h5>
+                                </div>
+                                <p class="mb-3">All'interno del dettaglio della previsione, annullare la modalità modifica cliccando il pulsante <strong>"Annulla"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/31.png" alt="Fondo del dettaglio della previsione in modifica con il pulsante Annulla evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">4</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Elimina previsione</h5>
+                                </div>
+                                <p class="mb-3">Dopo essere usciti dalla modalità modifica, per cancellare la previsione, cliccare il pulsante <strong>"Elimina"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/32.png" alt="Fondo del dettaglio della previsione con il pulsante Elimina evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                  <hr class="my-4" />
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">5</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Conferma eliminazione</h5>
+                                </div>
+                                <p class="mb-3">Il sistema mostra una finestra di conferma e, dopo aver cliccato il pulsante <strong>"Elimina"</strong>, se la previsione piano accosti è in uso presso un piano accosti in bozza l'utente viene informato tramite una seconda finestra. Cliccare <strong>"Conferma"</strong> per proseguire.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/33.png" alt="Finestra Conferma Eliminazione con il pulsante Elimina e finestra Attenzione con il pulsante Conferma" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">6</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Eliminazione completata</h5>
+                                </div>
+                                <p class="mb-3">Dopo aver confermato, il sistema mostra una finestra informativa dell'avvenuta eliminazione della previsione. Chiudere la finestra tramite il pulsante <strong>"Chiudi"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/piano-accosti/34.png" alt="Finestra Successo Previsione eliminata con successo e il pulsante Chiudi evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                  <div class="alert alert-warning d-flex align-items-start gap-2 rounded-3 mt-4 mb-0" role="alert">
+                    <i class="bi bi-exclamation-circle flex-shrink-0 mt-1" aria-hidden="true"></i>
+                    <p class="mb-0">Una volta eliminata la previsione, l'operazione non potrà essere annullata.</p>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          { root: null, rootMargin: '-45% 0px -45% 0px', threshold: 0 }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            activate(this.getAttribute('href').replace('#', ''));
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg = document.getElementById('lightbox-img');
+        const modal = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+          img.addEventListener('click', function () { apriLightbox(this); });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () { lbImg.src = ''; });
+      })();
+    </script>
+
+  </body>
+</html>

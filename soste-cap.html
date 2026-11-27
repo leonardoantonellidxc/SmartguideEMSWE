@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/guardia-costiera.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+
+    <title>EMSWE Navis — Ricerca e consultazione soste e soste per Unità da Diporto</title>
+
+    <style>
+      .col-12.col-lg-9 img {
+        cursor: zoom-in;
+        transition: opacity .2s;
+      }
+      .col-12.col-lg-9 img:hover {
+        opacity: .85;
+      }
+      .col-12.col-lg-9 img[role="button"]:focus-visible {
+        outline: 3px solid #ffb20f;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Salta al contenuto principale</a>
+    <header aria-label="Funzioni di servizio">
+      <div class="header-top-dark">
+        <div class="container py-2">
+          <div class="row gx-variable align-items-center">
+            <div class="col d-none d-md-flex align-items-center">
+              <i class="bi bi-arrow-left me-2 text-white"></i>
+              <a href="#" class="link-white fw-semibold"> Torna in Supporto </a>
+            </div>
+            <div class="col col-md-auto text-end">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  id="language"
+                  class="btn btn-sm link-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Lingue disponibili:</span>ITA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="language">
+                  <li><a class="dropdown-item" href="#">ITA<span class="visually-hidden">: italiano</span></a></li>
+                  <li><a class="dropdown-item" href="#" lang="en">ENG<span class="visually-hidden">: english</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-light">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-auto d-block d-md-none">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu"
+                aria-controls="navbar-menu"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Apri menu principale</span>
+                <i class="bi bi-list bi-lg"></i>
+              </button>
+            </div>
+            <div class="col-auto">
+              <img src="img/logo_prova1.svg" alt="Logo Capitanerie di Porto" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container-fluid">
+      <div class="container">
+
+        <nav class="mt-3" aria-label="Ti trovi in">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Supporto</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Manuali Smart Guide</a></li>
+            <li class="breadcrumb-item"><a href="index-capitanerie.html">Operatore CdP</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Ricerca e consultazione soste e soste per Unità da Diporto</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+
+          <!-- SIDEBAR -->
+          <div class="col-12 col-lg-3 my-3">
+            <div class="sidebar-sticky-wrapper sticky-top">
+              <nav class="sidebar sidebar-expand-lg sidebar-dark sticky-top" aria-label="Menu della sezione">
+                <div class="sidebar-header">
+                  <p class="sidebar-title h6 mb-0">
+                    Indice<span class="visually-hidden"> della sezione</span>
+                  </p>
+                  <button
+                    type="button"
+                    class="navbar-toggler collapsed d-block d-lg-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar-menu"
+                    aria-controls="sidebar-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Apri menu della sezione</span>
+                    <i class="bi bi-list bi-lg"></i>
+                  </button>
+                </div>
+                <div class="sidebar-collapse collapse" id="sidebar-menu">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#ricerca-consultazione-sosta">01. Ricerca e consultazione sosta</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#ricerca-consultazione-diporto">02. Ricerca e consultazione sosta per unità da Diporto</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-12 col-lg-9 my-3">
+
+            <!-- HERO -->
+            <section class="sg-hero my-6">
+              <div class="rounded-3 mb-4">
+                <p class="fw-semibold text-secondary mb-1">13 | Operatore CdP</p>
+                <h1 class="h4 mb-2">Ricerca e consultazione soste e soste per Unità da Diporto</h1>
+                <p class="mb-3">Una panoramica dei flussi di ricerca e consultazione delle soste e soste per Unità da Diporto, per orientarti passo dopo passo.</p>
+                <ul class="list-unstyled d-flex flex-wrap gap-2 mb-0">
+                  <li class="border rounded-2 bg-light small px-3 py-2">Profilo: <strong>Responsabile Locale</strong></li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 01 — RICERCA E CONSULTAZIONE DI UNA SOSTA (pag. 355-361)
+                 Profilo: Responsabile Locale
+                 ============================================================ -->
+            <section id="ricerca-consultazione-sosta" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">01.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Ricerca e consultazione di una sosta</h2>
+                      <p class="text-white mb-0">Una panoramica sui flussi di ricerca e consultazione delle Soste.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 356 — PUNTI DI ACCESSO PER LA RICERCA SOSTE -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <p class="mb-3"><span class="border rounded-2 bg-light small px-3 py-2">Profilo: <strong>Responsabile Locale</strong></span></p>
+                  <h4 class="h4 text-secondary mb-2">Ricerca e consultazione di una sosta</h4>
+                  <h3 class="h1 mb-3">Punti di accesso per la ricerca soste</h3>
+                  <p class="mb-4">La ricerca di una sosta avviene:</p>
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                    <div class="d-flex flex-column gap-4">
+                    <div class="d-flex gap-3">
+                      <div class="sg-step-badge flex-shrink-0">1</div>
+                      <div class="w-100">
+                      <div class="card border-0 rounded-3 p-3 bg-primary">
+                        <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                        <p class="text-white mb-0">Cliccando sulla voce <strong>"Gestione e consultazione"</strong> viene visualizzato un menu a tendina, da cui è possibile accedere alla voce <strong>"Soste"</strong>, al cui interno è possibile ricercare le soste presenti a sistema.</p>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                      <div class="sg-step-badge flex-shrink-0">2</div>
+                      <div class="w-100">
+                      <p class="mb-0">Dalla dashboard, oltre a visualizzare una panoramica delle soste giornaliere, <strong>è possibile ricercarle</strong> attraverso l'apposita sezione: <strong>"Ricerca sosta"</strong>.</p>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                      <div class="sg-step-badge flex-shrink-0">3</div>
+                      <div class="w-100">
+                      <p class="mb-0">Sarà possibile visualizzare le soste nella sezione <strong>"Soste nel porto di oggi"</strong>.</p>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                      <div class="sg-step-badge flex-shrink-0">4</div>
+                      <div class="w-100">
+                      <p class="mb-0">Nella sezione Panoramica, nella voce <strong>"Lista soste"</strong> sarà presente l'elenco delle soste.</p>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/soste-cap/1.png" alt="Dashboard con il menu Gestione e Consultazione aperto e le sezioni Ricerca soste, Soste nel porto di oggi e Lista soste numerate" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 357 — FUNZIONALITÀ IN PAGINA -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Ricerca e consultazione di una sosta: lista soste</h4>
+                  <h3 class="h1 mb-3">Funzionalità in pagina</h3>
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-4">Accedendo alla sezione "Lista soste", il sistema mostra i <strong>filtri di ricerca</strong> disponibili, sia di <strong>base sia avanzati</strong>. Dopo aver selezionato i criteri desiderati e cliccato su <strong>"Cerca"</strong>, i risultati vengono visualizzati in <strong>forma tabellare</strong>.</p>
+                      <img src="./img/soste-cap/2.png" alt="Pagina Soste con le quattro aree numerate: filtri, schede Lista soste e Aggiornamenti soste, azioni sulla tabella e tabella dei risultati" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-7">
+                    <div class="d-flex flex-column gap-4">
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-3">
+                          <div class="sg-step-badge flex-shrink-0">1</div>
+                          <div>
+                            <h5 class="fw-bold text-uppercase mb-2">Sezione filtri</h5>
+                            <p class="mb-0">La sezione Filtri consente di ricercare le soste secondo diversi criteri. Sono disponibili filtri base e filtri avanzati per affinare la ricerca.</p>
+                          </div>
+                        </div>
+                        <img src="./img/soste-cap/3.png" alt="Filtri Visit ID, Nome nave, IMO, Tipo nave, MMSI, Call Sign, ETA, ETD, porti e intervallo data creazione sosta con il pulsante Cerca" class="w-100 rounded-3" />
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-3">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <div>
+                            <h5 class="fw-bold text-uppercase mb-2">Visualizzazione di "Lista soste" o "Aggiornamento soste"</h5>
+                            <p class="mb-0">È possibile scegliere di visualizzare i risultati di ricerca della lista soste e degli aggiornamenti delle soste.</p>
+                          </div>
+                        </div>
+                        <img src="./img/soste-cap/4.png" alt="Schede Lista soste e Aggiornamenti soste" class="w-100 rounded-3" />
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-3">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <div>
+                            <h5 class="fw-bold text-uppercase mb-2">Filtri e azioni sulla tabella</h5>
+                            <p class="mb-0">I risultati della ricerca possono essere filtrati per <strong>"Attività"</strong> e <strong>"Stato Attività"</strong>. <strong>È possibile esportare</strong> e, per "Lista soste", sarà possibile visualizzare solo le soste aventi <strong>merci pericolose</strong> tramite l'apposito pulsante.</p>
+                          </div>
+                        </div>
+                        <img src="./img/soste-cap/5.png" alt="Filtri della tabella, pulsante Solo merci pericolose e menu Esporta con i formati Excel, CSV e PDF" class="w-100 rounded-3" />
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-3">
+                          <div class="sg-step-badge flex-shrink-0">4</div>
+                          <div>
+                            <h5 class="fw-bold text-uppercase mb-2">Visualizzazione soste tramite tabella</h5>
+                            <p class="mb-0">I risultati della ricerca vengono presentati in una tabella, mostrando le <strong>informazioni e azioni principali</strong>.</p>
+                          </div>
+                        </div>
+                        <img src="./img/soste-cap/6.png" alt="Tabella dei risultati con Visit ID, Stato, Nome nave, Stato nave, Porto di sosta, ETA/ATA, ETD/ATD, Data creazione sosta e azioni" class="w-100 rounded-3" />
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 358 — FOCUS SULL'AZIONE DI VISUALIZZAZIONE DELLE MERCI PERICOLOSE (LISTA SOSTE) -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Ricerca e consultazione di una sosta</h4>
+                  <h3 class="h1 mb-3">Focus sull'azione di visualizzazione delle merci pericolose (Lista soste)</h3>
+                  <p class="mb-4">È possibile visualizzare o nascondere le merci pericolose tramite l'interazione con il pulsante evidenziato.</p>
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <h5 class="fw-bold text-uppercase mb-0">Pulsante disattivato</h5>
+                                </div>
+                                <p class="mb-3">Di default il pulsante sarà disattivato, saranno visualizzate tutte le soste.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/soste-cap/7.png" alt="Tabella Lista soste con il pulsante Solo merci pericolose disattivato evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <h5 class="fw-bold text-uppercase mb-0">Pulsante attivo</h5>
+                                </div>
+                                <p class="mb-3">Se il pulsante è attivo, saranno mostrate solo le soste per quelle navi che dichiarano di trasportare merci pericolose.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/soste-cap/8.png" alt="Tabella Lista soste con il pulsante Solo merci pericolose attivo evidenziato" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 359 — VISUALIZZAZIONE RISULTATI IN TABELLA: LISTA SOSTE E AGGIORNAMENTO SOSTE -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Ricerca e consultazione di una sosta</h4>
+                  <h3 class="h1 mb-3">Visualizzazione risultati in tabella: Lista Soste e Aggiornamento soste</h3>
+                  <p class="mb-4">I risultati di ricerca delle soste possono essere visualizzati tramite tabella secondo due modalità:</p>
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Lista Soste</h5>
+                                </div>
+                                <p class="mb-3">È l'elenco di tutte le soste presenti a sistema, sulle quali è possibile accedere al dettaglio e svolgere diverse azioni in relazione alla responsabilità dell'utente.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/soste-cap/9.png" alt="Scheda Lista soste con i filtri Stato e Stato nave e la tabella delle soste" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Aggiornamenti soste</h5>
+                                </div>
+                                <p class="mb-3">È un elenco di attività che l'utente deve svolgere per gestire gli Obblighi di Dichiarazione presenti nelle soste. Sarà possibile filtrare i risultati in tabella per <strong>"Attività"</strong> e <strong>"Stato Attività"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/soste-cap/10.png" alt="Scheda Aggiornamenti soste con i filtri Attività e Stato attività e la tabella delle attività" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 360 — DETTAGLIO DELLA SOSTA -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Ricerca e consultazione</h4>
+                  <h3 class="h1 mb-3">Dettaglio della sosta</h3>
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-4">
+                      <p class="mb-3">All'interno del fascicolo sono consultabili le seguenti informazioni:</p>
+                      <ul class="mb-4">
+                        <li>Informazioni sosta;</li>
+                        <li>Informazioni aggiuntive;</li>
+                        <li>Obblighi di dichiarazione:
+                          <ul>
+                            <li>Comunicazioni;</li>
+                            <li>Controlli frontiera;</li>
+                            <li>Merci;</li>
+                            <li>Rifiuti;</li>
+                            <li>Sicurezza;</li>
+                            <li>FAL.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <img src="./img/soste-cap/11.png" alt="Dettaglio della sosta con Informazioni sosta, Informazioni aggiuntive e la sezione Obblighi di dichiarazione" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <p class="mb-3">Nell'elenco degli Obblighi di Dichiarazione saranno visualizzati solo gli Obblighi di Dichiarazione inviati dal <strong>Declarant</strong> e di competenza dell'utente che ha effettuato l'accesso al sistema.</p>
+                      <img src="./img/soste-cap/12.png" alt="Sezione Obblighi di dichiarazione con l'accordion Comunicazioni e l'icona dell'occhio per la visualizzazione del dettaglio" class="w-100 rounded-3" />
+                      <div class="card border-0 rounded-3 bg-light p-3 mt-3">
+                        <h5 class="fw-bold mb-2">Possibili azioni sugli Obblighi di Dichiarazione</h5>
+                        <p class="mb-0"><span class="d-inline-flex align-items-center gap-2 border rounded-2 bg-white fw-semibold small px-3 py-2"><i class="bi bi-eye" aria-hidden="true"></i>Visualizzazione dettaglio</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 361 — SOSTA PER NAVE CON SEGNALAZIONE ATTIVA -->
+                <div id="sosta-nave-segnalata" class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Ricerca e consultazione sosta</h4>
+                  <h3 class="h1 mb-3">Sosta per nave con segnalazione attiva</h3>
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <h5 class="fw-bold text-uppercase mb-0">Visualizzazione segnalazione</h5>
+                                </div>
+                                <p class="mb-3">Nel caso in cui la nave della sosta visualizzata risulti segnalata, verrà mostrata in automatico una finestra al primo operatore che accede in visualizzazione di una sosta e solo per il primo accesso.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/soste-cap/13.png" alt="Finestra La nave associata a questa sosta ha una segnalazione attiva con la motivazione della segnalazione" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <h5 class="fw-bold text-uppercase mb-0">Indicatore visivo informazioni segnalazione</h5>
+                                </div>
+                                <p class="mb-3">Nel caso in cui la nave della sosta visualizzata risulti segnalata, sarà disponibile un indicatore visivo alla cui selezione verrà mostrata una finestra che informa l'utente che esiste una segnalazione attiva.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/soste-cap/14.png" alt="Dettaglio della sosta con l'indicatore Visualizza informazioni segnalazione" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-4 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <h5 class="fw-bold text-uppercase mb-0">Mail segnalazione attiva</h5>
+                                </div>
+                                <p class="mb-3">Il sistema invia una mail al verificarsi dell'evento indicato in configurazioni segnalazioni.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/soste-cap/15.png" alt="E-mail Warning sosta su nave segnalata con il Visit ID della sosta creata" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- ============================================================
+                 SEZIONE 02 — RICERCA E CONSULTAZIONE SOSTA PER UNITÀ DA DIPORTO (pag. 362-366)
+                 Profilo: Responsabile Locale
+                 ============================================================ -->
+            <section id="ricerca-consultazione-diporto" class="mb-6">
+              <div class="sg-section__frame rounded-3 overflow-hidden">
+
+                <div class="sg-section__head p-2 p-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="sg-section__num text-white mb-0 me-2">02.</p>
+                    <div>
+                      <h2 class="text-white h1 mb-2">Ricerca e consultazione sosta per unità da Diporto</h2>
+                      <p class="text-white mb-0">Una panoramica sui flussi di ricerca e consultazione delle soste per unità da Diporto.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 363 — PUNTI DI ACCESSO PER LA RICERCA SOSTE PER UNITÀ DA DIPORTO -->
+                <div class="sg-section__body p-2 p-lg-4">
+
+                  <p class="mb-3"><span class="border rounded-2 bg-light small px-3 py-2">Profilo: <strong>Responsabile Locale</strong></span></p>
+                  <h4 class="h4 text-secondary mb-2">Ricerca e consultazione sosta per unità da Diporto</h4>
+                  <h3 class="h1 mb-3">Punti di accesso per la ricerca soste per unità da Diporto</h3>
+                  <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-4">La ricerca di una sosta per unità da Diporto avviene tramite:</p>
+                    <div class="d-flex gap-3">
+                      <div class="sg-step-badge flex-shrink-0">1</div>
+                      <div class="w-100">
+                      <div class="card border-0 rounded-3 p-3 bg-primary">
+                        <h5 class="text-white fw-bold mb-2">Menu a tendina</h5>
+                        <p class="text-white mb-0">Cliccando sulla voce <strong>"Gestione e consultazione"</strong> viene visualizzato un menu a tendina, da cui è possibile accedere alla voce <strong>"Soste per unità da diporto"</strong>, al cui interno è possibile ricercare le soste per unità da diporto presenti a sistema.</p>
+                      </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <img src="./img/soste-cap/16.png" alt="Menu a tendina Gestione e Consultazione con la voce Sosta per unità da diporto evidenziata" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 364 — FUNZIONALITÀ IN PAGINA -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Ricerca e consultazione di una sosta per unità da Diporto: lista soste</h4>
+                  <h3 class="h1 mb-3">Funzionalità in pagina</h3>
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                      <p class="mb-4">Accedendo alla sezione "Lista soste", il sistema mostra i <strong>filtri di ricerca</strong> disponibili, sia di <strong>base sia avanzati</strong>. Dopo aver selezionato i criteri desiderati e cliccato su <strong>"Cerca"</strong>, i risultati vengono visualizzati in <strong>forma tabellare</strong>.</p>
+                      <img src="./img/soste-cap/17.png" alt="Pagina Soste con le quattro aree numerate: filtri, schede Lista soste e Aggiornamenti soste, azioni sulla tabella e tabella dei risultati" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-7">
+                    <div class="d-flex flex-column gap-4">
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-3">
+                          <div class="sg-step-badge flex-shrink-0">1</div>
+                          <div>
+                            <h5 class="fw-bold text-uppercase mb-2">Sezione filtri</h5>
+                            <p class="mb-0">La sezione Filtri consente di ricercare le soste secondo diversi criteri. Sono disponibili filtri base e filtri avanzati per affinare la ricerca.</p>
+                          </div>
+                        </div>
+                        <img src="./img/soste-cap/18.png" alt="Filtri Visit ID, Nome nave, IMO, Tipo nave, MMSI, Call Sign, ETA, ETD, porti e intervallo data creazione sosta con il pulsante Cerca" class="w-100 rounded-3" />
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-3">
+                          <div class="sg-step-badge flex-shrink-0">2</div>
+                          <div>
+                            <h5 class="fw-bold text-uppercase mb-2">Visualizzazione di "Lista soste" o "Aggiornamento soste"</h5>
+                            <p class="mb-0">È possibile scegliere di visualizzare i risultati di ricerca della lista soste e degli aggiornamenti delle soste.</p>
+                          </div>
+                        </div>
+                        <img src="./img/soste-cap/19.png" alt="Schede Lista soste e Aggiornamenti soste" class="w-100 rounded-3" />
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-3">
+                          <div class="sg-step-badge flex-shrink-0">3</div>
+                          <div>
+                            <h5 class="fw-bold text-uppercase mb-2">Filtri e azioni sulla tabella</h5>
+                            <p class="mb-0">I risultati della ricerca possono essere filtrati per <strong>"Attività"</strong> e <strong>"Stato Attività"</strong>. Selezionando una o più soste è possibile <strong>salvare</strong>, <strong>cancellare</strong> ed <strong>esportare</strong>. Infine, per "Lista soste", sarà possibile visualizzare solo le soste aventi <strong>merci pericolose</strong> tramite l'apposito pulsante.</p>
+                          </div>
+                        </div>
+                        <img src="./img/soste-cap/20.png" alt="Filtri Stato e Stato nave, pulsanti Salva e invia, Cancella ed Esporta e pulsante Solo merci pericolose" class="w-100 rounded-3" />
+                      </div>
+                      <div class="card border-0 rounded-3 bg-light p-3">
+                        <div class="d-flex gap-3 mb-3">
+                          <div class="sg-step-badge flex-shrink-0">4</div>
+                          <div>
+                            <h5 class="fw-bold text-uppercase mb-2">Visualizzazione soste tramite tabella</h5>
+                            <p class="mb-0">I risultati della ricerca vengono presentati in una tabella, mostrando le <strong>informazioni e azioni principali</strong>. Con il pulsante <strong>"Aggiungi operazione"</strong> è possibile aggiungere un'operazione alla sosta: <a href="gestione-operazioni.html">focus su "Gestione Operazioni"</a>.</p>
+                          </div>
+                        </div>
+                        <img src="./img/soste-cap/21.png" alt="Tabella dei risultati con Visit ID, Stato, Nome nave, Stato nave, Porto di sosta, ETA/ATA, ETD/ATD, Data creazione sosta e azioni" class="w-100 rounded-3" />
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 365 — VISUALIZZAZIONE RISULTATI IN TABELLA: LISTA SOSTE E AGGIORNAMENTO SOSTE -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Ricerca e consultazione sosta per unità da Diporto</h4>
+                  <h3 class="h1 mb-3">Visualizzazione risultati in tabella: Lista Soste e Aggiornamento soste</h3>
+                  <p class="mb-4">I risultati di ricerca delle soste possono essere visualizzati tramite tabella secondo due modalità:</p>
+                  <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">1</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Lista Soste</h5>
+                                </div>
+                                <p class="mb-3">È l'elenco di tutte le soste presenti a sistema, create dall'utente che ha effettuato l'accesso, sulle quali è possibile accedere al dettaglio e svolgere diverse azioni.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/soste-cap/22.png" alt="Scheda Lista soste con i filtri Stato e Stato nave e la tabella delle soste" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 d-flex">
+                            <div class="card border-0 rounded-3 w-100">
+                              <div class="card-body bg-light p-4 d-flex flex-column">
+                                <div class="d-flex gap-3 mb-3">
+                                  <div class="sg-step-badge flex-shrink-0">2</div>
+                                  <h5 class="fw-bold text-uppercase mb-0">Aggiornamenti soste</h5>
+                                </div>
+                                <p class="mb-3">È un elenco di attività che l'utente deve svolgere sia per gestire le soste create dal Collaboratore, sia per integrare gli Obblighi di Dichiarazione. Sarà possibile filtrare i risultati in tabella per <strong>"Attività"</strong> e <strong>"Stato Attività"</strong>.</p>
+                                <div class="mt-auto">
+                                  <img src="./img/soste-cap/23.png" alt="Scheda Aggiornamenti soste con i filtri Attività e Stato attività e la tabella delle attività" class="w-100 rounded-3" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                </div>
+
+                <!-- PAG. 366 — DETTAGLIO DELLA SOSTA -->
+                <div class="sg-section__body p-2 p-lg-4 border-top">
+
+                  <h4 class="h4 text-secondary mb-2">Ricerca e consultazione di una sosta per unità da Diporto</h4>
+                  <h3 class="h1 mb-3">Dettaglio della sosta</h3>
+                  <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-4">
+                      <p class="mb-3">All'interno della pagina sono consultabili le seguenti informazioni:</p>
+                      <ul class="mb-4">
+                        <li>Informazioni sosta;</li>
+                        <li>Informazioni aggiuntive;</li>
+                        <li>Obblighi di dichiarazione:
+                          <ul>
+                            <li>Comunicazioni;</li>
+                            <li>Controlli frontiera;</li>
+                            <li>Merci;</li>
+                            <li>Rifiuti;</li>
+                            <li>Sicurezza;</li>
+                            <li>FAL.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <img src="./img/soste-cap/24.png" alt="Dettaglio della sosta per unità da diporto con Informazioni sosta, Informazioni aggiuntive e Obblighi di dichiarazione" class="w-100 rounded-3" />
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <img src="./img/soste-cap/25.png" alt="Elenco degli Obblighi di dichiarazione suddivisi in Comunicazioni, Controlli frontiera, Merci, Rifiuti e Sicurezza" class="w-100 rounded-3" />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+          </div><!-- /col-lg-9 -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </main>
+
+    <footer>
+      <div class="footer-dark">
+        <div class="container py-3">
+          <div class="row gx-variable align-items-center">
+            <div class="col-12">
+              <hr />
+              <ul class="list-inline d-inline-block me-3">
+                <li class="list-inline-item">
+                  <a href="#" class="link-white external-link" target="_blank"
+                    >Dichiarazione di accessibilità<span class="visually-hidden"
+                      >: apre una nuova finestra</span
+                    >
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-white">Cookie</a>
+                </li>
+              </ul>
+              <span class="fw-semibold text-white">Capitanerie di Porto — Guardia Costiera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black bg-opacity-75">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center p-2">
+            <img id="lightbox-img" src="" alt="" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        if (!sections.length || !navLinks.length) return;
+
+        function activate(id) {
+          navLinks.forEach((link) => {
+            const isMatch = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isMatch);
+            if (isMatch) {
+              link.setAttribute('aria-current', 'true');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              const topMost = visible.reduce((a, b) =>
+                a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+              );
+              activate(topMost.target.id);
+            }
+          },
+          { root: null, rootMargin: '-45% 0px -45% 0px', threshold: 0 }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            activate(this.getAttribute('href').replace('#', ''));
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const contenuto = document.querySelector('.col-12.col-lg-9');
+        if (!contenuto) return;
+        const lbImg = document.getElementById('lightbox-img');
+        const modal = document.getElementById('lightboxModal');
+        const bsModal = new bootstrap.Modal(modal);
+
+        function apriLightbox(img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          bsModal.show();
+        }
+
+        contenuto.querySelectorAll('img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+          img.addEventListener('click', function () { apriLightbox(this); });
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+              event.preventDefault();
+              apriLightbox(this);
+            }
+          });
+        });
+
+        modal.addEventListener('hidden.bs.modal', function () { lbImg.src = ''; });
+      })();
+    </script>
+
+  </body>
+</html>
